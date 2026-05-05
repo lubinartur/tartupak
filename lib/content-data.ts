@@ -3,6 +3,10 @@ export type ProductCategory = {
   title: string;
   description: string;
   applications: readonly string[];
+  detail?: {
+    intro: string;
+    highlights: readonly string[];
+  };
 };
 
 /** Aligned with docs/22_product_catalog.md */
@@ -11,8 +15,18 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     slug: "transport-packaging",
     title: "Transport Packaging",
     description:
-      "Standard corrugated cardboard transport boxes used for shipping and storage.",
+      "The most common corrugated packaging type — easy to fold, close and stack for shipping and storage.",
     applications: ["logistics", "warehouses", "shipping"],
+    detail: {
+      intro:
+        "Transport packaging is a practical choice for B2B shipments where speed of packing, protection and stable palletization matter.",
+      highlights: [
+        "Easy to fold and close",
+        "Built for stacking and pallet transport",
+        "Sizes and quantities made to order",
+        "Production possible from 1 piece",
+      ],
+    },
   },
   {
     slug: "pizza-boxes",
@@ -20,13 +34,31 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description:
       "Food-safe cardboard pizza boxes for restaurants and delivery services.",
     applications: ["restaurants", "pizza delivery", "takeaway food"],
+    detail: {
+      intro:
+        "Food packaging can be tailored to the product, handling and branding needs, from structure to print.",
+      highlights: [
+        "Retail packaging / print design available",
+        "Sample packaging available before larger runs",
+        "Sizes made to order",
+      ],
+    },
   },
   {
     slug: "frozen-products-packaging",
     title: "Frozen Products Packaging",
     description:
-      "Moisture-resistant packaging designed for frozen products.",
+      "Moisture-resistant corrugated packaging for refrigerated and frozen products.",
     applications: ["frozen food production", "cold storage logistics"],
+    detail: {
+      intro:
+        "For cold-chain products we use moisture-resistant materials so packaging keeps its strength in refrigerated and frozen conditions.",
+      highlights: [
+        "Moisture-resistant material options",
+        "Designed for refrigerated/frozen handling",
+        "Sizes made to order, including small runs",
+      ],
+    },
   },
   {
     slug: "custom-packaging",
@@ -34,13 +66,32 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description:
       "Packaging developed specifically for the customer's product dimensions and transportation conditions.",
     applications: ["industrial products", "electronics", "fragile items"],
+    detail: {
+      intro:
+        "We help choose a suitable solution: packaging construction, board parameters and (if needed) print — matched to your product and logistics.",
+      highlights: [
+        "Packaging construction with specialist consultation",
+        "Sample packaging to validate fit and handling",
+        "Flexible technology for required size and quantity",
+      ],
+    },
   },
   {
     slug: "large-packaging",
     title: "Large Packaging",
     description:
-      "Heavy-duty corrugated cardboard packaging for large or heavy goods.",
+      "Heavy-duty corrugated cardboard containers for large or heavy goods.",
     applications: ["industrial equipment", "pallet transport"],
+    detail: {
+      intro:
+        "Large corrugated cardboard containers support heavy loads and are often used in industrial shipments.",
+      highlights: [
+        "Load capacity up to 200 kg (depending on construction)",
+        "Typically 5–7 mm corrugated cardboard",
+        "Often stapled for added strength",
+        "Made to the required size and quantity",
+      ],
+    },
   },
   {
     slug: "printed-packaging",
@@ -48,25 +99,34 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description:
       "Flexo printed cardboard packaging with logos or branding.",
     applications: ["retail packaging", "brand packaging"],
+    detail: {
+      intro:
+        "Printed packaging supports retail-ready presentation while keeping the practicality of corrugated construction.",
+      highlights: [
+        "Retail packaging / print design support",
+        "Branding on corrugated packaging",
+        "Samples available on request",
+      ],
+    },
   },
 ];
 
 export const WHY_TARTUPAK = [
   {
     title: "20+ years of experience",
-    text: "Corrugated board and boxes from our Estonian plant. Technical answers come from people on the floor, not a script.",
+    text: "Founded in 2001 in Tõrvandi (Estonia). We manufacture corrugated packaging and supply corrugated cardboard for many industries.",
   },
   {
-    title: "Custom packaging engineering",
-    text: "Board grade, construction and die lines sized for your product, stack pattern and line speeds.",
+    title: "Specialists who help you choose",
+    text: "From packaging construction to board selection and print — get practical guidance to match your product and logistics.",
   },
   {
-    title: "Flexible production quantities",
-    text: "Pilot runs and steady call-offs — volume matched to what you ship, not retail pack counts.",
+    title: "Flexible production — even 1 piece",
+    text: "Packaging can be made in the required size and quantity, including production from a single piece when you need a quick sample or small run.",
   },
   {
-    title: "Reliable B2B delivery",
-    text: "Lead times and loading windows agreed up front. Handoff when your carrier or warehouse is ready.",
+    title: "Trusted and reliable partner",
+    text: "AA credit rating and “Edukas Eesti Ettevõte” recognition. Main market is Estonia with exports to Scandinavia and the Baltic countries.",
   },
 ] as const;
 

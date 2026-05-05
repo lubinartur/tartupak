@@ -43,8 +43,12 @@ export function ManufacturingProcess() {
           {STEPS.map((step) => (
             <article
               key={step.title}
-              className="group flex h-full min-h-0 flex-col rounded-lg border border-border bg-card p-5 shadow-[0_10px_26px_rgba(43,43,43,0.06)] transition-colors hover:border-kraft/40 sm:p-6"
+              className="group relative flex h-full min-h-0 flex-col rounded-2xl border border-border bg-[#fffdfb] p-6 shadow-[0_18px_44px_rgba(43,43,43,0.06)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.01] hover:border-kraft/40 hover:shadow-[0_26px_64px_rgba(43,43,43,0.09)] sm:p-7"
             >
+              <div
+                className="pointer-events-none absolute inset-0 rounded-2xl opacity-[0.55] [box-shadow:inset_0_1px_0_rgba(255,255,255,0.85)]"
+                aria-hidden
+              />
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-border/70 bg-surface">
                 <Image
                   src={step.src}

@@ -2,7 +2,11 @@ import Link from "next/link";
 import { ProductSilhouetteVisual } from "@/components/visuals/ProductSilhouetteVisual";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { PRODUCT_CATEGORIES, SITE_NAME } from "@/lib/constants";
+import {
+  CORRUGATED_CARDBOARD_OFFERING,
+  PRODUCT_CATEGORIES,
+  SITE_NAME,
+} from "@/lib/constants";
 import type { Metadata } from "next";
 
 const pageY = "py-20 md:py-24 lg:py-[7.5rem]";
@@ -21,6 +25,9 @@ export default function ProductsPage() {
           title="Product categories"
           description="Corrugated categories we manufacture for B2B — logistics, food, industry. Open a category for typical applications."
         />
+        <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-muted">
+          {CORRUGATED_CARDBOARD_OFFERING.summary} {CORRUGATED_CARDBOARD_OFFERING.variants.join("; ")}.
+        </p>
         <ul className="mt-16 grid list-none grid-cols-1 gap-5 sm:mt-20 sm:grid-cols-2 lg:gap-6 [grid-auto-rows:1fr]">
           {PRODUCT_CATEGORIES.map((c, i) => (
             <li key={c.slug} className="h-full min-h-0">

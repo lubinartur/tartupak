@@ -18,7 +18,11 @@ export function ProductCard({
   visualVariant = 0,
 }: ProductCardProps) {
   return (
-    <article className="group flex h-full min-h-0 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-[0_10px_26px_rgba(43,43,43,0.06)] transition-colors hover:border-kraft/40">
+    <article className="group relative flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-border bg-[#fffdfb] shadow-[0_18px_44px_rgba(43,43,43,0.06)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.01] hover:border-kraft/40 hover:shadow-[0_26px_64px_rgba(43,43,43,0.09)]">
+      <div
+        className="pointer-events-none absolute inset-0 rounded-2xl opacity-[0.55] [box-shadow:inset_0_1px_0_rgba(255,255,255,0.85)]"
+        aria-hidden
+      />
       {/* Visual: subtle flute texture + baseline — packaging mockup feel */}
       <div className="relative aspect-[3/2] w-full shrink-0 border-b border-border bg-[#f4efea]">
         <div
@@ -35,7 +39,7 @@ export function ProductCard({
           aria-hidden
         />
         <div className="relative flex h-full w-full items-center justify-center px-5 pb-6 pt-5 sm:px-6 sm:pb-7 sm:pt-6">
-          <div className="relative h-[78%] w-[88%] max-w-[240px] transition-transform duration-500 group-hover:scale-[1.03]">
+          <div className="relative h-[78%] w-[88%] max-w-[240px] transition-transform duration-500 group-hover:scale-[1.02]">
             <ProductSilhouetteVisual
               variant={visualVariant}
               className="h-full w-full drop-shadow-[0_1px_0_rgba(43,43,43,0.07)]"
@@ -48,11 +52,11 @@ export function ProductCard({
         </div>
       </div>
 
-      <div className="flex min-h-0 flex-1 flex-col p-6 pt-5">
+      <div className="relative flex min-h-0 flex-1 flex-col p-7 pt-6">
         <h3 className="text-lg font-semibold leading-snug tracking-tight text-foreground">
           {title}
         </h3>
-        <p className="mt-2 text-sm leading-[1.65] text-muted">{description}</p>
+        <p className="mt-2 text-sm leading-[1.7] text-muted/90">{description}</p>
 
         {applications?.length ? (
           <div className="mt-4">

@@ -86,8 +86,22 @@ export default async function ProductDetailPage({ params }: Props) {
         </div>
 
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted">
-          Drawings, samples and board specifications are available on request.
+          {cat.detail?.intro ??
+            "Drawings, samples and board specifications are available on request."}
         </p>
+
+        {cat.detail?.highlights?.length ? (
+          <div className="mt-6 max-w-2xl">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-forest">
+              Highlights
+            </p>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
+              {cat.detail.highlights.map((h) => (
+                <li key={h}>{h}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
 
         <PageCTA>
           <Button href="/contact">Get a quote</Button>

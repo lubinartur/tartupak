@@ -1,23 +1,37 @@
-import { ContactSection } from "@/components/sections/ContactSection";
-import { CustomPackaging } from "@/components/sections/CustomPackaging";
-import { FefcoPreview } from "@/components/sections/FefcoPreview";
-import { Hero } from "@/components/sections/Hero";
-import { PackagingSolutions } from "@/components/sections/PackagingSolutions";
-import { ManufacturingProcess } from "@/components/sections/ManufacturingProcess";
-import { ProductCategories } from "@/components/sections/ProductCategories";
-import { WhyTartupak } from "@/components/sections/WhyTartupak";
+import { Capabilities } from "@/components/home/Capabilities";
+import { CustomPackagingCTA } from "@/components/home/CustomPackagingCTA";
+import { HomeHero } from "@/components/home/HomeHero";
+import { IndustriesGrid } from "@/components/home/IndustriesGrid";
+import { ManufacturingProcess } from "@/components/home/ManufacturingProcess";
+import { TrustIntro } from "@/components/home/TrustIntro";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
-      <Hero />
-      <PackagingSolutions />
-      <ProductCategories />
-      <CustomPackaging />
+    <div className="relative bg-background">
+      <div
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.28]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(17,17,17,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(17,17,17,0.03) 1px, transparent 1px)",
+          backgroundSize: "160px 160px",
+          backgroundPosition: "center top",
+        }}
+        aria-hidden
+      />
+      <div
+        className="industrial-grain pointer-events-none absolute inset-0 -z-10 opacity-[0.14] mix-blend-multiply"
+        style={{
+          backgroundPosition: "center top",
+        }}
+        aria-hidden
+      />
+
+      <HomeHero />
+      <TrustIntro />
+      <Capabilities />
+      <IndustriesGrid />
       <ManufacturingProcess />
-      <FefcoPreview />
-      <WhyTartupak />
-      <ContactSection />
-    </>
+      <CustomPackagingCTA />
+    </div>
   );
 }

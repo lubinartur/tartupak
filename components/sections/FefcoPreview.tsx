@@ -10,7 +10,7 @@ const sectionY =
 export function FefcoPreview() {
   return (
     <section
-      className={`border-t border-forest/10 bg-surface ${sectionY}`}
+      className={`border-t border-forest/10 bg-surface/70 ${sectionY}`}
     >
       <Container>
         <div className="flex flex-col gap-8 border-b border-forest/12 pb-8 md:flex-row md:items-end md:justify-between md:gap-10 md:pb-10">

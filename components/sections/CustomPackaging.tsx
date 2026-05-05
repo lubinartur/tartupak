@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { DielineFlatVisual } from "@/components/visuals/DielineFlatVisual";
 
 const sectionY =
-  "py-20 md:py-24 lg:py-[7.5rem]";
+  "py-24 md:py-28 lg:py-[8.5rem]";
 
 export function CustomPackaging() {
   return (
@@ -11,22 +11,28 @@ export function CustomPackaging() {
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-x-24">
           <div className="order-2 lg:order-1">
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border bg-card shadow-[0_10px_26px_rgba(43,43,43,0.06)]">
+            <div className="relative">
               <div
-                className="pointer-events-none absolute inset-0 opacity-[0.5]"
-                style={{
-                  backgroundImage: `repeating-linear-gradient(
-                    90deg,
-                    transparent,
-                    transparent 8px,
-                    rgba(31, 61, 43, 0.04) 8px,
-                    rgba(31, 61, 43, 0.04) 9px
-                  )`,
-                }}
+                className="pointer-events-none absolute -inset-6 -z-10 rounded-2xl bg-[#efe3d6] opacity-[0.55] sm:-inset-7"
                 aria-hidden
               />
-              <div className="relative h-full w-full">
-                <DielineFlatVisual className="h-full w-full min-h-[12rem]" />
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-border bg-card shadow-[0_18px_44px_rgba(43,43,43,0.07)]">
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-[0.5]"
+                  style={{
+                    backgroundImage: `repeating-linear-gradient(
+                      90deg,
+                      transparent,
+                      transparent 8px,
+                      rgba(31, 61, 43, 0.04) 8px,
+                      rgba(31, 61, 43, 0.04) 9px
+                    )`,
+                  }}
+                  aria-hidden
+                />
+                <div className="relative h-full w-full">
+                  <DielineFlatVisual className="h-full w-full min-h-[12rem]" />
+                </div>
               </div>
             </div>
           </div>
@@ -42,7 +48,11 @@ export function CustomPackaging() {
               Our specialists will help you find the optimal packaging solution.
             </p>
             <div className="mt-10">
-              <Button href="/contact" variant="primary">
+              <Button
+                href="/contact"
+                variant="primary"
+                className="min-h-12 px-7 text-[0.9375rem] shadow-[0_12px_28px_rgba(17,24,39,0.12)]"
+              >
                 Get a quote
               </Button>
             </div>

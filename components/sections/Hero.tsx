@@ -1,216 +1,124 @@
 "use client";
 
-import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { Container } from "@/components/ui/Container";
-import { CorrugatedStackVisual } from "@/components/visuals/CorrugatedStackVisual";
+import { useEffect, useRef } from "react";
 
-const HERO_VIDEO_MP4 = "/videos/hero-box.mp4";
-const HERO_BOX_PNG_PUBLIC = "/images/hero/hero-cardboard-box.png";
-
-const HERO_MEDIA_CROP_SCALE = 1.35;
-
-const BASE_TRANSFORM =
-  "rotateX(0deg) rotateY(0deg) translateX(0px) translateY(0px) scale(1)";
-
-const PARALLAX_ROT_MAX = 4;
-const PARALLAX_TRANS_MAX = 8;
-
-function canUseParallax(): boolean {
-  if (typeof window === "undefined") return false;
-  return (
-    window.innerWidth >= 1024 &&
-    window.matchMedia("(hover: hover) and (pointer: fine)").matches
-  );
-}
-
-/** Layout width only — no masks, shadows, glows, or backgrounds */
-function HeroVisualShell({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="relative mx-auto h-full w-full max-w-[min(94vw,560px)] sm:max-w-[min(94vw,640px)] lg:max-w-[820px]">
-      {children}
-    </div>
-  );
-}
-
-function HeroFloatingBoxes() {
-  const [videoFailed, setVideoFailed] = useState(false);
-  const [pngFailed, setPngFailed] = useState(false);
+export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const innerRef = useRef<HTMLDivElement>(null);
-  const moveRef = useRef({ x: 0, y: 0 });
-  const tickingRef = useRef(false);
-
-  const applyPlaybackRate = useCallback(() => {
-    const main = videoRef.current;
-    if (main) main.playbackRate = 0.7;
-  }, []);
 
   useEffect(() => {
-    applyPlaybackRate();
-  }, [applyPlaybackRate, videoFailed]);
-
-  const applyTransform = useCallback((clientX: number, clientY: number) => {
-    const el = containerRef.current;
-    const inner = innerRef.current;
-    if (!el || !inner) return;
-
-    if (!canUseParallax()) {
-      inner.style.transform = BASE_TRANSFORM;
-      return;
-    }
-
-    const rect = el.getBoundingClientRect();
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-    const nx = (clientX - cx) / (rect.width / 2);
-    const ny = (clientY - cy) / (rect.height / 2);
-    const dx = Math.max(-1, Math.min(1, nx));
-    const dy = Math.max(-1, Math.min(1, ny));
-
-    const rotateY = dx * PARALLAX_ROT_MAX;
-    const rotateX = -dy * PARALLAX_ROT_MAX;
-    const translateX = dx * PARALLAX_TRANS_MAX;
-    const translateY = dy * PARALLAX_TRANS_MAX;
-
-    inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateX(${translateX}px) translateY(${translateY}px) scale(1)`;
-  }, []);
-
-  const scheduleApply = useCallback(
-    (clientX: number, clientY: number) => {
-      moveRef.current = { x: clientX, y: clientY };
-      if (tickingRef.current) return;
-      tickingRef.current = true;
-      window.requestAnimationFrame(() => {
-        tickingRef.current = false;
-        applyTransform(moveRef.current.x, moveRef.current.y);
-      });
-    },
-    [applyTransform],
-  );
-
-  const onMouseMove = useCallback(
-    (e: React.MouseEvent) => {
-      if (!canUseParallax()) return;
-      scheduleApply(e.clientX, e.clientY);
-    },
-    [scheduleApply],
-  );
-
-  const onMouseLeave = useCallback(() => {
-    const inner = innerRef.current;
-    if (!inner) return;
-    inner.style.transform = BASE_TRANSFORM;
-  }, []);
-
-  useEffect(() => {
-    const inner = innerRef.current;
-    if (!inner) return;
-    inner.style.transform = BASE_TRANSFORM;
-
-    const onResize = () => {
-      if (!canUseParallax()) inner.style.transform = BASE_TRANSFORM;
-    };
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+    const v = videoRef.current;
+    if (!v) return;
+    // Slow down to a premium, calm tempo.
+    v.playbackRate = 0.55;
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative mx-auto w-full max-w-[min(22rem,92vw)] overflow-x-clip overflow-y-visible sm:max-w-[min(30rem,94vw)] lg:mx-0 lg:ml-0 lg:flex lg:max-w-none lg:justify-end lg:overflow-visible lg:[perspective:1200px]"
-      onMouseMove={onMouseMove}
-      onMouseLeave={onMouseLeave}
+    <section
+      className="relative min-h-[90vh] overflow-hidden border-b border-border"
+      style={{
+        background:
+          "radial-gradient(circle at 65% 40%, rgba(255,255,255,0.35), rgba(0,0,0,0.05) 60%), linear-gradient(to bottom, #f6f3ee, #ebe7df)",
+      }}
     >
-      <div className="hero-box-idle-float-subtle relative h-[min(48vh,22rem)] w-full max-w-full overflow-visible lg:absolute lg:left-auto lg:right-[2vw] lg:top-1/2 lg:h-[min(56vh,520px)] lg:min-h-[min(48vh,480px)] lg:w-full lg:max-w-[820px] lg:-translate-y-1/2">
-        <div
-          ref={innerRef}
-          className="relative h-full w-full overflow-visible will-change-transform [transform-style:preserve-3d] transition-[transform] duration-200 ease-out"
-          style={{ transform: BASE_TRANSFORM }}
-        >
-          <div className="relative h-full w-full">
-            {!videoFailed ? (
-              <HeroVisualShell>
-                <div className="relative flex h-full min-h-0 w-full items-center justify-center overflow-hidden lg:justify-end">
-                  <video
-                    ref={videoRef}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="block h-full w-full max-h-full min-h-0 min-w-0 origin-center border-0 object-contain outline-none"
-                    style={{ transform: `scale(${HERO_MEDIA_CROP_SCALE})` }}
-                    aria-hidden
-                    onLoadedData={applyPlaybackRate}
-                    onError={() => setVideoFailed(true)}
-                  >
-                    <source src={HERO_VIDEO_MP4} type="video/mp4" />
-                  </video>
-                </div>
-              </HeroVisualShell>
-            ) : !pngFailed ? (
-              <HeroVisualShell>
-                <div className="relative flex h-full min-h-0 w-full items-center justify-center overflow-hidden lg:justify-end">
-                  <Image
-                    src={HERO_BOX_PNG_PUBLIC}
-                    alt="Corrugated cardboard box"
-                    width={900}
-                    height={900}
-                    className="h-full w-full origin-center object-contain object-center"
-                    style={{ transform: `scale(${HERO_MEDIA_CROP_SCALE})` }}
-                    priority
-                    sizes="(max-width: 1024px) 92vw, 74vw"
-                    onError={() => setPngFailed(true)}
-                  />
-                </div>
-              </HeroVisualShell>
-            ) : (
-              <HeroVisualShell>
-                <div className="flex h-full w-full items-center justify-center lg:justify-end [&>svg]:max-h-full">
-                  <CorrugatedStackVisual className="h-[90%] w-[90%] max-h-[24rem] lg:max-h-none" />
-                </div>
-              </HeroVisualShell>
-            )}
+      {/* Video background */}
+      <video
+        ref={videoRef}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 z-0 h-full w-full object-cover"
+        style={{
+          transform: "translateY(2%) scale(1.05)",
+          filter: "contrast(1.05) brightness(1.02) saturate(1.02)",
+          objectPosition: "55% center",
+        }}
+        aria-hidden
+      >
+        <source src="/videos/hero-box.mp4" type="video/mp4" />
+      </video>
+
+      {/* Depth + lighting overlays (combined) */}
+      <div
+        className="absolute inset-0 z-[1]"
+        style={{
+          background:
+            "radial-gradient(circle at 60% 40%, rgba(255,255,255,0.25), transparent 60%), linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.05) 70%), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25))",
+        }}
+        aria-hidden
+      />
+
+      {/* Ground shadow under product (realism) */}
+      <div
+        className="pointer-events-none absolute left-[62%] top-[68%] z-[1] h-[22rem] w-[44rem] -translate-x-1/2 -translate-y-1/2 blur-2xl md:h-[26rem] md:w-[54rem] lg:h-[30rem] lg:w-[64rem]"
+        style={{
+          background:
+            "radial-gradient(closest-side, rgba(0,0,0,0.30), rgba(0,0,0,0.0) 70%)",
+        }}
+        aria-hidden
+      />
+
+      {/* Subtle light on box (top-left highlight) */}
+      <div
+        className="pointer-events-none absolute inset-0 z-[1]"
+        style={{
+          background:
+            "radial-gradient(680px 420px at 44% 18%, rgba(255,255,255,0.10), transparent 60%)",
+        }}
+        aria-hidden
+      />
+
+      {/* Soft bottom fade into warm off-white */}
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-24 sm:h-28"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(247,243,236,0) 0%, rgba(247,243,236,0.95) 100%)",
+        }}
+        aria-hidden
+      />
+
+      {/* Content layer */}
+      <div className="relative z-[2] mx-auto flex min-h-[90vh] w-full max-w-[1720px] flex-col justify-center px-5 py-16 sm:px-6 md:px-8 md:py-24">
+        <div className="flex w-full flex-col items-center text-center md:ml-[12%] md:items-start md:text-left lg:translate-y-14">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/75">
+            TARTUPAK · Estonian packaging manufacturer
+          </p>
+
+          <h1
+            className="mt-4 max-w-[980px] font-heading text-[clamp(84px,13vw,220px)] font-[900] uppercase leading-[0.85] tracking-[-0.06em]"
+            style={{ color: "rgba(255,255,255,0.86)", mixBlendMode: "overlay" }}
+          >
+            PACKAGING
+          </h1>
+
+          <h2 className="mt-3 max-w-[640px] text-[clamp(26px,4.4vw,54px)] font-bold leading-[0.95] tracking-[-0.02em] text-white">
+            Cardboard packaging for modern production
+          </h2>
+
+          <p className="mt-7 max-w-[520px] text-base leading-[1.75] text-white/85 md:text-lg">
+            Custom corrugated cardboard packaging for logistics, food production
+            and industry.
+          </p>
+
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+            <Button
+              href="/contact"
+              className="min-h-12 rounded-full px-6 py-3 shadow-[0_14px_32px_rgba(0,0,0,0.22)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_44px_rgba(0,0,0,0.28)]"
+            >
+              Get a quote
+            </Button>
+            <Button
+              href="/fefco"
+              variant="secondary"
+              className="min-h-12 rounded-full border border-white/40 bg-white/90 px-6 py-3 text-foreground shadow-sm backdrop-blur-[10px] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_14px_32px_rgba(0,0,0,0.16)]"
+            >
+              Browse FEFCO catalog
+            </Button>
           </div>
         </div>
       </div>
-    </div>
-  );
-}
-
-export function Hero() {
-  return (
-    <section className="overflow-x-clip overflow-y-visible border-b border-border bg-background py-14 md:py-20 lg:py-24">
-      <Container className="overflow-visible">
-        <div className="relative overflow-visible">
-          <div className="grid items-center gap-8 overflow-x-clip overflow-y-visible lg:grid-cols-12 lg:gap-6 xl:gap-8">
-            <div className="relative z-10 min-w-0 lg:col-span-7 lg:pr-2 xl:col-span-6 xl:pr-4">
-              <h1 className="text-[2.875rem] font-semibold leading-[0.98] tracking-[-0.02em] text-foreground sm:text-[3.625rem] md:text-[4rem] lg:text-[4.75rem] lg:leading-[0.98] xl:text-[5.25rem] 2xl:text-[5.75rem]">
-                <span className="block">Cardboard packaging</span>
-                <span className="block text-foreground/90">for modern production</span>
-              </h1>
-
-              <p className="mt-8 max-w-xl text-base leading-[1.7] text-muted md:text-lg md:leading-[1.65]">
-                Custom corrugated cardboard packaging for logistics, food
-                production and industry.
-              </p>
-
-              <div className="mt-10 flex flex-wrap items-center gap-3">
-                <Button href="/contact">Get a quote</Button>
-                <Button href="/fefco" variant="secondary">
-                  Browse FEFCO catalog
-                </Button>
-              </div>
-            </div>
-
-            <div className="relative z-0 flex min-h-[16rem] justify-center overflow-x-clip overflow-y-visible lg:col-span-5 lg:min-h-[min(48vh,34rem)] xl:col-span-6">
-              <HeroFloatingBoxes />
-            </div>
-          </div>
-        </div>
-      </Container>
     </section>
   );
 }

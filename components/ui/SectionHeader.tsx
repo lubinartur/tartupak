@@ -28,7 +28,7 @@ export function SectionHeader({
       </h2>
       {description ? (
         <p
-          className={`mt-5 max-w-xl text-base leading-[1.65] text-muted md:text-[1.0625rem] ${align === "center" ? "mx-auto" : ""}`}
+          className={`mt-6 max-w-xl text-base leading-[1.72] text-muted/90 md:text-[1.0625rem] ${align === "center" ? "mx-auto" : ""}`}
         >
           {description}
         </p>
