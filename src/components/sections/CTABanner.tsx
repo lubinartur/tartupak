@@ -7,16 +7,9 @@ export async function CTABanner() {
   const headline = parseHeroHeadline(t("title"));
 
   return (
-    <section className="relative overflow-hidden bg-brand-green px-8 py-32 lg:px-12">
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
-          backgroundSize: "30px 30px",
-        }}
-      />
-      <div className="relative z-10 w-full space-y-8 text-center">
-        <h2 className="text-brand-bg">
+    <section className="border-t border-brand-border bg-white px-8 py-32 lg:px-12">
+      <div className="w-full space-y-8 text-center">
+        <h2 className="text-brand-green">
           {headline.highlight ? (
             <>
               {headline.before}
@@ -27,11 +20,11 @@ export async function CTABanner() {
             t("title")
           )}
         </h2>
-        <p className="mx-auto max-w-xl text-xl font-light text-brand-bg/60">{t("description")}</p>
+        <p className="mx-auto max-w-xl text-xl font-normal text-brand-text">{t("description")}</p>
         <div className="pt-8">
           <Link
             href="/contact"
-            className="inline-block rounded-sm bg-brand-bg px-12 py-6 text-lg font-bold text-brand-green shadow-2xl transition-all hover:-translate-y-1 hover:brightness-110 active:translate-y-0"
+            className="inline-block rounded-sm bg-brand-green px-12 py-5 text-sm font-bold tracking-widest text-white uppercase shadow-lg shadow-brand-green/10 transition-all hover:-translate-y-0.5 hover:bg-brand-text active:translate-y-0"
           >
             {t("button")}
           </Link>

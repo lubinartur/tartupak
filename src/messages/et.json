@@ -95,8 +95,7 @@
     },
     "fefcoPreview": {
       "overline": "STANDARDID",
-      "title": "FEFCO globaalne kataloog",
-      "cta": "Vaata täiskataloog (147 koodi)"
+      "title": "FEFCO globaalne kataloog"
     },
     "whyUs": {
       "overline": "TIPPTASE",
@@ -187,6 +186,7 @@
     "subtitle": "Rahvusvaheline lainepappkarpide standard.",
     "searchPlaceholder": "Otsi FEFCO koodi...",
     "typicalUse": "Tüüpiline kasutus",
+    "viewAllCatalog": "Vaata täiskataloog (147 koodi)",
     "viewDetails": "Vaata lähemalt →",
     "items": {
       "0201": {

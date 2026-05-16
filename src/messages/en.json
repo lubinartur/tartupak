@@ -95,8 +95,7 @@
     },
     "fefcoPreview": {
       "overline": "STANDARDS",
-      "title": "FEFCO Global Catalog",
-      "cta": "View Full Catalog (147 codes)"
+      "title": "FEFCO Global Catalog"
     },
     "whyUs": {
       "overline": "EXCELLENCE",
@@ -187,6 +186,7 @@
     "subtitle": "International standard for corrugated packaging designs.",
     "searchPlaceholder": "Search FEFCO code...",
     "typicalUse": "Typical use",
+    "viewAllCatalog": "View Full Catalog (147 codes)",
     "viewDetails": "View Details →",
     "items": {
       "0201": {

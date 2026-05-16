@@ -6,17 +6,18 @@ import { fefcoPreviewCodes } from "@/data/fefco";
 
 export async function FEFCOPreview() {
   const t = await getTranslations("home.fefcoPreview");
+  const fefco = await getTranslations("fefco");
 
   return (
     <section className="bg-white px-8 py-24 lg:px-12">
       <div className="w-full">
-        <div className="mb-16 flex flex-col items-end justify-between gap-8 md:flex-row">
+        <div className="mb-16 flex items-end justify-between gap-8">
           <SectionHeader className="mb-0" overline={t("overline")} title={t("title")} />
           <Link
             href="/fefco"
-            className="rounded-sm bg-brand-green px-8 py-4 text-sm font-bold text-brand-bg"
+            className="shrink-0 font-display text-sm tracking-wide text-brand-text uppercase transition-colors hover:text-brand-kraft"
           >
-            {t("cta")}
+            {fefco("viewAllCatalog")} →
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
