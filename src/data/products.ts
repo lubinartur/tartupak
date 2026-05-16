@@ -1,10 +1,11 @@
 export const productSlugs = [
-  "transport-packaging",
-  "pizza-boxes",
-  "frozen-products",
-  "custom-packaging",
-  "large-packaging",
-  "printed-packaging",
+  "lainepapp",
+  "transpordipakend",
+  "fleksotrukk",
+  "kulmutatud-toodete-pakend",
+  "pizzakarbid",
+  "erilise-kujuga-pakendid",
+  "suuregabariidilised-pakendid",
 ] as const;
 
 export type ProductSlug = (typeof productSlugs)[number];

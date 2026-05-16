@@ -10,7 +10,7 @@ export async function ManufacturingProcess() {
   return (
     <section className="min-h-[380px] border-y border-brand-green/5 bg-brand-bg px-8 py-40 lg:px-12">
       <div className="w-full">
-        <SectionHeader centered title={t("title")} className="mx-auto" />
+        <SectionHeader centered overline={t("overline")} title={t("title")} className="mx-auto" />
         <div className="relative grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           <div className="absolute top-[5rem] right-[5%] left-[5%] -z-0 hidden h-px bg-brand-green/20 lg:block" />
           {stepKeys.map((key, i) => (

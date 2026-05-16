@@ -29,7 +29,31 @@
       "title": "We create *packaging* that protects.",
       "subtitle": "Premium corrugated cardboard solutions engineered for industrial reliability. We combine Scandinavian minimalism with 20+ years of manufacturing expertise.",
       "ctaPrimary": "Request a Quote",
-      "ctaSecondary": "Browse Catalog"
+      "ctaSecondary": "Browse Catalog",
+      "carousel": {
+        "constructionCode": "Construction Code",
+        "material": "Material",
+        "strength": "Strength",
+        "impact": "Impact",
+        "slide0": {
+          "code": "FEFCO 0201",
+          "material": "Cardboard",
+          "strength": "Double Wall",
+          "impact": "100% Eco"
+        },
+        "slide1": {
+          "code": "FEFCO 0201",
+          "material": "Cardboard",
+          "strength": "Double Wall",
+          "impact": "100% Eco"
+        },
+        "slide2": {
+          "code": "FEFCO 0300",
+          "material": "Cardboard",
+          "strength": "Single Wall",
+          "impact": "100% Eco"
+        }
+      }
     },
     "trustBar": {
       "piece": "From 1 piece",
@@ -38,15 +62,17 @@
       "delivery": "Delivery Included"
     },
     "categories": {
-      "title": "Product Categories",
-      "subtitle": "Corrugated packaging for different industries and use cases."
+      "overline": "INDUSTRIAL EXPERTISE",
+      "title": "Packaging Categories"
     },
     "bespoke": {
-      "title": "Custom Packaging",
-      "description": "Send us the dimensions, quantity and intended use of your product. Our specialists will help you find the optimal packaging solution.",
-      "cta": "Start an inquiry"
+      "overline": "BESPOKE DESIGN",
+      "title": "Packaging built to your exact specs",
+      "description": "Every product is unique, and its packaging should be too. From specialist electronics to delicate retail displays, we engineer solutions that balance protection with presentation.",
+      "link": "Explore custom solutions →"
     },
     "process": {
+      "overline": "OUR WORKFLOW",
       "title": "The Journey of a Box",
       "steps": {
         "design": {
@@ -68,18 +94,19 @@
       }
     },
     "fefcoPreview": {
-      "title": "FEFCO Standards",
-      "subtitle": "Commonly used corrugated box standard types.",
-      "cta": "View full catalog"
+      "overline": "STANDARDS",
+      "title": "FEFCO Global Catalog",
+      "cta": "View Full Catalog (147 codes)"
     },
     "whyUs": {
+      "overline": "EXCELLENCE",
       "title": "Why Industry Leaders Choose Us",
       "stats": {
         "aa": { "value": "AA", "label": "Credit Rating" },
         "years": { "value": "20+", "label": "Years Experience" },
         "sustainable": { "value": "100%", "label": "Sustainable Materials" },
         "scale": { "value": "1pc", "label": "Scale Flexible" },
-        "ee": { "value": "EE", "label": "Edukas Eesti Ettevõte" },
+        "ee": { "value": "EE", "label": "Leading Estonian Enterprise" },
         "est": { "value": "EST", "label": "Rapid Delivery" }
       }
     },
@@ -94,35 +121,40 @@
     "subtitle": "Corrugated packaging for logistics, food production and industry.",
     "requestQuote": "Request a Quote",
     "items": {
-      "transport-packaging": {
+      "lainepapp": {
+        "title": "Corrugated Cardboard",
+        "description": "The foundation of all our packaging. We produce and supply corrugated cardboard in various flute profiles and wall configurations — single wall, double wall, and triple wall. Suitable for manufacturing, retail, and logistics.",
+        "applications": "Packaging manufacturing, raw material supply, custom box production, retail and logistics"
+      },
+      "transpordipakend": {
         "title": "Transport Packaging",
-        "description": "Standard corrugated cardboard transport boxes for shipping and storage.",
-        "applications": "Logistics, warehouses, shipping"
+        "description": "Robust corrugated cardboard transport boxes designed for heavy-duty shipping and storage. Built to withstand the rigors of logistics while keeping contents pristine. Available in standard and custom dimensions from 1 piece.",
+        "applications": "Logistics and freight, warehousing, e-commerce shipping, industrial goods transport"
       },
-      "pizza-boxes": {
+      "fleksotrukk": {
+        "title": "Flexo Print Packaging",
+        "description": "High-quality flexographic printing on corrugated cardboard. Up to 4 colors for vivid retail presence and brand recognition. Ideal for companies that want packaging to communicate their brand as well as protect their product.",
+        "applications": "Retail packaging, brand packaging, product presentation boxes, promotional packaging"
+      },
+      "kulmutatud-toodete-pakend": {
+        "title": "Frozen Product Packaging",
+        "description": "Moisture-resistant corrugated cardboard packaging specifically engineered for frozen and refrigerated products. Maintains structural integrity at low temperatures. Suitable for cold storage logistics and frozen food production.",
+        "applications": "Frozen food production, cold storage logistics, refrigerated goods transport, food industry"
+      },
+      "pizzakarbid": {
         "title": "Pizza Boxes",
-        "description": "Food-safe cardboard pizza boxes for restaurants and delivery services.",
-        "applications": "Restaurants, pizza delivery, takeaway food"
+        "description": "Food-safe corrugated cardboard pizza boxes for restaurants and delivery services. Ventilated and grease-resistant to keep food fresh and hot. Available in standard sizes and custom dimensions with optional flexo print branding.",
+        "applications": "Pizzerias and restaurants, food delivery services, takeaway food packaging, catering"
       },
-      "frozen-products": {
-        "title": "Frozen Products Packaging",
-        "description": "Moisture-resistant packaging designed for frozen products.",
-        "applications": "Frozen food production, cold storage logistics"
+      "erilise-kujuga-pakendid": {
+        "title": "Custom Shape Packaging",
+        "description": "Bespoke packaging developed specifically for your product's dimensions, shape and transportation conditions. Our CAD designers engineer die-cut solutions that balance protection with presentation. From fragile electronics to industrial components.",
+        "applications": "Electronics and tech products, fragile or irregularly shaped items, industrial components, premium retail presentation"
       },
-      "custom-packaging": {
-        "title": "Custom Packaging",
-        "description": "Packaging developed for your product dimensions and transportation conditions.",
-        "applications": "Industrial products, electronics, fragile items"
-      },
-      "large-packaging": {
-        "title": "Large Packaging",
-        "description": "Heavy-duty corrugated cardboard packaging for large or heavy goods.",
-        "applications": "Industrial equipment, pallet transport"
-      },
-      "printed-packaging": {
-        "title": "Printed Packaging",
-        "description": "Flexo printed cardboard packaging with logos or branding.",
-        "applications": "Retail packaging, brand packaging"
+      "suuregabariidilised-pakendid": {
+        "title": "Large Format Packaging",
+        "description": "Heavy-duty corrugated cardboard packaging for large or heavy goods. Engineered for oversized industrial products, furniture, appliances, and pallet transport. Built to handle substantial weight and volume without compromising structural integrity.",
+        "applications": "Industrial equipment, furniture and appliances, pallet transport, construction materials"
       }
     }
   },
@@ -131,6 +163,7 @@
     "subtitle": "International standard for corrugated packaging designs.",
     "searchPlaceholder": "Search FEFCO code...",
     "typicalUse": "Typical use",
+    "viewDetails": "View Details →",
     "items": {
       "0201": {
         "title": "Regular slotted container (RSC)",

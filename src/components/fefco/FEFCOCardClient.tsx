@@ -6,7 +6,7 @@ import type { FefcoCode } from "@/data/fefco";
 
 export function FEFCOCardClient({ code }: { code: FefcoCode }) {
   const t = useTranslations(`fefco.items.${code}`);
-  const common = useTranslations("common");
+  const fefco = useTranslations("fefco");
 
   return (
     <Link
@@ -25,7 +25,7 @@ export function FEFCOCardClient({ code }: { code: FefcoCode }) {
       </div>
       <div className="mt-8">
         <span className="text-[10px] font-bold tracking-[0.2em] text-brand-green uppercase transition-transform group-hover:translate-x-1">
-          {common("learnMore")} →
+          {fefco("viewDetails")}
         </span>
       </div>
     </Link>

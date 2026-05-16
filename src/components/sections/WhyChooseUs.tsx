@@ -9,7 +9,7 @@ export async function WhyChooseUs() {
   return (
     <section className="bg-brand-bg px-8 py-32 lg:px-12">
       <div className="w-full">
-        <SectionHeader centered title={t("title")} className="mx-auto" />
+        <SectionHeader centered overline={t("overline")} title={t("title")} className="mx-auto" />
         <div className="mt-24 grid grid-cols-1 gap-x-12 gap-y-20 md:grid-cols-2 lg:grid-cols-3">
           {statKeys.map((key) => (
             <div key={key} className="flex flex-col items-start space-y-6">

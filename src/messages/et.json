@@ -29,7 +29,31 @@
       "title": "Me loome *pakendit*, mis kaitseb.",
       "subtitle": "Kvaliteetne gofreeritud kartongpakend tööstuslikuks usaldusväärsuseks. Ühendame Skandinaavia minimalismi 20+ aastase tootmiskogemusega.",
       "ctaPrimary": "Küsi pakkumist",
-      "ctaSecondary": "Sirvi kataloogi"
+      "ctaSecondary": "Sirvi kataloogi",
+      "carousel": {
+        "constructionCode": "Konstruktsioonikood",
+        "material": "Materjal",
+        "strength": "Tugevus",
+        "impact": "Mõju",
+        "slide0": {
+          "code": "FEFCO 0201",
+          "material": "Kartong",
+          "strength": "Kaheseineline",
+          "impact": "100% öko"
+        },
+        "slide1": {
+          "code": "FEFCO 0201",
+          "material": "Kartong",
+          "strength": "Kaheseineline",
+          "impact": "100% öko"
+        },
+        "slide2": {
+          "code": "FEFCO 0300",
+          "material": "Kartong",
+          "strength": "Üheseineline",
+          "impact": "100% öko"
+        }
+      }
     },
     "trustBar": {
       "piece": "Alates 1 tükist",
@@ -38,15 +62,17 @@
       "delivery": "Kohaletoimetamine"
     },
     "categories": {
-      "title": "Tootekategooriad",
-      "subtitle": "Lainepappkarbid erinevatele tööstusharudele ja kasutusotstarvetele."
+      "overline": "TÖÖSTUSLIK EKSPERTIIS",
+      "title": "Pakendikategooriad"
     },
     "bespoke": {
-      "title": "Kohandatud pakendid",
-      "description": "Saatke meile toote mõõdud, kogus ja kasutusotstarve. Meie spetsialistid aitavad leida optimaalse pakendilahenduse.",
-      "cta": "Alusta päringut"
+      "overline": "ERITELLIMUS",
+      "title": "Pakend täpselt teie spetsifikatsioonide järgi",
+      "description": "Iga toode on ainulaadne ja selle pakend peaks seda peegeldama. Alates õrnadest elektroonikaseadmetest kuni jaemüügi eksponaatideni loome lahendusi, mis ühendavad kaitse ja presentatsiooni.",
+      "link": "Uuri kohandatud lahendusi →"
     },
     "process": {
+      "overline": "MEIE TÖÖPROTSESS",
       "title": "Kasti teekond",
       "steps": {
         "design": {
@@ -68,11 +94,12 @@
       }
     },
     "fefcoPreview": {
-      "title": "FEFCO standardid",
-      "subtitle": "Levinumad lainepappkarpide standardtüübid.",
-      "cta": "Vaata kogu kataloogi"
+      "overline": "STANDARDID",
+      "title": "FEFCO globaalne kataloog",
+      "cta": "Vaata täiskataloog (147 koodi)"
     },
     "whyUs": {
+      "overline": "TIPPTASE",
       "title": "Miks tööstusliidrid valivad meid",
       "stats": {
         "aa": { "value": "AA", "label": "Krediidireiting" },
@@ -94,35 +121,40 @@
     "subtitle": "Lainepappkarbid logistika, toiduainetootmise ja tööstuse jaoks.",
     "requestQuote": "Küsi pakkumist",
     "items": {
-      "transport-packaging": {
-        "title": "Transpordipakendid",
-        "description": "Standardlainepappkarbid saatmiseks ja ladustamiseks.",
-        "applications": "Logistika, laod, saatmine"
+      "lainepapp": {
+        "title": "Lainepapp",
+        "description": "Meie pakendite alus. Toodame ja müüme lainepappi erinevates profiilides ja seintega konfiguratsioonides — ühe-, kahe- ja kolmeseineline. Sobib tootmisele, jaekaubandusele ja logistikale.",
+        "applications": "Pakenditootmine, toormaterjali tarnimine tootmisele, kohandatud karpide tootmine, jaemüük ja logistika"
       },
-      "pizza-boxes": {
-        "title": "Pitsakarbid",
-        "description": "Toiduainetele sobivad pitsakarbid restoranidele ja kullerteenustele.",
-        "applications": "Restoranid, pitsa kullerteenus, kaasa võtmine"
+      "transpordipakend": {
+        "title": "Transpordipakend",
+        "description": "Vastupidavad lainepappkastid rasketeks veooperatsioonideks ja ladustamiseks. Kaitsevad sisu logistika väljakutsete eest. Saadaval standardmõõtudes ja eritellimustena alates 1 tükist.",
+        "applications": "Logistika ja kaubavedu, ladustamine, e-kaubanduse saatmine, tööstuskaupade transport"
       },
-      "frozen-products": {
-        "title": "Külmutoodete pakendid",
-        "description": "Niiskuskindlad pakendid külmutoodetele.",
-        "applications": "Külmutoidu tootmine, külmlogistika"
+      "fleksotrukk": {
+        "title": "Fleksotrükk",
+        "description": "Kõrgkvaliteetne fleksotrükk lainepapile. Kuni 4 värvi erksa jaemüügiilme ja bränditeadlikkuse jaoks. Ideaalne ettevõtetele, kes soovivad, et pakend edastaks nende brändi ja kaitseks toodet.",
+        "applications": "Jaemüügipakendid, brändipakendid, tooteesitluskarbid, reklaampakendid"
       },
-      "custom-packaging": {
-        "title": "Kohandatud pakendid",
-        "description": "Toote mõõtudele ja transporditingimustele vastavad pakendid.",
-        "applications": "Tööstustooted, elektroonika, habras tooted"
+      "kulmutatud-toodete-pakend": {
+        "title": "Külmutatud toodete pakend",
+        "description": "Niiskuskindel lainepappakend, mis on spetsiaalselt loodud külmutatud ja jahutatud toodete jaoks. Säilitab konstruktiivse terviklikkuse madalatel temperatuuridel. Sobib külmlaonduse logistikaks ja külmutatud toidu tootmiseks.",
+        "applications": "Külmutoidu tootmine, külmlao logistika, jahutatud kaupade transport, toiduainetööstus"
       },
-      "large-packaging": {
-        "title": "Suured pakendid",
-        "description": "Vastupidavad lainepappkarbid suurtele või rasketele kaupadele.",
-        "applications": "Tööstusseadmed, aluste transport"
+      "pizzakarbid": {
+        "title": "Pizzakarbid",
+        "description": "Toiduohutud lainepapp-pitsaboksid restoranidele ja kullerteenustele. Ventileeritud ja rasvakindlad, et hoida toit värske ja kuum. Saadaval standardmõõtudes ja eritellimustena koos valikulise fleksotrüki brändinguga.",
+        "applications": "Pitsarestoranid, toidukullerteenused, kaasa võetava toidu pakend, catering"
       },
-      "printed-packaging": {
-        "title": "Trükiga pakendid",
-        "description": "Flekso trükiga lainepappkarbid logo või brändiga.",
-        "applications": "Jaemüügipakendid, brändipakendid"
+      "erilise-kujuga-pakendid": {
+        "title": "Erilise kujuga pakendid",
+        "description": "Eritellimuspakend, mis on välja töötatud spetsiaalselt teie toote mõõtmete, kuju ja transporditingimuste jaoks. Meie CAD-disainerid loovad stantsitud lahendusi, mis ühendavad kaitse ja esitluse. Õrnatest elektroonikaseadmetest tööstuskomponentideni.",
+        "applications": "Elektroonika ja tehnikatooted, habras või ebakujulised esemed, tööstuskomponendid, premium jaemüügiesitlus"
+      },
+      "suuregabariidilised-pakendid": {
+        "title": "Suuregabariidilised pakendid",
+        "description": "Vastupidav lainepappakend suurte või raskete kaupade jaoks. Loodud ülesuurtele tööstustoodetele, mööblile, kodumasinatele ja kaubaaluste transpordile. Valmistatud kandma olulist kaalu ja mahtu, ohverdamata konstruktiivset terviklikkust.",
+        "applications": "Tööstusseadmed, mööbel ja kodumasinad, aluste transport, ehitusmaterjalid"
       }
     }
   },
@@ -131,6 +163,7 @@
     "subtitle": "Rahvusvaheline lainepappkarpide standard.",
     "searchPlaceholder": "Otsi FEFCO koodi...",
     "typicalUse": "Tüüpiline kasutus",
+    "viewDetails": "Vaata lähemalt →",
     "items": {
       "0201": {
         "title": "Tavaline pilukonteiner (RSC)",

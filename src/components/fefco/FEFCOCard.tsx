@@ -8,7 +8,7 @@ type FEFCOCardProps = {
 
 export async function FEFCOCard({ code }: FEFCOCardProps) {
   const t = await getTranslations(`fefco.items.${code}`);
-  const common = await getTranslations("common");
+  const fefco = await getTranslations("fefco");
 
   return (
     <Link
@@ -27,7 +27,7 @@ export async function FEFCOCard({ code }: FEFCOCardProps) {
       </div>
       <div className="mt-8 flex items-center justify-between">
         <span className="text-[10px] font-bold tracking-[0.2em] text-brand-green uppercase transition-transform group-hover:translate-x-1">
-          {common("learnMore")} →
+          {fefco("viewDetails")}
         </span>
       </div>
     </Link>

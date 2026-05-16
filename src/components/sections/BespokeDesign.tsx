@@ -19,21 +19,21 @@ export async function BespokeDesign() {
               <Factory size={24} className="text-brand-kraft" />
               <div>
                 <p className="text-[10px] font-bold tracking-widest text-brand-green/40 uppercase">
-                  {t("title")}
+                  {t("overline")}
                 </p>
-                <p className="text-sm font-bold text-brand-green">{t("cta")}</p>
+                <p className="text-sm font-bold text-brand-green">{t("link")}</p>
               </div>
             </div>
           </div>
         </div>
         <div className="order-1 space-y-8 lg:order-2">
-          <SectionHeader title={t("title")} className="mb-0" />
+          <SectionHeader overline={t("overline")} title={t("title")} className="mb-0" />
           <p className="max-w-lg text-lg leading-relaxed text-brand-text/60">{t("description")}</p>
           <Link
-            href="/contact"
+            href="/products/erilise-kujuga-pakendid"
             className="group inline-flex items-center gap-3 font-bold text-brand-green"
           >
-            {t("cta")}
+            {t("link")}
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-2" />
           </Link>
         </div>

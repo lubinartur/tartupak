@@ -11,7 +11,7 @@ export async function FEFCOPreview() {
     <section className="bg-white px-8 py-24 lg:px-12">
       <div className="w-full">
         <div className="mb-16 flex flex-col items-end justify-between gap-8 md:flex-row">
-          <SectionHeader className="mb-0" subtitle={t("subtitle")} title={t("title")} />
+          <SectionHeader className="mb-0" overline={t("overline")} title={t("title")} />
           <Link
             href="/fefco"
             className="rounded-sm bg-brand-green px-8 py-4 text-sm font-bold text-brand-bg"

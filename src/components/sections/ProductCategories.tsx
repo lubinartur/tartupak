@@ -1,20 +1,28 @@
 import { getTranslations } from "next-intl/server";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { ProductCard } from "@/components/products/ProductCard";
+import { ProductCategoriesCarousel } from "@/components/sections/ProductCategoriesCarousel";
 import { productSlugs } from "@/data/products";
+import type { ProductCategoryCardData } from "@/components/products/ProductCategoryCard";
 
 export async function ProductCategories() {
   const t = await getTranslations("home.categories");
 
+  const cards: ProductCategoryCardData[] = await Promise.all(
+    productSlugs.map(async (slug) => {
+      const item = await getTranslations(`products.items.${slug}`);
+      return {
+        slug,
+        title: item("title"),
+        description: item("description"),
+      };
+    }),
+  );
+
   return (
     <section className="bg-brand-bg px-8 py-24 lg:px-12">
       <div className="w-full">
-        <SectionHeader subtitle={t("subtitle")} title={t("title")} />
-        <div className="grid grid-cols-1 gap-px border border-brand-green/5 bg-brand-green/5 sm:grid-cols-2 lg:grid-cols-6">
-          {productSlugs.map((slug) => (
-            <ProductCard key={slug} slug={slug} />
-          ))}
-        </div>
+        <SectionHeader overline={t("overline")} title={t("title")} />
+        <ProductCategoriesCarousel cards={cards} />
       </div>
     </section>
   );

@@ -10,11 +10,9 @@ import {
 } from "@/components/visuals/HeroVisuals";
 import { cn, parseHeroHeadline } from "@/lib/utils";
 
-const SLIDES = [
-  { code: "FEFCO 0201", visual: Fefco0201Flat, material: "Cardboard", strength: "Double Wall", impact: "100% Eco" },
-  { code: "FEFCO 0201", visual: Fefco0201Assembled, material: "Cardboard", strength: "Double Wall", impact: "100% Eco" },
-  { code: "FEFCO 0300", visual: Fefco0300Telescope, material: "Cardboard", strength: "Single Wall", impact: "100% Eco" },
-] as const;
+const SLIDE_KEYS = ["slide0", "slide1", "slide2"] as const;
+const VISUALS = [Fefco0201Flat, Fefco0201Assembled, Fefco0300Telescope] as const;
+const SPEC_FIELDS = ["material", "strength", "impact"] as const;
 
 const FADE_MS = 600;
 
@@ -26,7 +24,7 @@ export function HeroCarousel() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
+      setCurrentSlide((prev) => (prev + 1) % SLIDE_KEYS.length);
     }, 4000);
     return () => clearInterval(timer);
   }, []);
@@ -82,9 +80,9 @@ export function HeroCarousel() {
           <div className="relative flex h-full w-full flex-col border border-brand-border bg-white/50 shadow-xl backdrop-blur-sm">
             <div className="flex items-center justify-between border-b border-brand-border bg-white/40 p-6">
               <div className="relative min-h-[1rem] flex-1">
-                {SLIDES.map((s, idx) => (
+                {SLIDE_KEYS.map((key, idx) => (
                   <span
-                    key={`${s.code}-${idx}`}
+                    key={key}
                     className={cn(
                       "absolute inset-0 text-[10px] font-bold tracking-widest uppercase transition-opacity ease-in-out",
                       idx === currentSlide ? "opacity-40" : "opacity-0",
@@ -92,14 +90,14 @@ export function HeroCarousel() {
                     style={{ transitionDuration: `${FADE_MS}ms` }}
                     aria-hidden={idx !== currentSlide}
                   >
-                    Construction Code: {s.code}
+                    {t("carousel.constructionCode")}: {t(`carousel.${key}.code`)}
                   </span>
                 ))}
               </div>
               <div className="flex gap-2">
-                {SLIDES.map((_, idx) => (
+                {SLIDE_KEYS.map((key, idx) => (
                   <button
-                    key={idx}
+                    key={key}
                     type="button"
                     onClick={() => setCurrentSlide(idx)}
                     className={cn(
@@ -113,11 +111,11 @@ export function HeroCarousel() {
             </div>
 
             <div className="relative min-h-[280px] flex-1 overflow-hidden p-8 sm:min-h-[320px]">
-              {SLIDES.map((s, idx) => {
-                const Visual = s.visual;
+              {SLIDE_KEYS.map((key, idx) => {
+                const Visual = VISUALS[idx];
                 return (
                   <div
-                    key={idx}
+                    key={key}
                     className={cn(
                       "absolute inset-8 flex items-center justify-center transition-opacity ease-in-out",
                       idx === currentSlide ? "opacity-100" : "pointer-events-none opacity-0",
@@ -134,15 +132,15 @@ export function HeroCarousel() {
             </div>
 
             <div className="grid grid-cols-3 gap-4 border-t border-brand-border bg-white/40 p-6">
-              {(["material", "strength", "impact"] as const).map((field) => (
+              {SPEC_FIELDS.map((field) => (
                 <div key={field}>
                   <p className="mb-1 text-[9px] font-bold uppercase opacity-40">
-                    {field.charAt(0).toUpperCase() + field.slice(1)}
+                    {t(`carousel.${field}`)}
                   </p>
                   <div className="relative min-h-[1rem]">
-                    {SLIDES.map((s, idx) => (
+                    {SLIDE_KEYS.map((slideKey, idx) => (
                       <p
-                        key={idx}
+                        key={slideKey}
                         className={cn(
                           "absolute inset-0 text-xs font-medium transition-opacity ease-in-out",
                           idx === currentSlide ? "opacity-100" : "opacity-0",
@@ -150,7 +148,7 @@ export function HeroCarousel() {
                         style={{ transitionDuration: `${FADE_MS}ms` }}
                         aria-hidden={idx !== currentSlide}
                       >
-                        {s[field]}
+                        {t(`carousel.${slideKey}.${field}`)}
                       </p>
                     ))}
                   </div>
