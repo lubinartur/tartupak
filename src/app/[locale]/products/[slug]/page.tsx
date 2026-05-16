@@ -99,7 +99,7 @@ export default async function ProductDetailPage({ params }: Props) {
               </h2>
               <ul className="mt-4 space-y-3">
                 {applications.map((application) => (
-                  <li key={application} className="flex items-start gap-3 text-sm text-brand-text/70">
+                  <li key={application} className="flex items-start gap-3 text-sm text-brand-text font-normal">
                     <CheckCircle
                       size={18}
                       className="mt-0.5 shrink-0 text-brand-kraft"
@@ -120,13 +120,13 @@ export default async function ProductDetailPage({ params }: Props) {
           </div>
         </div>
 
-        <section className="mb-16 grid grid-cols-1 gap-12 bg-brand-green p-12 text-brand-bg/80 md:grid-cols-3 lg:mb-32 lg:p-20">
+        <section className="mb-16 grid grid-cols-1 gap-12 bg-brand-green p-12 text-white [&_p]:text-white md:grid-cols-3 lg:mb-32 lg:p-20">
           {featureKeys.map((key) => {
             const Icon = featureIcons[key];
             return (
               <div key={key} className="space-y-4">
-                <Icon size={32} className="text-brand-bg" strokeWidth={1.5} aria-hidden />
-                <h3 className="font-serif text-xl text-brand-bg">{detail(`features.${key}.title`)}</h3>
+                <Icon size={32} className="text-brand-kraft" strokeWidth={1.5} aria-hidden />
+                <h3 className="font-serif text-xl">{detail(`features.${key}.title`)}</h3>
                 <p className="text-sm leading-relaxed">{detail(`features.${key}.description`)}</p>
               </div>
             );

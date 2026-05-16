@@ -1,14 +1,22 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
-import type { FefcoCode } from "@/data/fefco";
+import {
+  getFefcoEntry,
+  getFefcoLocalized,
+} from "@/data/fefco-catalog";
 
 type FEFCOCardProps = {
-  code: FefcoCode;
+  code: string;
 };
 
 export async function FEFCOCard({ code }: FEFCOCardProps) {
-  const t = await getTranslations(`fefco.items.${code}`);
+  const entry = getFefcoEntry(code);
+  if (!entry) return null;
+
+  const locale = await getLocale();
   const fefco = await getTranslations("fefco");
+  const name = getFefcoLocalized(entry.name, locale);
+  const description = getFefcoLocalized(entry.description, locale);
 
   return (
     <Link
@@ -22,8 +30,8 @@ export async function FEFCOCard({ code }: FEFCOCardProps) {
         <div className="h-12 w-px bg-brand-green/10 transition-all group-hover:h-16" />
       </div>
       <div className="flex-grow space-y-3">
-        <h3 className="text-lg leading-tight font-semibold text-brand-green">{t("title")}</h3>
-        <p className="text-sm leading-relaxed text-brand-text/50">{t("description")}</p>
+        <h3 className="text-lg leading-tight font-semibold text-brand-green">{name}</h3>
+        <p className="line-clamp-3 text-sm leading-relaxed text-brand-text font-normal">{description}</p>
       </div>
       <div className="mt-8 flex items-center justify-between">
         <span className="text-[10px] font-bold tracking-[0.2em] text-brand-green uppercase transition-transform group-hover:translate-x-1">

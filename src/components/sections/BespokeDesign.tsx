@@ -28,7 +28,7 @@ export async function BespokeDesign() {
         </div>
         <div className="order-1 space-y-8 lg:order-2">
           <SectionHeader overline={t("overline")} title={t("title")} className="mb-0" />
-          <p className="max-w-lg text-lg leading-relaxed text-brand-text/60">{t("description")}</p>
+          <p className="max-w-lg text-lg leading-relaxed text-brand-text font-normal">{t("description")}</p>
           <Link
             href="/products/erilise-kujuga-pakendid"
             className="group inline-flex items-center gap-3 font-bold text-brand-green"

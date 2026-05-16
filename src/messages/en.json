@@ -182,43 +182,23 @@
     }
   },
   "fefco": {
-    "title": "FEFCO Catalog",
-    "subtitle": "International standard for corrugated packaging designs.",
-    "searchPlaceholder": "Search FEFCO code...",
-    "typicalUse": "Typical use",
+    "overline": "STANDARDS",
+    "title": "FEFCO Design Catalog",
+    "searchPlaceholder": "Search by code or name... (e.g. 0201)",
+    "filterAll": "All",
+    "filterSeries": "Series {series}",
+    "showingCount": "Showing {count} codes",
+    "noResults": "No FEFCO codes match your search criteria.",
     "viewAllCatalog": "View Full Catalog (147 codes)",
     "viewDetails": "View Details →",
-    "items": {
-      "0201": {
-        "title": "Regular slotted container (RSC)",
-        "description": "The most widely used packaging format in the world. Top and bottom flaps meet in the center when closed. Simple, cost-effective, ideal for most shipping needs.",
-        "usage": "General logistics, e-commerce, warehousing, food industry"
-      },
-      "0427": {
-        "title": "Folder-type box",
-        "description": "A self-locking box that requires no tape for assembly. Perfect for premium presentation and fast packing lines.",
-        "usage": "Subscription boxes, product presentation, high-end shipping, retail"
-      },
-      "0203": {
-        "title": "Fully overlapping slotted container (FOL)",
-        "description": "Outer flaps fully overlap, providing extra edge protection and stacking strength. Excellent for heavy goods.",
-        "usage": "Heavy goods, industrial transport, stacking applications"
-      },
-      "0300": {
-        "title": "Full telescope box",
-        "description": "Consists of separate top and bottom parts that fit over each other. Provides excellent protection for the product.",
-        "usage": "Electronics, gifts, premium products"
-      },
-      "0711": {
-        "title": "Ready-glued case",
-        "description": "Quick assembly with pre-glued bottom. Ideal for fast-paced fulfillment lines and high-volume operations.",
-        "usage": "E-commerce fulfillment, fast assembly lines, high volume shipping"
-      },
-      "0421": {
-        "title": "Die-cut folder",
-        "description": "Precision die-cut design for sleek retail-ready presentation. No tape or glue required for assembly.",
-        "usage": "Retail packaging, gifts, cosmetics, electronics"
-      }
+    "detail": {
+      "backToCatalog": "Back to Catalog",
+      "overline": "INTERNATIONAL STANDARD #{code}",
+      "typicalUseCases": "Typical Use Cases",
+      "quoteCta": "Request a quote for this format",
+      "drawingLabel": "FEFCO DRAWING #{code}",
+      "drawingPlaceholder": "Technical schematic placeholder. Our CAD designers can adjust this standard to your exact dimensions.",
+      "faqTitle": "Questions about {code}"
     }
   },
   "about": {

@@ -182,43 +182,23 @@
     }
   },
   "fefco": {
-    "title": "FEFCO kataloog",
-    "subtitle": "Rahvusvaheline lainepappkarpide standard.",
-    "searchPlaceholder": "Otsi FEFCO koodi...",
-    "typicalUse": "Tüüpiline kasutus",
+    "overline": "STANDARDID",
+    "title": "FEFCO disainikataloog",
+    "searchPlaceholder": "Otsi koodi või nime järgi... (nt 0201)",
+    "filterAll": "Kõik",
+    "filterSeries": "Seeria {series}",
+    "showingCount": "Kuvatakse {count} koodi",
+    "noResults": "Ühtegi FEFCO koodi ei leitud.",
     "viewAllCatalog": "Vaata täiskataloog (147 koodi)",
     "viewDetails": "Vaata lähemalt →",
-    "items": {
-      "0201": {
-        "title": "Tavaline pilukonteiner (RSC)",
-        "description": "Maailmas kõige laialdasemalt kasutatav pakendivorm. Ülemised ja alumised klapid kohtuvad sulgemisel keskel. Lihtne, kulutõhus, ideaalne enamiku saatmise vajaduste jaoks.",
-        "usage": "Üldine logistika, e-kaubandus, ladustamine, toiduainetööstus"
-      },
-      "0427": {
-        "title": "Kaustatüüpi kast",
-        "description": "Ise lukustuv karp, mis ei vaja kokkupanekuks teipi. Sobib ideaalselt premium-esitluseks ja kiiretele pakkimisliinidele.",
-        "usage": "Tellimuskarbid, tooteesitlus, premium-saatmine, jaemüük"
-      },
-      "0203": {
-        "title": "Täielikult kattuva pilukonteiner",
-        "description": "Välisklapid kattuvad täielikult, pakkudes täiendavat servakaitset ja virnastustuge. Suurepärane raskete kaupade jaoks.",
-        "usage": "Rasked kaubad, tööstustransport, virnastusrakendused"
-      },
-      "0300": {
-        "title": "Täisteleskoop-kast",
-        "description": "Koosneb eraldi ülemisest ja alumisest osast, mis sobivad üksteise peale. Pakub tootele suurepärast kaitset.",
-        "usage": "Elektroonika, kingitused, premium-tooted"
-      },
-      "0711": {
-        "title": "Eelliimitud kast",
-        "description": "Kiire kokkupanek eelliimitud põhjaga. Ideaalne kiire tempo täitmisliinidele ja suuremahulisele tootmisele.",
-        "usage": "E-kaubanduse täitmine, kiired kokkupanekuliinid, suuremahuline saatmine"
-      },
-      "0421": {
-        "title": "Stantsitud kaust",
-        "description": "Täpne stantsitud disain sujuvaks jaemüügivalmiseks esitluseks. Kokkupanekuks pole vaja teipi ega liimi.",
-        "usage": "Jaemüügipakendid, kingitused, kosmeetika, elektroonika"
-      }
+    "detail": {
+      "backToCatalog": "Tagasi kataloogi",
+      "overline": "RAHVUSVAHELINE STANDARD #{code}",
+      "typicalUseCases": "Tüüpilised kasutusalad",
+      "quoteCta": "Küsi pakkumist selle formaadi jaoks",
+      "drawingLabel": "FEFCO JOONIS #{code}",
+      "drawingPlaceholder": "Tehnilise skeemi kohatäide. Meie CAD-disainerid saavad standardit kohandada teie täpsetele mõõtudele.",
+      "faqTitle": "Küsimused koodi {code} kohta"
     }
   },
   "about": {

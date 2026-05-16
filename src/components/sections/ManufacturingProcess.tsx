@@ -25,7 +25,7 @@ export async function ManufacturingProcess() {
                 <h4 className="text-sm font-bold tracking-[0.15em] text-brand-green uppercase">
                   {t(`steps.${key}.title`)}
                 </h4>
-                <p className="mx-auto max-w-[220px] text-[15px] leading-[1.6] text-brand-text/60">
+                <p className="mx-auto max-w-[220px] text-[15px] leading-[1.6] text-brand-text font-normal">
                   {t(`steps.${key}.description`)}
                 </p>
               </div>

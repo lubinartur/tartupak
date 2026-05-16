@@ -14,8 +14,8 @@ export default async function FefcoPage({ params }: Props) {
   return (
     <div className="px-6 pt-32 pb-24 lg:px-12">
       <div className="mx-auto max-w-7xl">
-        <SectionHeader title={t("title")} subtitle={t("subtitle")} className="mb-16" />
-        <FEFCOSearch />
+        <SectionHeader overline={t("overline")} title={t("title")} className="mb-16" />
+        <FEFCOSearch locale={locale} />
       </div>
     </div>
   );

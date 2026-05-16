@@ -4,31 +4,28 @@ import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Search } from "lucide-react";
 import { FEFCOCardClient } from "@/components/fefco/FEFCOCardClient";
-import { fefcoCodes, type FefcoCode } from "@/data/fefco";
+import { FEFCO_CATALOG, fefcoSearchHaystack } from "@/data/fefco-catalog";
 import { cn } from "@/lib/utils";
 
-const SERIES = ["02", "03", "04", "07"] as const;
+const SERIES = ["02", "03", "04", "05", "06", "07"] as const;
 
-function getSeries(code: string) {
-  return code.slice(0, 2);
-}
+type FEFCOSearchProps = {
+  locale: string;
+};
 
-export function FEFCOSearch() {
+export function FEFCOSearch({ locale }: FEFCOSearchProps) {
   const t = useTranslations("fefco");
   const [search, setSearch] = useState("");
   const [activeSeries, setActiveSeries] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return fefcoCodes.filter((code) => {
-      const title = t(`items.${code}.title`).toLowerCase();
-      const desc = t(`items.${code}.description`).toLowerCase();
-      const matchesSearch =
-        !q || code.includes(q) || title.includes(q) || desc.includes(q);
-      const matchesSeries = activeSeries ? getSeries(code) === activeSeries : true;
+    return FEFCO_CATALOG.filter((entry) => {
+      const matchesSearch = !q || fefcoSearchHaystack(entry).includes(q);
+      const matchesSeries = activeSeries ? entry.series === activeSeries : true;
       return matchesSearch && matchesSeries;
-    }) as FefcoCode[];
-  }, [search, activeSeries, t]);
+    });
+  }, [search, activeSeries]);
 
   return (
     <div>
@@ -54,7 +51,7 @@ export function FEFCOSearch() {
                 : "border-brand-green/10 bg-transparent text-brand-green hover:border-brand-green",
             )}
           >
-            All
+            {t("filterAll")}
           </button>
           {SERIES.map((s) => (
             <button
@@ -68,28 +65,28 @@ export function FEFCOSearch() {
                   : "border-brand-green/10 bg-transparent text-brand-green hover:border-brand-green",
               )}
             >
-              Series {s}
+              {t("filterSeries", { series: s })}
             </button>
           ))}
         </div>
       </div>
 
       <div className="mb-8 flex items-center justify-between border-b border-brand-green/5 pb-4">
-        <span className="text-xs font-bold tracking-widest text-brand-text/40 uppercase">
-          {filtered.length} codes
+        <span className="text-xs font-bold tracking-widest text-brand-text font-normal uppercase">
+          {t("showingCount", { count: filtered.length })}
         </span>
       </div>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {filtered.map((code) => (
-          <FEFCOCardClient key={code} code={code} />
+        {filtered.map((entry) => (
+          <FEFCOCardClient key={entry.code} entry={entry} locale={locale} />
         ))}
       </div>
 
       {filtered.length === 0 ? (
-        <div className="space-y-4 py-32 text-center text-brand-text/40">
+        <div className="space-y-4 py-32 text-center text-brand-text font-normal">
           <Search size={48} className="mx-auto opacity-10" />
-          <p className="text-lg">{t("searchPlaceholder")}</p>
+          <p className="text-lg">{t("noResults")}</p>
         </div>
       ) : null}
     </div>

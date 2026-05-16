@@ -12,7 +12,7 @@ export default async function TermsPage({ params }: Props) {
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
       <h1 className="text-4xl text-brand-green">{t("title")}</h1>
-      <p className="mt-8 text-lg text-brand-text/70 leading-relaxed">{t("body")}</p>
+      <p className="mt-8 text-lg text-brand-text font-normal leading-relaxed">{t("body")}</p>
     </div>
   );
 }

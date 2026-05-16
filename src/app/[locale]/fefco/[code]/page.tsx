@@ -1,44 +1,146 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { ArrowLeft, HelpCircle, Layers, Package, Ruler } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import { isFefcoCode, fefcoCodes } from "@/data/fefco";
+import { Button } from "@/components/ui/Button";
+import {
+  fefcoCatalogCodes,
+  getFefcoEntry,
+  getFefcoLocalized,
+  getFefcoUseCases,
+  isFefcoCatalogCode,
+} from "@/data/fefco-catalog";
+import { getFefcoFaq } from "@/lib/fefco-faq";
+import { routing } from "@/i18n/routing";
 
 type Props = {
   params: Promise<{ locale: string; code: string }>;
 };
 
 export function generateStaticParams() {
-  return fefcoCodes.map((code) => ({ code }));
+  return routing.locales.flatMap((locale) =>
+    fefcoCatalogCodes.map((code) => ({ locale, code })),
+  );
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, code } = await params;
+  const entry = getFefcoEntry(code);
+  if (!entry) return {};
+
+  const name = getFefcoLocalized(entry.name, locale);
+  return {
+    title: `FEFCO ${code} — ${name} | Tartupak`,
+    description: getFefcoLocalized(entry.description, locale),
+  };
 }
 
 export default async function FefcoDetailPage({ params }: Props) {
   const { locale, code } = await params;
   setRequestLocale(locale);
 
-  if (!isFefcoCode(code)) {
+  if (!isFefcoCatalogCode(code)) {
     notFound();
   }
 
-  const t = await getTranslations(`fefco.items.${code}`);
-  const fefco = await getTranslations("fefco");
-  const common = await getTranslations("common");
+  const entry = getFefcoEntry(code)!;
+  const name = getFefcoLocalized(entry.name, locale);
+  const description = getFefcoLocalized(entry.description, locale);
+  const useCases = getFefcoUseCases(entry, locale);
+  const t = await getTranslations("fefco.detail");
+  const faqItems = getFefcoFaq(code, name, locale);
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-      <Link href="/fefco" className="text-sm text-brand-kraft hover:text-brand-green">
-        ← {common("backToFefco")}
-      </Link>
-      <div className="mt-8 grid gap-12 md:grid-cols-2">
-        <div className="flex aspect-square items-center justify-center rounded-sm border border-brand-border bg-brand-kraft/10">
-          <span className="font-display text-6xl font-bold text-brand-green/20">{code}</span>
-        </div>
-        <div>
-          <h1 className="text-4xl text-brand-green">{t("title")}</h1>
-          <p className="mt-6 text-lg text-brand-text/70 leading-relaxed">{t("description")}</p>
-          <p className="mt-6 text-sm">
-            <span className="font-medium text-brand-green">{fefco("typicalUse")}: </span>
-            <span className="text-brand-text/70">{t("usage")}</span>
-          </p>
+    <div className="px-6 pt-32 pb-24 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <Link
+          href="/fefco"
+          className="group mb-12 inline-flex items-center gap-2 text-xs font-bold tracking-widest text-brand-green/60 uppercase hover:text-brand-green"
+        >
+          <ArrowLeft
+            size={16}
+            className="transition-transform group-hover:-translate-x-1"
+          />
+          {t("backToCatalog")}
+        </Link>
+
+        <div className="mb-32 grid grid-cols-1 gap-16 lg:grid-cols-12">
+          <div className="flex flex-col gap-8 lg:col-span-7">
+            <div className="space-y-4">
+              <span className="text-xs font-bold tracking-widest text-brand-kraft uppercase">
+                {t("overline", { code })}
+              </span>
+              <h1
+                className={`font-serif font-bold text-brand-green text-5xl leading-tight lg:text-6xl ${locale === "ru" ? "font-black" : ""}`}
+              >
+                {name}
+              </h1>
+            </div>
+
+            <p className="text-xl leading-relaxed font-normal text-brand-text">
+              {description}
+            </p>
+
+            <div className="space-y-6">
+              <h2 className="text-[10px] font-bold tracking-[0.2em] text-brand-green/60 uppercase">
+                {t("typicalUseCases")}
+              </h2>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {useCases.map((useCase) => (
+                  <div
+                    className="flex items-center gap-3 border border-brand-green/5 bg-brand-bg/50 p-4 text-sm font-medium text-brand-green"
+                    key={useCase}
+                  >
+                    <Package size={16} className="shrink-0 text-brand-kraft" />
+                    <span>{useCase}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-2">
+              <Button href={`/contact?fefco=${code}`} variant="primary" className="gap-3">
+                {t("quoteCta")}
+                <Ruler size={18} />
+              </Button>
+            </div>
+
+            <div className="space-y-4">
+              <h2 className="flex items-center gap-2 font-serif text-lg text-brand-green">
+                <HelpCircle size={20} className="text-brand-kraft" />
+                {t("faqTitle", { code })}
+              </h2>
+              <div className="space-y-px border border-brand-green/10 bg-brand-green/10 shadow-sm">
+                {faqItems.map((faq) => (
+                  <div className="space-y-2 bg-white p-6" key={faq.question}>
+                    <p className="text-sm font-bold text-brand-green">{faq.question}</p>
+                    <p className="text-sm font-normal text-brand-text">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 lg:col-start-8">
+            <div className="relative flex aspect-square flex-col items-center justify-center border border-brand-green/10 bg-white p-12">
+              <div className="absolute top-6 left-6 border border-brand-green/5 p-2">
+                <span className="text-[10px] font-bold text-brand-green/20">
+                  {t("drawingLabel", { code })}
+                </span>
+              </div>
+              <Layers
+                size={140}
+                strokeWidth={0.5}
+                className="mb-8 text-brand-green/10"
+                aria-hidden
+              />
+              <div className="mb-8 h-px w-full bg-brand-green/5" />
+              <p className="max-w-[200px] text-center text-[10px] font-bold tracking-widest text-brand-text uppercase">
+                {t("drawingPlaceholder")}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

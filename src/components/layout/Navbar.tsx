@@ -59,7 +59,7 @@ export function Navbar() {
                 "text-sm font-medium tracking-wide transition-colors hover:text-brand-green/70",
                 pathname === link.href || pathname.startsWith(`${link.href}/`)
                   ? "text-brand-green"
-                  : "text-brand-text/80",
+                  : "text-brand-text font-normal",
               )}
             >
               {t(link.key)}
@@ -168,7 +168,7 @@ function LocaleSwitcher({
             onClick={() => onChange(l.code)}
             className={cn(
               "text-[10px] font-bold uppercase tracking-widest transition-opacity",
-              locale === l.code ? "text-brand-green" : "text-brand-text/40 hover:text-brand-green",
+              locale === l.code ? "text-brand-green" : "text-brand-text font-normal hover:text-brand-green",
             )}
           >
             {l.label}

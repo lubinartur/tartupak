@@ -13,13 +13,13 @@ export default async function ContactPage({ params }: Props) {
   return (
     <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
       <h1 className="text-4xl text-brand-green">{t("title")}</h1>
-      <p className="mt-4 text-lg text-brand-text/70">{t("subtitle")}</p>
+      <p className="mt-4 text-lg text-brand-text font-normal">{t("subtitle")}</p>
 
       <div className="mt-12 grid gap-12 lg:grid-cols-2">
         <div className="space-y-6">
           <div className="flex gap-4">
             <MapPin className="h-5 w-5 shrink-0 text-brand-kraft" />
-            <p className="text-brand-text/80">{t("address")}</p>
+            <p className="text-brand-text font-normal">{t("address")}</p>
           </div>
           <div className="flex gap-4">
             <Mail className="h-5 w-5 shrink-0 text-brand-kraft" />

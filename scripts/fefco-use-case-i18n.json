@@ -1,0 +1,598 @@
+{
+  "POS": {
+    "et": "müügikoht",
+    "ru": "точка продаж"
+  },
+  "POS display": {
+    "et": "müügikoha ekspositsioon",
+    "ru": "POS-дисплей"
+  },
+  "accessories": {
+    "et": "tarvikud",
+    "ru": "аксессуары"
+  },
+  "appliances": {
+    "et": "kodutehnika",
+    "ru": "бытовая техника"
+  },
+  "archive": {
+    "et": "arhiiv",
+    "ru": "архивное хранение"
+  },
+  "artwork": {
+    "et": "kunstiteosed",
+    "ru": "произведения искусства"
+  },
+  "bakery": {
+    "et": "pagariäri",
+    "ru": "пекарня"
+  },
+  "base liner": {
+    "et": "aluse vooder",
+    "ru": "подложка дна"
+  },
+  "books": {
+    "et": "raamatud",
+    "ru": "книги"
+  },
+  "bottle dividers": {
+    "et": "pudelijaoturid",
+    "ru": "разделители для бутылок"
+  },
+  "bottles": {
+    "et": "pudelid",
+    "ru": "бутылки"
+  },
+  "branding": {
+    "et": "bränding",
+    "ru": "брендинг"
+  },
+  "bulk goods": {
+    "et": "laokaubad",
+    "ru": "навалочные товары"
+  },
+  "bulk industrial": {
+    "et": "tööstuslik laokaup",
+    "ru": "промышленные навалочные грузы"
+  },
+  "cables": {
+    "et": "kaablid",
+    "ru": "кабели"
+  },
+  "ceramics": {
+    "et": "keraamika",
+    "ru": "керамика"
+  },
+  "cold chain": {
+    "et": "külm-ahel",
+    "ru": "холодовая цепь"
+  },
+  "consumer goods": {
+    "et": "tarbekaubad",
+    "ru": "товары народного потребления"
+  },
+  "consumer products": {
+    "et": "tarbetooted",
+    "ru": "потребительские товары"
+  },
+  "cosmetics": {
+    "et": "kosmeetika",
+    "ru": "косметика"
+  },
+  "display": {
+    "et": "ekspositsioon",
+    "ru": "витринная выкладка"
+  },
+  "display packaging": {
+    "et": "ekspositsioonipakend",
+    "ru": "витринная упаковка"
+  },
+  "documents": {
+    "et": "dokumendid",
+    "ru": "документы"
+  },
+  "dust-sensitive products": {
+    "et": "tolmutundlikud tooted",
+    "ru": "пылечувствительные товары"
+  },
+  "e-commerce": {
+    "et": "e-kaubandus",
+    "ru": "электронная коммерция"
+  },
+  "e-commerce fulfillment": {
+    "et": "e-kaubanduse täitmine",
+    "ru": "комплектация e-commerce"
+  },
+  "easy-open": {
+    "et": "kergesti avatav",
+    "ru": "лёгкое открывание"
+  },
+  "easy-open packaging": {
+    "et": "kergesti avatav pakend",
+    "ru": "упаковка с лёгким открыванием"
+  },
+  "eggs": {
+    "et": "munad",
+    "ru": "яйца"
+  },
+  "electronics": {
+    "et": "elektroonika",
+    "ru": "электроника"
+  },
+  "export": {
+    "et": "eksport",
+    "ru": "экспорт"
+  },
+  "export packaging": {
+    "et": "ekspordipakend",
+    "ru": "экспортная упаковка"
+  },
+  "fast assembly": {
+    "et": "kiire kokkupanek",
+    "ru": "быстрая сборка"
+  },
+  "fast assembly lines": {
+    "et": "kiired kokkupanekuliinid",
+    "ru": "быстрые линии сборки"
+  },
+  "fast packing": {
+    "et": "kiire pakkimine",
+    "ru": "быстрая упаковка"
+  },
+  "flat goods": {
+    "et": "lamed kaubad",
+    "ru": "плоские товары"
+  },
+  "flat products": {
+    "et": "lamed tooted",
+    "ru": "плоские изделия"
+  },
+  "food": {
+    "et": "toiduained",
+    "ru": "продукты питания"
+  },
+  "food delivery": {
+    "et": "toidu kohaletoimetamine",
+    "ru": "доставка еды"
+  },
+  "food display": {
+    "et": "toidu ekspositsioon",
+    "ru": "витринная выкладка продуктов"
+  },
+  "food industry": {
+    "et": "toidutööstus",
+    "ru": "пищевая промышленность"
+  },
+  "food packaging": {
+    "et": "toidupakend",
+    "ru": "пищевая упаковка"
+  },
+  "fragile electronics": {
+    "et": "habras elektroonika",
+    "ru": "хрупкая электроника"
+  },
+  "fragile goods": {
+    "et": "habras kaup",
+    "ru": "хрупкие товары"
+  },
+  "fragile goods protection": {
+    "et": "habraste kaupade kaitse",
+    "ru": "защита хрупких товаров"
+  },
+  "fragile items": {
+    "et": "habras tooted",
+    "ru": "хрупкие изделия"
+  },
+  "fresh produce": {
+    "et": "värsked tooted",
+    "ru": "свежая продукция"
+  },
+  "frozen food": {
+    "et": "külmutatud toit",
+    "ru": "замороженные продукты"
+  },
+  "fruit": {
+    "et": "puuviljad",
+    "ru": "фрукты"
+  },
+  "furniture": {
+    "et": "mööbel",
+    "ru": "мебель"
+  },
+  "furniture transport": {
+    "et": "mööbli transport",
+    "ru": "перевозка мебели"
+  },
+  "general logistics": {
+    "et": "üldine logistika",
+    "ru": "общая логистика"
+  },
+  "general shipping": {
+    "et": "üldine saatmine",
+    "ru": "общие перевозки"
+  },
+  "gifts": {
+    "et": "kingitused",
+    "ru": "подарки"
+  },
+  "glass": {
+    "et": "klaas",
+    "ru": "стекло"
+  },
+  "glass separators": {
+    "et": "klaasijaoturid",
+    "ru": "стеклоразделители"
+  },
+  "hanging packaging": {
+    "et": "rippuv pakend",
+    "ru": "подвесная упаковка"
+  },
+  "hardware": {
+    "et": "riistvara",
+    "ru": "метизы и фурнитура"
+  },
+  "heavy fragile goods": {
+    "et": "rasked habras kaubad",
+    "ru": "тяжёлые хрупкие грузы"
+  },
+  "heavy freight": {
+    "et": "raske kaubavedu",
+    "ru": "тяжёлые грузы"
+  },
+  "heavy goods": {
+    "et": "rasked kaubad",
+    "ru": "тяжёлые товары"
+  },
+  "heavy goods separation": {
+    "et": "raske kauba eraldamine",
+    "ru": "разделение тяжёлых грузов"
+  },
+  "heavy industrial goods": {
+    "et": "rasked tööstuskaubad",
+    "ru": "тяжёлые промышленные товары"
+  },
+  "heavy products": {
+    "et": "rasked tooted",
+    "ru": "тяжёлые изделия"
+  },
+  "heavy retail": {
+    "et": "raske jaekaubandus",
+    "ru": "тяжёлая розница"
+  },
+  "heavy rolls": {
+    "et": "rasked rullid",
+    "ru": "тяжёлые рулоны"
+  },
+  "heavy stacking": {
+    "et": "raske virnastamine",
+    "ru": "тяжёлое штабелирование"
+  },
+  "high volume": {
+    "et": "suur maht",
+    "ru": "большие объёмы"
+  },
+  "high volume shipping": {
+    "et": "suuremahuline saatmine",
+    "ru": "массовые отгрузки"
+  },
+  "high-end shipping": {
+    "et": "premium-saatmine",
+    "ru": "премиальная доставка"
+  },
+  "high-value goods": {
+    "et": "kõrge väärtusega kaubad",
+    "ru": "ценные товары"
+  },
+  "individual product cells": {
+    "et": "üksikute toodete lahtrid",
+    "ru": "индивидуальные ячейки для товаров"
+  },
+  "industrial": {
+    "et": "tööstuslik",
+    "ru": "промышленное применение"
+  },
+  "industrial components": {
+    "et": "tööstuskomponendid",
+    "ru": "промышленные компоненты"
+  },
+  "industrial equipment corner protection": {
+    "et": "tööstusseadmete nurkade kaitse",
+    "ru": "защита углов промышленного оборудования"
+  },
+  "industrial goods": {
+    "et": "tööstuskaubad",
+    "ru": "промышленные товары"
+  },
+  "industrial materials": {
+    "et": "tööstuslikud materjalid",
+    "ru": "промышленные материалы"
+  },
+  "industrial transport": {
+    "et": "tööstustransport",
+    "ru": "промышленные перевозки"
+  },
+  "jewelry": {
+    "et": "ehted",
+    "ru": "ювелирные изделия"
+  },
+  "large format goods": {
+    "et": "suurformaadilised kaubad",
+    "ru": "крупногабаритные товары"
+  },
+  "layer separation": {
+    "et": "kihtide eraldamine",
+    "ru": "разделение слоёв"
+  },
+  "luxury gifts": {
+    "et": "luksuskingitused",
+    "ru": "люксовые подарки"
+  },
+  "luxury packaging": {
+    "et": "luksuspakend",
+    "ru": "люксовая упаковка"
+  },
+  "matches": {
+    "et": "tikud",
+    "ru": "спички"
+  },
+  "media": {
+    "et": "meedia",
+    "ru": "медиапродукция"
+  },
+  "medical": {
+    "et": "meditsiin",
+    "ru": "медицина"
+  },
+  "multi-product": {
+    "et": "mitme tootega",
+    "ru": "несколько товаров"
+  },
+  "multi-product kits": {
+    "et": "mitme tootega komplektid",
+    "ru": "наборы из нескольких товаров"
+  },
+  "multi-product packaging": {
+    "et": "mitme toote pakend",
+    "ru": "упаковка нескольких товаров"
+  },
+  "multi-unit": {
+    "et": "mitme ühikuga",
+    "ru": "несколько единиц"
+  },
+  "multi-unit cells": {
+    "et": "mitme ühiku lahtrid",
+    "ru": "ячейки для нескольких единиц"
+  },
+  "multi-unit gifts": {
+    "et": "mitme ühikuga kingitused",
+    "ru": "подарочные наборы"
+  },
+  "multi-unit packaging": {
+    "et": "mitme ühiku pakend",
+    "ru": "упаковка нескольких единиц"
+  },
+  "no-glue assembly": {
+    "et": "liimivaba kokkupanek",
+    "ru": "сборка без клея"
+  },
+  "no-tape": {
+    "et": "teipimata",
+    "ru": "без скотча"
+  },
+  "no-tape assembly": {
+    "et": "teipimata kokkupanek",
+    "ru": "сборка без скотча"
+  },
+  "pallet and edge protection": {
+    "et": "paleti ja servade kaitse",
+    "ru": "защита паллет и кромок"
+  },
+  "pallet edge protection": {
+    "et": "paleti servade kaitse",
+    "ru": "защита кромок паллет"
+  },
+  "pallet shipping": {
+    "et": "paleti saatmine",
+    "ru": "паллетные перевозки"
+  },
+  "pallet slip sheet": {
+    "et": "paleti libisemisleht",
+    "ru": "прокладочный лист для паллет"
+  },
+  "pallet top protection": {
+    "et": "paleti ülapealse kaitse",
+    "ru": "верхняя защита паллет"
+  },
+  "pizza": {
+    "et": "pitsa",
+    "ru": "пицца"
+  },
+  "postal": {
+    "et": "postiteenused",
+    "ru": "почтовые отправления"
+  },
+  "posters": {
+    "et": "plakatid",
+    "ru": "плакаты"
+  },
+  "precision equipment": {
+    "et": "täppisseadmed",
+    "ru": "точное оборудование"
+  },
+  "precision parts": {
+    "et": "täppisosad",
+    "ru": "точные детали"
+  },
+  "premium gifts": {
+    "et": "premium-kingitused",
+    "ru": "премиальные подарки"
+  },
+  "premium packaging": {
+    "et": "premium-pakend",
+    "ru": "премиальная упаковка"
+  },
+  "premium products": {
+    "et": "premium-tooted",
+    "ru": "премиальные товары"
+  },
+  "premium retail": {
+    "et": "premium-jaemüük",
+    "ru": "премиальная розница"
+  },
+  "presentation": {
+    "et": "esitlus",
+    "ru": "презентация"
+  },
+  "presentation boxes": {
+    "et": "esitluskarbid",
+    "ru": "презентационные коробки"
+  },
+  "prints": {
+    "et": "trükised",
+    "ru": "печатная продукция"
+  },
+  "product branding": {
+    "et": "toote bränding",
+    "ru": "брендинг продукта"
+  },
+  "product presentation": {
+    "et": "toote esitlus",
+    "ru": "презентация продукта"
+  },
+  "product wrapping": {
+    "et": "toote mähkimine",
+    "ru": "обёртка продукта"
+  },
+  "products requiring extra top protection": {
+    "et": "tooted, mis vajavad täiendavat ülakaitset",
+    "ru": "товары, требующие дополнительной верхней защиты"
+  },
+  "protective sheet": {
+    "et": "kaitseleht",
+    "ru": "защитный лист"
+  },
+  "resealable packaging": {
+    "et": "uuelti sulatav pakend",
+    "ru": "упаковка с повторным закрытием"
+  },
+  "retail": {
+    "et": "jaemüük",
+    "ru": "розница"
+  },
+  "retail display": {
+    "et": "jaekaupluse ekspositsioon",
+    "ru": "розничная витрина"
+  },
+  "retail hang packaging": {
+    "et": "jaemüügi rippuv pakend",
+    "ru": "подвесная розничная упаковка"
+  },
+  "retail packaging": {
+    "et": "jaemüügipakend",
+    "ru": "розничная упаковка"
+  },
+  "retail sleeves": {
+    "et": "jaemüügi ümbrised",
+    "ru": "розничные вложения"
+  },
+  "sealed shipping": {
+    "et": "hermeetiline saatmine",
+    "ru": "герметичная отправка"
+  },
+  "secure document transport": {
+    "et": "turvaline dokumentide transport",
+    "ru": "безопасная перевозка документов"
+  },
+  "secure packaging": {
+    "et": "turvaline pakend",
+    "ru": "защищённая упаковка"
+  },
+  "secure shipping": {
+    "et": "turvaline saatmine",
+    "ru": "безопасная отправка"
+  },
+  "shallow packaging": {
+    "et": "madal pakend",
+    "ru": "неглубокая упаковка"
+  },
+  "snacks": {
+    "et": "suupisted",
+    "ru": "снеки"
+  },
+  "software": {
+    "et": "tarkvara",
+    "ru": "программное обеспечение"
+  },
+  "specialty retail": {
+    "et": "spetsialiseeritud jaemüük",
+    "ru": "специализированная розница"
+  },
+  "stacking": {
+    "et": "virnastamine",
+    "ru": "штабелирование"
+  },
+  "stacking applications": {
+    "et": "virnastusrakendused",
+    "ru": "применение для штабелирования"
+  },
+  "storage": {
+    "et": "ladustamine",
+    "ru": "хранение"
+  },
+  "sturdy tray": {
+    "et": "tugev alus",
+    "ru": "прочный лоток"
+  },
+  "subscription boxes": {
+    "et": "tellimuskarbid",
+    "ru": "подписочные коробки"
+  },
+  "surface protection": {
+    "et": "pinna kaitse",
+    "ru": "защита поверхности"
+  },
+  "takeaway": {
+    "et": "kaasaost",
+    "ru": "еда навынос"
+  },
+  "tall products": {
+    "et": "kõrged tooted",
+    "ru": "высокие изделия"
+  },
+  "technical drawings": {
+    "et": "tehnilised joonised",
+    "ru": "технические чертежи"
+  },
+  "technical rolls": {
+    "et": "tehnilised rullid",
+    "ru": "технические рулоны"
+  },
+  "textile rolls": {
+    "et": "tekstiilirullid",
+    "ru": "текстильные рулоны"
+  },
+  "tools": {
+    "et": "tööriistad",
+    "ru": "инструменты"
+  },
+  "trays": {
+    "et": "alused",
+    "ru": "лотки"
+  },
+  "vegetables": {
+    "et": "köögiviljad",
+    "ru": "овощи"
+  },
+  "warehousing": {
+    "et": "ladustamine",
+    "ru": "складирование"
+  },
+  "watches": {
+    "et": "kellad",
+    "ru": "часы"
+  },
+  "wine": {
+    "et": "vein",
+    "ru": "вино"
+  }
+}

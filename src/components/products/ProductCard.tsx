@@ -36,7 +36,7 @@ export async function ProductCard({ slug, className }: ProductCardProps) {
             className="shrink-0 text-brand-green opacity-20 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
           />
         </div>
-        <p className="line-clamp-3 text-[11px] leading-relaxed text-brand-text/50">{t("description")}</p>
+        <p className="line-clamp-3 text-[11px] leading-relaxed text-brand-text font-normal">{t("description")}</p>
       </div>
     </Link>
   );
