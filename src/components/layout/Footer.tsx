@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { Mail, Phone, MapPin, Linkedin, Instagram, Award } from "lucide-react";
@@ -14,31 +15,36 @@ export async function Footer() {
     { href: "/contact", label: nav("contact") },
   ] as const;
 
+  const sectionLabel =
+    "mb-6 font-display text-[10px] font-bold tracking-[0.3em] text-brand-kraft uppercase";
+
   return (
-    <footer className="bg-brand-green px-8 pt-16 pb-8 text-brand-bg lg:px-12">
+    <footer className="bg-brand-green px-8 pt-16 pb-8 text-white lg:px-12">
       <div className="w-full">
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-6">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center border border-white/20">
-                <div className="h-4 w-4 border border-white" />
-              </div>
-              <span className="font-serif text-xl font-bold tracking-widest text-white uppercase">
-                Tartupak
-              </span>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/logo-tartupak.svg"
+                alt="Tartupak"
+                width={212}
+                height={36}
+                style={{ height: "36px", width: "auto" }}
+                className="brightness-0 invert"
+              />
             </Link>
-            <p className="max-w-xs text-xs leading-relaxed text-brand-bg/60">{t("tagline")}</p>
+            <p className="max-w-xs text-xs leading-relaxed text-white/70">{t("tagline")}</p>
             <div className="flex gap-3">
               <a
                 href="#"
-                className="flex h-8 w-8 items-center justify-center border border-white/10 text-white transition-all hover:bg-white hover:text-brand-green"
+                className="flex h-8 w-8 items-center justify-center border border-white/30 text-white transition-colors hover:border-brand-kraft"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={16} />
               </a>
               <a
                 href="#"
-                className="flex h-8 w-8 items-center justify-center border border-white/10 text-white transition-all hover:bg-white hover:text-brand-green"
+                className="flex h-8 w-8 items-center justify-center border border-white/30 text-white transition-colors hover:border-brand-kraft"
                 aria-label="Instagram"
               >
                 <Instagram size={16} />
@@ -47,38 +53,34 @@ export async function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-6 font-display text-[10px] font-bold tracking-[0.3em] text-white/40 uppercase">
-              {t("contact")}
-            </h4>
+            <h4 className={sectionLabel}>{t("contact")}</h4>
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-4">
-                <MapPin size={18} className="mt-0.5 text-brand-kraft" />
-                <span className="text-xs leading-relaxed text-brand-bg/80">{contact("address")}</span>
+                <MapPin size={18} className="mt-0.5 shrink-0 text-brand-kraft" />
+                <span className="text-xs leading-relaxed text-white/90">{contact("address")}</span>
               </li>
               <li className="flex items-center gap-4">
-                <Mail size={18} className="text-brand-kraft" />
+                <Mail size={18} className="shrink-0 text-brand-kraft" />
                 <a
                   href={`mailto:${contact("email")}`}
-                  className="text-xs text-brand-bg/80 underline decoration-1 underline-offset-8 decoration-white/10 transition-colors hover:text-white"
+                  className="text-xs text-white/90 underline decoration-1 underline-offset-8 decoration-white/30 transition-colors hover:text-brand-kraft"
                 >
                   {contact("email")}
                 </a>
               </li>
               <li className="flex items-center gap-4">
-                <Phone size={18} className="text-brand-kraft" />
-                <span className="text-xs text-brand-bg/80">{contact("phone")}</span>
+                <Phone size={18} className="shrink-0 text-brand-kraft" />
+                <span className="text-xs text-white/90">{contact("phone")}</span>
               </li>
             </ul>
           </div>
 
           <div className="lg:pl-10">
-            <h4 className="mb-6 font-display text-[10px] font-bold tracking-[0.3em] text-white/40 uppercase">
-              {t("navigation")}
-            </h4>
+            <h4 className={sectionLabel}>{t("navigation")}</h4>
             <ul className="flex flex-col gap-3">
               {navLinks.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-xs text-brand-bg/60 transition-colors hover:text-white">
+                  <Link href={item.href} className="text-xs text-white transition-colors hover:text-brand-kraft">
                     {item.label}
                   </Link>
                 </li>
@@ -87,40 +89,38 @@ export async function Footer() {
           </div>
 
           <div className="space-y-6">
-            <h4 className="mb-6 font-display text-[10px] font-bold tracking-[0.3em] text-white/40 uppercase">
-              {t("credentials")}
-            </h4>
+            <h4 className={sectionLabel}>{t("credentials")}</h4>
             <div className="flex items-center gap-4">
-              <div className="flex h-8 w-8 items-center justify-center border border-white/20 text-[9px] font-bold tracking-widest">
+              <div className="flex h-8 w-8 items-center justify-center border border-white/30 text-[9px] font-bold tracking-widest text-white">
                 AA
               </div>
-              <p className="text-[9px] leading-tight tracking-widest text-brand-bg/40 uppercase">
+              <p className="text-[9px] leading-tight tracking-widest text-white/70 uppercase">
                 {t("aaCredit")}
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <Award size={20} className="text-white/20" />
-              <p className="text-[9px] leading-tight tracking-widest text-brand-bg/40 uppercase">
+              <Award size={20} className="shrink-0 text-brand-kraft" />
+              <p className="text-[9px] leading-tight tracking-widest text-white/70 uppercase">
                 {t("edukasEttevote")}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-6 border-t border-white/5 pt-6 md:flex-row">
-          <p className="text-[9px] font-bold tracking-[0.2em] text-brand-bg/20 uppercase">
+        <div className="flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-6 md:flex-row">
+          <p className="text-[9px] font-bold tracking-[0.2em] text-white/70 uppercase">
             © {new Date().getFullYear()} Tartupak. {t("rights")}
           </p>
           <div className="flex gap-8">
             <Link
               href="/privacy"
-              className="text-[9px] font-bold tracking-[0.2em] text-brand-bg/20 uppercase hover:text-brand-bg/40"
+              className="text-[9px] font-bold tracking-[0.2em] text-white/70 uppercase transition-colors hover:text-brand-kraft"
             >
               {t("privacy")}
             </Link>
             <Link
               href="/terms"
-              className="text-[9px] font-bold tracking-[0.2em] text-brand-bg/20 uppercase hover:text-brand-bg/40"
+              className="text-[9px] font-bold tracking-[0.2em] text-white/70 uppercase transition-colors hover:text-brand-kraft"
             >
               {t("terms")}
             </Link>

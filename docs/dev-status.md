@@ -48,10 +48,22 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 | Packaging Categories | ✅ Done | 7 categories, horizontal carousel, arrows, auto-scroll |
 | Bespoke Design | ✅ Done | Die-cut visual, doc copy, link to erilise-kujuga-pakendid |
 | Manufacturing Process | ✅ Done | 4 steps, overline + copy from docs |
-| FEFCO Preview | ✅ Done | 6 codes (0201, 0427, 0203, 0300, 0711, 0421), headline + catalog link on one row |
+| FEFCO Preview | ✅ Done | 6 codes (0201, 0427, 0203, 0300, 0711, 0421); headline + catalog link on one row (text link with arrow) |
 | Why Choose Us | ✅ Done | AA, 20+, 100%, 1tk/1pc, EE, EST |
 | CTA Banner | ✅ Done | Kraft italic word, correct copy |
 | Footer | ✅ Done | 4 columns, LinkedIn + Instagram, credentials |
+
+---
+
+## Recent Changes
+
+- Facility photo gallery on `/about` with lightbox (4 photos, keyboard navigation)
+- Product photos connected on `/products/[slug]` detail pages
+- `TrustStatsGrid` redesigned with bordered cards, centered text
+- RU hero headline shortened to fit 3 lines
+- Font weight fixes applied globally (Inter 300 removed, body `font-normal`)
+- Green features block on product detail: white text + kraft icons fixed
+- FEFCO detail page: FAQ moved to left column, 2-column layout restored
 
 ---
 
@@ -62,15 +74,15 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 - No Vercel deployment yet
 - FEFCO illustrations are placeholders (no real SVG drawings)
 - Privacy and Terms pages have placeholder text
+- Social media links (LinkedIn/Instagram) are placeholder `href="#"` — real URLs pending from client
 
 ---
 
 ## Next Steps
 
 1. Configure Resend for contact form submission
-2. Write Privacy Policy and Terms content
-3. Connect Sanity CMS
-4. Deploy to Vercel
-5. SEO: meta tags, og images, sitemap
-6. FEFCO SVG illustrations (future)
-7. Real product photos (future)
+2. Deploy to Vercel
+3. SEO: meta tags, og images, sitemap
+4. Privacy Policy and Terms content
+5. FEFCO SVG illustrations (future)
+6. Real social media URLs when client provides them

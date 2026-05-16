@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { ArrowUpRight } from "lucide-react";
-import { CategoryIcon } from "@/components/visuals/CategoryIcon";
 import type { ProductSlug } from "@/data/products";
 
 export type ProductCategoryCardData = {
@@ -15,10 +15,16 @@ export function ProductCategoryCard({ slug, title, description }: ProductCategor
   return (
     <Link
       href={`/products/${slug}`}
-      className="group flex h-[320px] w-[280px] min-w-[280px] max-w-[280px] shrink-0 flex-col overflow-hidden rounded-sm border border-brand-border bg-white transition-all hover:border-brand-green/20 hover:bg-brand-bg"
+      className="group flex h-[320px] w-[280px] min-w-[280px] max-w-[280px] shrink-0 flex-col overflow-hidden rounded-lg border border-brand-border bg-white transition-all hover:border-brand-green/20 hover:bg-brand-bg"
     >
-      <div className="relative flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-white text-brand-green transition-colors group-hover:text-brand-kraft">
-        <CategoryIcon slug={slug} />
+      <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-lg bg-white">
+        <Image
+          src={`/images/product-${slug}.png`}
+          alt={title}
+          fill
+          className="object-cover"
+          sizes="280px"
+        />
         <div className="absolute inset-0 bg-brand-green/0 transition-colors duration-500 group-hover:bg-brand-green/2" />
       </div>
 

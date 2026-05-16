@@ -1,26 +1,34 @@
 import { getTranslations } from "next-intl/server";
-import { Award, Box, Package, Truck } from "lucide-react";
+import { Gift, Package, Palette, Ruler, Truck } from "lucide-react";
 
-const icons = [Package, Box, Award, Truck] as const;
-const keys = ["piece", "dimensions", "creditRating", "delivery"] as const;
+const items = [
+  { key: "piece", Icon: Package },
+  { key: "dimensions", Icon: Ruler },
+  { key: "flexoPrint", Icon: Palette },
+  { key: "freeSample", Icon: Gift },
+  { key: "delivery", Icon: Truck },
+] as const;
 
 export async function TrustBar() {
   const t = await getTranslations("home.trustBar");
 
   return (
-    <section className="border-y border-brand-green/5 bg-white px-8 py-12 lg:px-12">
-      <div className="flex w-full flex-wrap justify-between gap-12">
-        {keys.map((key, i) => {
-          const Icon = icons[i];
-          return (
-            <div key={key} className="flex items-center gap-4 font-display font-medium text-brand-green">
-              <div className="text-brand-kraft">
-                <Icon size={24} strokeWidth={1.5} />
-              </div>
-              <span className="text-xs tracking-widest uppercase">{t(key)}</span>
+    <section className="w-full bg-brand-green px-8 py-16 lg:px-12">
+      <div className="w-full">
+        <div className="grid w-full grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-0 lg:divide-x lg:divide-white/15">
+          {items.map(({ key, Icon }) => (
+            <div
+              key={key}
+              className="flex min-w-0 flex-col items-center px-4 text-center lg:px-6"
+            >
+              <Icon size={28} className="text-brand-kraft" strokeWidth={1.5} aria-hidden />
+              <p className="mt-4 text-[13px] font-medium tracking-[0.12em] text-white uppercase">
+                {t(`items.${key}.label`)}
+              </p>
+              <p className="mt-2 text-[12px] text-white/50">{t(`items.${key}.subtext`)}</p>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );

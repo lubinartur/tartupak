@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, HelpCircle, Layers, Package, Ruler } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
+import { FefcoMontageBadge } from "@/components/fefco/FefcoMontageBadge";
+import { getFefcoMontage } from "@/data/fefco";
 import {
   fefcoCatalogCodes,
   getFefcoEntry,
@@ -50,6 +52,7 @@ export default async function FefcoDetailPage({ params }: Props) {
   const useCases = getFefcoUseCases(entry, locale);
   const t = await getTranslations("fefco.detail");
   const faqItems = getFefcoFaq(code, name, locale);
+  const montage = getFefcoMontage(code);
 
   return (
     <div className="px-6 pt-32 pb-24 lg:px-12">
@@ -76,6 +79,7 @@ export default async function FefcoDetailPage({ params }: Props) {
               >
                 {name}
               </h1>
+              {montage ? <FefcoMontageBadge montage={montage} /> : null}
             </div>
 
             <p className="text-xl leading-relaxed font-normal text-brand-text">

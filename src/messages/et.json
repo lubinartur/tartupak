@@ -56,10 +56,28 @@
       }
     },
     "trustBar": {
-      "piece": "Alates 1 tükist",
-      "dimensions": "Kohandatud mõõtmed",
-      "creditRating": "AA krediidireiting",
-      "delivery": "Kohaletoimetamine"
+      "items": {
+        "piece": {
+          "label": "Alates 1 tükist",
+          "subtext": "Minimaalse tellimustaateta"
+        },
+        "dimensions": {
+          "label": "Kohandatud mõõtmed",
+          "subtext": "Suvalised mõõdud tellimuse järgi"
+        },
+        "flexoPrint": {
+          "label": "Fleksotrükk",
+          "subtext": "Bränding ja pakendidisain"
+        },
+        "freeSample": {
+          "label": "Tasuta proovinäidis",
+          "subtext": "Enne seeriatootmist"
+        },
+        "delivery": {
+          "label": "Kohaletoimetamine",
+          "subtext": "Baltikum ja Skandinaavia"
+        }
+      }
     },
     "categories": {
       "overline": "TÖÖSTUSLIK EKSPERTIIS",
@@ -69,7 +87,7 @@
       "overline": "ERITELLIMUS",
       "title": "Pakend täpselt teie spetsifikatsioonide järgi",
       "description": "Iga toode on ainulaadne ja selle pakend peaks seda peegeldama. Alates õrnadest elektroonikaseadmetest kuni jaemüügi eksponaatideni loome lahendusi, mis ühendavad kaitse ja presentatsiooni.",
-      "link": "Uuri kohandatud lahendusi →"
+      "link": "Uuri kohandatud lahendusi"
     },
     "process": {
       "overline": "MEIE TÖÖPROTSESS",
@@ -102,11 +120,18 @@
       "title": "Miks tööstusliidrid valivad meid",
       "stats": {
         "aa": { "value": "AA", "label": "Krediidireiting" },
-        "years": { "value": "20+", "label": "Aastat kogemust" },
-        "sustainable": { "value": "100%", "label": "Jätkusuutlikud materjalid" },
-        "scale": { "value": "1tk", "label": "Paindlik mastaap" },
-        "ee": { "value": "EE", "label": "Edukas Eesti Ettevõte" },
-        "est": { "value": "EST", "label": "Kiire tarnimine" }
+        "years": {
+          "value": "20+",
+          "label": "Aastat kogemust",
+          "description": "Kaks aastakümmet lainepaki kogemust Baltikumis ja Skandinaavias.",
+          "subtitle": "Alates 2001"
+        },
+        "sustainable": {
+          "value": "100%",
+          "label": "Jätkusuutlikud materjalid",
+          "description": "Kõik toorained pärit jätkusuutlikult majandatavatest metsadest ja täielikult taaskasutatavad."
+        },
+        "scale": { "value": "1tk", "label": "Paindlik mastaap" }
       }
     },
     "cta": {
@@ -124,6 +149,7 @@
     "requestQuoteForProduct": "Küsi pakkumist selle toote jaoks",
     "detail": {
       "overline": "TÖÖSTUSLIK LAHENDUS",
+      "specsLabel": "TEHNILISED ANDMED",
       "features": {
         "recyclable": {
           "title": "100% taaskasutatav",
@@ -184,6 +210,7 @@
   "fefco": {
     "overline": "STANDARDID",
     "title": "FEFCO disainikataloog",
+    "downloadCatalog": "Laadi alla FEFCO kataloog (PDF)",
     "searchPlaceholder": "Otsi koodi või nime järgi... (nt 0201)",
     "filterAll": "Kõik",
     "filterSeries": "Seeria {series}",
@@ -191,6 +218,7 @@
     "noResults": "Ühtegi FEFCO koodi ei leitud.",
     "viewAllCatalog": "Vaata täiskataloog (147 koodi)",
     "viewDetails": "Vaata lähemalt →",
+    "montageLabel": "Koostamine",
     "detail": {
       "backToCatalog": "Tagasi kataloogi",
       "overline": "RAHVUSVAHELINE STANDARD #{code}",
@@ -307,7 +335,6 @@
     "body": "Veebilehe kasutamise tingimused. Täielikud tingimused täpsustatakse enne avaldamist."
   },
   "common": {
-    "learnMore": "Loe lähemalt",
     "backToProducts": "Tagasi toodete juurde",
     "backToFefco": "Tagasi FEFCO kataloogi"
   }

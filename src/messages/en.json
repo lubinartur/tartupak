@@ -56,10 +56,28 @@
       }
     },
     "trustBar": {
-      "piece": "From 1 piece",
-      "dimensions": "Custom Dimensions",
-      "creditRating": "AA Credit Rating",
-      "delivery": "Delivery Included"
+      "items": {
+        "piece": {
+          "label": "From 1 piece",
+          "subtext": "No minimum order"
+        },
+        "dimensions": {
+          "label": "Custom dimensions",
+          "subtext": "Any size made to order"
+        },
+        "flexoPrint": {
+          "label": "Flexo printing",
+          "subtext": "Packaging branding and design"
+        },
+        "freeSample": {
+          "label": "Free sample",
+          "subtext": "Before production runs"
+        },
+        "delivery": {
+          "label": "Delivery included",
+          "subtext": "Baltics and Scandinavia"
+        }
+      }
     },
     "categories": {
       "overline": "INDUSTRIAL EXPERTISE",
@@ -69,7 +87,7 @@
       "overline": "BESPOKE DESIGN",
       "title": "Packaging built to your exact specs",
       "description": "Every product is unique, and its packaging should be too. From specialist electronics to delicate retail displays, we engineer solutions that balance protection with presentation.",
-      "link": "Explore custom solutions →"
+      "link": "Explore custom solutions"
     },
     "process": {
       "overline": "OUR WORKFLOW",
@@ -102,11 +120,18 @@
       "title": "Why Industry Leaders Choose Us",
       "stats": {
         "aa": { "value": "AA", "label": "Credit Rating" },
-        "years": { "value": "20+", "label": "Years Experience" },
-        "sustainable": { "value": "100%", "label": "Sustainable Materials" },
-        "scale": { "value": "1pc", "label": "Scale Flexible" },
-        "ee": { "value": "EE", "label": "Leading Estonian Enterprise" },
-        "est": { "value": "EST", "label": "Rapid Delivery" }
+        "years": {
+          "value": "20+",
+          "label": "Years Experience",
+          "description": "Two decades of corrugated packaging expertise serving the Baltics and Scandinavia.",
+          "subtitle": "Since 2001"
+        },
+        "sustainable": {
+          "value": "100%",
+          "label": "Sustainable Materials",
+          "description": "All raw materials from sustainably managed forests and fully recyclable production."
+        },
+        "scale": { "value": "1pc", "label": "Scale Flexible" }
       }
     },
     "cta": {
@@ -124,6 +149,7 @@
     "requestQuoteForProduct": "Request a Quote for This Product",
     "detail": {
       "overline": "INDUSTRIAL MODEL",
+      "specsLabel": "TECHNICAL SPECS",
       "features": {
         "recyclable": {
           "title": "100% Recyclable",
@@ -184,6 +210,7 @@
   "fefco": {
     "overline": "STANDARDS",
     "title": "FEFCO Design Catalog",
+    "downloadCatalog": "Download FEFCO Catalogue (PDF)",
     "searchPlaceholder": "Search by code or name... (e.g. 0201)",
     "filterAll": "All",
     "filterSeries": "Series {series}",
@@ -191,6 +218,7 @@
     "noResults": "No FEFCO codes match your search criteria.",
     "viewAllCatalog": "View Full Catalog (147 codes)",
     "viewDetails": "View Details →",
+    "montageLabel": "Assembly",
     "detail": {
       "backToCatalog": "Back to Catalog",
       "overline": "INTERNATIONAL STANDARD #{code}",
@@ -307,7 +335,6 @@
     "body": "Terms for using this website. Full terms will be finalized before publication."
   },
   "common": {
-    "learnMore": "Learn more",
     "backToProducts": "Back to Products",
     "backToFefco": "Back to FEFCO catalog"
   }

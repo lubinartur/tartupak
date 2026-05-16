@@ -2,6 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { FefcoMontageBadgeClient } from "@/components/fefco/FefcoMontageBadgeClient";
+import { getFefcoMontage } from "@/data/fefco";
 import {
   getFefcoLocalized,
   type FefcoCatalogEntry,
@@ -16,6 +18,7 @@ export function FEFCOCardClient({ entry, locale }: FEFCOCardClientProps) {
   const fefco = useTranslations("fefco");
   const name = getFefcoLocalized(entry.name, locale);
   const description = getFefcoLocalized(entry.description, locale);
+  const montage = getFefcoMontage(entry.code);
 
   return (
     <Link
@@ -30,6 +33,7 @@ export function FEFCOCardClient({ entry, locale }: FEFCOCardClientProps) {
       </div>
       <div className="flex-grow space-y-3">
         <h3 className="text-lg leading-tight font-semibold text-brand-green">{name}</h3>
+        {montage ? <FefcoMontageBadgeClient montage={montage} /> : null}
         <p className="line-clamp-3 text-sm leading-relaxed text-brand-text font-normal">{description}</p>
       </div>
       <div className="mt-8">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { Menu, X, Globe } from "lucide-react";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
@@ -38,13 +39,15 @@ export function Navbar() {
       )}
     >
       <div className="flex w-full items-center justify-between">
-        <Link href="/" className="group flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-brand-green transition-transform group-hover:scale-110">
-            <span className="font-serif text-xl font-bold text-brand-bg">T</span>
-          </div>
-          <span className="font-serif text-2xl font-bold tracking-tight text-brand-green">
-            Tartupak
-          </span>
+        <Link href="/" className="group inline-block">
+          <Image
+            src="/logo-tartupak.svg"
+            alt="Tartupak"
+            height={40}
+            width={236}
+            style={{ height: "40px", width: "auto" }}
+            priority
+          />
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">

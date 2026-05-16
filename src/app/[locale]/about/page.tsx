@@ -4,7 +4,7 @@ import { Leaf, Ruler, Zap } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FacilityGallery } from "@/components/about/FacilityGallery";
-import { TrustStatsGrid } from "@/components/sections/TrustStatsGrid";
+import { WhyChooseUsBento } from "@/components/sections/WhyChooseUsBento";
 import { parseHeroHeadline } from "@/lib/utils";
 
 type Props = {
@@ -31,6 +31,7 @@ export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("about");
+  const tWhyUs = await getTranslations("home.whyUs");
   const headline = parseHeroHeadline(t("headline"));
 
   return (
@@ -88,8 +89,14 @@ export default async function AboutPage({ params }: Props) {
         </section>
 
         {/* Stats */}
-        <section className="mb-32 bg-brand-bg px-8 py-32 lg:px-12">
-          <TrustStatsGrid />
+        <section className="mb-32">
+          <SectionHeader
+            centered
+            overline={tWhyUs("overline")}
+            title={tWhyUs("title")}
+            className="mx-auto mb-16"
+          />
+          <WhyChooseUsBento />
         </section>
 
         {/* CTA */}

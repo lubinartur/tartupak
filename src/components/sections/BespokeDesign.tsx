@@ -17,12 +17,9 @@ export async function BespokeDesign() {
             </div>
             <div className="absolute right-8 bottom-8 flex items-center gap-4 bg-white p-4 shadow-xl">
               <Factory size={24} className="text-brand-kraft" />
-              <div>
-                <p className="text-[10px] font-bold tracking-widest text-brand-green/40 uppercase">
-                  {t("overline")}
-                </p>
-                <p className="text-sm font-bold text-brand-green">{t("link")}</p>
-              </div>
+              <p className="text-[10px] font-bold tracking-widest text-brand-green/40 uppercase">
+                {t("overline")}
+              </p>
             </div>
           </div>
         </div>
@@ -31,7 +28,7 @@ export async function BespokeDesign() {
           <p className="max-w-lg text-lg leading-relaxed text-brand-text font-normal">{t("description")}</p>
           <Link
             href="/products/erilise-kujuga-pakendid"
-            className="group inline-flex items-center gap-3 font-bold text-brand-green"
+            className="group inline-flex items-center gap-3 font-bold text-brand-green transition-colors hover:text-brand-kraft"
           >
             {t("link")}
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-2" />

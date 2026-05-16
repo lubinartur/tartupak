@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { FEFCOCard } from "@/components/fefco/FEFCOCard";
 import { fefcoPreviewCodes } from "@/data/fefco";
@@ -19,9 +20,10 @@ export async function FEFCOPreview() {
           </div>
           <Link
             href="/fefco"
-            className="shrink-0 font-display text-sm tracking-wide text-brand-text uppercase transition-colors hover:text-brand-kraft"
+            className="group inline-flex shrink-0 items-center gap-3 font-bold text-brand-green transition-colors hover:text-brand-kraft"
           >
-            {fefco("viewAllCatalog")} →
+            {fefco("viewAllCatalog")}
+            <ArrowRight size={18} className="transition-transform group-hover:translate-x-2" />
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

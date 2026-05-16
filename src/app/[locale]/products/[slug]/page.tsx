@@ -7,7 +7,12 @@ import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ProductCard } from "@/components/products/ProductCard";
-import { isProductSlug, productSlugs, type ProductSlug } from "@/data/products";
+import {
+  getProductSpecs,
+  isProductSlug,
+  productSlugs,
+  type ProductSlug,
+} from "@/data/products";
 import { routing } from "@/i18n/routing";
 
 type Props = {
@@ -66,6 +71,7 @@ export default async function ProductDetailPage({ params }: Props) {
   const detail = await getTranslations("products.detail");
   const common = await getTranslations("common");
   const applications = parseApplications(t("applications"));
+  const specs = getProductSpecs(slug, locale);
   const relatedSlugs = getRelatedSlugs(slug);
 
   return (
@@ -94,6 +100,17 @@ export default async function ProductDetailPage({ params }: Props) {
               </span>
               <h1 className="text-4xl font-bold text-brand-green md:text-5xl">{t("title")}</h1>
               <p className="text-xl leading-relaxed font-normal text-brand-text">{t("description")}</p>
+            </div>
+
+            <div>
+              <h2 className="font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/60 uppercase">
+                {detail("specsLabel")}
+              </h2>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-brand-text font-normal">
+                {specs.map((spec) => (
+                  <li key={spec}>{spec}</li>
+                ))}
+              </ul>
             </div>
 
             <div>
@@ -142,9 +159,9 @@ export default async function ProductDetailPage({ params }: Props) {
             title={detail("related.title")}
             className="mb-12"
           />
-          <div className="grid grid-cols-1 gap-px border border-brand-green/5 bg-brand-green/5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {relatedSlugs.map((relatedSlug) => (
-              <ProductCard key={relatedSlug} slug={relatedSlug} />
+              <ProductCard key={relatedSlug} slug={relatedSlug} variant="related" />
             ))}
           </div>
         </section>

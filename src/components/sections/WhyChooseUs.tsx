@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { TrustStatsGrid } from "@/components/sections/TrustStatsGrid";
+import { WhyChooseUsBento } from "@/components/sections/WhyChooseUsBento";
 
 export async function WhyChooseUs() {
   const t = await getTranslations("home.whyUs");
@@ -10,7 +10,7 @@ export async function WhyChooseUs() {
       <div className="w-full">
         <SectionHeader centered overline={t("overline")} title={t("title")} className="mx-auto" />
         <div className="mt-24">
-          <TrustStatsGrid />
+          <WhyChooseUsBento />
         </div>
       </div>
     </section>

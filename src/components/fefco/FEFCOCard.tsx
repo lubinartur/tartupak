@@ -1,5 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
+import { FefcoMontageBadge } from "@/components/fefco/FefcoMontageBadge";
+import { getFefcoMontage } from "@/data/fefco";
 import {
   getFefcoEntry,
   getFefcoLocalized,
@@ -17,6 +19,7 @@ export async function FEFCOCard({ code }: FEFCOCardProps) {
   const fefco = await getTranslations("fefco");
   const name = getFefcoLocalized(entry.name, locale);
   const description = getFefcoLocalized(entry.description, locale);
+  const montage = getFefcoMontage(code);
 
   return (
     <Link
@@ -31,6 +34,7 @@ export async function FEFCOCard({ code }: FEFCOCardProps) {
       </div>
       <div className="flex-grow space-y-3">
         <h3 className="text-lg leading-tight font-semibold text-brand-green">{name}</h3>
+        {montage ? <FefcoMontageBadge montage={montage} /> : null}
         <p className="line-clamp-3 text-sm leading-relaxed text-brand-text font-normal">{description}</p>
       </div>
       <div className="mt-8 flex items-center justify-between">
