@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Gift, Package, Palette, Ruler, Truck } from "lucide-react";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 const items = [
   { key: "piece", Icon: Package },
@@ -16,9 +17,10 @@ export async function TrustBar() {
     <section className="w-full bg-brand-green px-8 py-16 lg:px-12">
       <div className="w-full">
         <div className="grid w-full grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-0 lg:divide-x lg:divide-white/15">
-          {items.map(({ key, Icon }) => (
-            <div
+          {items.map(({ key, Icon }, index) => (
+            <FadeIn
               key={key}
+              delay={index * 0.06}
               className="flex min-w-0 flex-col items-center px-4 text-center lg:px-6"
             >
               <Icon size={28} className="text-brand-kraft" strokeWidth={1.5} aria-hidden />
@@ -26,7 +28,7 @@ export async function TrustBar() {
                 {t(`items.${key}.label`)}
               </p>
               <p className="mt-2 text-[12px] text-white/50">{t(`items.${key}.subtext`)}</p>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>

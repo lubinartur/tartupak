@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { ArrowLeft, HelpCircle, Layers, Package, Ruler } from "lucide-react";
+import { ArrowLeft, HelpCircle, Package, Ruler } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
+import { FefcoDetailDiagram } from "@/components/fefco/FefcoDiagram";
 import { FefcoMontageBadge } from "@/components/fefco/FefcoMontageBadge";
 import { getFefcoMontage } from "@/data/fefco";
 import {
@@ -127,23 +128,12 @@ export default async function FefcoDetailPage({ params }: Props) {
           </div>
 
           <div className="lg:col-span-5 lg:col-start-8">
-            <div className="relative flex aspect-square flex-col items-center justify-center border border-brand-green/10 bg-white p-12">
-              <div className="absolute top-6 left-6 border border-brand-green/5 p-2">
-                <span className="text-[10px] font-bold text-brand-green/20">
-                  {t("drawingLabel", { code })}
-                </span>
-              </div>
-              <Layers
-                size={140}
-                strokeWidth={0.5}
-                className="mb-8 text-brand-green/10"
-                aria-hidden
-              />
-              <div className="mb-8 h-px w-full bg-brand-green/5" />
-              <p className="max-w-[200px] text-center text-[10px] font-bold tracking-widest text-brand-text uppercase">
-                {t("drawingPlaceholder")}
-              </p>
-            </div>
+            <FefcoDetailDiagram
+              code={code}
+              name={name}
+              drawingLabel={t("drawingLabel", { code })}
+              placeholderText={t("drawingPlaceholder")}
+            />
           </div>
         </div>
       </div>

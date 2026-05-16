@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/routing";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { FEFCOCard } from "@/components/fefco/FEFCOCard";
 import { fefcoPreviewCodes } from "@/data/fefco";
 
@@ -27,8 +28,10 @@ export async function FEFCOPreview() {
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {fefcoPreviewCodes.map((code) => (
-            <FEFCOCard key={code} code={code} />
+          {fefcoPreviewCodes.map((code, index) => (
+            <FadeIn key={code} delay={index * 0.08}>
+              <FEFCOCard code={code} />
+            </FadeIn>
           ))}
         </div>
       </div>

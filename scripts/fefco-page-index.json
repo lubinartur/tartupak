@@ -1,0 +1,468 @@
+[
+  {
+    "page": "page-01.png",
+    "codes_detected": []
+  },
+  {
+    "page": "page-02.png",
+    "codes_detected": [
+      "0201",
+      "0204",
+      "0215"
+    ]
+  },
+  {
+    "page": "page-03.png",
+    "codes_detected": [
+      "0216",
+      "0712"
+    ]
+  },
+  {
+    "page": "page-04.png",
+    "codes_detected": []
+  },
+  {
+    "page": "page-05.png",
+    "codes_detected": []
+  },
+  {
+    "page": "page-06.png",
+    "codes_detected": []
+  },
+  {
+    "page": "page-07.png",
+    "codes_detected": [
+      "0200",
+      "0201",
+      "0202"
+    ]
+  },
+  {
+    "page": "page-08.png",
+    "codes_detected": [
+      "0203",
+      "0204",
+      "0205"
+    ]
+  },
+  {
+    "page": "page-09.png",
+    "codes_detected": [
+      "0206",
+      "0207",
+      "0208"
+    ]
+  },
+  {
+    "page": "page-10.png",
+    "codes_detected": [
+      "0209",
+      "0210",
+      "0211"
+    ]
+  },
+  {
+    "page": "page-11.png",
+    "codes_detected": [
+      "0212",
+      "0214",
+      "0215"
+    ]
+  },
+  {
+    "page": "page-12.png",
+    "codes_detected": [
+      "0216",
+      "0217",
+      "0218"
+    ]
+  },
+  {
+    "page": "page-13.png",
+    "codes_detected": [
+      "0225",
+      "0226",
+      "0227"
+    ]
+  },
+  {
+    "page": "page-14.png",
+    "codes_detected": [
+      "0228",
+      "0229",
+      "0230"
+    ]
+  },
+  {
+    "page": "page-15.png",
+    "codes_detected": [
+      "0231"
+    ]
+  },
+  {
+    "page": "page-16.png",
+    "codes_detected": [
+      "0300",
+      "0301",
+      "0302"
+    ]
+  },
+  {
+    "page": "page-17.png",
+    "codes_detected": [
+      "0303",
+      "0304",
+      "0306"
+    ]
+  },
+  {
+    "page": "page-18.png",
+    "codes_detected": [
+      "0307",
+      "0308",
+      "0309"
+    ]
+  },
+  {
+    "page": "page-19.png",
+    "codes_detected": [
+      "0310",
+      "0312",
+      "0313"
+    ]
+  },
+  {
+    "page": "page-20.png",
+    "codes_detected": [
+      "0314",
+      "0320",
+      "0321"
+    ]
+  },
+  {
+    "page": "page-21.png",
+    "codes_detected": [
+      "0322",
+      "0323",
+      "0325"
+    ]
+  },
+  {
+    "page": "page-22.png",
+    "codes_detected": [
+      "0330",
+      "0331",
+      "0350"
+    ]
+  },
+  {
+    "page": "page-23.png",
+    "codes_detected": [
+      "0351",
+      "0352"
+    ]
+  },
+  {
+    "page": "page-24.png",
+    "codes_detected": [
+      "0400",
+      "0401",
+      "0402"
+    ]
+  },
+  {
+    "page": "page-25.png",
+    "codes_detected": [
+      "0403",
+      "0404",
+      "0405"
+    ]
+  },
+  {
+    "page": "page-26.png",
+    "codes_detected": [
+      "0406",
+      "0409",
+      "0410"
+    ]
+  },
+  {
+    "page": "page-27.png",
+    "codes_detected": [
+      "0411",
+      "0412",
+      "0413"
+    ]
+  },
+  {
+    "page": "page-28.png",
+    "codes_detected": [
+      "0415",
+      "0416",
+      "0420"
+    ]
+  },
+  {
+    "page": "page-29.png",
+    "codes_detected": [
+      "0421",
+      "0422",
+      "0423"
+    ]
+  },
+  {
+    "page": "page-30.png",
+    "codes_detected": [
+      "0424",
+      "0425",
+      "0426"
+    ]
+  },
+  {
+    "page": "page-31.png",
+    "codes_detected": [
+      "0427",
+      "0428",
+      "0429"
+    ]
+  },
+  {
+    "page": "page-32.png",
+    "codes_detected": [
+      "0430",
+      "0431",
+      "0432"
+    ]
+  },
+  {
+    "page": "page-33.png",
+    "codes_detected": [
+      "0433",
+      "0434",
+      "0435"
+    ]
+  },
+  {
+    "page": "page-34.png",
+    "codes_detected": [
+      "0436",
+      "0437",
+      "0440"
+    ]
+  },
+  {
+    "page": "page-35.png",
+    "codes_detected": [
+      "0441",
+      "0442",
+      "0443"
+    ]
+  },
+  {
+    "page": "page-36.png",
+    "codes_detected": [
+      "0444",
+      "0445",
+      "0446"
+    ]
+  },
+  {
+    "page": "page-37.png",
+    "codes_detected": [
+      "0447",
+      "0448",
+      "0449"
+    ]
+  },
+  {
+    "page": "page-38.png",
+    "codes_detected": [
+      "0450",
+      "0451",
+      "0452"
+    ]
+  },
+  {
+    "page": "page-39.png",
+    "codes_detected": [
+      "0453",
+      "0454",
+      "0455"
+    ]
+  },
+  {
+    "page": "page-40.png",
+    "codes_detected": [
+      "0456",
+      "0457",
+      "0458"
+    ]
+  },
+  {
+    "page": "page-41.png",
+    "codes_detected": [
+      "0459",
+      "0460",
+      "0470"
+    ]
+  },
+  {
+    "page": "page-42.png",
+    "codes_detected": [
+      "0471",
+      "0472",
+      "0473"
+    ]
+  },
+  {
+    "page": "page-43.png",
+    "codes_detected": [
+      "0501",
+      "0502",
+      "0503"
+    ]
+  },
+  {
+    "page": "page-44.png",
+    "codes_detected": [
+      "0504",
+      "0505",
+      "0507",
+      "0509",
+      "0510",
+      "0511"
+    ]
+  },
+  {
+    "page": "page-45.png",
+    "codes_detected": [
+      "0512"
+    ]
+  },
+  {
+    "page": "page-46.png",
+    "codes_detected": [
+      "0601",
+      "0602",
+      "0605"
+    ]
+  },
+  {
+    "page": "page-47.png",
+    "codes_detected": [
+      "0606",
+      "0607",
+      "0608"
+    ]
+  },
+  {
+    "page": "page-48.png",
+    "codes_detected": [
+      "0610",
+      "0615",
+      "0616"
+    ]
+  },
+  {
+    "page": "page-49.png",
+    "codes_detected": [
+      "0620",
+      "0621"
+    ]
+  },
+  {
+    "page": "page-50.png",
+    "codes_detected": [
+      "0700",
+      "0701",
+      "0703"
+    ]
+  },
+  {
+    "page": "page-51.png",
+    "codes_detected": [
+      "0711",
+      "0712",
+      "0713"
+    ]
+  },
+  {
+    "page": "page-52.png",
+    "codes_detected": [
+      "0714",
+      "0715",
+      "0716"
+    ]
+  },
+  {
+    "page": "page-53.png",
+    "codes_detected": [
+      "0717",
+      "0718",
+      "0747"
+    ]
+  },
+  {
+    "page": "page-54.png",
+    "codes_detected": [
+      "0748",
+      "0751",
+      "0752"
+    ]
+  },
+  {
+    "page": "page-55.png",
+    "codes_detected": [
+      "0759",
+      "0761",
+      "0770"
+    ]
+  },
+  {
+    "page": "page-56.png",
+    "codes_detected": [
+      "0771",
+      "0772",
+      "0773"
+    ]
+  },
+  {
+    "page": "page-57.png",
+    "codes_detected": [
+      "0774"
+    ]
+  },
+  {
+    "page": "page-58.png",
+    "codes_detected": []
+  },
+  {
+    "page": "page-59.png",
+    "codes_detected": []
+  },
+  {
+    "page": "page-60.png",
+    "codes_detected": []
+  },
+  {
+    "page": "page-61.png",
+    "codes_detected": []
+  },
+  {
+    "page": "page-62.png",
+    "codes_detected": []
+  },
+  {
+    "page": "page-63.png",
+    "codes_detected": []
+  },
+  {
+    "page": "page-64.png",
+    "codes_detected": []
+  },
+  {
+    "page": "page-65.png",
+    "codes_detected": []
+  }
+]

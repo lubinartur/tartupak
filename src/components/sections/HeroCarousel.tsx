@@ -8,6 +8,7 @@ import {
   Fefco0201Flat,
   Fefco0300Telescope,
 } from "@/components/visuals/HeroVisuals";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { cn, parseHeroHeadline } from "@/lib/utils";
 
 const SLIDE_KEYS = ["slide0", "slide1", "slide2"] as const;
@@ -32,7 +33,7 @@ export function HeroCarousel() {
   return (
     <section className="relative flex min-h-screen flex-col overflow-hidden border-b border-brand-border bg-brand-bg pt-24">
       <div className="grid flex-grow grid-cols-1 lg:grid-cols-2">
-        <div className="relative z-10 flex w-full flex-col justify-center border-brand-border px-8 py-20 lg:border-r lg:px-12">
+        <FadeIn className="relative z-10 flex w-full flex-col justify-center border-brand-border px-8 py-20 lg:border-r lg:px-12">
           <div className="space-y-10">
             <div className="space-y-6">
               <div className="flex items-center gap-3">
@@ -73,7 +74,7 @@ export function HeroCarousel() {
               </Link>
             </div>
           </div>
-        </div>
+        </FadeIn>
 
         <div className="relative flex items-center justify-center bg-brand-kraft/10 p-12 lg:p-24">
           <div className="pointer-events-none absolute inset-0 opacity-[0.03] kraft-texture" />

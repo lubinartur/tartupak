@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { parseHeroHeadline } from "@/lib/utils";
 
 export async function CTABanner() {
@@ -8,7 +9,7 @@ export async function CTABanner() {
 
   return (
     <section className="border-t border-brand-border bg-white px-8 py-32 lg:px-12">
-      <div className="w-full space-y-8 text-center">
+      <FadeIn className="w-full space-y-8 text-center">
         <h2 className="text-brand-green">
           {headline.highlight ? (
             <>
@@ -29,7 +30,7 @@ export async function CTABanner() {
             {t("button")}
           </Link>
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }

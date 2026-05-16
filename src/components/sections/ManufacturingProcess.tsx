@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const stepKeys = ["design", "production", "quality", "delivery"] as const;
@@ -14,8 +15,9 @@ export async function ManufacturingProcess() {
         <div className="relative grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           <div className="absolute top-[5rem] right-[5%] left-[5%] -z-0 hidden h-px bg-brand-green/20 lg:block" />
           {stepKeys.map((key, i) => (
-            <div
+            <FadeIn
               key={key}
+              delay={i * 0.08}
               className="relative z-10 flex flex-col items-center space-y-8 text-center"
             >
               <div className="select-none font-serif text-[100px] leading-none font-extralight text-brand-green/12 lg:text-[120px]">
@@ -29,7 +31,7 @@ export async function ManufacturingProcess() {
                   {t(`steps.${key}.description`)}
                 </p>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>

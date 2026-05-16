@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { FefcoMontageBadge } from "@/components/fefco/FefcoMontageBadge";
+import { FefcoCardDiagram } from "@/components/fefco/FefcoDiagram";
 import { getFefcoMontage } from "@/data/fefco";
 import {
   getFefcoEntry,
@@ -26,6 +27,7 @@ export async function FEFCOCard({ code }: FEFCOCardProps) {
       href={`/fefco/${code}`}
       className="group flex h-full flex-col border border-brand-green/5 bg-white p-8 transition-all hover:border-brand-green/20 hover:bg-brand-bg"
     >
+      <FefcoCardDiagram />
       <div className="mb-8 flex items-center justify-between">
         <span className="font-serif text-5xl text-brand-green/10 transition-colors group-hover:text-brand-green/20">
           #{code}

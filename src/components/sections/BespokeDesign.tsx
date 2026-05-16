@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { ArrowRight, Factory } from "lucide-react";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CustomDieCutSVG } from "@/components/visuals/CustomDieCutSVG";
 
@@ -23,7 +24,7 @@ export async function BespokeDesign() {
             </div>
           </div>
         </div>
-        <div className="order-1 space-y-8 lg:order-2">
+        <FadeIn className="order-1 space-y-8 lg:order-2">
           <SectionHeader overline={t("overline")} title={t("title")} className="mb-0" />
           <p className="max-w-lg text-lg leading-relaxed text-brand-text font-normal">{t("description")}</p>
           <Link
@@ -33,7 +34,7 @@ export async function BespokeDesign() {
             {t("link")}
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-2" />
           </Link>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

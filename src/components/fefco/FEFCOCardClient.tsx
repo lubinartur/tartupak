@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { FefcoMontageBadgeClient } from "@/components/fefco/FefcoMontageBadgeClient";
+import { FefcoCardDiagram } from "@/components/fefco/FefcoDiagram";
 import { getFefcoMontage } from "@/data/fefco";
 import {
   getFefcoLocalized,
@@ -25,6 +26,7 @@ export function FEFCOCardClient({ entry, locale }: FEFCOCardClientProps) {
       href={`/fefco/${entry.code}`}
       className="group flex h-full flex-col border border-brand-green/5 bg-white p-8 transition-all hover:border-brand-green/20 hover:bg-brand-bg"
     >
+      <FefcoCardDiagram />
       <div className="mb-8 flex items-center justify-between">
         <span className="font-serif text-5xl text-brand-green/10 transition-colors group-hover:text-brand-green/20">
           #{entry.code}
