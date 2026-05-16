@@ -206,6 +206,14 @@
     "headline": "Reliable by *Nature.*",
     "body": "Tartu Pak OÜ was founded in Tõrvandi, Estonia, with a simple goal: to provide industrial-grade packaging that never compromises on quality. Today, we operate one of Tartu County's most modern corrugated cardboard production lines, serving clients across the Baltics and Scandinavia.",
     "facilityLabel": "PRODUCTION FACILITY TÕRVANDI",
+    "facility": {
+      "alt": {
+        "1": "Tartupak production hall in Tõrvandi",
+        "2": "Corrugated cardboard production line",
+        "3": "Manufacturing equipment at Tartupak facility",
+        "4": "Exterior view of Tartupak production facility, Tõrvandi"
+      }
+    },
     "philosophy": {
       "overline": "OUR PHILOSOPHY",
       "title": "Manufacturing Excellence",

@@ -206,6 +206,14 @@
     "headline": "Usaldusväärne *loodusest.*",
     "body": "Tartu Pak OÜ asutati Tõrvandis, Eestis, lihtsa eesmärgiga: pakkuda tööstuslikku pakendit, mis ei tee järeleandmisi kvaliteedis. Täna käitame ühte Tartu maakonna kaasaegsemat gofreeritud kartongpakendi tootmisliini, teenindades kliente üle Baltikumi ja Skandinaavia.",
     "facilityLabel": "TOOTMISHOONE TÕRVANDIS",
+    "facility": {
+      "alt": {
+        "1": "Tartupaki tootmishall Tõrvandis",
+        "2": "Lainepapi tootmisliin",
+        "3": "Tootmisseadmed Tartupaki tehases",
+        "4": "Tartupaki tootmishoone välisvaade Tõrvandis"
+      }
+    },
     "philosophy": {
       "overline": "MEIE FILOSOOFIA",
       "title": "Tootmise tipptase",

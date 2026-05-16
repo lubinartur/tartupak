@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Leaf, Ruler, Zap } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { FacilityGallery } from "@/components/about/FacilityGallery";
 import { TrustStatsGrid } from "@/components/sections/TrustStatsGrid";
 import { parseHeroHeadline } from "@/lib/utils";
 
@@ -55,13 +56,7 @@ export default async function AboutPage({ params }: Props) {
             </p>
           </div>
 
-          <div className="relative aspect-square border border-brand-green/5 bg-white p-4">
-            <div className="relative flex h-full w-full items-center justify-center overflow-hidden border border-brand-green/10 bg-brand-bg/30">
-              <span className="z-10 text-center text-[10px] font-bold tracking-widest text-brand-text uppercase">
-                {t("facilityLabel")}
-              </span>
-            </div>
-          </div>
+          <FacilityGallery />
         </div>
 
         {/* Philosophy */}

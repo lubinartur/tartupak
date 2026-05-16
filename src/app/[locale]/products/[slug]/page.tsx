@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { CheckCircle, Package, Recycle, ShieldCheck } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ProductCard } from "@/components/products/ProductCard";
-import { CategoryIcon } from "@/components/visuals/CategoryIcon";
 import { isProductSlug, productSlugs, type ProductSlug } from "@/data/products";
 import { routing } from "@/i18n/routing";
 
@@ -76,12 +76,15 @@ export default async function ProductDetailPage({ params }: Props) {
         </Link>
 
         <div className="mb-16 grid items-start gap-12 lg:mb-32 lg:grid-cols-2 lg:gap-24">
-          <div className="flex aspect-square items-center justify-center border border-brand-green/5 bg-white p-4">
-            <div className="flex h-full w-full items-center justify-center border border-brand-green/10 bg-brand-bg/30 p-8">
-              <div className="relative flex h-48 w-48 items-center justify-center text-brand-green md:h-56 md:w-56">
-                <CategoryIcon slug={slug} />
-              </div>
-            </div>
+          <div className="relative aspect-square overflow-hidden rounded-sm border border-brand-border">
+            <Image
+              src={`/images/product-${slug}.png`}
+              alt={t("title")}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
+            />
           </div>
 
           <div className="flex flex-col space-y-10">
