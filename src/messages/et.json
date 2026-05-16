@@ -1,0 +1,200 @@
+{
+  "metadata": {
+    "title": "Tartupak — lainepappkarpide tootja Eestis",
+    "description": "Kohandatud lainepappkarbid logistika, tootmise ja tööstuse jaoks."
+  },
+  "nav": {
+    "home": "Avaleht",
+    "products": "Tooted",
+    "fefco": "FEFCO kataloog",
+    "about": "Meist",
+    "contact": "Kontakt",
+    "quote": "Küsi pakkumist"
+  },
+  "footer": {
+    "tagline": "Eesti gofreeritud kartongpakendi tootja alates 2001. Kaasaegsed tootmisliinid ja jätkusuutlikud tööstuslikud lahendused.",
+    "navigation": "Navigatsioon",
+    "contact": "Kontakt",
+    "credentials": "Tunnustused",
+    "aaCredit": "AA krediidireiting",
+    "edukasEttevote": "Edukas Eesti Ettevõte",
+    "legal": "Õiguslik",
+    "privacy": "Privaatsus",
+    "terms": "Tingimused",
+    "rights": "Kõik õigused kaitstud."
+  },
+  "home": {
+    "hero": {
+      "overline": "PREMIUM TÖÖSTUSLIKUD LAHENDUSED",
+      "title": "Me loome *pakendit*, mis kaitseb.",
+      "subtitle": "Kvaliteetne gofreeritud kartongpakend tööstuslikuks usaldusväärsuseks. Ühendame Skandinaavia minimalismi 20+ aastase tootmiskogemusega.",
+      "ctaPrimary": "Küsi pakkumist",
+      "ctaSecondary": "Sirvi kataloogi"
+    },
+    "trustBar": {
+      "piece": "Alates 1 tükist",
+      "dimensions": "Kohandatud mõõtmed",
+      "creditRating": "AA krediidireiting",
+      "delivery": "Kohaletoimetamine"
+    },
+    "categories": {
+      "title": "Tootekategooriad",
+      "subtitle": "Lainepappkarbid erinevatele tööstusharudele ja kasutusotstarvetele."
+    },
+    "bespoke": {
+      "title": "Kohandatud pakendid",
+      "description": "Saatke meile toote mõõdud, kogus ja kasutusotstarve. Meie spetsialistid aitavad leida optimaalse pakendilahenduse.",
+      "cta": "Alusta päringut"
+    },
+    "process": {
+      "title": "Kasti teekond",
+      "steps": {
+        "design": {
+          "title": "Disain",
+          "description": "Kohandatud konstruktsioonijoonised ja prototüüpimine"
+        },
+        "production": {
+          "title": "Tootmine",
+          "description": "Täpne lõikamine ja kiire koostamine"
+        },
+        "quality": {
+          "title": "Kvaliteet",
+          "description": "Range kontroll tugevuse ja viimistluse üle"
+        },
+        "delivery": {
+          "title": "Tarnimine",
+          "description": "Lõplik logistika üle Põhja-Euroopa"
+        }
+      }
+    },
+    "fefcoPreview": {
+      "title": "FEFCO standardid",
+      "subtitle": "Levinumad lainepappkarpide standardtüübid.",
+      "cta": "Vaata kogu kataloogi"
+    },
+    "whyUs": {
+      "title": "Miks tööstusliidrid valivad meid",
+      "stats": {
+        "aa": { "value": "AA", "label": "Krediidireiting" },
+        "years": { "value": "20+", "label": "Aastat kogemust" },
+        "sustainable": { "value": "100%", "label": "Jätkusuutlikud materjalid" },
+        "scale": { "value": "1tk", "label": "Paindlik mastaap" },
+        "ee": { "value": "EE", "label": "Edukas Eesti Ettevõte" },
+        "est": { "value": "EST", "label": "Kiire tarnimine" }
+      }
+    },
+    "cta": {
+      "title": "Valmis pakkima *nutikamalt?*",
+      "description": "Konsulteerige meie spetsialistidega kohandatud pakkumise saamiseks, mis vastab teie tehnilistele nõuetele ja eelarvele.",
+      "button": "Küsi tasuta pakkumist"
+    }
+  },
+  "products": {
+    "title": "Tooted",
+    "subtitle": "Lainepappkarbid logistika, toiduainetootmise ja tööstuse jaoks.",
+    "requestQuote": "Küsi pakkumist",
+    "items": {
+      "transport-packaging": {
+        "title": "Transpordipakendid",
+        "description": "Standardlainepappkarbid saatmiseks ja ladustamiseks.",
+        "applications": "Logistika, laod, saatmine"
+      },
+      "pizza-boxes": {
+        "title": "Pitsakarbid",
+        "description": "Toiduainetele sobivad pitsakarbid restoranidele ja kullerteenustele.",
+        "applications": "Restoranid, pitsa kullerteenus, kaasa võtmine"
+      },
+      "frozen-products": {
+        "title": "Külmutoodete pakendid",
+        "description": "Niiskuskindlad pakendid külmutoodetele.",
+        "applications": "Külmutoidu tootmine, külmlogistika"
+      },
+      "custom-packaging": {
+        "title": "Kohandatud pakendid",
+        "description": "Toote mõõtudele ja transporditingimustele vastavad pakendid.",
+        "applications": "Tööstustooted, elektroonika, habras tooted"
+      },
+      "large-packaging": {
+        "title": "Suured pakendid",
+        "description": "Vastupidavad lainepappkarbid suurtele või rasketele kaupadele.",
+        "applications": "Tööstusseadmed, aluste transport"
+      },
+      "printed-packaging": {
+        "title": "Trükiga pakendid",
+        "description": "Flekso trükiga lainepappkarbid logo või brändiga.",
+        "applications": "Jaemüügipakendid, brändipakendid"
+      }
+    }
+  },
+  "fefco": {
+    "title": "FEFCO kataloog",
+    "subtitle": "Rahvusvaheline lainepappkarpide standard.",
+    "searchPlaceholder": "Otsi FEFCO koodi...",
+    "typicalUse": "Tüüpiline kasutus",
+    "items": {
+      "0201": {
+        "title": "Tavaline pilukonteiner (RSC)",
+        "description": "Maailmas kõige laialdasemalt kasutatav pakendivorm. Ülemised ja alumised klapid kohtuvad sulgemisel keskel. Lihtne, kulutõhus, ideaalne enamiku saatmise vajaduste jaoks.",
+        "usage": "Üldine logistika, e-kaubandus, ladustamine, toiduainetööstus"
+      },
+      "0427": {
+        "title": "Kaustatüüpi kast",
+        "description": "Ise lukustuv karp, mis ei vaja kokkupanekuks teipi. Sobib ideaalselt premium-esitluseks ja kiiretele pakkimisliinidele.",
+        "usage": "Tellimuskarbid, tooteesitlus, premium-saatmine, jaemüük"
+      },
+      "0203": {
+        "title": "Täielikult kattuva pilukonteiner",
+        "description": "Välisklapid kattuvad täielikult, pakkudes täiendavat servakaitset ja virnastustuge. Suurepärane raskete kaupade jaoks.",
+        "usage": "Rasked kaubad, tööstustransport, virnastusrakendused"
+      },
+      "0300": {
+        "title": "Täisteleskoop-kast",
+        "description": "Koosneb eraldi ülemisest ja alumisest osast, mis sobivad üksteise peale. Pakub tootele suurepärast kaitset.",
+        "usage": "Elektroonika, kingitused, premium-tooted"
+      },
+      "0711": {
+        "title": "Eelliimitud kast",
+        "description": "Kiire kokkupanek eelliimitud põhjaga. Ideaalne kiire tempo täitmisliinidele ja suuremahulisele tootmisele.",
+        "usage": "E-kaubanduse täitmine, kiired kokkupanekuliinid, suuremahuline saatmine"
+      },
+      "0421": {
+        "title": "Stantsitud kaust",
+        "description": "Täpne stantsitud disain sujuvaks jaemüügivalmiseks esitluseks. Kokkupanekuks pole vaja teipi ega liimi.",
+        "usage": "Jaemüügipakendid, kingitused, kosmeetika, elektroonika"
+      }
+    }
+  },
+  "about": {
+    "title": "Meist",
+    "intro": "Tartupak on Eesti lainepappkarpide tootja.",
+    "body": "Ettevõte arendab pakendilahendusi logistika, toiduainetootmise, e-kaubanduse ja tööstusettevõtete jaoks. Meie spetsialistid aitavad klientidel luua pakendeid, mis kaitsevad tooteid ladustamise ja transpordi ajal, jäädes samal ajal kulutõhusaks ja keskkonnasõbralikuks."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Kirjutage meile oma pakendivajadusest.",
+    "address": "Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Eesti",
+    "email": "info@tartupak.ee",
+    "phone": "+372 741 5333",
+    "mobile": "+372 5349 9642",
+    "form": {
+      "name": "Nimi",
+      "email": "E-post",
+      "company": "Ettevõte",
+      "message": "Sõnum",
+      "submit": "Saada päring"
+    }
+  },
+  "privacy": {
+    "title": "Privaatsuspoliitika",
+    "body": "See leht kirjeldab, kuidas Tartupak töötleb isikuandmeid veebilehe külastajate ja päringute saatjate kohta."
+  },
+  "terms": {
+    "title": "Kasutustingimused",
+    "body": "Veebilehe kasutamise tingimused. Täielikud tingimused täpsustatakse enne avaldamist."
+  },
+  "common": {
+    "learnMore": "Loe lähemalt",
+    "backToProducts": "Tagasi toodete juurde",
+    "backToFefco": "Tagasi FEFCO kataloogi"
+  }
+}

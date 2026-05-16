@@ -1,0 +1,43 @@
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/routing";
+import { ArrowRight, Factory } from "lucide-react";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { CustomDieCutSVG } from "@/components/visuals/CustomDieCutSVG";
+
+export async function BespokeDesign() {
+  const t = await getTranslations("home.bespoke");
+
+  return (
+    <section className="flex items-center bg-white px-8 py-24 lg:px-12">
+      <div className="grid w-full grid-cols-1 items-center gap-20 lg:grid-cols-2">
+        <div className="order-2 lg:order-1">
+          <div className="relative flex aspect-video items-center justify-center overflow-hidden border border-brand-green/5 bg-brand-bg p-1">
+            <div className="flex h-full w-full items-center justify-center border border-brand-green/10">
+              <CustomDieCutSVG />
+            </div>
+            <div className="absolute right-8 bottom-8 flex items-center gap-4 bg-white p-4 shadow-xl">
+              <Factory size={24} className="text-brand-kraft" />
+              <div>
+                <p className="text-[10px] font-bold tracking-widest text-brand-green/40 uppercase">
+                  {t("title")}
+                </p>
+                <p className="text-sm font-bold text-brand-green">{t("cta")}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="order-1 space-y-8 lg:order-2">
+          <SectionHeader title={t("title")} className="mb-0" />
+          <p className="max-w-lg text-lg leading-relaxed text-brand-text/60">{t("description")}</p>
+          <Link
+            href="/contact"
+            className="group inline-flex items-center gap-3 font-bold text-brand-green"
+          >
+            {t("cta")}
+            <ArrowRight size={18} className="transition-transform group-hover:translate-x-2" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}

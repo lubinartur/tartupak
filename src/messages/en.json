@@ -1,0 +1,200 @@
+{
+  "metadata": {
+    "title": "Tartupak — Cardboard Packaging Manufacturer in Estonia",
+    "description": "Custom corrugated cardboard packaging for logistics, food production and industry."
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "fefco": "FEFCO Catalog",
+    "about": "About",
+    "contact": "Contact",
+    "quote": "Request a Quote"
+  },
+  "footer": {
+    "tagline": "Estonian corrugated cardboard packaging manufacturer since 2001. Modern production lines and sustainable industrial solutions.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "credentials": "Credentials",
+    "aaCredit": "AA Credit Rating",
+    "edukasEttevote": "Edukas Eesti Ettevõte",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "rights": "All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "overline": "PREMIUM INDUSTRIAL SOLUTIONS",
+      "title": "We create *packaging* that protects.",
+      "subtitle": "Premium corrugated cardboard solutions engineered for industrial reliability. We combine Scandinavian minimalism with 20+ years of manufacturing expertise.",
+      "ctaPrimary": "Request a Quote",
+      "ctaSecondary": "Browse Catalog"
+    },
+    "trustBar": {
+      "piece": "From 1 piece",
+      "dimensions": "Custom Dimensions",
+      "creditRating": "AA Credit Rating",
+      "delivery": "Delivery Included"
+    },
+    "categories": {
+      "title": "Product Categories",
+      "subtitle": "Corrugated packaging for different industries and use cases."
+    },
+    "bespoke": {
+      "title": "Custom Packaging",
+      "description": "Send us the dimensions, quantity and intended use of your product. Our specialists will help you find the optimal packaging solution.",
+      "cta": "Start an inquiry"
+    },
+    "process": {
+      "title": "The Journey of a Box",
+      "steps": {
+        "design": {
+          "title": "Design",
+          "description": "Custom construction drawing and prototyping"
+        },
+        "production": {
+          "title": "Production",
+          "description": "Precision cutting and high-speed assembly"
+        },
+        "quality": {
+          "title": "Quality",
+          "description": "Rigorous checks on strength and finish"
+        },
+        "delivery": {
+          "title": "Delivery",
+          "description": "Final logistics across Northern Europe"
+        }
+      }
+    },
+    "fefcoPreview": {
+      "title": "FEFCO Standards",
+      "subtitle": "Commonly used corrugated box standard types.",
+      "cta": "View full catalog"
+    },
+    "whyUs": {
+      "title": "Why Industry Leaders Choose Us",
+      "stats": {
+        "aa": { "value": "AA", "label": "Credit Rating" },
+        "years": { "value": "20+", "label": "Years Experience" },
+        "sustainable": { "value": "100%", "label": "Sustainable Materials" },
+        "scale": { "value": "1pc", "label": "Scale Flexible" },
+        "ee": { "value": "EE", "label": "Edukas Eesti Ettevõte" },
+        "est": { "value": "EST", "label": "Rapid Delivery" }
+      }
+    },
+    "cta": {
+      "title": "Ready to pack *smarter?*",
+      "description": "Consult with our specialists for a tailored quote that fits your technical requirements and budget.",
+      "button": "Get a Free Quote"
+    }
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Corrugated packaging for logistics, food production and industry.",
+    "requestQuote": "Request a Quote",
+    "items": {
+      "transport-packaging": {
+        "title": "Transport Packaging",
+        "description": "Standard corrugated cardboard transport boxes for shipping and storage.",
+        "applications": "Logistics, warehouses, shipping"
+      },
+      "pizza-boxes": {
+        "title": "Pizza Boxes",
+        "description": "Food-safe cardboard pizza boxes for restaurants and delivery services.",
+        "applications": "Restaurants, pizza delivery, takeaway food"
+      },
+      "frozen-products": {
+        "title": "Frozen Products Packaging",
+        "description": "Moisture-resistant packaging designed for frozen products.",
+        "applications": "Frozen food production, cold storage logistics"
+      },
+      "custom-packaging": {
+        "title": "Custom Packaging",
+        "description": "Packaging developed for your product dimensions and transportation conditions.",
+        "applications": "Industrial products, electronics, fragile items"
+      },
+      "large-packaging": {
+        "title": "Large Packaging",
+        "description": "Heavy-duty corrugated cardboard packaging for large or heavy goods.",
+        "applications": "Industrial equipment, pallet transport"
+      },
+      "printed-packaging": {
+        "title": "Printed Packaging",
+        "description": "Flexo printed cardboard packaging with logos or branding.",
+        "applications": "Retail packaging, brand packaging"
+      }
+    }
+  },
+  "fefco": {
+    "title": "FEFCO Catalog",
+    "subtitle": "International standard for corrugated packaging designs.",
+    "searchPlaceholder": "Search FEFCO code...",
+    "typicalUse": "Typical use",
+    "items": {
+      "0201": {
+        "title": "Regular slotted container (RSC)",
+        "description": "The most widely used packaging format in the world. Top and bottom flaps meet in the center when closed. Simple, cost-effective, ideal for most shipping needs.",
+        "usage": "General logistics, e-commerce, warehousing, food industry"
+      },
+      "0427": {
+        "title": "Folder-type box",
+        "description": "A self-locking box that requires no tape for assembly. Perfect for premium presentation and fast packing lines.",
+        "usage": "Subscription boxes, product presentation, high-end shipping, retail"
+      },
+      "0203": {
+        "title": "Fully overlapping slotted container (FOL)",
+        "description": "Outer flaps fully overlap, providing extra edge protection and stacking strength. Excellent for heavy goods.",
+        "usage": "Heavy goods, industrial transport, stacking applications"
+      },
+      "0300": {
+        "title": "Full telescope box",
+        "description": "Consists of separate top and bottom parts that fit over each other. Provides excellent protection for the product.",
+        "usage": "Electronics, gifts, premium products"
+      },
+      "0711": {
+        "title": "Ready-glued case",
+        "description": "Quick assembly with pre-glued bottom. Ideal for fast-paced fulfillment lines and high-volume operations.",
+        "usage": "E-commerce fulfillment, fast assembly lines, high volume shipping"
+      },
+      "0421": {
+        "title": "Die-cut folder",
+        "description": "Precision die-cut design for sleek retail-ready presentation. No tape or glue required for assembly.",
+        "usage": "Retail packaging, gifts, cosmetics, electronics"
+      }
+    }
+  },
+  "about": {
+    "title": "About",
+    "intro": "Tartupak is an Estonian manufacturer of corrugated cardboard packaging.",
+    "body": "The company develops packaging solutions for logistics, food production, ecommerce and industrial companies. Our specialists help customers design packaging that protects products during storage and transportation while remaining cost-efficient and environmentally responsible."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Tell us about your packaging requirements.",
+    "address": "Tamme 35, Tõrvandi, Ülenurme vald, 61715 Tartumaa, Estonia",
+    "email": "info@tartupak.ee",
+    "phone": "+372 741 5333",
+    "mobile": "+372 5349 9642",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "message": "Message",
+      "submit": "Send inquiry"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "body": "This page describes how Tartupak processes personal data from website visitors and inquiry submissions."
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "body": "Terms for using this website. Full terms will be finalized before publication."
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "backToProducts": "Back to products",
+    "backToFefco": "Back to FEFCO catalog"
+  }
+}

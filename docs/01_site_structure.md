@@ -1,59 +1,99 @@
 # Site Structure
 
-Main navigation:
+## Languages
 
-Home
-Products
-FEFCO Catalog
-About
-Contact
+ET (Estonian) — default
+RU (Russian)
+EN (English)
+
+Language switcher in navbar: globe icon + language code.
 
 ---
 
-## Homepage
+## Navigation
 
-Hero
+Main nav:
+- Products
+- FEFCO Catalog
+- About
+- Contact
 
-Product Categories
+CTA button (navbar): Get a Quote → links to /contact
 
-Custom Packaging
+---
 
-Manufacturing Process
+## Pages
 
-FEFCO preview
+| Page | Route |
+|---|---|
+| Home | `/` |
+| Products | `/products` |
+| Product Detail | `/products/[slug]` |
+| FEFCO Catalog | `/fefco` |
+| FEFCO Detail | `/fefco/[code]` |
+| About | `/about` |
+| Contact | `/contact` |
+| Privacy Policy | `/privacy` |
+| Terms | `/terms` |
 
-Why Tartupak
+---
 
-Contact form
+## Homepage Sections
+
+1. Hero
+2. Trust bar (From 1 piece · Custom dimensions · AA Credit rating · Delivery included)
+3. Packaging Categories
+4. Custom packaging / Bespoke design
+5. Manufacturing process (The Journey of a Box)
+6. FEFCO preview
+7. Why choose us (stats)
+8. CTA banner (Ready to pack smarter?)
+9. Footer
 
 ---
 
 ## Products
 
-Category list:
+7 categories (from tartupak.ee):
 
-Transport boxes
-Pizza boxes
-Cold storage packaging
-Custom shape packaging
-Large packaging
-Printed packaging
+| Slug | ET | EN | RU |
+|---|---|---|---|
+| `lainepapp` | Lainepapp | Corrugated Cardboard | Гофрокартон |
+| `transpordipakend` | Transpordipakend | Transport Packaging | Транспортная упаковка |
+| `fleksotrukk` | Fleksotrükk | Flexo Print Packaging | Флексопечать |
+| `kulmutatud-toodete-pakend` | Külmutatud toodete pakend | Frozen Product Packaging | Упаковка для заморозки |
+| `pizzakarbid` | Pizzakarbid | Pizza Boxes | Коробки для пиццы |
+| `erilise-kujuga-pakendid` | Erilise kujuga pakendid | Custom Shape Packaging | Нестандартная упаковка |
+| `suuregabariidilised-pakendid` | Suuregabariidilised pakendid | Large Format Packaging | Крупногабаритная упаковка |
 
 ---
 
 ## FEFCO Catalog
 
-Display standard FEFCO packaging types.
+Full catalog grouped by series:
 
-Example:
+- Series 02 (200–231)
+- Series 03 (300–352)
+- Series 04 (400–474)
+- Series 05 (501–512)
+- Series 06 (601–621)
+- Series 07 (700–774)
 
-0201
-0203
-0210
-0427
-0713
+Each entry: code, name, description, illustration, typical use cases, CTA to request quote.
 
-Each entry contains:
-• illustration
-• description
-• usage
+Catalog page features:
+- Search by code or name
+- Filter by series
+- Grid layout
+
+---
+
+## Footer
+
+4 columns:
+1. Brand: logo, short description, social links (LinkedIn, Instagram)
+2. Logistics Hub: address, email, phone
+3. Navigation: Products, FEFCO Catalog, About, Contact
+4. Credentials: AA Credit Rating, Edukas Eesti Ettevõte
+
+Bottom bar: copyright + Privacy Policy + Terms links
