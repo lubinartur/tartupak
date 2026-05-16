@@ -15,7 +15,7 @@ export default function About() {
                 Tartu Pak OÜ was founded in Tõrvandi, Estonia, with a simple goal: to provide industrial-grade packaging that never compromises on quality.
               </p>
               <p className="text-lg text-brand-text/50 leading-relaxed max-w-lg">
-                Today, we operate one of Tartu County's most modern corrugated cardboard production lines, serving clients across the Baltics and Scandinavia.
+                Today, we operate one of Tartu County&apos;s most modern corrugated cardboard production lines, serving clients across the Baltics and Scandinavia.
               </p>
            </div>
            <div className="aspect-square bg-white border border-brand-green/5 relative p-4 group">

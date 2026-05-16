@@ -202,23 +202,92 @@
     }
   },
   "about": {
-    "title": "About",
-    "intro": "Tartupak is an Estonian manufacturer of corrugated cardboard packaging.",
-    "body": "The company develops packaging solutions for logistics, food production, ecommerce and industrial companies. Our specialists help customers design packaging that protects products during storage and transportation while remaining cost-efficient and environmentally responsible."
+    "overline": "ESTABLISHED 2001",
+    "headline": "Reliable by *Nature.*",
+    "body": "Tartu Pak OÜ was founded in Tõrvandi, Estonia, with a simple goal: to provide industrial-grade packaging that never compromises on quality. Today, we operate one of Tartu County's most modern corrugated cardboard production lines, serving clients across the Baltics and Scandinavia.",
+    "facilityLabel": "PRODUCTION FACILITY TÕRVANDI",
+    "philosophy": {
+      "overline": "OUR PHILOSOPHY",
+      "title": "Manufacturing Excellence",
+      "cards": {
+        "precision": {
+          "title": "Precision Engineering",
+          "description": "CAD-driven design process ensures every box fits your product down to the millimetre."
+        },
+        "production": {
+          "title": "Modern Production",
+          "description": "Ongoing investment in high-speed cutting and automated assembly lines."
+        },
+        "eco": {
+          "title": "Eco Commitment",
+          "description": "100% of our production waste is recycled and all raw materials are from sustainable sources."
+        }
+      }
+    },
+    "cta": "Start Your Project →"
   },
   "contact": {
-    "title": "Contact",
-    "subtitle": "Tell us about your packaging requirements.",
-    "address": "Tamme 35, Tõrvandi, Ülenurme vald, 61715 Tartumaa, Estonia",
+    "overline": "GET IN TOUCH",
+    "title": "Start Your Project",
+    "subtitle": "Whether you need a custom one-off box or a high-volume supply chain solution, our team is ready to assist.",
+    "info": {
+      "officeTitle": "Office & Production",
+      "emailTitle": "Email",
+      "phoneTitle": "Direct Lines",
+      "hoursTitle": "Working Hours",
+      "hours": "Monday–Friday 08:00–16:30",
+      "landline": "Landline",
+      "mobile": "Mobile"
+    },
+    "address": "Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Estonia",
+    "addressLine1": "Tamme 35, Tõrvandi alevik,",
+    "addressLine2": "Ülenurme vald, 61715 Tartumaa,",
+    "addressLine3": "Estonia",
     "email": "info@tartupak.ee",
     "phone": "+372 741 5333",
     "mobile": "+372 5349 9642",
     "form": {
-      "name": "Name",
-      "email": "Email",
+      "fullName": "Full Name",
       "company": "Company",
-      "message": "Message",
-      "submit": "Send inquiry"
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "packagingType": "Packaging Type",
+      "dimensions": "Dimensions (optional)",
+      "quantity": "Estimated Quantity",
+      "message": "Detailed Message",
+      "selectPackaging": "Select packaging type",
+      "placeholders": {
+        "fullName": "John Smith",
+        "company": "Company Name",
+        "email": "john@example.com",
+        "phone": "+372 ...",
+        "dimensions": "L × W × H (mm)",
+        "quantity": "e.g. 500",
+        "message": "Describe your packaging requirements..."
+      },
+      "packagingTypes": {
+        "lainepapp": "Corrugated Cardboard",
+        "transpordipakend": "Transport Packaging",
+        "fleksotrukk": "Flexo Print Packaging",
+        "kulmutatud-toodete-pakend": "Frozen Product Packaging",
+        "pizzakarbid": "Pizza Boxes",
+        "erilise-kujuga-pakendid": "Custom Shape Packaging",
+        "suuregabariidilised-pakendid": "Large Format Packaging",
+        "fefco": "FEFCO standard (specify code)",
+        "other": "Other"
+      },
+      "submit": "Send Quote Request",
+      "responseNote": "We typically respond within 1 business day.",
+      "success": "Thank you! We'll get back to you within 1 business day.",
+      "error": "Something went wrong. Please try again.",
+      "fefcoPrefill": "FEFCO #{code}",
+      "errors": {
+        "nameRequired": "Full name is required.",
+        "nameMin": "Name must be at least 2 characters.",
+        "emailRequired": "Email is required.",
+        "emailInvalid": "Please enter a valid email address.",
+        "messageMax": "Message must be at most 2000 characters."
+      }
     }
   },
   "privacy": {

@@ -1,100 +1,109 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { QuoteForm } from "@/components/contact/QuoteForm";
 
 type Props = {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ type?: string; fefco?: string }>;
 };
 
-export default async function ContactPage({ params }: Props) {
+function telHref(phone: string) {
+  return `tel:${phone.replace(/[\s/]/g, "")}`;
+}
+
+export default async function ContactPage({ params, searchParams }: Props) {
   const { locale } = await params;
+  const { type, fefco } = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations("contact");
 
-  return (
-    <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-      <h1 className="text-4xl text-brand-green">{t("title")}</h1>
-      <p className="mt-4 text-lg text-brand-text font-normal">{t("subtitle")}</p>
+  const infoCards = [
+    {
+      icon: MapPin,
+      title: t("info.officeTitle"),
+      content: (
+        <address className="font-medium text-brand-green not-italic">
+          {t("addressLine1")}
+          <br />
+          {t("addressLine2")}
+          <br />
+          {t("addressLine3")}
+        </address>
+      ),
+    },
+    {
+      icon: Mail,
+      title: t("info.emailTitle"),
+      content: (
+        <a
+          href={`mailto:${t("email")}`}
+          className="font-medium text-brand-green underline decoration-brand-green/20 underline-offset-4 hover:text-brand-kraft"
+        >
+          {t("email")}
+        </a>
+      ),
+    },
+    {
+      icon: Phone,
+      title: t("info.phoneTitle"),
+      content: (
+        <div className="flex flex-col font-medium text-brand-green">
+          <a href={telHref(t("phone"))} className="hover:text-brand-kraft">
+            {t("phone")} ({t("info.landline")})
+          </a>
+          <a href={telHref(t("mobile"))} className="hover:text-brand-kraft">
+            {t("mobile")} ({t("info.mobile")})
+          </a>
+        </div>
+      ),
+    },
+    {
+      icon: Clock,
+      title: t("info.hoursTitle"),
+      content: <p className="font-medium text-brand-green">{t("info.hours")}</p>,
+    },
+  ] as const;
 
-      <div className="mt-12 grid gap-12 lg:grid-cols-2">
-        <div className="space-y-6">
-          <div className="flex gap-4">
-            <MapPin className="h-5 w-5 shrink-0 text-brand-kraft" />
-            <p className="text-brand-text font-normal">{t("address")}</p>
-          </div>
-          <div className="flex gap-4">
-            <Mail className="h-5 w-5 shrink-0 text-brand-kraft" />
-            <a href={`mailto:${t("email")}`} className="text-brand-green hover:text-brand-kraft">
-              {t("email")}
-            </a>
-          </div>
-          <div className="flex gap-4">
-            <Phone className="h-5 w-5 shrink-0 text-brand-kraft" />
-            <div className="space-y-1">
-              <a href={`tel:${t("phone").replace(/\s/g, "")}`} className="block text-brand-green hover:text-brand-kraft">
-                {t("phone")}
-              </a>
-              <a href={`tel:${t("mobile").replace(/\s/g, "")}`} className="block text-brand-green hover:text-brand-kraft">
-                {t("mobile")}
-              </a>
+  return (
+    <div className="px-6 pt-32 pb-24 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeader
+          overline={t("overline")}
+          title={t("title")}
+          className="mb-16"
+        />
+
+        <div className="mb-32 grid grid-cols-1 items-start gap-20 lg:grid-cols-12">
+          <div className="space-y-12 lg:col-span-5">
+            <p className="text-xl leading-relaxed font-normal text-brand-text">
+              {t("subtitle")}
+            </p>
+
+            <div className="space-y-6">
+              {infoCards.map(({ icon: Icon, title, content }) => (
+                <div
+                  key={title}
+                  className="flex gap-6 border border-brand-green/5 bg-white p-6"
+                >
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-bg text-brand-kraft">
+                    <Icon size={24} aria-hidden />
+                  </div>
+                  <div>
+                    <h3 className="mb-1 text-xs font-bold tracking-widest text-brand-green/40 uppercase">
+                      {title}
+                    </h3>
+                    {content}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
 
-        <form className="space-y-4 rounded-sm border border-brand-border bg-white p-8">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-brand-green">
-              {t("form.name")}
-            </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              required
-              className="mt-1 w-full rounded-sm border border-brand-border px-4 py-3 text-sm outline-none focus:border-brand-green"
-            />
+          <div className="lg:col-span-7">
+            <QuoteForm initialType={type} initialFefco={fefco} />
           </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-brand-green">
-              {t("form.email")}
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              className="mt-1 w-full rounded-sm border border-brand-border px-4 py-3 text-sm outline-none focus:border-brand-green"
-            />
-          </div>
-          <div>
-            <label htmlFor="company" className="block text-sm font-medium text-brand-green">
-              {t("form.company")}
-            </label>
-            <input
-              id="company"
-              name="company"
-              type="text"
-              className="mt-1 w-full rounded-sm border border-brand-border px-4 py-3 text-sm outline-none focus:border-brand-green"
-            />
-          </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-brand-green">
-              {t("form.message")}
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              required
-              className="mt-1 w-full rounded-sm border border-brand-border px-4 py-3 text-sm outline-none focus:border-brand-green resize-y"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full rounded-sm bg-brand-green px-6 py-3 text-sm font-medium text-white hover:bg-brand-green/90 transition-colors"
-          >
-            {t("form.submit")}
-          </button>
-        </form>
+        </div>
       </div>
     </div>
   );

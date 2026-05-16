@@ -1,19 +1,112 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Leaf, Ruler, Zap } from "lucide-react";
+import { Link } from "@/i18n/routing";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { TrustStatsGrid } from "@/components/sections/TrustStatsGrid";
+import { parseHeroHeadline } from "@/lib/utils";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
+const philosophyKeys = ["precision", "production", "eco"] as const;
+const philosophyIcons = {
+  precision: Ruler,
+  production: Zap,
+  eco: Leaf,
+} as const;
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about" });
+  return {
+    title: `${t("philosophy.title")} | Tartupak`,
+    description: t("body"),
+  };
+}
+
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("about");
+  const headline = parseHeroHeadline(t("headline"));
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
-      <h1 className="text-4xl text-brand-green">{t("title")}</h1>
-      <p className="mt-8 text-xl text-brand-text font-normal leading-relaxed">{t("intro")}</p>
-      <p className="mt-6 text-lg text-brand-text font-normal leading-relaxed">{t("body")}</p>
+    <div className="px-6 pt-32 pb-24 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        {/* Hero */}
+        <div className="mb-32 grid grid-cols-1 items-center gap-20 lg:grid-cols-2">
+          <div className="space-y-8">
+            <span className="text-xs font-bold tracking-widest text-brand-kraft uppercase">
+              {t("overline")}
+            </span>
+            <h1
+              className={`font-serif text-5xl leading-[0.95] text-brand-green md:text-7xl lg:text-8xl ${locale === "ru" ? "font-black" : "font-bold"}`}
+            >
+              {headline.before}
+              {headline.highlight ? (
+                <span className="text-brand-kraft italic">{headline.highlight}</span>
+              ) : null}
+              {headline.after}
+            </h1>
+            <p className="max-w-lg text-xl leading-relaxed font-normal text-brand-text">
+              {t("body")}
+            </p>
+          </div>
+
+          <div className="relative aspect-square border border-brand-green/5 bg-white p-4">
+            <div className="relative flex h-full w-full items-center justify-center overflow-hidden border border-brand-green/10 bg-brand-bg/30">
+              <span className="z-10 text-center text-[10px] font-bold tracking-widest text-brand-text uppercase">
+                {t("facilityLabel")}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Philosophy */}
+        <section className="mb-32">
+          <SectionHeader
+            overline={t("philosophy.overline")}
+            title={t("philosophy.title")}
+            className="mb-16"
+          />
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+            {philosophyKeys.map((key) => {
+              const Icon = philosophyIcons[key];
+              return (
+                <div
+                  key={key}
+                  className="space-y-4 border border-brand-border p-6"
+                >
+                  <Icon size={28} className="text-brand-kraft" strokeWidth={1.5} aria-hidden />
+                  <h3 className="font-serif text-xl text-brand-green">
+                    {t(`philosophy.cards.${key}.title`)}
+                  </h3>
+                  <p className="text-sm leading-relaxed font-normal text-brand-text">
+                    {t(`philosophy.cards.${key}.description`)}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* Stats */}
+        <section className="mb-32 bg-brand-bg px-8 py-32 lg:px-12">
+          <TrustStatsGrid />
+        </section>
+
+        {/* CTA */}
+        <section className="border-t border-brand-green/5 py-12 text-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 rounded-sm bg-brand-green px-12 py-5 font-bold text-brand-bg transition-colors hover:bg-brand-green/90"
+          >
+            {t("cta")}
+          </Link>
+        </section>
+      </div>
     </div>
   );
 }

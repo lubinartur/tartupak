@@ -19,17 +19,14 @@ export function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileMenuPath, setMobileMenuPath] = useState<string | null>(null);
+  const isMobileMenuOpen = mobileMenuPath === pathname;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [pathname]);
 
   return (
     <nav
@@ -80,7 +77,7 @@ export function Navbar() {
         <button
           type="button"
           className="p-2 text-brand-green md:hidden"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          onClick={() => setMobileMenuPath(isMobileMenuOpen ? null : pathname)}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -105,7 +102,7 @@ export function Navbar() {
                 variant="mobile"
                 onChange={(l) => {
                   router.replace(pathname, { locale: l });
-                  setIsMobileMenuOpen(false);
+                  setMobileMenuPath(null);
                 }}
               />
               <Link

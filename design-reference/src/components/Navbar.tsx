@@ -13,8 +13,9 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileMenuPath, setMobileMenuPath] = useState<string | null>(null);
   const location = useLocation();
+  const isMobileMenuOpen = mobileMenuPath === location.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,11 +24,6 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Close mobile menu on route change
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [location]);
 
   return (
     <nav
@@ -78,7 +74,7 @@ export default function Navbar() {
         {/* Mobile Toggle */}
         <button
           className="md:hidden text-brand-green p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          onClick={() => setMobileMenuPath(isMobileMenuOpen ? null : location.pathname)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

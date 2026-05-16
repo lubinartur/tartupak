@@ -202,23 +202,92 @@
     }
   },
   "about": {
-    "title": "Meist",
-    "intro": "Tartupak on Eesti lainepappkarpide tootja.",
-    "body": "Ettevõte arendab pakendilahendusi logistika, toiduainetootmise, e-kaubanduse ja tööstusettevõtete jaoks. Meie spetsialistid aitavad klientidel luua pakendeid, mis kaitsevad tooteid ladustamise ja transpordi ajal, jäädes samal ajal kulutõhusaks ja keskkonnasõbralikuks."
+    "overline": "ASUTATUD 2001",
+    "headline": "Usaldusväärne *loodusest.*",
+    "body": "Tartu Pak OÜ asutati Tõrvandis, Eestis, lihtsa eesmärgiga: pakkuda tööstuslikku pakendit, mis ei tee järeleandmisi kvaliteedis. Täna käitame ühte Tartu maakonna kaasaegsemat gofreeritud kartongpakendi tootmisliini, teenindades kliente üle Baltikumi ja Skandinaavia.",
+    "facilityLabel": "TOOTMISHOONE TÕRVANDIS",
+    "philosophy": {
+      "overline": "MEIE FILOSOOFIA",
+      "title": "Tootmise tipptase",
+      "cards": {
+        "precision": {
+          "title": "Täppistehnoloogia",
+          "description": "CAD-põhine disainiprotsess tagab, et iga karp sobib teie tootele millimeetri täpsusega."
+        },
+        "production": {
+          "title": "Kaasaegne tootmine",
+          "description": "Pidev investeerimine kiiretesse lõike- ja automatiseeritud koostusliinidesse."
+        },
+        "eco": {
+          "title": "Ökoloogiline vastutus",
+          "description": "100% meie tootmisjäätmetest taaskasutatakse ja kõik toorained pärinevad jätkusuutlikest allikatest."
+        }
+      }
+    },
+    "cta": "Alustage oma projekti →"
   },
   "contact": {
-    "title": "Kontakt",
-    "subtitle": "Kirjutage meile oma pakendivajadusest.",
+    "overline": "VÕTA ÜHENDUST",
+    "title": "Alustage oma projekti",
+    "subtitle": "Olgu teil vaja ühekordset eritellimust või suuremahulist tarneahela lahendust — meie meeskond on valmis aitama.",
+    "info": {
+      "officeTitle": "Kontor ja tootmine",
+      "emailTitle": "E-post",
+      "phoneTitle": "Otsetelefonid",
+      "hoursTitle": "Tööaeg",
+      "hours": "Esmaspäev–reede 08:00–16:30",
+      "landline": "Lauatelefon",
+      "mobile": "Mobiil"
+    },
     "address": "Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Eesti",
+    "addressLine1": "Tamme 35, Tõrvandi alevik,",
+    "addressLine2": "Ülenurme vald, 61715 Tartumaa,",
+    "addressLine3": "Eesti",
     "email": "info@tartupak.ee",
     "phone": "+372 741 5333",
     "mobile": "+372 5349 9642",
     "form": {
-      "name": "Nimi",
-      "email": "E-post",
+      "fullName": "Täisnimi",
       "company": "Ettevõte",
-      "message": "Sõnum",
-      "submit": "Saada päring"
+      "email": "E-posti aadress",
+      "phone": "Telefoninumber",
+      "packagingType": "Pakendi tüüp",
+      "dimensions": "Mõõtmed (valikuline)",
+      "quantity": "Eeldatav kogus",
+      "message": "Üksikasjalik sõnum",
+      "selectPackaging": "Valige pakendi tüüp",
+      "placeholders": {
+        "fullName": "Jaan Tamm",
+        "company": "Ettevõtte nimi",
+        "email": "jaan@näide.ee",
+        "phone": "+372 ...",
+        "dimensions": "P × L × K (mm)",
+        "quantity": "nt 500",
+        "message": "Kirjeldage oma pakendinõudeid..."
+      },
+      "packagingTypes": {
+        "lainepapp": "Lainepapp",
+        "transpordipakend": "Transpordipakend",
+        "fleksotrukk": "Fleksotrükk",
+        "kulmutatud-toodete-pakend": "Külmutatud toodete pakend",
+        "pizzakarbid": "Pizzakarbid",
+        "erilise-kujuga-pakendid": "Erilise kujuga pakendid",
+        "suuregabariidilised-pakendid": "Suuregabariidilised pakendid",
+        "fefco": "FEFCO standard (märkige kood)",
+        "other": "Muu"
+      },
+      "submit": "Saada hinnapäring",
+      "responseNote": "Vastame tavaliselt 1 tööpäeva jooksul.",
+      "success": "Aitäh! Võtame teiega ühendust 1 tööpäeva jooksul.",
+      "error": "Midagi läks valesti. Palun proovige uuesti.",
+      "fefcoPrefill": "FEFCO #{code}",
+      "errors": {
+        "nameRequired": "Täisnimi on kohustuslik.",
+        "nameMin": "Nimi peab olema vähemalt 2 tähemärki.",
+        "emailRequired": "E-post on kohustuslik.",
+        "emailInvalid": "Palun sisestage kehtiv e-posti aadress.",
+        "messageMax": "Sõnum võib olla kuni 2000 tähemärki."
+      }
     }
   },
   "privacy": {
