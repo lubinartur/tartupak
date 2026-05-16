@@ -117,9 +117,33 @@
     }
   },
   "products": {
-    "title": "Products",
-    "subtitle": "Corrugated packaging for logistics, food production and industry.",
+    "overline": "OUR PORTFOLIO",
+    "title": "Premium Packaging Solutions",
+    "metaDescription": "Corrugated cardboard packaging for logistics, food production, industry and retail — seven product categories from Tartupak.",
+    "applicationsLabel": "Applications",
     "requestQuote": "Request a Quote",
+    "requestQuoteForProduct": "Request a Quote for This Product",
+    "detail": {
+      "overline": "INDUSTRIAL MODEL",
+      "features": {
+        "recyclable": {
+          "title": "100% Recyclable",
+          "description": "Sourced from sustainably managed European forests"
+        },
+        "protection": {
+          "title": "Premium Protection",
+          "description": "Engineered structural integrity for industrial transport"
+        },
+        "sizing": {
+          "title": "Custom Sizing",
+          "description": "Available in standard FEFCO codes or bespoke dimensions"
+        }
+      },
+      "related": {
+        "overline": "MORE SOLUTIONS",
+        "title": "Explore Related Packaging"
+      }
+    },
     "items": {
       "lainepapp": {
         "title": "Corrugated Cardboard",
@@ -227,7 +251,7 @@
   },
   "common": {
     "learnMore": "Learn more",
-    "backToProducts": "Back to products",
+    "backToProducts": "Back to Products",
     "backToFefco": "Back to FEFCO catalog"
   }
 }

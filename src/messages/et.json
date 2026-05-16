@@ -117,9 +117,33 @@
     }
   },
   "products": {
-    "title": "Tooted",
-    "subtitle": "Lainepappkarbid logistika, toiduainetootmise ja tööstuse jaoks.",
+    "overline": "MEIE PORTFELL",
+    "title": "Premium pakendilahendused",
+    "metaDescription": "Lainepapppakendid logistika, toiduainetootmise, tööstuse ja jaemüügi jaoks — seitse tootekategooriat Tartupakilt.",
+    "applicationsLabel": "Rakendused",
     "requestQuote": "Küsi pakkumist",
+    "requestQuoteForProduct": "Küsi pakkumist selle toote jaoks",
+    "detail": {
+      "overline": "TÖÖSTUSLIK LAHENDUS",
+      "features": {
+        "recyclable": {
+          "title": "100% taaskasutatav",
+          "description": "Pärit jätkusuutlikult majandatud Euroopa metsadest"
+        },
+        "protection": {
+          "title": "Premium kaitse",
+          "description": "Konstrueeritud struktuuriline terviklikkus tööstustranspordiks"
+        },
+        "sizing": {
+          "title": "Kohandatud mõõtmed",
+          "description": "Saadaval standardsetes FEFCO koodides või eritellimusel"
+        }
+      },
+      "related": {
+        "overline": "ROHKEM LAHENDUSI",
+        "title": "Uuri seotud pakendeid"
+      }
+    },
     "items": {
       "lainepapp": {
         "title": "Lainepapp",

@@ -1,6 +1,6 @@
 # Development Status
 
-Last updated: 2025-05
+Last updated: 2026-05
 
 ---
 
@@ -13,6 +13,8 @@ Last updated: 2025-05
 - Sanity (not yet connected)
 - Vercel (not yet deployed)
 
+Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
+
 ---
 
 ## Pages
@@ -20,14 +22,22 @@ Last updated: 2025-05
 | Page | Route | Status |
 |---|---|---|
 | Home | `/` | ✅ Done |
-| Products listing | `/products` | 🔲 Not started |
-| Product detail | `/products/[slug]` | 🔲 Not started |
-| FEFCO Catalog | `/fefco` | 🔲 Not started |
-| FEFCO Detail | `/fefco/[code]` | 🔲 Not started |
-| About | `/about` | 🔲 Not started |
-| Contact | `/contact` | 🔲 Not started |
-| Privacy Policy | `/privacy` | 🔲 Not started |
-| Terms | `/terms` | 🔲 Not started |
+| Products listing | `/products` | 🔧 Stub |
+| Product detail | `/products/[slug]` | 🔧 Stub |
+| FEFCO Catalog | `/fefco` | 🔧 Stub |
+| FEFCO Detail | `/fefco/[code]` | 🔧 Stub |
+| About | `/about` | 🔧 Stub |
+| Contact | `/contact` | 🔧 Stub |
+| Privacy Policy | `/privacy` | 🔧 Stub |
+| Terms | `/terms` | 🔧 Stub |
+
+**Stub notes:**
+- **Products listing / detail** — Routes exist; grid and placeholder detail pages need full content from `docs/22_product_catalog.md`.
+- **FEFCO Catalog** — Search and series filter UI exist; only 6 codes in data (preview set), not full catalog.
+- **FEFCO Detail** — Basic layout per code; needs FAQ, illustration, full copy.
+- **About** — Minimal copy page.
+- **Contact** — Form UI only; no Resend submission.
+- **Privacy / Terms** — Placeholder body text.
 
 ---
 
@@ -36,13 +46,13 @@ Last updated: 2025-05
 | Section | Status | Notes |
 |---|---|---|
 | Navbar | ✅ Done | Logo, nav, language switcher, CTA |
-| Hero | ✅ Done | Bold italic headline, kraft word, FEFCO carousel |
-| Trust Bar | ✅ Done | 4 items, correct copy |
-| Packaging Categories | ✅ Done | 6 cards (Lainepapp missing — see below) |
-| Bespoke Design | ✅ Done | Die-cut visual, CTA |
-| Manufacturing Process | ✅ Done | 4 steps |
-| FEFCO Preview | ✅ Done | 6 codes, 3+3 grid |
-| Why Choose Us | ✅ Done | AA, 20+, 100%, 1pc, EE, EST |
+| Hero | ✅ Done | Bold italic headline, kraft word, FEFCO carousel, i18n spec labels |
+| Trust Bar | ✅ Done | 4 items, correct copy (ET/EN/RU) |
+| Packaging Categories | ✅ Done | 7 categories, horizontal carousel, arrows, auto-scroll |
+| Bespoke Design | ✅ Done | Die-cut visual, doc copy, link to erilise-kujuga-pakendid |
+| Manufacturing Process | ✅ Done | 4 steps, overline + copy from docs |
+| FEFCO Preview | ✅ Done | 6 codes (0201, 0427, 0203, 0300, 0711, 0421), 3+3 grid |
+| Why Choose Us | ✅ Done | AA, 20+, 100%, 1tk/1pc, EE, EST |
 | CTA Banner | ✅ Done | Kraft italic word, correct copy |
 | Footer | ✅ Done | 4 columns, LinkedIn + Instagram, credentials |
 
@@ -50,8 +60,9 @@ Last updated: 2025-05
 
 ## Known Issues
 
-- Lainepapp category missing from homepage categories (6 shown, should be 7)
-- Sanity CMS not connected — all content from static data files
+- Product slugs are Estonian (`lainepapp`, `transpordipakend`, `fleksotrukk`, etc.) — aligned with tartupak.ee / `docs/22_product_catalog.md`
+- FEFCO full catalog has only 6 codes in `src/data/fefco.ts`; needs all 147 from `docs/23_fefco_data.md`
+- Sanity CMS not connected — content from `src/messages/*.json` and `src/data/*.ts`
 - No contact form submission logic (Resend not configured)
 - No deployment to Vercel yet
 
@@ -59,11 +70,12 @@ Last updated: 2025-05
 
 ## Next Steps
 
-1. `/products` page and `/products/[slug]` detail
-2. `/fefco` catalog page with search + series filter
-3. `/fefco/[code]` detail page
-4. `/contact` page with form submission via Resend
-5. `/about` page
-6. Connect Sanity CMS
-7. Deploy to Vercel
-8. SEO: meta tags, og images, sitemap
+1. ✅ Product category carousel arrows (fixed)
+2. Build `/products` page and `/products/[slug]` detail with full catalog content
+3. Build `/fefco` full catalog with all 147 codes
+4. Build `/fefco/[code]` detail page (FAQ, illustration, CTA)
+5. Build `/contact` with Resend form submission
+6. Build `/about` page (full copy, philosophy cards)
+7. Connect Sanity CMS
+8. Deploy to Vercel
+9. SEO: meta tags, og images, sitemap
