@@ -2,8 +2,33 @@ import Image from "next/image";
 import { Layers } from "lucide-react";
 import { getFefcoImage } from "@/data/fefco";
 
-/** Placeholder only — no diagram images on catalog/preview cards. */
-export function FefcoCardDiagram() {
+type FefcoCardDiagramProps = {
+  code: string;
+  name: string;
+  variant?: "catalog" | "preview";
+};
+
+export function FefcoCardDiagram({
+  code,
+  name,
+  variant = "catalog",
+}: FefcoCardDiagramProps) {
+  if (variant === "preview") {
+    const src = getFefcoImage(code);
+    if (!src) return null;
+    return (
+      <div className="relative mb-6 h-32 w-full">
+        <Image
+          src={src}
+          alt={name}
+          fill
+          className="object-contain"
+          sizes="(max-width: 1024px) 50vw, 33vw"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       className="mb-6 flex h-36 w-full items-center justify-center border border-brand-green/5 bg-brand-bg/30"
@@ -28,6 +53,7 @@ export function FefcoDetailDiagram({
   placeholderText,
 }: FefcoDetailDiagramProps) {
   const src = getFefcoImage(code);
+  console.log("FEFCO image path:", getFefcoImage(code), "for code:", code);
 
   return (
     <div className="relative flex aspect-square flex-col items-center justify-center border border-brand-green/10 bg-white p-12">
@@ -36,14 +62,16 @@ export function FefcoDetailDiagram({
       </div>
 
       {src ? (
-        <div className="relative flex w-full flex-1 items-center justify-center py-8">
-          <Image
-            src={src}
-            alt={name}
-            width={480}
-            height={320}
-            className="max-h-80 w-full object-contain"
-          />
+        <div className="flex w-full flex-1 items-center justify-center p-6">
+          <div className="flex w-full items-center justify-center rounded-lg bg-white p-6">
+            <Image
+              src={src}
+              alt={name}
+              width={480}
+              height={320}
+              className="max-h-72 w-full object-contain"
+            />
+          </div>
         </div>
       ) : (
         <>

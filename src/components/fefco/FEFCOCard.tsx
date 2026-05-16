@@ -10,9 +10,10 @@ import {
 
 type FEFCOCardProps = {
   code: string;
+  variant?: "catalog" | "preview";
 };
 
-export async function FEFCOCard({ code }: FEFCOCardProps) {
+export async function FEFCOCard({ code, variant = "catalog" }: FEFCOCardProps) {
   const entry = getFefcoEntry(code);
   if (!entry) return null;
 
@@ -27,7 +28,7 @@ export async function FEFCOCard({ code }: FEFCOCardProps) {
       href={`/fefco/${code}`}
       className="group flex h-full flex-col border border-brand-green/5 bg-white p-8 transition-all hover:border-brand-green/20 hover:bg-brand-bg"
     >
-      <FefcoCardDiagram />
+      <FefcoCardDiagram code={code} name={name} variant={variant} />
       <div className="mb-8 flex items-center justify-between">
         <span className="font-serif text-5xl text-brand-green/10 transition-colors group-hover:text-brand-green/20">
           #{code}

@@ -30,7 +30,7 @@ export async function FEFCOPreview() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {fefcoPreviewCodes.map((code, index) => (
             <FadeIn key={code} delay={index * 0.08}>
-              <FEFCOCard code={code} />
+              <FEFCOCard code={code} variant="preview" />
             </FadeIn>
           ))}
         </div>

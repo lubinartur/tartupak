@@ -26,7 +26,7 @@ export function FEFCOCardClient({ entry, locale }: FEFCOCardClientProps) {
       href={`/fefco/${entry.code}`}
       className="group flex h-full flex-col border border-brand-green/5 bg-white p-8 transition-all hover:border-brand-green/20 hover:bg-brand-bg"
     >
-      <FefcoCardDiagram />
+      <FefcoCardDiagram code={entry.code} name={name} variant="catalog" />
       <div className="mb-8 flex items-center justify-between">
         <span className="font-serif text-5xl text-brand-green/10 transition-colors group-hover:text-brand-green/20">
           #{entry.code}

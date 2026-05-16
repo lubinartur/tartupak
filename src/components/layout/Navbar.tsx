@@ -14,6 +14,18 @@ const navItems = [
   { href: "/contact", key: "contact" },
 ] as const;
 
+function navLabel(key: (typeof navItems)[number]["key"], t: ReturnType<typeof useTranslations<"nav">>) {
+  if (key === "fefco") {
+    return (
+      <>
+        <span className="lg:hidden">{t("fefcoShort")}</span>
+        <span className="hidden lg:inline">{t("fefco")}</span>
+      </>
+    );
+  }
+  return t(key);
+}
+
 export function Navbar() {
   const t = useTranslations("nav");
   const locale = useLocale();
@@ -32,46 +44,50 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 right-0 left-0 z-40 px-6 py-6 transition-all duration-300 lg:px-12",
+        "fixed top-0 right-0 left-0 z-40 overflow-hidden px-4 py-4 transition-all duration-300 md:px-6 lg:px-12 lg:py-6",
         isScrolled
-          ? "border-b border-brand-border bg-brand-bg/95 py-4 backdrop-blur-md"
+          ? "border-b border-brand-border bg-brand-bg/95 backdrop-blur-md lg:py-4"
           : "border-b border-brand-border bg-transparent",
       )}
     >
-      <div className="flex w-full items-center justify-between">
-        <Link href="/" className="group inline-block">
+      <div className="flex w-full min-w-0 items-center justify-between gap-2 overflow-hidden md:gap-3 lg:gap-4">
+        <Link href="/" className="group inline-block shrink-0">
           <Image
             src="/logo-tartupak.svg"
             alt="Tartupak"
-            height={40}
             width={236}
-            style={{ height: "40px", width: "auto" }}
+            height={40}
+            className="h-8 w-auto lg:h-10"
             priority
           />
         </Link>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden min-w-0 flex-1 items-center justify-center gap-3 overflow-hidden md:flex lg:gap-8">
           {navItems.map((link) => (
             <Link
               key={link.key}
               href={link.href}
               className={cn(
-                "text-sm font-medium tracking-wide transition-colors hover:text-brand-green/70",
+                "shrink-0 whitespace-nowrap text-sm font-medium tracking-wide transition-colors hover:text-brand-green/70",
                 pathname === link.href || pathname.startsWith(`${link.href}/`)
                   ? "text-brand-green"
                   : "text-brand-text font-normal",
               )}
             >
-              {t(link.key)}
+              {navLabel(link.key, t)}
             </Link>
           ))}
         </div>
 
-        <div className="hidden items-center gap-4 md:flex">
-          <LocaleSwitcher locale={locale} onChange={(l) => router.replace(pathname, { locale: l })} />
+        <div className="hidden shrink-0 items-center gap-2 overflow-hidden md:flex lg:gap-4">
+          <LocaleSwitcher
+            locale={locale}
+            onChange={(l) => router.replace(pathname, { locale: l })}
+            compact
+          />
           <Link
             href="/contact"
-            className="ml-2 rounded-sm bg-brand-green px-6 py-3 text-xs font-bold uppercase tracking-widest text-brand-bg transition-all hover:-translate-y-0.5 hover:bg-brand-text active:translate-y-0"
+            className="ml-1 rounded-sm bg-brand-green px-4 py-2 text-[10px] font-bold tracking-widest text-brand-bg uppercase transition-all hover:-translate-y-0.5 hover:bg-brand-text active:translate-y-0 lg:ml-2 lg:px-6 lg:py-3 lg:text-xs"
           >
             {t("quote")}
           </Link>
@@ -79,7 +95,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="p-2 text-brand-green md:hidden"
+          className="shrink-0 p-2 text-brand-green md:hidden"
           onClick={() => setMobileMenuPath(isMobileMenuOpen ? null : pathname)}
           aria-label="Toggle menu"
         >
@@ -96,7 +112,7 @@ export function Navbar() {
                 href={link.href}
                 className="ml-4 border-b border-brand-green/5 pb-2 font-serif text-lg text-brand-green"
               >
-                {t(link.key)}
+                {link.key === "fefco" ? t("fefco") : t(link.key)}
               </Link>
             ))}
             <div className="flex items-center justify-between pt-4">
@@ -126,10 +142,12 @@ function LocaleSwitcher({
   locale,
   onChange,
   variant = "desktop",
+  compact = false,
 }: {
   locale: string;
   onChange: (locale: string) => void;
   variant?: "desktop" | "mobile";
+  compact?: boolean;
 }) {
   const locales = [
     { code: "et", label: "ET" },
@@ -158,16 +176,21 @@ function LocaleSwitcher({
   }
 
   return (
-    <div className="flex cursor-pointer items-center gap-2 border-r border-brand-border pr-4 transition-colors hover:text-brand-green">
-      <Globe size={14} />
-      <div className="flex gap-1">
+    <div
+      className={cn(
+        "flex cursor-pointer items-center gap-1.5 border-r border-brand-border transition-colors hover:text-brand-green lg:gap-2 lg:pr-4",
+        compact ? "pr-2" : "pr-4",
+      )}
+    >
+      <Globe size={14} className="shrink-0" />
+      <div className="flex gap-0.5 lg:gap-1">
         {locales.map((l) => (
           <button
             key={l.code}
             type="button"
             onClick={() => onChange(l.code)}
             className={cn(
-              "text-[10px] font-bold uppercase tracking-widest transition-opacity",
+              "text-[10px] font-bold tracking-widest uppercase transition-opacity",
               locale === l.code ? "text-brand-green" : "text-brand-text font-normal hover:text-brand-green",
             )}
           >
