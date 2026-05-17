@@ -19,6 +19,7 @@ const FADE_MS = 600;
 
 export function HeroCarousel() {
   const t = useTranslations("home.hero");
+  const tAria = useTranslations("common.aria");
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const headline = parseHeroHeadline(t("title"));
@@ -105,7 +106,7 @@ export function HeroCarousel() {
                       "h-2.5 w-2.5 rounded-full border border-brand-green transition-all duration-300",
                       currentSlide === idx ? "bg-brand-green" : "bg-transparent",
                     )}
-                    aria-label={`Slide ${idx + 1}`}
+                    aria-label={`${tAria("slide")} ${idx + 1}`}
                   />
                 ))}
               </div>

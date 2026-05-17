@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   ProductCategoryCard,
@@ -25,6 +26,7 @@ type ProductCategoriesCarouselProps = {
 };
 
 export function ProductCategoriesCarousel({ cards }: ProductCategoriesCarouselProps) {
+  const tAria = useTranslations("common.aria");
   const scrollRef = useRef<HTMLDivElement>(null);
   const loopWidthRef = useRef(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -112,7 +114,7 @@ export function ProductCategoriesCarousel({ cards }: ProductCategoriesCarouselPr
         type="button"
         onClick={() => scrollByCard(-1)}
         className={cn(arrowClass)}
-        aria-label="Scroll categories left"
+        aria-label={tAria("scrollLeft")}
       >
         <ChevronLeft size={20} />
       </button>
@@ -142,7 +144,7 @@ export function ProductCategoriesCarousel({ cards }: ProductCategoriesCarouselPr
         type="button"
         onClick={() => scrollByCard(1)}
         className={cn(arrowClass)}
-        aria-label="Scroll categories right"
+        aria-label={tAria("scrollRight")}
       >
         <ChevronRight size={20} />
       </button>

@@ -244,6 +244,11 @@
         "4": "Внешний вид производственного объекта Tartupak, Тырванди"
       }
     },
+    "aria": {
+      "close": "Закрыть",
+      "previousPhoto": "Предыдущее фото",
+      "nextPhoto": "Следующее фото"
+    },
     "philosophy": {
       "overline": "НАША ФИЛОСОФИЯ",
       "title": "Производственное превосходство",
@@ -338,6 +343,17 @@
   },
   "common": {
     "backToProducts": "Назад к продукции",
-    "backToFefco": "Назад к каталогу FEFCO"
+    "backToFefco": "Назад к каталогу FEFCO",
+    "aria": {
+      "toggleMenu": "Открыть меню",
+      "closeMenu": "Закрыть меню",
+      "changeLanguage": "Сменить язык",
+      "language": "Язык",
+      "slide": "Слайд",
+      "scrollLeft": "Прокрутить влево",
+      "scrollRight": "Прокрутить вправо",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    }
   }
 }

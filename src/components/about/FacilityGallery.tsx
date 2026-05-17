@@ -23,6 +23,7 @@ const GRID_CELL_CLASS =
 
 export function FacilityGallery() {
   const t = useTranslations("about.facility.alt");
+  const tAria = useTranslations("about.aria");
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -138,7 +139,7 @@ export function FacilityGallery() {
             type="button"
             onClick={closeLightbox}
             className="absolute top-6 right-6 cursor-pointer text-white transition-opacity hover:opacity-80"
-            aria-label="Close"
+            aria-label={tAria("close")}
           >
             <X size={32} strokeWidth={1.5} />
           </button>
@@ -150,7 +151,7 @@ export function FacilityGallery() {
               showPrevious();
             }}
             className="absolute top-1/2 left-4 z-10 -translate-y-1/2 cursor-pointer rounded-sm p-2 text-white transition-opacity hover:opacity-80 md:left-8"
-            aria-label="Previous photo"
+            aria-label={tAria("previousPhoto")}
           >
             <ChevronLeft size={40} strokeWidth={1.5} />
           </button>
@@ -162,7 +163,7 @@ export function FacilityGallery() {
               showNext();
             }}
             className="absolute top-1/2 right-4 z-10 -translate-y-1/2 cursor-pointer rounded-sm p-2 text-white transition-opacity hover:opacity-80 md:right-8"
-            aria-label="Next photo"
+            aria-label={tAria("nextPhoto")}
           >
             <ChevronRight size={40} strokeWidth={1.5} />
           </button>

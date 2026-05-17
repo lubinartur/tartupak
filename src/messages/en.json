@@ -244,6 +244,11 @@
         "4": "Exterior view of Tartupak production facility, Tõrvandi"
       }
     },
+    "aria": {
+      "close": "Close",
+      "previousPhoto": "Previous photo",
+      "nextPhoto": "Next photo"
+    },
     "philosophy": {
       "overline": "OUR PHILOSOPHY",
       "title": "Manufacturing Excellence",
@@ -338,6 +343,17 @@
   },
   "common": {
     "backToProducts": "Back to Products",
-    "backToFefco": "Back to FEFCO catalog"
+    "backToFefco": "Back to FEFCO catalog",
+    "aria": {
+      "toggleMenu": "Toggle menu",
+      "closeMenu": "Close menu",
+      "changeLanguage": "Change language",
+      "language": "Language",
+      "slide": "Slide",
+      "scrollLeft": "Scroll left",
+      "scrollRight": "Scroll right",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    }
   }
 }

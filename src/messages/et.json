@@ -132,7 +132,7 @@
           "label": "Jätkusuutlikud materjalid",
           "description": "Kõik toorained pärit jätkusuutlikult majandatavatest metsadest ja täielikult taaskasutatavad."
         },
-        "scale": { "value": "1tk", "label": "Paindlik mastaap" }
+        "scale": { "value": "1 tk", "label": "Paindlik mastaap" }
       }
     },
     "cta": {
@@ -244,6 +244,11 @@
         "4": "Tartupaki tootmishoone välisvaade Tõrvandis"
       }
     },
+    "aria": {
+      "close": "Sulge",
+      "previousPhoto": "Eelmine foto",
+      "nextPhoto": "Järgmine foto"
+    },
     "philosophy": {
       "overline": "MEIE FILOSOOFIA",
       "title": "Tootmise tipptase",
@@ -338,6 +343,17 @@
   },
   "common": {
     "backToProducts": "Tagasi toodete juurde",
-    "backToFefco": "Tagasi FEFCO kataloogi"
+    "backToFefco": "Tagasi FEFCO kataloogi",
+    "aria": {
+      "toggleMenu": "Ava menüü",
+      "closeMenu": "Sulge menüü",
+      "changeLanguage": "Vaheta keelt",
+      "language": "Keel",
+      "slide": "Slaid",
+      "scrollLeft": "Keri vasakule",
+      "scrollRight": "Kerige paremale",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    }
   }
 }

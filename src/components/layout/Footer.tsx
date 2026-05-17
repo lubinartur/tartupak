@@ -7,6 +7,7 @@ export async function Footer() {
   const t = await getTranslations("footer");
   const nav = await getTranslations("nav");
   const contact = await getTranslations("contact");
+  const tAria = await getTranslations("common.aria");
 
   const navLinks = [
     { href: "/products", label: nav("products") },
@@ -38,14 +39,14 @@ export async function Footer() {
               <a
                 href="#"
                 className="flex h-8 w-8 items-center justify-center border border-white/30 text-white transition-colors hover:border-brand-kraft"
-                aria-label="LinkedIn"
+                aria-label={tAria("linkedin")}
               >
                 <Linkedin size={16} />
               </a>
               <a
                 href="#"
                 className="flex h-8 w-8 items-center justify-center border border-white/30 text-white transition-colors hover:border-brand-kraft"
-                aria-label="Instagram"
+                aria-label={tAria("instagram")}
               >
                 <Instagram size={16} />
               </a>

@@ -37,6 +37,7 @@ function navLabel(key: (typeof navItems)[number]["key"], t: ReturnType<typeof us
 
 export function Navbar() {
   const t = useTranslations("nav");
+  const tAria = useTranslations("common.aria");
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuPath, setMobileMenuPath] = useState<string | null>(null);
@@ -98,7 +99,7 @@ export function Navbar() {
             type="button"
             className="shrink-0 p-2 text-brand-green md:hidden"
             onClick={() => setMobileMenuPath(isMobileMenuOpen ? null : pathname)}
-            aria-label="Toggle menu"
+            aria-label={tAria("toggleMenu")}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -111,7 +112,7 @@ export function Navbar() {
             type="button"
             className="fixed inset-0 z-40 bg-black/50 md:hidden"
             onClick={() => setMobileMenuPath(null)}
-            aria-label="Close menu"
+            aria-label={tAria("closeMenu")}
           />
           <div className="absolute top-full right-0 left-0 z-50 overflow-hidden border-b border-brand-green/10 bg-brand-bg shadow-xl md:hidden">
           <div className="flex flex-col gap-4 p-6">
@@ -144,6 +145,7 @@ function LocaleDropdown() {
   const locale = useLocale() as LocaleCode;
   const pathname = usePathname();
   const router = useRouter();
+  const tAria = useTranslations("common.aria");
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -185,7 +187,7 @@ function LocaleDropdown() {
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
         aria-haspopup="listbox"
-        aria-label="Change language"
+        aria-label={tAria("changeLanguage")}
         className={cn(
           "flex cursor-pointer items-center gap-1.5 border border-transparent py-1 pr-2 pl-1 font-display text-[10px] font-bold tracking-widest uppercase transition-colors hover:text-brand-green md:border-r md:border-brand-border md:pr-4 lg:gap-2 lg:pr-4",
           open ? "text-brand-green" : "text-brand-text",
@@ -198,7 +200,7 @@ function LocaleDropdown() {
       {open ? (
         <ul
           role="listbox"
-          aria-label="Language"
+          aria-label={tAria("language")}
           className="absolute top-full right-0 z-50 mt-1 min-w-[10.5rem] border border-brand-border bg-brand-bg py-1 shadow-lg"
         >
           {otherLocales.map((l) => (
