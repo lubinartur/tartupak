@@ -42,18 +42,30 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 
 | Section | Status | Notes |
 |---|---|---|
-| Navbar | ✅ Done | Logo, nav, language dropdown (globe + ET/EN/RU), CTA, responsive |
+| Navbar | ✅ Done | Logo, nav, language dropdown (globe + ET/EN/RU), CTA, responsive, i18n aria-labels |
 | Hero | ✅ Done | Bold italic headline, kraft word, FEFCO carousel, i18n spec labels |
 | Trust Bar | ✅ Done | Dark green bg, 5 service items with subtext (ET/EN/RU) |
-| Packaging Categories | ✅ Done | Horizontal carousel, large cards (photo top + white text area bottom), fast scroll |
-| Bespoke Design | ✅ Done | Die-cut visual, doc copy, link to erilise-kujuga-pakendid |
-| Manufacturing Process | ✅ Done | 4 steps, overline + copy from docs |
-| FEFCO Preview | ✅ Done | 6 codes (0201, 0427, 0203, 0300, 0711, 0421) |
-| Why Choose Us | ✅ Done | Bento grid — 20+, AA, 1tk, 100% |
+| Packaging Categories | ✅ Done | Horizontal carousel (desktop), 1-col grid (mobile), large cards, fast scroll |
+| Bespoke Design | ✅ Done | Real product photo, doc copy, link to erilise-kujuga-pakendid |
+| Manufacturing Process | ✅ Done | Dark green bg, 4 steps with kraft icons, no divider line |
+| FEFCO Preview | ✅ Done | 6 codes, illustrations visible, mobile button alignment fixed |
+| Why Choose Us | ✅ Done | Bento grid — 20+, AA, 1 tk, 100% |
 | CTA Banner | ✅ Done | Kraft italic word, correct copy |
 | Footer | ✅ Done | Inverted logo, kraft section labels |
 
 ---
+
+## Recent Changes (2026-05-17 session 3)
+
+- i18n audit completed — all 227 keys aligned across ET/EN/RU
+- aria-labels moved to messages: navbar, hero carousel, categories carousel, facility gallery, footer socials
+- Manufacturing Process redesigned — dark green bg, lucide icons, removed divider line
+- Bespoke Design — SVG replaced with real product photo (`bespoke-packaging.png`)
+- FEFCO illustrations — `mix-blend-multiply` via plain `<img>`, PNG white backgrounds removed manually
+- OG image added — default `og:image` pointing to `/images/bespoke-packaging.png`
+- Mobile fixes — burger menu backdrop, categories 1-col grid, FEFCO catalog button left-aligned
+- Category carousel cards — taller photo area, reduced bottom padding
+- `1tk` → `1 tk` in ET messages
 
 ## Recent Changes (2026-05-17 session 2)
 
@@ -61,7 +73,7 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 - SEO implemented — `generateMetadata` for all pages, sitemap.xml (477 URLs × 3 locales), robots.txt
 - Language switcher replaced with dropdown (globe icon + locale code, closes on outside click)
 - Packaging Categories carousel redesigned — large cards with full-bleed photo + white text bottom area, fast scroll
-- FEFCO illustrations — PNG white background removed manually for 8 codes; `mix-blend-multiply` applied via plain `<img>` (not Next.js Image)
+- FEFCO illustrations — PNG white background removed manually for 8 codes; `mix-blend-multiply` applied
 
 ## Previous Changes (2026-05-17 session 1)
 
@@ -92,13 +104,12 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 
 ---
 
-## Next Steps
+## Next Steps (awaiting client)
 
-1. Configure Resend (`RESEND_API_KEY`) in Vercel env vars
-2. Privacy Policy and Terms content (client to provide)
-3. Real social media URLs (client to provide)
-4. More FEFCO illustrations (client to provide)
-5. Mobile responsiveness audit
-6. OG images for social sharing
-7. Connect Sanity CMS (when client needs to edit content)
-8. Review images.unoptimized before production
+1. Configure Resend (`RESEND_API_KEY`) + recipient email in Vercel env vars
+2. Privacy Policy and Terms content
+3. Real social media URLs (LinkedIn / Instagram)
+4. More FEFCO illustrations (139 codes remaining)
+5. Connect domain tartupak.ee to Vercel
+6. Connect Sanity CMS (if client wants to edit content)
+7. Review images.unoptimized before production
