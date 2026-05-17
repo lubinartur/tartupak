@@ -40,6 +40,11 @@ export async function generateMetadata({
       title: t("title"),
       description: t("description"),
       url: absoluteUrl(locale, "/"),
+      images: [{ url: "/images/bespoke-packaging.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: ["/images/bespoke-packaging.png"],
     },
   };
 }
