@@ -20,7 +20,7 @@ export function ProductCategoryCard({ slug, title, description }: ProductCategor
           src={`/images/product-${slug}.png`}
           alt={title}
           fill
-          className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+          className="object-cover object-top"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </div>
@@ -33,7 +33,7 @@ export function ProductCategoryCard({ slug, title, description }: ProductCategor
           <ArrowUpRight
             size={18}
             strokeWidth={1.5}
-            className="shrink-0 text-brand-green opacity-40 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100"
+            className="shrink-0 text-brand-green opacity-40 transition-all duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100"
             aria-hidden
           />
         </div>

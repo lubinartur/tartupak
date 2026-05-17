@@ -6,6 +6,7 @@ import { TrustBar } from "@/components/sections/TrustBar";
 import { ProductCategories } from "@/components/sections/ProductCategories";
 import { BespokeDesign } from "@/components/sections/BespokeDesign";
 import { ManufacturingProcess } from "@/components/sections/ManufacturingProcess";
+import { BoxesVideoStrip } from "@/components/sections/BoxesVideoStrip";
 import { FEFCOPreview } from "@/components/sections/FEFCOPreview";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { CTABanner } from "@/components/sections/CTABanner";
@@ -38,6 +39,7 @@ export default async function HomePage({ params }: Props) {
       <ProductCategories />
       <BespokeDesign />
       <ManufacturingProcess />
+      <BoxesVideoStrip />
       <FEFCOPreview />
       <WhyChooseUs />
       <CTABanner />

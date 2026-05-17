@@ -18,9 +18,9 @@ export async function BespokeDesign() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="absolute right-8 bottom-8 flex items-center gap-4 bg-white p-4 shadow-xl">
-              <Factory size={24} className="text-brand-kraft" />
-              <p className="text-[10px] font-bold tracking-widest text-brand-green/40 uppercase">
+            <div className="absolute right-8 bottom-8 flex items-center gap-4 bg-brand-kraft px-6 py-4 shadow-xl">
+              <Factory className="h-6 w-6 text-brand-green" aria-hidden />
+              <p className="text-base font-bold tracking-widest text-brand-green uppercase">
                 {t("overline")}
               </p>
             </div>

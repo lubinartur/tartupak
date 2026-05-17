@@ -10,7 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const GAP = 16;
-const AUTO_SCROLL_PX_PER_SEC = 30;
+const AUTO_SCROLL_PX_PER_SEC = 45;
 
 const arrowClass =
   "shrink-0 rounded-full border border-brand-border bg-white p-2 text-brand-green shadow-sm transition-colors hover:bg-brand-green hover:text-white";
@@ -79,8 +79,6 @@ export function ProductCategoriesCarousel({ cards }: ProductCategoriesCarouselPr
     const el = scrollRef.current;
     if (!el) return;
 
-    el.style.scrollSnapType = isPaused ? "x mandatory" : "none";
-
     let rafId = 0;
     let lastTime = performance.now();
 
@@ -121,13 +119,13 @@ export function ProductCategoriesCarousel({ cards }: ProductCategoriesCarouselPr
 
       <div
         ref={scrollRef}
-        className="scrollbar-hide min-w-0 flex-1 snap-x snap-mandatory overflow-x-auto"
+        className="scrollbar-hide min-w-0 flex-1 overflow-x-auto"
       >
         <div className="flex w-max flex-row gap-4 py-1">
           {loopCards.map((card, index) => (
             <div
               key={`${card.slug}-${index}`}
-              className="snap-start shrink-0"
+              className="shrink-0"
               style={cardWidth > 0 ? { width: cardWidth } : undefined}
             >
               <ProductCategoryCard
