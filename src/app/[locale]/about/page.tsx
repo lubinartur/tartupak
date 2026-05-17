@@ -6,6 +6,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FacilityGallery } from "@/components/about/FacilityGallery";
 import { WhyChooseUsBento } from "@/components/sections/WhyChooseUsBento";
 import { parseHeroHeadline } from "@/lib/utils";
+import { createPageMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -21,10 +22,12 @@ const philosophyIcons = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "about" });
-  return {
-    title: `${t("philosophy.title")} | Tartupak`,
+  return createPageMetadata({
+    locale,
+    pathname: "/about",
+    title: t("philosophy.title"),
     description: t("body"),
-  };
+  });
 }
 
 export default async function AboutPage({ params }: Props) {

@@ -16,6 +16,7 @@ import {
 } from "@/data/fefco-catalog";
 import { getFefcoFaq } from "@/lib/fefco-faq";
 import { routing } from "@/i18n/routing";
+import { createPageMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string; code: string }>;
@@ -33,10 +34,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!entry) return {};
 
   const name = getFefcoLocalized(entry.name, locale);
-  return {
-    title: `FEFCO ${code} — ${name} | Tartupak`,
-    description: getFefcoLocalized(entry.description, locale),
-  };
+  const title = `FEFCO ${code} — ${name}`;
+  const description = getFefcoLocalized(entry.description, locale);
+
+  return createPageMetadata({
+    locale,
+    pathname: `/fefco/${code}`,
+    title,
+    description,
+  });
 }
 
 export default async function FefcoDetailPage({ params }: Props) {

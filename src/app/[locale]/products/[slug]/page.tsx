@@ -14,6 +14,7 @@ import {
   type ProductSlug,
 } from "@/data/products";
 import { routing } from "@/i18n/routing";
+import { createPageMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -41,10 +42,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const t = await getTranslations({ locale, namespace: `products.items.${slug}` });
 
-  return {
-    title: `${t("title")} | Tartupak`,
+  return createPageMetadata({
+    locale,
+    pathname: `/products/${slug}`,
+    title: t("title"),
     description: t("description"),
-  };
+  });
 }
 
 function parseApplications(value: string): string[] {

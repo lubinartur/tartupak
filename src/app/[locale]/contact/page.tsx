@@ -1,4 +1,7 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/seo";
+import { routing } from "@/i18n/routing";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { QuoteForm } from "@/components/contact/QuoteForm";
@@ -10,6 +13,22 @@ type Props = {
 
 function telHref(phone: string) {
   return `tel:${phone.replace(/[\s/]/g, "")}`;
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
+
+  return createPageMetadata({
+    locale,
+    pathname: "/contact",
+    title: t("title"),
+    description: t("subtitle"),
+  });
 }
 
 export default async function ContactPage({ params, searchParams }: Props) {

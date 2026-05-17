@@ -8,13 +8,17 @@ import {
 } from "@/components/products/ProductCategoryCard";
 import { cn } from "@/lib/utils";
 
-const CARD_WIDTH = 280;
 const GAP = 16;
-const SCROLL_STEP = CARD_WIDTH + GAP;
 const AUTO_SCROLL_PX_PER_SEC = 30;
 
 const arrowClass =
   "shrink-0 rounded-full border border-brand-border bg-white p-2 text-brand-green shadow-sm transition-colors hover:bg-brand-green hover:text-white";
+
+function getCardsPerView(width: number): number {
+  if (width >= 1024) return 3;
+  if (width >= 640) return 2;
+  return 1;
+}
 
 type ProductCategoriesCarouselProps = {
   cards: ProductCategoryCardData[];
@@ -24,11 +28,16 @@ export function ProductCategoriesCarousel({ cards }: ProductCategoriesCarouselPr
   const scrollRef = useRef<HTMLDivElement>(null);
   const loopWidthRef = useRef(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [cardWidth, setCardWidth] = useState(0);
   const loopCards = useMemo(() => [...cards, ...cards], [cards]);
 
-  const measureLoop = useCallback(() => {
+  const measure = useCallback(() => {
     const el = scrollRef.current;
     if (!el) return;
+
+    const perView = getCardsPerView(el.clientWidth);
+    const width = (el.clientWidth - (perView - 1) * GAP) / perView;
+    setCardWidth(width);
     loopWidthRef.current = el.scrollWidth / 2;
   }, []);
 
@@ -37,25 +46,38 @@ export function ProductCategoriesCarousel({ cards }: ProductCategoriesCarouselPr
     if (!el) return;
 
     el.scrollLeft = 0;
-    measureLoop();
+    measure();
 
-    const resizeObserver = new ResizeObserver(measureLoop);
+    const resizeObserver = new ResizeObserver(measure);
     resizeObserver.observe(el);
 
     return () => resizeObserver.disconnect();
-  }, [cards, measureLoop]);
-
-  const scrollByCard = useCallback((direction: -1 | 1) => {
-    const el = scrollRef.current;
-    if (!el) return;
-
-    setIsPaused(true);
-    el.scrollBy({ left: direction * SCROLL_STEP, behavior: "smooth" });
-  }, []);
+  }, [cards, measure]);
 
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
+    loopWidthRef.current = el.scrollWidth / 2;
+  }, [cardWidth, loopCards.length]);
+
+  const scrollStep = cardWidth > 0 ? cardWidth + GAP : 0;
+
+  const scrollByCard = useCallback(
+    (direction: -1 | 1) => {
+      const el = scrollRef.current;
+      if (!el || scrollStep <= 0) return;
+
+      setIsPaused(true);
+      el.scrollBy({ left: direction * scrollStep, behavior: "auto" });
+    },
+    [scrollStep],
+  );
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    el.style.scrollSnapType = isPaused ? "x mandatory" : "none";
 
     let rafId = 0;
     let lastTime = performance.now();
@@ -82,7 +104,7 @@ export function ProductCategoriesCarousel({ cards }: ProductCategoriesCarouselPr
 
   return (
     <div
-      className="flex items-center gap-3"
+      className="mt-12 flex items-center gap-3"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -95,15 +117,23 @@ export function ProductCategoriesCarousel({ cards }: ProductCategoriesCarouselPr
         <ChevronLeft size={20} />
       </button>
 
-      <div ref={scrollRef} className="scrollbar-hide min-w-0 flex-1 overflow-x-auto">
-        <div className="flex w-max flex-row gap-4 py-1 pl-4 pr-4">
+      <div
+        ref={scrollRef}
+        className="scrollbar-hide min-w-0 flex-1 snap-x snap-mandatory overflow-x-auto"
+      >
+        <div className="flex w-max flex-row gap-4 py-1">
           {loopCards.map((card, index) => (
-            <ProductCategoryCard
+            <div
               key={`${card.slug}-${index}`}
-              slug={card.slug}
-              title={card.title}
-              description={card.description}
-            />
+              className="snap-start shrink-0"
+              style={cardWidth > 0 ? { width: cardWidth } : undefined}
+            >
+              <ProductCategoryCard
+                slug={card.slug}
+                title={card.title}
+                description={card.description}
+              />
+            </div>
           ))}
         </div>
       </div>

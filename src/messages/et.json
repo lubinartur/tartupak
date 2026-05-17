@@ -211,6 +211,7 @@
   "fefco": {
     "overline": "STANDARDID",
     "title": "FEFCO disainikataloog",
+    "metaDescription": "Sirvi 147 rahvusvahelist FEFCO lainepappkarbi disainikoodi. Otsi koodi järgi, vaata spetsifikatsioone ja küsi pakkumist Tartupakilt.",
     "downloadCatalog": "Laadi alla FEFCO kataloog (PDF)",
     "searchPlaceholder": "Otsi koodi või nime järgi... (nt 0201)",
     "filterAll": "Kõik",

@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ProductCard } from "@/components/products/ProductCard";
 import { productSlugs } from "@/data/products";
 import { routing } from "@/i18n/routing";
+import { createPageMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -17,10 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "products" });
 
-  return {
-    title: `${t("title")} | Tartupak`,
+  return createPageMetadata({
+    locale,
+    pathname: "/products",
+    title: t("title"),
     description: t("metaDescription"),
-  };
+  });
 }
 
 export default async function ProductsPage({ params }: Props) {

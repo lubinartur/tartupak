@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { absoluteUrl, openGraphLocale, SITE_URL } from "@/lib/seo";
 import "../globals.css";
 
 type Props = {
@@ -26,8 +27,20 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "metadata" });
 
   return {
-    title: t("title"),
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: t("title"),
+      template: "%s | Tartupak",
+    },
     description: t("description"),
+    openGraph: {
+      siteName: "Tartupak",
+      type: "website",
+      locale: openGraphLocale(locale),
+      title: t("title"),
+      description: t("description"),
+      url: absoluteUrl(locale, "/"),
+    },
   };
 }
 

@@ -2,8 +2,8 @@ import { getTranslations } from "next-intl/server";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ProductCategoriesCarousel } from "@/components/sections/ProductCategoriesCarousel";
-import { productSlugs } from "@/data/products";
 import type { ProductCategoryCardData } from "@/components/products/ProductCategoryCard";
+import { productSlugs } from "@/data/products";
 
 export async function ProductCategories() {
   const t = await getTranslations("home.categories");
@@ -25,7 +25,9 @@ export async function ProductCategories() {
         <FadeIn>
           <SectionHeader overline={t("overline")} title={t("title")} />
         </FadeIn>
-        <ProductCategoriesCarousel cards={cards} />
+        <FadeIn delay={0.1}>
+          <ProductCategoriesCarousel cards={cards} />
+        </FadeIn>
       </div>
     </section>
   );

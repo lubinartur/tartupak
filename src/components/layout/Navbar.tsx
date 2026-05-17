@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { Menu, X, Globe } from "lucide-react";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
+import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -13,6 +14,14 @@ const navItems = [
   { href: "/about", key: "about" },
   { href: "/contact", key: "contact" },
 ] as const;
+
+const locales = [
+  { code: "et", label: "ET", name: "Eesti" },
+  { code: "en", label: "EN", name: "English" },
+  { code: "ru", label: "RU", name: "Русский" },
+] as const;
+
+type LocaleCode = (typeof locales)[number]["code"];
 
 function navLabel(key: (typeof navItems)[number]["key"], t: ReturnType<typeof useTranslations<"nav">>) {
   if (key === "fefco") {
@@ -28,9 +37,7 @@ function navLabel(key: (typeof navItems)[number]["key"], t: ReturnType<typeof us
 
 export function Navbar() {
   const t = useTranslations("nav");
-  const locale = useLocale();
   const pathname = usePathname();
-  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuPath, setMobileMenuPath] = useState<string | null>(null);
   const isMobileMenuOpen = mobileMenuPath === pathname;
@@ -44,13 +51,13 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 right-0 left-0 z-40 overflow-hidden px-4 py-4 transition-all duration-300 md:px-6 lg:px-12 lg:py-6",
+        "fixed top-0 right-0 left-0 z-40 overflow-visible px-4 py-4 transition-all duration-300 md:px-6 lg:px-12 lg:py-6",
         isScrolled
           ? "border-b border-brand-border bg-brand-bg/95 backdrop-blur-md lg:py-4"
           : "border-b border-brand-border bg-transparent",
       )}
     >
-      <div className="flex w-full min-w-0 items-center justify-between gap-2 overflow-hidden md:gap-3 lg:gap-4">
+      <div className="flex w-full min-w-0 items-center justify-between gap-2 overflow-visible md:gap-3 lg:gap-4">
         <Link href="/" className="group inline-block shrink-0">
           <Image
             src="/logo-tartupak.svg"
@@ -79,28 +86,23 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden shrink-0 items-center gap-2 overflow-hidden md:flex lg:gap-4">
-          <LocaleSwitcher
-            locale={locale}
-            onChange={(l) => router.replace(pathname, { locale: l })}
-            compact
-          />
+        <div className="flex shrink-0 items-center gap-2 overflow-visible lg:gap-4">
+          <LocaleDropdown />
           <Link
             href="/contact"
-            className="ml-1 rounded-sm bg-brand-green px-4 py-2 text-[10px] font-bold tracking-widest text-brand-bg uppercase transition-all hover:-translate-y-0.5 hover:bg-brand-text active:translate-y-0 lg:ml-2 lg:px-6 lg:py-3 lg:text-xs"
+            className="hidden rounded-sm bg-brand-green px-4 py-2 text-[10px] font-bold tracking-widest text-brand-bg uppercase transition-all hover:-translate-y-0.5 hover:bg-brand-text active:translate-y-0 md:ml-1 md:inline-block lg:ml-2 lg:px-6 lg:py-3 lg:text-xs"
           >
             {t("quote")}
           </Link>
+          <button
+            type="button"
+            className="shrink-0 p-2 text-brand-green md:hidden"
+            onClick={() => setMobileMenuPath(isMobileMenuOpen ? null : pathname)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-
-        <button
-          type="button"
-          className="shrink-0 p-2 text-brand-green md:hidden"
-          onClick={() => setMobileMenuPath(isMobileMenuOpen ? null : pathname)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
 
       {isMobileMenuOpen ? (
@@ -111,26 +113,18 @@ export function Navbar() {
                 key={link.key}
                 href={link.href}
                 className="ml-4 border-b border-brand-green/5 pb-2 font-serif text-lg text-brand-green"
+                onClick={() => setMobileMenuPath(null)}
               >
                 {link.key === "fefco" ? t("fefco") : t(link.key)}
               </Link>
             ))}
-            <div className="flex items-center justify-between pt-4">
-              <LocaleSwitcher
-                locale={locale}
-                variant="mobile"
-                onChange={(l) => {
-                  router.replace(pathname, { locale: l });
-                  setMobileMenuPath(null);
-                }}
-              />
-              <Link
-                href="/contact"
-                className="rounded-sm bg-brand-green px-6 py-3 text-sm text-white"
-              >
-                {t("quote")}
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              className="mt-2 inline-block rounded-sm bg-brand-green px-6 py-3 text-center text-sm text-white"
+              onClick={() => setMobileMenuPath(null)}
+            >
+              {t("quote")}
+            </Link>
           </div>
         </div>
       ) : null}
@@ -138,66 +132,81 @@ export function Navbar() {
   );
 }
 
-function LocaleSwitcher({
-  locale,
-  onChange,
-  variant = "desktop",
-  compact = false,
-}: {
-  locale: string;
-  onChange: (locale: string) => void;
-  variant?: "desktop" | "mobile";
-  compact?: boolean;
-}) {
-  const locales = [
-    { code: "et", label: "ET" },
-    { code: "en", label: "EN" },
-    { code: "ru", label: "RU" },
-  ];
+function LocaleDropdown() {
+  const locale = useLocale() as LocaleCode;
+  const pathname = usePathname();
+  const router = useRouter();
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
 
-  if (variant === "mobile") {
-    return (
-      <div className="flex gap-4 p-2">
-        {locales.map((l) => (
-          <button
-            key={l.code}
-            type="button"
-            onClick={() => onChange(l.code)}
-            className={cn(
-              "text-xs font-bold",
-              locale === l.code ? "underline" : "opacity-40",
-            )}
-          >
-            {l.label}
-          </button>
-        ))}
-      </div>
-    );
-  }
+  const current = locales.find((l) => l.code === locale) ?? locales[0];
+  const otherLocales = locales.filter((l) => l.code !== locale);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const handlePointerDown = (event: MouseEvent) => {
+      if (rootRef.current && !rootRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [open]);
+
+  const switchLocale = (next: LocaleCode) => {
+    if (next !== locale && routing.locales.includes(next)) {
+      router.replace(pathname, { locale: next });
+    }
+    setOpen(false);
+  };
 
   return (
-    <div
-      className={cn(
-        "flex cursor-pointer items-center gap-1.5 border-r border-brand-border transition-colors hover:text-brand-green lg:gap-2 lg:pr-4",
-        compact ? "pr-2" : "pr-4",
-      )}
-    >
-      <Globe size={14} className="shrink-0" />
-      <div className="flex gap-0.5 lg:gap-1">
-        {locales.map((l) => (
-          <button
-            key={l.code}
-            type="button"
-            onClick={() => onChange(l.code)}
-            className={cn(
-              "text-[10px] font-bold tracking-widest uppercase transition-opacity",
-              locale === l.code ? "text-brand-green" : "text-brand-text font-normal hover:text-brand-green",
-            )}
-          >
-            {l.label}
-          </button>
-        ))}
-      </div>
+    <div ref={rootRef} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((prev) => !prev)}
+        aria-expanded={open}
+        aria-haspopup="listbox"
+        aria-label="Change language"
+        className={cn(
+          "flex cursor-pointer items-center gap-1.5 border border-transparent py-1 pr-2 pl-1 font-display text-[10px] font-bold tracking-widest uppercase transition-colors hover:text-brand-green md:border-r md:border-brand-border md:pr-4 lg:gap-2 lg:pr-4",
+          open ? "text-brand-green" : "text-brand-text",
+        )}
+      >
+        <Globe size={14} className="shrink-0" aria-hidden />
+        <span>{current.label}</span>
+      </button>
+
+      {open ? (
+        <ul
+          role="listbox"
+          aria-label="Language"
+          className="absolute top-full right-0 z-50 mt-1 min-w-[10.5rem] border border-brand-border bg-brand-bg py-1 shadow-lg"
+        >
+          {otherLocales.map((l) => (
+            <li key={l.code} role="option" aria-selected={false}>
+              <button
+                type="button"
+                onClick={() => switchLocale(l.code)}
+                className="flex w-full items-baseline gap-2 px-3 py-2 text-left font-display text-[10px] font-bold tracking-widest uppercase transition-colors hover:bg-brand-green/5 hover:text-brand-green"
+              >
+                <span className="w-6 shrink-0 text-brand-green">{l.label}</span>
+                <span className="font-normal text-brand-text">{l.name}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </div>
   );
 }

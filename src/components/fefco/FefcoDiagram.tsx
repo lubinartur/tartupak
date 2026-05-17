@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Layers } from "lucide-react";
 import { getFefcoImage } from "@/data/fefco";
 
@@ -17,13 +16,24 @@ export function FefcoCardDiagram({
     const src = getFefcoImage(code);
     if (!src) return null;
     return (
-      <div className="relative mb-6 h-32 w-full">
-        <Image
+      <div className="mb-6 flex h-32 w-full items-center justify-center">
+        <img
           src={src}
           alt={name}
-          fill
-          className="object-contain"
-          sizes="(max-width: 1024px) 50vw, 33vw"
+          className="max-h-full w-full object-contain"
+        />
+      </div>
+    );
+  }
+
+  const catalogSrc = getFefcoImage(code);
+  if (catalogSrc) {
+    return (
+      <div className="mb-6 flex h-36 w-full items-center justify-center">
+        <img
+          src={catalogSrc}
+          alt={name}
+          className="max-h-full w-full object-contain mix-blend-multiply"
         />
       </div>
     );
@@ -63,15 +73,11 @@ export function FefcoDetailDiagram({
 
       {src ? (
         <div className="flex w-full flex-1 items-center justify-center p-6">
-          <div className="flex w-full items-center justify-center rounded-lg bg-white p-6">
-            <Image
-              src={src}
-              alt={name}
-              width={480}
-              height={320}
-              className="max-h-72 w-full object-contain"
-            />
-          </div>
+          <img
+            src={src}
+            alt={name}
+            className="max-h-72 w-full object-contain mix-blend-multiply"
+          />
         </div>
       ) : (
         <>
