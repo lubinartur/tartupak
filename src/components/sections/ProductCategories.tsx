@@ -2,7 +2,10 @@ import { getTranslations } from "next-intl/server";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ProductCategoriesCarousel } from "@/components/sections/ProductCategoriesCarousel";
-import type { ProductCategoryCardData } from "@/components/products/ProductCategoryCard";
+import {
+  ProductCategoryCard,
+  type ProductCategoryCardData,
+} from "@/components/products/ProductCategoryCard";
 import { productSlugs } from "@/data/products";
 
 export async function ProductCategories() {
@@ -25,8 +28,20 @@ export async function ProductCategories() {
         <FadeIn>
           <SectionHeader overline={t("overline")} title={t("title")} />
         </FadeIn>
-        <FadeIn delay={0.1}>
-          <ProductCategoriesCarousel cards={cards} />
+        <FadeIn delay={0.1} className="mt-12">
+          <div className="grid grid-cols-1 gap-4 sm:hidden">
+            {cards.map((card) => (
+              <ProductCategoryCard
+                key={card.slug}
+                slug={card.slug}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
+          </div>
+          <div className="hidden sm:block">
+            <ProductCategoriesCarousel cards={cards} />
+          </div>
         </FadeIn>
       </div>
     </section>

@@ -57,7 +57,7 @@ export function Navbar() {
           : "border-b border-brand-border bg-transparent",
       )}
     >
-      <div className="flex w-full min-w-0 items-center justify-between gap-2 overflow-visible md:gap-3 lg:gap-4">
+      <div className="relative z-50 flex w-full min-w-0 items-center justify-between gap-2 overflow-visible md:gap-3 lg:gap-4">
         <Link href="/" className="group inline-block shrink-0">
           <Image
             src="/logo-tartupak.svg"
@@ -106,13 +106,20 @@ export function Navbar() {
       </div>
 
       {isMobileMenuOpen ? (
-        <div className="absolute top-full right-0 left-0 overflow-hidden border-b border-brand-green/10 bg-brand-bg shadow-xl md:hidden">
+        <>
+          <button
+            type="button"
+            className="fixed inset-0 z-40 bg-black/50 md:hidden"
+            onClick={() => setMobileMenuPath(null)}
+            aria-label="Close menu"
+          />
+          <div className="absolute top-full right-0 left-0 z-50 overflow-hidden border-b border-brand-green/10 bg-brand-bg shadow-xl md:hidden">
           <div className="flex flex-col gap-4 p-6">
             {navItems.map((link) => (
               <Link
                 key={link.key}
                 href={link.href}
-                className="ml-4 border-b border-brand-green/5 pb-2 font-serif text-lg text-brand-green"
+                className="ml-4 border-b border-brand-green/5 pb-2 font-serif text-xl text-brand-green"
                 onClick={() => setMobileMenuPath(null)}
               >
                 {link.key === "fefco" ? t("fefco") : t(link.key)}
@@ -127,6 +134,7 @@ export function Navbar() {
             </Link>
           </div>
         </div>
+        </>
       ) : null}
     </nav>
   );

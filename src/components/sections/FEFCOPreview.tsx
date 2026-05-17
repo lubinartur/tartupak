@@ -12,8 +12,8 @@ export async function FEFCOPreview() {
   return (
     <section className="bg-white px-8 py-24 lg:px-12">
       <div className="w-full">
-        <div className="mb-12 flex items-end justify-between gap-8">
-          <div className="space-y-4">
+        <div className="mb-12 flex flex-col items-stretch gap-6 md:flex-row md:items-end md:justify-between md:gap-8">
+          <div className="min-w-0 space-y-4">
             <span className="block font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/60 uppercase sm:text-xs">
               {t("overline")}
             </span>
@@ -21,7 +21,7 @@ export async function FEFCOPreview() {
           </div>
           <Link
             href="/fefco"
-            className="group inline-flex shrink-0 items-center gap-3 font-bold text-brand-green transition-colors hover:text-brand-kraft"
+            className="group inline-flex w-full items-center justify-start gap-3 font-bold text-brand-green transition-colors hover:text-brand-kraft md:w-auto"
           >
             {fefco("viewAllCatalog")}
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-2" />

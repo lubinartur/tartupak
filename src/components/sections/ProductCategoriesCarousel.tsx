@@ -104,7 +104,7 @@ export function ProductCategoriesCarousel({ cards }: ProductCategoriesCarouselPr
 
   return (
     <div
-      className="mt-12 flex items-center gap-3"
+      className="flex items-center gap-3"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >

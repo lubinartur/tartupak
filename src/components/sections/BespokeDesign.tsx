@@ -3,8 +3,6 @@ import { Link } from "@/i18n/routing";
 import { ArrowRight, Factory } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { CustomDieCutSVG } from "@/components/visuals/CustomDieCutSVG";
-
 export async function BespokeDesign() {
   const t = await getTranslations("home.bespoke");
 
@@ -13,8 +11,12 @@ export async function BespokeDesign() {
       <div className="grid w-full grid-cols-1 items-center gap-20 lg:grid-cols-2">
         <div className="order-2 lg:order-1">
           <div className="relative flex aspect-video items-center justify-center overflow-hidden border border-brand-green/5 bg-brand-bg p-1">
-            <div className="flex h-full w-full items-center justify-center border border-brand-green/10">
-              <CustomDieCutSVG />
+            <div className="h-full w-full overflow-hidden border border-brand-green/10">
+              <img
+                src="/images/bespoke-packaging.png"
+                alt={t("title")}
+                className="h-full w-full object-cover"
+              />
             </div>
             <div className="absolute right-8 bottom-8 flex items-center gap-4 bg-white p-4 shadow-xl">
               <Factory size={24} className="text-brand-kraft" />

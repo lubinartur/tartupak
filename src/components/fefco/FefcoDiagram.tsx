@@ -16,11 +16,11 @@ export function FefcoCardDiagram({
     const src = getFefcoImage(code);
     if (!src) return null;
     return (
-      <div className="mb-6 flex h-32 w-full items-center justify-center">
+      <div className="mb-6 flex h-52 w-full items-center justify-center">
         <img
           src={src}
           alt={name}
-          className="max-h-full w-full object-contain"
+          className="max-h-full w-full object-contain mix-blend-multiply"
         />
       </div>
     );
