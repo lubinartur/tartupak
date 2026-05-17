@@ -13,9 +13,9 @@ export function ProductCategoryCard({ slug, title, description }: ProductCategor
   return (
     <Link
       href={`/products/${slug}`}
-      className="group flex h-full min-h-[320px] w-full flex-col overflow-hidden rounded-lg border border-brand-border bg-white transition-colors hover:border-brand-green/20 sm:min-h-[380px] lg:min-h-[420px]"
+      className="group flex w-full flex-col overflow-hidden rounded-lg border border-brand-border bg-white transition-colors hover:border-brand-green/20"
     >
-      <div className="relative min-h-0 flex-[3] overflow-hidden bg-brand-bg">
+      <div className="relative h-48 shrink-0 overflow-hidden bg-brand-bg sm:h-64 lg:h-80">
         <Image
           src={`/images/product-${slug}.png`}
           alt={title}
@@ -25,7 +25,7 @@ export function ProductCategoryCard({ slug, title, description }: ProductCategor
         />
       </div>
 
-      <div className="flex min-h-0 flex-[2] flex-col gap-2 bg-white p-4 sm:p-5">
+      <div className="flex shrink-0 flex-col gap-2 p-4">
         <div className="flex items-start justify-between gap-3">
           <h3 className="font-display text-sm leading-tight font-bold tracking-wide text-brand-green uppercase lg:text-base">
             {title}
