@@ -55,8 +55,9 @@ export function Navbar() {
         "fixed top-0 right-0 left-0 z-40 overflow-visible px-4 py-4 transition-all duration-300 md:px-6 lg:px-12 lg:py-6",
         isScrolled
           ? "border-b border-brand-border bg-brand-bg/95 backdrop-blur-md lg:py-4"
-          : "border-b border-brand-border bg-transparent",
+          : "border-b border-brand-border bg-brand-bg",
       )}
+      style={{ backgroundImage: "none" }}
     >
       <div className="relative z-50 flex w-full min-w-0 items-center justify-between gap-2 overflow-visible md:gap-3 lg:gap-4">
         <Link href="/" className="group inline-block shrink-0">
