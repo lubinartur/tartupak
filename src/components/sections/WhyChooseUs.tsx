@@ -8,7 +8,7 @@ export async function WhyChooseUs() {
 
   return (
     <section className="bg-brand-bg px-8 py-32 lg:px-12">
-      <div className="w-full">
+      <div className="w-full max-w-7xl mx-auto">
         <SectionHeader centered overline={t("overline")} title={t("title")} className="mx-auto" />
         <FadeIn className="mt-24">
           <WhyChooseUsBento />

@@ -59,7 +59,7 @@ export function Navbar() {
       )}
       style={{ backgroundImage: "none" }}
     >
-      <div className="relative z-50 flex w-full min-w-0 items-center justify-between gap-2 overflow-visible md:gap-3 lg:gap-4">
+      <div className="relative z-50 mx-auto flex w-full min-w-0 max-w-7xl items-center justify-between gap-2 overflow-visible md:gap-3 lg:gap-4">
         <Link href="/" className="group inline-block shrink-0">
           <Image
             src="/logo-tartupak.svg"

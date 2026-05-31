@@ -21,7 +21,7 @@ export async function Footer() {
 
   return (
     <footer className="bg-brand-green px-8 pt-16 pb-8 text-white lg:px-12">
-      <div className="w-full">
+      <div className="mx-auto w-full max-w-7xl">
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-6">
             <Link href="/" className="inline-block">

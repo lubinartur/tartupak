@@ -18,7 +18,7 @@ export async function ManufacturingProcess() {
 
   return (
     <section className="min-h-[380px] border-y border-white/20 bg-brand-green px-8 py-40 lg:px-12">
-      <div className="w-full">
+      <div className="w-full max-w-7xl mx-auto">
         <SectionHeader
           centered
           overline={t("overline")}

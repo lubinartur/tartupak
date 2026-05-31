@@ -15,7 +15,7 @@ export async function TrustBar() {
 
   return (
     <section className="w-full bg-brand-green px-8 py-16 lg:px-12">
-      <div className="w-full">
+      <div className="w-full max-w-7xl mx-auto">
         <div className="grid w-full grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-0 lg:divide-x lg:divide-white/15">
           {items.map(({ key, Icon }, index) => (
             <FadeIn

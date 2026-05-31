@@ -11,7 +11,7 @@ export async function FEFCOPreview() {
 
   return (
     <section className="bg-white px-8 py-24 lg:px-12">
-      <div className="w-full">
+      <div className="w-full max-w-7xl mx-auto">
         <div className="mb-12 flex flex-col items-stretch gap-6 md:flex-row md:items-end md:justify-between md:gap-8">
           <div className="min-w-0 space-y-4">
             <span className="block font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/60 uppercase sm:text-xs">

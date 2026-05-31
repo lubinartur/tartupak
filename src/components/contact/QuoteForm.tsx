@@ -47,10 +47,7 @@ function buildInitialState(
     packagingType = initialType;
   }
 
-  let message = "";
-  if (initialFefco && fefcoPrefill) {
-    message = fefcoPrefill.replace("#{code}", initialFefco);
-  }
+  const message = initialFefco && fefcoPrefill ? fefcoPrefill : "";
 
   return {
     fullName: "",
@@ -68,7 +65,7 @@ export function QuoteForm({ initialType, initialFefco }: QuoteFormProps) {
   const locale = useLocale();
   const t = useTranslations("contact.form");
   const [form, setForm] = useState<FormState>(() =>
-    buildInitialState(initialType, initialFefco, t("fefcoPrefill")),
+    buildInitialState(initialType, initialFefco, t("fefcoPrefill", { code: initialFefco ?? "" })),
   );
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">(

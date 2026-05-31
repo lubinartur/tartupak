@@ -24,7 +24,7 @@ export async function ProductCategories() {
 
   return (
     <section className="bg-brand-bg px-8 py-24 lg:px-12">
-      <div className="w-full">
+      <div className="w-full max-w-7xl mx-auto">
         <FadeIn>
           <SectionHeader overline={t("overline")} title={t("title")} />
         </FadeIn>

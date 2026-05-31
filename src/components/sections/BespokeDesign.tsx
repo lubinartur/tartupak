@@ -8,7 +8,7 @@ export async function BespokeDesign() {
 
   return (
     <section className="flex items-center bg-white px-8 py-24 lg:px-12">
-      <div className="grid w-full grid-cols-1 items-center gap-20 lg:grid-cols-2">
+      <div className="grid w-full max-w-7xl mx-auto grid-cols-1 items-center gap-20 lg:grid-cols-2">
         <div className="order-2 lg:order-1">
           <div className="relative flex aspect-video items-center justify-center overflow-hidden border border-brand-green/5 bg-brand-bg p-1">
             <div className="h-full w-full overflow-hidden border border-brand-green/10">
