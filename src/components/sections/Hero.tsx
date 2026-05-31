@@ -8,10 +8,10 @@ export async function Hero() {
   const headline = parseHeroHeadline(t("title"));
 
   return (
-    <section className="relative flex min-h-screen flex-col overflow-hidden border-b border-brand-border bg-brand-bg pt-24">
-      <div className="grid flex-grow grid-cols-1 lg:grid-cols-2">
-        <FadeIn className="relative z-10 flex w-full flex-col justify-center border-brand-border px-8 py-20 lg:border-r lg:px-12">
-          <div className="space-y-10">
+    <section className="relative min-h-[600px] overflow-hidden border-b border-brand-border bg-brand-bg pt-20 lg:min-h-[700px]">
+      <div className="grid h-full min-h-[600px] grid-cols-1 lg:min-h-[700px] lg:grid-cols-[3fr_2fr]">
+        <FadeIn className="relative z-10 flex flex-col justify-center border-brand-border py-12 pr-6 pl-6 lg:border-r lg:pr-8 lg:pl-8 xl:pl-[calc((100vw_-_1280px)/2_+_2rem)]">
+          <div className="w-full max-w-7xl space-y-10">
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <div className="h-px w-12 bg-brand-kraft/60" />
@@ -19,7 +19,7 @@ export async function Hero() {
                   {t("overline")}
                 </span>
               </div>
-              <h1 className="hero-headline tracking-tight text-brand-green">
+              <h1 className="hero-headline text-5xl tracking-tight text-brand-green md:text-6xl lg:text-7xl">
                 {headline.highlight ? (
                   <>
                     {headline.before}
@@ -53,7 +53,7 @@ export async function Hero() {
           </div>
         </FadeIn>
 
-        <div className="relative min-h-[320px] w-full lg:min-h-0 lg:h-full">
+        <div className="relative min-h-[320px] overflow-hidden lg:min-h-0 lg:h-full">
           <video
             className="absolute inset-0 h-full w-full object-cover"
             src="/videos/hero-video.mp4"
