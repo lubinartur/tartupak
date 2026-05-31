@@ -50,6 +50,15 @@ export function Navbar() {
   }, []);
 
   return (
+    <>
+    {isMobileMenuOpen ? (
+      <button
+        type="button"
+        className="fixed inset-0 z-30 bg-black/50 md:hidden"
+        onClick={() => setMobileMenuPath(null)}
+        aria-label={tAria("closeMenu")}
+      />
+    ) : null}
     <nav
       className={cn(
         "fixed top-0 right-0 left-0 z-40 overflow-visible px-4 py-4 transition-all duration-300 md:px-6 lg:px-12 lg:py-6",
@@ -109,14 +118,7 @@ export function Navbar() {
       </div>
 
       {isMobileMenuOpen ? (
-        <>
-          <button
-            type="button"
-            className="fixed inset-0 z-40 bg-black/50 md:hidden"
-            onClick={() => setMobileMenuPath(null)}
-            aria-label={tAria("closeMenu")}
-          />
-          <div className="absolute top-full right-0 left-0 z-50 overflow-hidden border-b border-brand-green/10 bg-brand-bg shadow-xl md:hidden">
+        <div className="absolute top-full right-0 left-0 z-50 overflow-hidden border-b border-brand-green/10 bg-brand-bg shadow-lg md:hidden">
           <div className="flex flex-col gap-4 p-6">
             {navItems.map((link) => (
               <Link
@@ -137,9 +139,9 @@ export function Navbar() {
             </Link>
           </div>
         </div>
-        </>
       ) : null}
     </nav>
+    </>
   );
 }
 
