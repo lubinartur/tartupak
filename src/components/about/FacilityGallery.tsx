@@ -121,7 +121,7 @@ export function FacilityGallery() {
             src={PHOTOS[3]}
             alt={alts[3]}
             fill
-            sizes="100vw"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className={GRID_IMAGE_CLASS}
           />
         </button>
