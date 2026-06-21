@@ -276,15 +276,17 @@
       "hoursTitle": "Working Hours",
       "hours": "Monday–Friday 08:00–16:30",
       "landline": "Landline",
-      "mobile": "Mobile"
+      "mobile": "Mobile",
+      "fax": "Fax"
     },
     "address": "Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Estonia",
     "addressLine1": "Tamme 35, Tõrvandi alevik,",
     "addressLine2": "Ülenurme vald, 61715 Tartumaa,",
     "addressLine3": "Estonia",
-    "email": "info@tartupak.ee",
+    "email": "maksim@tartupak.ee",
     "phone": "+372 741 5333",
     "mobile": "+372 5349 9642",
+    "fax": "+372 741 5336",
     "form": {
       "fullName": "Full Name",
       "company": "Company",
@@ -348,7 +350,7 @@
       "slide": "Slide",
       "scrollLeft": "Scroll left",
       "scrollRight": "Scroll right",
-      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
       "instagram": "Instagram"
     }
   }

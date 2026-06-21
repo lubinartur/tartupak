@@ -120,7 +120,7 @@ export async function POST(request: Request) {
   try {
     const { error } = await resend.emails.send({
       from: fromEmail,
-      to: "info@tartupak.ee",
+      to: "maksim@tartupak.ee",
       replyTo: data.email,
       subject: `Uus pakkumispäring / New quote request / Новый запрос — tartupak.ee`,
       html,

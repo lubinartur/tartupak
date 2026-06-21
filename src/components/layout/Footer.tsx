@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
-import { Mail, Phone, MapPin, Linkedin, Instagram, Award } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Award } from "lucide-react";
 
 export async function Footer() {
   const t = await getTranslations("footer");
@@ -37,14 +37,14 @@ export async function Footer() {
             <p className="max-w-xs text-xs leading-relaxed text-white/70">{t("tagline")}</p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/Tartupak"
                 className="flex h-8 w-8 items-center justify-center border border-white/30 text-white transition-colors hover:border-brand-kraft"
-                aria-label={tAria("linkedin")}
+                aria-label={tAria("facebook")}
               >
-                <Linkedin size={16} />
+                <Facebook size={16} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/tartupak.ee/"
                 className="flex h-8 w-8 items-center justify-center border border-white/30 text-white transition-colors hover:border-brand-kraft"
                 aria-label={tAria("instagram")}
               >
@@ -69,9 +69,13 @@ export async function Footer() {
                   {contact("email")}
                 </a>
               </li>
-              <li className="flex items-center gap-4">
-                <Phone size={18} className="shrink-0 text-brand-kraft" />
-                <span className="text-xs text-white/90">{contact("phone")}</span>
+              <li className="flex items-start gap-4">
+                <Phone size={18} className="mt-0.5 shrink-0 text-brand-kraft" />
+                <div className="flex flex-col gap-1 text-xs text-white/90">
+                  <span>{contact("phone")}</span>
+                  <span>{contact("mobile")}</span>
+                  <span>{contact("fax")}</span>
+                </div>
               </li>
             </ul>
           </div>

@@ -74,6 +74,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
           <a href={telHref(t("mobile"))} className="hover:text-brand-kraft">
             {t("mobile")} ({t("info.mobile")})
           </a>
+          <span>{t("fax")} ({t("info.fax")})</span>
         </div>
       ),
     },
