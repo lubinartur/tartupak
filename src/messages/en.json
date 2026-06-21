@@ -73,10 +73,6 @@
         "freeSample": {
           "label": "Free sample",
           "subtext": "Before production runs"
-        },
-        "delivery": {
-          "label": "Delivery included",
-          "subtext": "Baltics and Scandinavia"
         }
       }
     },

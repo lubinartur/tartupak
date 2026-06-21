@@ -73,10 +73,6 @@
         "freeSample": {
           "label": "Tasuta proovinäidis",
           "subtext": "Enne seeriatootmist"
-        },
-        "delivery": {
-          "label": "Kohaletoimetamine",
-          "subtext": "Baltikum ja Skandinaavia"
         }
       }
     },
