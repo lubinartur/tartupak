@@ -122,7 +122,7 @@ export async function POST(request: Request) {
       from: fromEmail,
       to: "info@tartupak.ee",
       replyTo: data.email,
-      subject: `Quote request from ${data.fullName}`,
+      subject: `Uus pakkumispäring / New quote request / Новый запрос — tartupak.ee`,
       html,
     });
 

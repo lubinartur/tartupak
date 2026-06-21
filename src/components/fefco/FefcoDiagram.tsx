@@ -63,7 +63,6 @@ export function FefcoDetailDiagram({
   placeholderText,
 }: FefcoDetailDiagramProps) {
   const src = getFefcoImage(code);
-  console.log("FEFCO image path:", getFefcoImage(code), "for code:", code);
 
   return (
     <div className="relative flex aspect-square flex-col items-center justify-center border border-brand-green/10 bg-white p-12">

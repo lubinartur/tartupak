@@ -1,9 +1,7 @@
 import {
   fefcoCatalogCodes,
-  getFefcoEntry,
   isFefcoCatalogCode,
   type FefcoCatalogCode,
-  type FefcoCatalogEntry,
 } from "./fefco-catalog";
 
 export {
@@ -116,15 +114,4 @@ export const FEFCO_IMAGES: Partial<Record<FefcoCode, FefcoImagePath>> = {
 export function getFefcoImage(code: string): FefcoImagePath | undefined {
   if (!isFefcoCode(code)) return undefined;
   return FEFCO_IMAGES[code];
-}
-
-export type FefcoEntryWithImage = FefcoCatalogEntry & {
-  image?: FefcoImagePath;
-};
-
-export function getFefcoEntryWithImage(code: string): FefcoEntryWithImage | undefined {
-  const entry = getFefcoEntry(code);
-  if (!entry) return undefined;
-  const image = getFefcoImage(code);
-  return image ? { ...entry, image } : entry;
 }
