@@ -15,34 +15,6 @@ export type FefcoCatalogEntry = {
 
 export const FEFCO_CATALOG: FefcoCatalogEntry[] = [
   {
-    "code": "0200",
-    "series": "02",
-    "name": {
-      "en": "Slotted container — basic variant",
-      "et": "Pilukonteiner — põhivariant",
-      "ru": "Ящик с прорезями — базовый вариант"
-    },
-    "description": {
-      "en": "Basic variant. FEFCO 0200 format suited for general shipping, warehousing.",
-      "et": "Põhivariant. FEFCO 0200 vorm, mis sobib: üldine saatmine, ladustamine.",
-      "ru": "Базовый вариант. Формат FEFCO 0200 подходит для: общие перевозки, складирование."
-    },
-    "useCases": {
-      "en": [
-        "general shipping",
-        "warehousing"
-      ],
-      "et": [
-        "üldine saatmine",
-        "ladustamine"
-      ],
-      "ru": [
-        "общие перевозки",
-        "складирование"
-      ]
-    }
-  },
-  {
     "code": "0201",
     "series": "02",
     "name": {
@@ -742,37 +714,6 @@ export const FEFCO_CATALOG: FefcoCatalogEntry[] = [
     }
   },
   {
-    "code": "0300",
-    "series": "03",
-    "name": {
-      "en": "Full telescope box",
-      "et": "Täisteleskoop-kast",
-      "ru": "Полностью телескопический ящик"
-    },
-    "description": {
-      "en": "Consists of separate top and bottom parts that fit over each other. Provides excellent protection for the product.",
-      "et": "Koosneb eraldi ülemisest ja alumisest osast, mis sobivad üksteise peale. Pakub tootele suurepärast kaitset.",
-      "ru": "Состоит из отдельных верхней и нижней частей, надеваемых друг на друга. Обеспечивает отличную защиту продукта."
-    },
-    "useCases": {
-      "en": [
-        "electronics",
-        "gifts",
-        "premium products"
-      ],
-      "et": [
-        "elektroonika",
-        "kingitused",
-        "premium-tooted"
-      ],
-      "ru": [
-        "электроника",
-        "подарки",
-        "премиальные товары"
-      ]
-    }
-  },
-  {
     "code": "0301",
     "series": "03",
     "name": {
@@ -1412,37 +1353,6 @@ export const FEFCO_CATALOG: FefcoCatalogEntry[] = [
       "ru": [
         "тяжёлые изделия",
         "промышленное применение"
-      ]
-    }
-  },
-  {
-    "code": "0400",
-    "series": "04",
-    "name": {
-      "en": "Folder — basic tray",
-      "et": "Kaust — põhialus",
-      "ru": "Папка — базовый поддон"
-    },
-    "description": {
-      "en": "Basic tray. FEFCO 0400 format suited for trays, food packaging.",
-      "et": "Kaust — põhialus",
-      "ru": "Базовый поддон. Формат FEFCO 0400 подходит для: лотки, пищевая упаковка."
-    },
-    "useCases": {
-      "en": [
-        "trays",
-        "food packaging",
-        "retail"
-      ],
-      "et": [
-        "alused",
-        "toidupakend",
-        "jaemüük"
-      ],
-      "ru": [
-        "лотки",
-        "пищевая упаковка",
-        "розница"
       ]
     }
   },
@@ -3467,37 +3377,6 @@ export const FEFCO_CATALOG: FefcoCatalogEntry[] = [
     }
   },
   {
-    "code": "0603",
-    "series": "06",
-    "name": {
-      "en": "Rigid box — with inner tray",
-      "et": "Jäik kast — sisealusega",
-      "ru": "Жёсткая коробка — с внутренним поддоном"
-    },
-    "description": {
-      "en": "With inner tray. FEFCO 0603 format suited for electronics, watches.",
-      "et": "Sisealusega. FEFCO 0603 vorm, mis sobib: elektroonika, kellad.",
-      "ru": "С внутренним поддоном. Формат FEFCO 0603 подходит для: электроника, часы."
-    },
-    "useCases": {
-      "en": [
-        "electronics",
-        "watches",
-        "jewelry"
-      ],
-      "et": [
-        "elektroonika",
-        "kellad",
-        "ehted"
-      ],
-      "ru": [
-        "электроника",
-        "часы",
-        "ювелирные изделия"
-      ]
-    }
-  },
-  {
     "code": "0606",
     "series": "06",
     "name": {
@@ -3584,37 +3463,6 @@ export const FEFCO_CATALOG: FefcoCatalogEntry[] = [
       "ru": [
         "люксовые подарки",
         "премиальная розница"
-      ]
-    }
-  },
-  {
-    "code": "0609",
-    "series": "06",
-    "name": {
-      "en": "Rigid box — with window",
-      "et": "Jäik kast — aknaga",
-      "ru": "Жёсткая коробка — с окном"
-    },
-    "description": {
-      "en": "With window. FEFCO 0609 format suited for retail display, food.",
-      "et": "Jäik kast — aknaga",
-      "ru": "Жёсткая коробка — с окном"
-    },
-    "useCases": {
-      "en": [
-        "retail display",
-        "food",
-        "cosmetics"
-      ],
-      "et": [
-        "jaekaupluse ekspositsioon",
-        "toiduained",
-        "kosmeetika"
-      ],
-      "ru": [
-        "розничная витрина",
-        "продукты питания",
-        "косметика"
       ]
     }
   },
@@ -3739,34 +3587,6 @@ export const FEFCO_CATALOG: FefcoCatalogEntry[] = [
         "бутылки",
         "стекло",
         "несколько товаров"
-      ]
-    }
-  },
-  {
-    "code": "0700",
-    "series": "07",
-    "name": {
-      "en": "Flat sheet — basic liner",
-      "et": "Lame leht — põhivoodrileht",
-      "ru": "Плоский лист — базовая подложка"
-    },
-    "description": {
-      "en": "Basic liner. FEFCO 0700 format suited for base liner, protective sheet.",
-      "et": "Põhivoodrileht. FEFCO 0700 vorm, mis sobib: aluse vooder, kaitseleht.",
-      "ru": "Базовая подложка. Формат FEFCO 0700 подходит для: подложка дна, защитный лист."
-    },
-    "useCases": {
-      "en": [
-        "base liner",
-        "protective sheet"
-      ],
-      "et": [
-        "aluse vooder",
-        "kaitseleht"
-      ],
-      "ru": [
-        "подложка дна",
-        "защитный лист"
       ]
     }
   },

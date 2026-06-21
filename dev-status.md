@@ -25,7 +25,7 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 | Home | `/` | ✅ Done |
 | Products listing | `/products` | ✅ Done |
 | Product detail | `/products/[slug]` | ✅ Done |
-| FEFCO Catalog | `/fefco` | ✅ Done (147 codes, search + series filter) |
+| FEFCO Catalog | `/fefco` | ✅ Done (141 codes, search + series filter) |
 | FEFCO Detail | `/fefco/[code]` | ✅ Done (FAQ, CTA — 8 codes have real illustrations) |
 | About | `/about` | ✅ Done |
 | Contact | `/contact` | ✅ Done (UI complete, Resend pending) |

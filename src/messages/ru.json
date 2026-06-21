@@ -211,14 +211,14 @@
   "fefco": {
     "overline": "СТАНДАРТЫ",
     "title": "Каталог конструкций FEFCO",
-    "metaDescription": "Просмотрите 147 международных кодов конструкций гофрокоробов FEFCO. Поиск по коду, спецификации и запрос предложения от Tartupak.",
+    "metaDescription": "Просмотрите 141 международных кодов конструкций гофрокоробов FEFCO. Поиск по коду, спецификации и запрос предложения от Tartupak.",
     "downloadCatalog": "Скачать каталог FEFCO (PDF)",
     "searchPlaceholder": "Поиск по коду или названию... (напр. 0201)",
     "filterAll": "Все",
     "filterSeries": "Серия {series}",
     "showingCount": "Показано кодов: {count}",
     "noResults": "По вашему запросу коды FEFCO не найдены.",
-    "viewAllCatalog": "Полный каталог (147 кодов)",
+    "viewAllCatalog": "Полный каталог (141 кодов)",
     "viewDetails": "Подробнее →",
     "montageLabel": "Сборка",
     "detail": {

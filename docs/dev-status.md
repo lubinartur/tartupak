@@ -25,7 +25,7 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 | Home | `/` | ✅ Done |
 | Products listing | `/products` | ✅ Done |
 | Product detail | `/products/[slug]` | ✅ Done |
-| FEFCO Catalog | `/fefco` | ✅ Done (147 codes, search + series filter) |
+| FEFCO Catalog | `/fefco` | ✅ Done (141 codes, search + series filter) |
 | FEFCO Detail | `/fefco/[code]` | ✅ Done (FAQ, CTA — 8 codes have real illustrations) |
 | About | `/about` | ✅ Done |
 | Contact | `/contact` | ✅ Done (UI complete, Resend pending) |
@@ -57,7 +57,7 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 - FEFCO illustrations: all 141 PNGs normalized (800x600, 60px padding) and deployed to public/images/fefco/
 - Hardcoded FEFCO_IMAGES map removed from fefco.ts — now all codes use /images/fefco/[code].png automatically
 - FefcoDiagram.tsx made client component with onError fallback to Layers icon
-- 6 section-header codes (0200, 0300, 0400, 0603, 0609 etc.) show placeholder — expected, no official illustration exists
+- 6 invalid/section-header codes removed from catalog (0200, 0300, 0400, 0603, 0609, 0700)
 
 ## Recent Changes (session 4)
 

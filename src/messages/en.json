@@ -211,14 +211,14 @@
   "fefco": {
     "overline": "STANDARDS",
     "title": "FEFCO Design Catalog",
-    "metaDescription": "Browse 147 international FEFCO corrugated box design codes. Search by code, view specifications and request a quote from Tartupak.",
+    "metaDescription": "Browse 141 international FEFCO corrugated box design codes. Search by code, view specifications and request a quote from Tartupak.",
     "downloadCatalog": "Download FEFCO Catalogue (PDF)",
     "searchPlaceholder": "Search by code or name... (e.g. 0201)",
     "filterAll": "All",
     "filterSeries": "Series {series}",
     "showingCount": "Showing {count} codes",
     "noResults": "No FEFCO codes match your search criteria.",
-    "viewAllCatalog": "View Full Catalog (147 codes)",
+    "viewAllCatalog": "View Full Catalog (141 codes)",
     "viewDetails": "View Details →",
     "montageLabel": "Assembly",
     "detail": {

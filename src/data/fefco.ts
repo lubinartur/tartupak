@@ -22,7 +22,7 @@ export const fefcoPreviewCodes = [
   "0201",
   "0427",
   "0203",
-  "0300",
+  "0301",
   "0711",
   "0421",
 ] as const;
@@ -42,7 +42,6 @@ export type FefcoMontageType = "M" | "A" | "M/A" | "M+A";
 
 /** Assembly / montage by FEFCO code (series 02 and 03). */
 export const FEFCO_MONTAGE: Record<string, FefcoMontageType> = {
-  "0200": "M/A",
   "0201": "M/A",
   "0202": "M/A",
   "0203": "M/A",
@@ -67,7 +66,6 @@ export const FEFCO_MONTAGE: Record<string, FefcoMontageType> = {
   "0229": "M",
   "0230": "M/A",
   "0231": "M/A",
-  "0300": "M/A",
   "0301": "M/A",
   "0302": "M",
   "0303": "M",
