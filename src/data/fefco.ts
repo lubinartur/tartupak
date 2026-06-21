@@ -97,21 +97,9 @@ export function getFefcoMontage(code: string): FefcoMontageType | undefined {
 }
 
 /** Public URL path for a FEFCO diagram PNG (files live under `public/images/fefco/`). */
-export type FefcoImagePath = `/images/fefco/${string}`;
-
-/** Manually created FEFCO illustrations (detail pages only). */
-export const FEFCO_IMAGES: Partial<Record<FefcoCode, FefcoImagePath>> = {
-  "0200": "/images/fefco/fefco-0200.png",
-  "0201": "/images/fefco/fefco-0201.png",
-  "0202": "/images/fefco/fefco-0202.png",
-  "0203": "/images/fefco/fefco-0203.png",
-  "0300": "/images/fefco/fefco-0300.png",
-  "0421": "/images/fefco/fefco-0421.png",
-  "0427": "/images/fefco/fefco-0427.png",
-  "0711": "/images/fefco/fefco-0711.png",
-};
+export type FefcoImagePath = `/images/fefco/${string}.png`;
 
 export function getFefcoImage(code: string): FefcoImagePath | undefined {
   if (!isFefcoCode(code)) return undefined;
-  return FEFCO_IMAGES[code];
+  return `/images/fefco/${code}.png`;
 }
