@@ -38,6 +38,8 @@ export async function Footer() {
             <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/Tartupak"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-8 w-8 items-center justify-center border border-white/30 text-white transition-colors hover:border-brand-kraft"
                 aria-label={tAria("facebook")}
               >
@@ -45,6 +47,8 @@ export async function Footer() {
               </a>
               <a
                 href="https://www.instagram.com/tartupak.ee/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-8 w-8 items-center justify-center border border-white/30 text-white transition-colors hover:border-brand-kraft"
                 aria-label={tAria("instagram")}
               >
