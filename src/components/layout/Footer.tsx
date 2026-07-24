@@ -64,22 +64,31 @@ export async function Footer() {
                 <MapPin size={18} className="mt-0.5 shrink-0 text-brand-kraft" />
                 <span className="text-xs leading-relaxed text-white/90">{contact("address")}</span>
               </li>
-              <li className="flex items-center gap-4">
-                <Mail size={18} className="shrink-0 text-brand-kraft" />
-                <a
-                  href={`mailto:${contact("email")}`}
-                  className="text-xs text-white/90 underline decoration-1 underline-offset-8 decoration-white/30 transition-colors hover:text-brand-kraft"
-                >
-                  {contact("email")}
-                </a>
-              </li>
               <li className="flex items-start gap-4">
-                <Phone size={18} className="mt-0.5 shrink-0 text-brand-kraft" />
-                <div className="flex flex-col gap-1 text-xs text-white/90">
-                  <span>{contact("phone")}</span>
-                  <span>{contact("mobile")}</span>
-                  <span>{contact("fax")}</span>
+                <Mail size={18} className="mt-0.5 shrink-0 text-brand-kraft" />
+                <div className="flex flex-col gap-1">
+                  <a
+                    href={`mailto:${contact("emailGeneral")}`}
+                    className="text-xs text-white/90 underline decoration-1 underline-offset-8 decoration-white/30 transition-colors hover:text-brand-kraft"
+                  >
+                    {contact("emailGeneral")}
+                  </a>
+                  <a
+                    href={`mailto:${contact("email")}`}
+                    className="text-xs text-white/90 underline decoration-1 underline-offset-8 decoration-white/30 transition-colors hover:text-brand-kraft"
+                  >
+                    {contact("email")}
+                  </a>
                 </div>
+              </li>
+              <li className="flex items-center gap-4">
+                <Phone size={18} className="shrink-0 text-brand-kraft" />
+                <a
+                  href={`tel:${contact("phone").replace(/[\s/]/g, "")}`}
+                  className="text-xs text-white/90 transition-colors hover:text-brand-kraft"
+                >
+                  {contact("phone")}
+                </a>
               </li>
             </ul>
           </div>
