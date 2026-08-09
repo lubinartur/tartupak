@@ -271,25 +271,25 @@
     "subtitle": "Olgu teil vaja ühekordset eritellimust või suuremahulist tarneahela lahendust — meie meeskond on valmis aitama.",
     "info": {
       "officeTitle": "Kontor ja tootmine",
-      "emailTitle": "E-post",
-      "phoneTitle": "Otsetelefonid",
       "hoursTitle": "Tööaeg",
-      "hours": "Esmaspäev–reede 08:00–16:30",
-      "generalEmail": "Üldine",
-      "salesEmail": "Müük"
+      "hours": "Esmaspäev–reede 08:00–16:30"
     },
     "address": "Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Eesti",
     "addressLine1": "Tamme 35, Tõrvandi alevik,",
     "addressLine2": "Ülenurme vald, 61715 Tartumaa,",
     "addressLine3": "Eesti",
-    "email": "maksim@tartupak.ee",
-    "emailGeneral": "info@tartupak.ee",
-    "phone": "+372 555 20205",
-    "sales": {
-      "name": "Maksim Babiak",
-      "title": "Müügijuht",
-      "phone": "+372 555 20205",
-      "email": "maksim@tartupak.ee"
+    "people": {
+      "kulli": {
+        "name": "Külli Aav",
+        "phone": "+372 534 99642",
+        "email": "info@tartupak.ee"
+      },
+      "maksim": {
+        "name": "Maksim Babiak",
+        "title": "Müügijuht",
+        "phone": "+372 555 20205",
+        "email": "maksim@tartupak.ee"
+      }
     },
     "form": {
       "fullName": "Täisnimi",

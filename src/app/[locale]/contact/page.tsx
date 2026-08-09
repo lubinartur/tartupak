@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
-import { Clock, Mail, MapPin, Phone, User } from "lucide-react";
+import { Clock, MapPin, User } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { QuoteForm } from "@/components/contact/QuoteForm";
 
@@ -37,6 +37,23 @@ export default async function ContactPage({ params, searchParams }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("contact");
 
+  const people = [
+    {
+      key: "kulli",
+      name: t("people.kulli.name"),
+      title: null as string | null,
+      phone: t("people.kulli.phone"),
+      email: t("people.kulli.email"),
+    },
+    {
+      key: "maksim",
+      name: t("people.maksim.name"),
+      title: t("people.maksim.title"),
+      phone: t("people.maksim.phone"),
+      email: t("people.maksim.email"),
+    },
+  ] as const;
+
   const infoCards = [
     {
       icon: MapPin,
@@ -49,48 +66,6 @@ export default async function ContactPage({ params, searchParams }: Props) {
           <br />
           {t("addressLine3")}
         </address>
-      ),
-    },
-    {
-      icon: Mail,
-      title: t("info.emailTitle"),
-      content: (
-        <div className="flex flex-col gap-2 font-medium text-brand-green">
-          <div>
-            <a
-              href={`mailto:${t("emailGeneral")}`}
-              className="underline decoration-brand-green/20 underline-offset-4 hover:text-brand-kraft"
-            >
-              {t("emailGeneral")}
-            </a>
-            <p className="text-xs font-normal text-brand-green/50">
-              {t("info.generalEmail")}
-            </p>
-          </div>
-          <div>
-            <a
-              href={`mailto:${t("email")}`}
-              className="underline decoration-brand-green/20 underline-offset-4 hover:text-brand-kraft"
-            >
-              {t("email")}
-            </a>
-            <p className="text-xs font-normal text-brand-green/50">
-              {t("info.salesEmail")}
-            </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      icon: Phone,
-      title: t("info.phoneTitle"),
-      content: (
-        <a
-          href={telHref(t("phone"))}
-          className="font-medium text-brand-green hover:text-brand-kraft"
-        >
-          {t("phone")}
-        </a>
       ),
     },
     {
@@ -133,31 +108,38 @@ export default async function ContactPage({ params, searchParams }: Props) {
                 </div>
               ))}
 
-              <div className="flex gap-6 border border-brand-green/5 bg-white p-6">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-bg text-brand-kraft">
-                  <User size={24} aria-hidden />
-                </div>
-                <div>
-                  <h3 className="mb-1 text-xs font-bold tracking-widest text-brand-green/40 uppercase">
-                    {t("sales.title")}
-                  </h3>
-                  <p className="font-medium text-brand-green">{t("sales.name")}</p>
-                  <div className="mt-2 flex flex-col gap-1 text-sm text-brand-green">
-                    <a
-                      href={telHref(t("sales.phone"))}
-                      className="hover:text-brand-kraft"
-                    >
-                      {t("sales.phone")}
-                    </a>
-                    <a
-                      href={`mailto:${t("sales.email")}`}
-                      className="underline decoration-brand-green/20 underline-offset-4 hover:text-brand-kraft"
-                    >
-                      {t("sales.email")}
-                    </a>
+              {people.map((person) => (
+                <div
+                  key={person.key}
+                  className="flex gap-6 border border-brand-green/5 bg-white p-6"
+                >
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-bg text-brand-kraft">
+                    <User size={24} aria-hidden />
+                  </div>
+                  <div>
+                    <p className="font-medium text-brand-green">{person.name}</p>
+                    {person.title ? (
+                      <p className="mt-0.5 text-xs font-bold tracking-widest text-brand-green/40 uppercase">
+                        {person.title}
+                      </p>
+                    ) : null}
+                    <div className="mt-2 flex flex-col gap-1 text-sm text-brand-green">
+                      <a
+                        href={telHref(person.phone)}
+                        className="hover:text-brand-kraft"
+                      >
+                        {person.phone}
+                      </a>
+                      <a
+                        href={`mailto:${person.email}`}
+                        className="underline decoration-brand-green/20 underline-offset-4 hover:text-brand-kraft"
+                      >
+                        {person.email}
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
 

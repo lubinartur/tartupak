@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
-import { Mail, Phone, MapPin, Facebook, Instagram, Award } from "lucide-react";
+import { MapPin, Facebook, Instagram, Award } from "lucide-react";
+
+function telHref(phone: string) {
+  return `tel:${phone.replace(/[\s/]/g, "")}`;
+}
 
 export async function Footer() {
   const t = await getTranslations("footer");
@@ -14,6 +18,23 @@ export async function Footer() {
     { href: "/fefco", label: nav("fefco") },
     { href: "/about", label: nav("about") },
     { href: "/contact", label: nav("contact") },
+  ] as const;
+
+  const people = [
+    {
+      key: "kulli",
+      name: contact("people.kulli.name"),
+      title: null as string | null,
+      phone: contact("people.kulli.phone"),
+      email: contact("people.kulli.email"),
+    },
+    {
+      key: "maksim",
+      name: contact("people.maksim.name"),
+      title: contact("people.maksim.title"),
+      phone: contact("people.maksim.phone"),
+      email: contact("people.maksim.email"),
+    },
   ] as const;
 
   const sectionLabel =
@@ -59,37 +80,33 @@ export async function Footer() {
 
           <div>
             <h4 className={sectionLabel}>{t("contact")}</h4>
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-5">
               <li className="flex items-start gap-4">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-brand-kraft" />
                 <span className="text-xs leading-relaxed text-white/90">{contact("address")}</span>
               </li>
-              <li className="flex items-start gap-4">
-                <Mail size={18} className="mt-0.5 shrink-0 text-brand-kraft" />
-                <div className="flex flex-col gap-1">
+              {people.map((person) => (
+                <li key={person.key} className="flex flex-col gap-1 pl-[34px]">
+                  <span className="text-xs font-medium text-white">{person.name}</span>
+                  {person.title ? (
+                    <span className="text-[10px] tracking-wide text-white/50">
+                      {person.title}
+                    </span>
+                  ) : null}
                   <a
-                    href={`mailto:${contact("emailGeneral")}`}
-                    className="text-xs text-white/90 underline decoration-1 underline-offset-8 decoration-white/30 transition-colors hover:text-brand-kraft"
+                    href={telHref(person.phone)}
+                    className="text-xs text-white/90 transition-colors hover:text-brand-kraft"
                   >
-                    {contact("emailGeneral")}
+                    {person.phone}
                   </a>
                   <a
-                    href={`mailto:${contact("email")}`}
-                    className="text-xs text-white/90 underline decoration-1 underline-offset-8 decoration-white/30 transition-colors hover:text-brand-kraft"
+                    href={`mailto:${person.email}`}
+                    className="text-xs text-white/90 underline decoration-1 underline-offset-4 decoration-white/30 transition-colors hover:text-brand-kraft"
                   >
-                    {contact("email")}
+                    {person.email}
                   </a>
-                </div>
-              </li>
-              <li className="flex items-center gap-4">
-                <Phone size={18} className="shrink-0 text-brand-kraft" />
-                <a
-                  href={`tel:${contact("phone").replace(/[\s/]/g, "")}`}
-                  className="text-xs text-white/90 transition-colors hover:text-brand-kraft"
-                >
-                  {contact("phone")}
-                </a>
-              </li>
+                </li>
+              ))}
             </ul>
           </div>
 

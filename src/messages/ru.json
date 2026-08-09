@@ -271,25 +271,25 @@
     "subtitle": "Нужна единичная коробка на заказ или крупносерийное решение для цепочки поставок — наша команда готова помочь.",
     "info": {
       "officeTitle": "Офис и производство",
-      "emailTitle": "Эл. почта",
-      "phoneTitle": "Прямые линии",
       "hoursTitle": "Рабочие часы",
-      "hours": "Понедельник–пятница 08:00–16:30",
-      "generalEmail": "Общий",
-      "salesEmail": "Продажи"
+      "hours": "Понедельник–пятница 08:00–16:30"
     },
     "address": "Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Эстония",
     "addressLine1": "Tamme 35, Tõrvandi alevik,",
     "addressLine2": "Ülenurme vald, 61715 Tartumaa,",
     "addressLine3": "Эстония",
-    "email": "maksim@tartupak.ee",
-    "emailGeneral": "info@tartupak.ee",
-    "phone": "+372 555 20205",
-    "sales": {
-      "name": "Maksim Babiak",
-      "title": "Менеджер по продажам",
-      "phone": "+372 555 20205",
-      "email": "maksim@tartupak.ee"
+    "people": {
+      "kulli": {
+        "name": "Külli Aav",
+        "phone": "+372 534 99642",
+        "email": "info@tartupak.ee"
+      },
+      "maksim": {
+        "name": "Maksim Babiak",
+        "title": "Менеджер по продажам",
+        "phone": "+372 555 20205",
+        "email": "maksim@tartupak.ee"
+      }
     },
     "form": {
       "fullName": "Полное имя",
