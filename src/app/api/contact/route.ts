@@ -118,7 +118,7 @@ export async function POST(request: Request) {
   try {
     const { error } = await resend.emails.send({
       from: "Tartupak <noreply@tartupak.ee>",
-      to: "info@tartupak.ee",
+      to: [process.env.RESEND_TO_EMAIL || "maksim@tartupak.ee"],
       replyTo: data.email,
       subject: `Uus pakkumispäring / New quote request / Новый запрос — tartupak.ee`,
       html,
