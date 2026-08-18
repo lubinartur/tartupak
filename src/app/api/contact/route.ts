@@ -85,8 +85,6 @@ export async function POST(request: Request) {
   }
 
   const { data } = validation;
-  const fromEmail =
-    process.env.RESEND_FROM_EMAIL ?? "Tartupak Website <onboarding@resend.dev>";
 
   const rows = [
     ["Name", data.fullName],
@@ -119,7 +117,7 @@ export async function POST(request: Request) {
 
   try {
     const { error } = await resend.emails.send({
-      from: fromEmail,
+      from: "Tartupak <noreply@tartupak.ee>",
       to: "info@tartupak.ee",
       replyTo: data.email,
       subject: `Uus pakkumispäring / New quote request / Новый запрос — tartupak.ee`,
