@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Send } from "lucide-react";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { useLocale, useTranslations } from "next-intl";
 import {
   isPackagingTypeSlug,
@@ -72,6 +73,9 @@ export function QuoteForm({ initialType, initialFefco }: QuoteFormProps) {
     "idle",
   );
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
   const packagingOptions = useMemo(
     () =>
@@ -123,13 +127,19 @@ export function QuoteForm({ initialType, initialFefco }: QuoteFormProps) {
 
     if (!validate()) return;
 
+    if (turnstileSiteKey && !turnstileToken) {
+      setSubmitError(t("error"));
+      setStatus("error");
+      return;
+    }
+
     setStatus("submitting");
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, locale }),
+        body: JSON.stringify({ ...form, locale, turnstileToken }),
       });
 
       const data = (await response.json()) as { error?: string };
@@ -149,6 +159,8 @@ export function QuoteForm({ initialType, initialFefco }: QuoteFormProps) {
         } else {
           setSubmitError(t("error"));
         }
+        setTurnstileToken(null);
+        turnstileRef.current?.reset();
         setStatus("error");
         return;
       }
@@ -156,6 +168,8 @@ export function QuoteForm({ initialType, initialFefco }: QuoteFormProps) {
       setStatus("success");
     } catch {
       setSubmitError(t("error"));
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
       setStatus("error");
     }
   }
@@ -336,9 +350,23 @@ export function QuoteForm({ initialType, initialFefco }: QuoteFormProps) {
         ) : null}
       </div>
 
+      {turnstileSiteKey ? (
+        <Turnstile
+          ref={turnstileRef}
+          siteKey={turnstileSiteKey}
+          onSuccess={(token) => setTurnstileToken(token)}
+          onExpire={() => setTurnstileToken(null)}
+          onError={() => setTurnstileToken(null)}
+        />
+      ) : null}
+
       <button
         type="submit"
-        disabled={status === "submitting" || status === "success"}
+        disabled={
+          status === "submitting" ||
+          status === "success" ||
+          (!!turnstileSiteKey && !turnstileToken)
+        }
         className="mt-4 flex items-center justify-center gap-3 rounded-sm bg-brand-green px-10 py-4 font-bold text-brand-bg shadow-lg shadow-brand-green/10 transition-all hover:bg-brand-green/95 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "submitting" ? "..." : t("submit")}

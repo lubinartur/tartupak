@@ -14,7 +14,26 @@ type ContactPayload = {
   quantity?: string;
   message?: string;
   locale?: string;
+  turnstileToken?: string;
 };
+
+type TurnstileVerifyResponse = {
+  success?: boolean;
+};
+
+async function verifyTurnstileToken(turnstileToken: string) {
+  const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      secret: process.env.TURNSTILE_SECRET_KEY,
+      response: turnstileToken,
+    }),
+  });
+
+  const verifyData = (await verifyRes.json()) as TurnstileVerifyResponse;
+  return verifyData.success === true;
+}
 
 function escapeHtml(value: string): string {
   return value
@@ -77,6 +96,11 @@ export async function POST(request: Request) {
     body = (await request.json()) as ContactPayload;
   } catch {
     return Response.json({ error: "invalid_request" }, { status: 400 });
+  }
+
+  const turnstileToken = body.turnstileToken?.trim() ?? "";
+  if (!turnstileToken || !(await verifyTurnstileToken(turnstileToken))) {
+    return Response.json({ error: "Bot detected" }, { status: 400 });
   }
 
   const validation = validatePayload(body);
