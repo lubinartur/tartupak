@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { ArrowRight, Factory } from "lucide-react";
@@ -11,11 +12,13 @@ export async function BespokeDesign() {
       <div className="grid w-full max-w-7xl mx-auto grid-cols-1 items-center gap-20 lg:grid-cols-2">
         <div className="order-2 lg:order-1">
           <div className="relative flex aspect-video items-center justify-center overflow-hidden border border-brand-green/5 bg-brand-bg p-1">
-            <div className="h-full w-full overflow-hidden border border-brand-green/10">
-              <img
+            <div className="relative h-full w-full overflow-hidden border border-brand-green/10">
+              <Image
                 src="/images/bespoke-packaging.png"
                 alt={t("title")}
-                className="h-full w-full object-cover"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
               />
             </div>
             <div className="absolute right-8 bottom-8 flex items-center gap-4 bg-brand-kraft px-6 py-4 shadow-xl">

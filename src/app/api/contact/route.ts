@@ -3,6 +3,15 @@ import { isPackagingTypeSlug } from "@/data/packaging-types";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_MESSAGE_LENGTH = 2000;
+const MAX_FIELD_LENGTHS = {
+  fullName: 100,
+  company: 150,
+  email: 254,
+  phone: 40,
+  dimensions: 200,
+  quantity: 100,
+} as const;
+const TURNSTILE_TIMEOUT_MS = 5000;
 
 type ContactPayload = {
   fullName?: string;
@@ -21,18 +30,26 @@ type TurnstileVerifyResponse = {
   success?: boolean;
 };
 
-async function verifyTurnstileToken(turnstileToken: string) {
-  const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      secret: process.env.TURNSTILE_SECRET_KEY,
-      response: turnstileToken,
-    }),
-  });
+async function verifyTurnstileToken(turnstileToken: string, remoteIp: string | null) {
+  try {
+    const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        secret: process.env.TURNSTILE_SECRET_KEY,
+        response: turnstileToken,
+        ...(remoteIp ? { remoteip: remoteIp } : {}),
+      }),
+      signal: AbortSignal.timeout(TURNSTILE_TIMEOUT_MS),
+    });
 
-  const verifyData = (await verifyRes.json()) as TurnstileVerifyResponse;
-  return verifyData.success === true;
+    const verifyData = (await verifyRes.json()) as TurnstileVerifyResponse;
+    return verifyData.success === true;
+  } catch (err) {
+    // Fail closed: a Turnstile outage or timeout must not let unverified requests through.
+    console.error("Turnstile verification error:", err);
+    return false;
+  }
 }
 
 function escapeHtml(value: string): string {
@@ -62,6 +79,13 @@ function validatePayload(body: ContactPayload) {
   }
   if (message.length > MAX_MESSAGE_LENGTH) {
     return { ok: false as const, error: "messageMax" };
+  }
+
+  const lengthLimited = Object.entries(MAX_FIELD_LENGTHS).some(
+    ([field, max]) => (body[field as keyof typeof MAX_FIELD_LENGTHS]?.trim().length ?? 0) > max,
+  );
+  if (lengthLimited) {
+    return { ok: false as const, error: "invalid_request" };
   }
 
   const packagingType = body.packagingType?.trim() ?? "";
@@ -99,7 +123,8 @@ export async function POST(request: Request) {
   }
 
   const turnstileToken = body.turnstileToken?.trim() ?? "";
-  if (!turnstileToken || !(await verifyTurnstileToken(turnstileToken))) {
+  const remoteIp = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || null;
+  if (!turnstileToken || !(await verifyTurnstileToken(turnstileToken, remoteIp))) {
     return Response.json({ error: "Bot detected" }, { status: 400 });
   }
 

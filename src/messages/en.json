@@ -357,5 +357,10 @@
       "facebook": "Facebook",
       "instagram": "Instagram"
     }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for does not exist or has been moved.",
+    "cta": "Back to home"
   }
 }

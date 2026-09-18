@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { routing } from "@/i18n/routing";
 
-export const SITE_URL = "https://tartupak.ee";
+// Canonical host: the apex domain (tartupak.ee) redirects to www.
+export const SITE_URL = "https://www.tartupak.ee";
 
 const OPEN_GRAPH_LOCALES: Record<string, string> = {
   et: "et_EE",
@@ -41,6 +43,13 @@ export function createPageMetadata({
   return {
     title: titleAbsolute ? { absolute: title } : title,
     description,
+    alternates: {
+      canonical: url,
+      languages: {
+        ...Object.fromEntries(routing.locales.map((l) => [l, absoluteUrl(l, pathname)])),
+        "x-default": absoluteUrl(routing.defaultLocale, pathname),
+      },
+    },
     openGraph: {
       title,
       description,

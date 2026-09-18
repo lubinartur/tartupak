@@ -357,5 +357,10 @@
       "facebook": "Facebook",
       "instagram": "Instagram"
     }
+  },
+  "notFound": {
+    "title": "Lehte ei leitud",
+    "body": "Otsitud lehte ei eksisteeri või on see teisaldatud.",
+    "cta": "Tagasi avalehele"
   }
 }

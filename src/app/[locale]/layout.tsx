@@ -56,6 +56,15 @@ export async function generateMetadata({
   };
 }
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Tartupak",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo-tartupak.svg`,
+  email: "info@tartupak.ee",
+};
+
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
@@ -70,6 +79,12 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale}>
       <body className="min-h-screen flex flex-col">
         <div className="kraft-texture" aria-hidden />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <main className="flex-1">{children}</main>

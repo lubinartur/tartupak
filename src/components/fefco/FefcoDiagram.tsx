@@ -17,6 +17,8 @@ function FefcoImage({ src, alt, className, onError }: FefcoImageProps) {
   if (failed) return null;
 
   return (
+    // Plain <img>: most codes have no illustration yet, and onError hides the missing ones.
+    // eslint-disable-next-line @next/next/no-img-element
     <img
       src={src}
       alt={alt}
