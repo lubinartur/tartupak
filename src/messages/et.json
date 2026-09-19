@@ -337,7 +337,88 @@
   },
   "privacy": {
     "title": "Privaatsuspoliitika",
-    "body": "See leht kirjeldab, kuidas Tartupak töötleb isikuandmeid veebilehe külastajate ja päringute saatjate kohta."
+    "body": "See leht kirjeldab, kuidas Tartupak töötleb isikuandmeid veebilehe külastajate ja päringute saatjate kohta.",
+    "updatedLabel": "Viimati uuendatud",
+    "updated": "19. september 2026",
+    "sections": [
+      {
+        "heading": "1. Vastutav töötleja",
+        "paragraphs": [
+          "Tartu Pak OÜ, Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Estonia.",
+          "E-post: info@tartupak.ee. Telefon: +372 534 99642."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "2. Milliseid andmeid me töötleme",
+        "paragraphs": [
+          "Kui saadate kontaktivormi kaudu pakkumispäringu, saame järgmised andmed:"
+        ],
+        "items": [
+          "nimi, ettevõte, e-posti aadress ja telefoninumber;",
+          "pakendi liik, mõõdud, kogus ja teie sõnum;",
+          "turvalisuse tagamiseks töötlevad veebilehe majutus- ja robotitõrjeteenus teie IP-aadressi lehe ja vormi kasutamisel."
+        ],
+        "paragraphsAfter": [
+          "Kui nõustute küpsistega, töötleme meie ja Google ka statistika- ja reklaamiandmeid: vaadatud lehed, seadme ja brauseri info, kampaania või reklaam, kust tulite, ning klikiidentifikaatorid (nt UTM-parameetrid ja Google’i klikk-ID). Kui keeldute, neid andmeid ei koguta."
+        ]
+      },
+      {
+        "heading": "3. Miks me andmeid töötleme",
+        "paragraphs": [],
+        "items": [
+          "Teie päringule vastamiseks ja pakkumise koostamiseks (toimingud teie soovil ja meie õigustatud huvi ettevõtet juhtida).",
+          "Lehe ja vormi turvalisuse tagamiseks ning robotite tõrjumiseks (õigustatud huvi).",
+          "Lehe külastatavuse ja reklaami tulemuslikkuse mõõtmiseks (teie nõusolek, mille saate igal ajal tagasi võtta)."
+        ],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "4. Kes andmeid saavad",
+        "paragraphs": [
+          "Kasutame järgmisi teenusepakkujaid, kes töötlevad andmeid meie nimel või iseseisva vastutava töötlejana:"
+        ],
+        "items": [
+          "Vercel (veebilehe majutus);",
+          "Resend (teie päringut sisaldava e-kirja edastamine);",
+          "Cloudflare Turnstile (robotitõrje kontaktivormil);",
+          "Google (Tag Manager, Analytics, Ads) — ainult siis, kui nõustute küpsistega."
+        ],
+        "paragraphsAfter": [
+          "Osa neist teenusepakkujatest asub väljaspool Euroopa Majanduspiirkonda. Andmeid edastatakse Euroopa Komisjoni piisavusotsuse või standardsete lepingutingimuste alusel. Me ei müü isikuandmeid."
+        ]
+      },
+      {
+        "heading": "5. Kui kaua me andmeid säilitame",
+        "paragraphs": [
+          "Päringuid säilitatakse niikaua, kui see on vajalik nende menetlemiseks, sellest tuleneva ärisuhte hoidmiseks ja õiguslike kohustuste täitmiseks. Statistika- ja reklaamiandmeid säilitatakse vastava Google’i teenuse säilitusseadete kohaselt."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "6. Küpsised ja sarnased tehnoloogiad",
+        "paragraphs": [],
+        "items": [
+          "Vajalikud: keele eelistus ja robotitõrje kontaktivormil. Need on lehe toimimiseks hädavajalikud.",
+          "Teie küpsisevalik salvestatakse teie brauseris (local storage).",
+          "Valikulised, ainult teie nõusolekul: Google Tag Manager, Google Analytics ja Google Ads külastuste ja reklaamitulemuste mõõtmiseks."
+        ],
+        "paragraphsAfter": [
+          "Saate oma valikut igal ajal muuta või tagasi võtta jaluses oleva lingi „Küpsiste seaded“ kaudu."
+        ]
+      },
+      {
+        "heading": "7. Teie õigused",
+        "paragraphs": [
+          "Teil on õigus oma andmetega tutvuda, neid parandada, kustutada, töötlemist piirata või selle vastu vastu vaielda, saada andmeid ülekantavas vormis ning nõusolek igal ajal tagasi võtta. Õiguste kasutamiseks kirjutage aadressil info@tartupak.ee.",
+          "Samuti võite esitada kaebuse Andmekaitse Inspektsioonile (www.aki.ee)."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      }
+    ]
   },
   "terms": {
     "title": "Kasutustingimused",

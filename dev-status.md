@@ -1,6 +1,6 @@
 # Development Status
 
-Last updated: 2026-05-17
+Last updated: 2026-09-19
 
 ---
 
@@ -102,11 +102,10 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 
 ## Known Issues
 
-- Resend not configured — set RESEND_API_KEY + RESEND_TO_EMAIL in Vercel env vars
-- Privacy and Terms: placeholder text, legal copy pending from client
-- Social media links: placeholder href="#" — real URLs pending from client
-- FEFCO illustrations: 141 PNGs ready, not yet deployed to public/images/fefco/
-- images.unoptimized: true — review before production deploy
+- Terms of Use: placeholder text, legal copy pending from client
+- Privacy Policy: written from actual data flows (contact form, Resend, Vercel, Turnstile, Google); have it reviewed and add the company registry code if desired
+- Tracking is off until `NEXT_PUBLIC_GTM_ID` is set in Vercel (see docs/24_seo_ads_plan.md)
+- public/images is ~38 MB of PNGs; consider WebP/AVIF re-export
 - middleware.ts uses deprecated Next.js 16 convention (low priority)
 
 ---

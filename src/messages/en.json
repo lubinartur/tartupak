@@ -337,7 +337,88 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "body": "This page describes how Tartupak processes personal data from website visitors and inquiry submissions."
+    "body": "This page describes how Tartupak processes personal data from website visitors and inquiry submissions.",
+    "updatedLabel": "Last updated",
+    "updated": "19 September 2026",
+    "sections": [
+      {
+        "heading": "1. Data controller",
+        "paragraphs": [
+          "Tartu Pak OÜ, Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Estonia.",
+          "E-mail: info@tartupak.ee. Phone: +372 534 99642."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "2. What data we process",
+        "paragraphs": [
+          "When you send a quote request through the contact form, we receive:"
+        ],
+        "items": [
+          "name, company, e-mail address and phone number;",
+          "packaging type, dimensions, quantity and your message;",
+          "for security: your IP address is processed by the hosting and bot-protection services when you use the site and the form."
+        ],
+        "paragraphsAfter": [
+          "If you accept cookies, we and Google also process analytics and advertising data: pages viewed, device and browser information, the campaign or ad you came from, and click identifiers (such as UTM parameters and Google click ID). If you decline, none of this is collected."
+        ]
+      },
+      {
+        "heading": "3. Why we process it",
+        "paragraphs": [],
+        "items": [
+          "To reply to your inquiry and prepare a quote (steps at your request and our legitimate interest in running our business).",
+          "To keep the site and the form secure and to block bots (legitimate interest).",
+          "To measure site traffic and the performance of our advertising (your consent, which you can withdraw at any time)."
+        ],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "4. Who receives the data",
+        "paragraphs": [
+          "We use the following service providers, who process data on our behalf or as independent controllers:"
+        ],
+        "items": [
+          "Vercel (website hosting);",
+          "Resend (delivery of the e-mail containing your inquiry);",
+          "Cloudflare Turnstile (bot protection on the contact form);",
+          "Google (Tag Manager, Analytics, Ads) — only if you accept cookies."
+        ],
+        "paragraphsAfter": [
+          "Some of these providers are located outside the European Economic Area. Transfers are based on an adequacy decision of the European Commission or standard contractual clauses. We do not sell personal data."
+        ]
+      },
+      {
+        "heading": "5. How long we keep it",
+        "paragraphs": [
+          "Inquiries are kept for as long as needed to handle them, to maintain any resulting business relationship and to meet legal obligations. Analytics and advertising data are kept according to the retention settings of the respective Google service."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "6. Cookies and similar technologies",
+        "paragraphs": [],
+        "items": [
+          "Essential: language preference and bot protection on the contact form. These are needed for the site to work.",
+          "Your cookie choice is stored in your browser (local storage).",
+          "Optional, only with your consent: Google Tag Manager, Google Analytics and Google Ads, used to measure visits and advertising results."
+        ],
+        "paragraphsAfter": [
+          "You can change or withdraw your choice at any time using “Cookie settings” in the footer."
+        ]
+      },
+      {
+        "heading": "7. Your rights",
+        "paragraphs": [
+          "You have the right to access your data, correct it, have it erased, restrict or object to processing, receive it in a portable format, and withdraw consent at any time. To exercise these rights write to info@tartupak.ee.",
+          "You may also lodge a complaint with the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon, www.aki.ee)."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      }
+    ]
   },
   "terms": {
     "title": "Terms of Use",
