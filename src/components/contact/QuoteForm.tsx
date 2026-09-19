@@ -2,6 +2,8 @@
 
 import { useMemo, useRef, useState } from "react";
 import { Send } from "lucide-react";
+import { getAttribution } from "@/lib/attribution";
+import { trackEvent } from "@/lib/consent";
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { useLocale, useTranslations } from "next-intl";
 import {
@@ -139,7 +141,7 @@ export function QuoteForm({ initialType, initialFefco }: QuoteFormProps) {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, locale, turnstileToken }),
+        body: JSON.stringify({ ...form, locale, turnstileToken, attribution: getAttribution() }),
       });
 
       const data = (await response.json()) as { error?: string };
@@ -165,6 +167,10 @@ export function QuoteForm({ initialType, initialFefco }: QuoteFormProps) {
         return;
       }
 
+      trackEvent("generate_lead", {
+        form_locale: locale,
+        packaging_type: form.packagingType || undefined,
+      });
       setStatus("success");
     } catch {
       setSubmitError(t("error"));

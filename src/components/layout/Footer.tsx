@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
+import { CookieSettingsButton } from "@/components/analytics/CookieSettingsButton";
 import { MapPin, Facebook, Instagram, Award } from "lucide-react";
 
 function telHref(phone: string) {
@@ -159,6 +160,7 @@ export async function Footer() {
             >
               {t("terms")}
             </Link>
+            <CookieSettingsButton className="text-[9px] font-bold tracking-[0.2em] text-white/70 uppercase transition-colors hover:text-brand-kraft" />
           </div>
         </div>
       </div>

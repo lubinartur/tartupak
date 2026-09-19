@@ -14,7 +14,8 @@ import {
   type ProductSlug,
 } from "@/data/products";
 import { routing } from "@/i18n/routing";
-import { createPageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { createPageMetadata, productJsonLd } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -79,6 +80,9 @@ export default async function ProductDetailPage({ params }: Props) {
 
   return (
     <div className="px-6 pt-32 pb-24 lg:px-12">
+      <JsonLd
+        data={productJsonLd({ locale, slug, name: t("title"), description: t("description") })}
+      />
       <div className="mx-auto max-w-7xl">
         <Link href="/products" className="mb-12 inline-block text-sm text-brand-kraft transition-colors hover:text-brand-green">
           ← {common("backToProducts")}

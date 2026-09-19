@@ -362,5 +362,13 @@
     "title": "Page not found",
     "body": "The page you are looking for does not exist or has been moved.",
     "cta": "Back to home"
+  },
+  "cookies": {
+    "title": "Cookies",
+    "body": "We use cookies to measure site traffic and the performance of our advertising. Essential cookies always work.",
+    "reject": "Reject",
+    "accept": "Accept",
+    "privacyLink": "Read the privacy policy",
+    "settings": "Cookie settings"
   }
 }

@@ -6,7 +6,11 @@ import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { absoluteUrl, openGraphLocale, SITE_URL } from "@/lib/seo";
+import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
+import { CookieBanner } from "@/components/analytics/CookieBanner";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { absoluteUrl, openGraphLocale, organizationJsonLd } from "@/lib/seo";
+import { SITE_URL } from "@/lib/seo";
 import "../globals.css";
 
 type Props = {
@@ -56,15 +60,6 @@ export async function generateMetadata({
   };
 }
 
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Tartupak",
-  url: SITE_URL,
-  logo: `${SITE_URL}/logo-tartupak.svg`,
-  email: "info@tartupak.ee",
-};
-
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
@@ -79,16 +74,13 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale}>
       <body className="min-h-screen flex flex-col">
         <div className="kraft-texture" aria-hidden />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
-          }}
-        />
+        <JsonLd data={organizationJsonLd} />
+        <GoogleTagManager />
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <CookieBanner />
         </NextIntlClientProvider>
       </body>
     </html>

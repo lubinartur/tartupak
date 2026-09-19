@@ -12,6 +12,16 @@ const MAX_FIELD_LENGTHS = {
   quantity: 100,
 } as const;
 const TURNSTILE_TIMEOUT_MS = 5000;
+const ATTRIBUTION_KEYS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_term",
+  "utm_content",
+  "gclid",
+  "landing_page",
+] as const;
+const MAX_ATTRIBUTION_LENGTH = 200;
 
 type ContactPayload = {
   fullName?: string;
@@ -24,6 +34,7 @@ type ContactPayload = {
   message?: string;
   locale?: string;
   turnstileToken?: string;
+  attribution?: unknown;
 };
 
 type TurnstileVerifyResponse = {
@@ -58,6 +69,17 @@ function escapeHtml(value: string): string {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function sanitizeAttribution(value: unknown): [string, string][] {
+  if (!value || typeof value !== "object") return [];
+  const source = value as Record<string, unknown>;
+  return ATTRIBUTION_KEYS.flatMap((key) => {
+    const item = source[key];
+    return typeof item === "string" && item.trim()
+      ? [[key, item.trim().slice(0, MAX_ATTRIBUTION_LENGTH)] as [string, string]]
+      : [];
+  });
 }
 
 function validatePayload(body: ContactPayload) {
@@ -145,6 +167,7 @@ export async function POST(request: Request) {
     ["Quantity", data.quantity || "—"],
     ["Locale", data.locale],
     ["Message", data.message || "—"],
+    ...sanitizeAttribution(body.attribution),
   ];
 
   const html = `

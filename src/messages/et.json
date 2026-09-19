@@ -362,5 +362,13 @@
     "title": "Lehte ei leitud",
     "body": "Otsitud lehte ei eksisteeri või on see teisaldatud.",
     "cta": "Tagasi avalehele"
+  },
+  "cookies": {
+    "title": "Küpsised",
+    "body": "Kasutame küpsiseid külastatavuse mõõtmiseks ja reklaami tulemuslikkuse hindamiseks. Vajalikud küpsised töötavad alati.",
+    "reject": "Keeldun",
+    "accept": "Nõustun",
+    "privacyLink": "Loe privaatsuspoliitikat",
+    "settings": "Küpsiste seaded"
   }
 }
