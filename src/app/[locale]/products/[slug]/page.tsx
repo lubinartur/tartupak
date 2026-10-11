@@ -111,7 +111,7 @@ export default async function ProductDetailPage({ params }: Props) {
             </div>
 
             <div>
-              <h2 className="font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/60 uppercase">
+              <h2 className="font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/75 uppercase">
                 {detail("specsLabel")}
               </h2>
               <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-brand-text font-normal">
@@ -122,7 +122,7 @@ export default async function ProductDetailPage({ params }: Props) {
             </div>
 
             <div>
-              <h2 className="font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/60 uppercase">
+              <h2 className="font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/75 uppercase">
                 {products("applicationsLabel")}
               </h2>
               <ul className="mt-4 space-y-3">

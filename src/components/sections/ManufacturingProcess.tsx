@@ -23,7 +23,7 @@ export async function ManufacturingProcess() {
           centered
           overline={t("overline")}
           title={t("title")}
-          className="mx-auto [&_h2]:text-white [&_span]:text-white/60"
+          className="mx-auto [&_h2]:text-white [&_span]:text-white/70"
         />
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {stepKeys.map((key, i) => {
@@ -42,7 +42,7 @@ export async function ManufacturingProcess() {
                   strokeWidth={1.5}
                   aria-hidden
                 />
-                <h4 className="text-sm font-bold tracking-[0.15em] text-white uppercase">
+                <h4 aria-level={3} className="text-sm font-bold tracking-[0.15em] text-white uppercase">
                   {t(`steps.${key}.title`)}
                 </h4>
                 <p className="mx-auto mt-3 max-w-[220px] text-[15px] leading-[1.6] font-normal text-white/70">

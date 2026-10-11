@@ -36,7 +36,7 @@ const inputClass =
   "w-full border-b border-brand-text/10 bg-brand-bg/50 px-1 py-3 text-sm text-brand-text outline-none transition-colors focus:border-brand-green";
 
 const labelClass =
-  "text-[10px] font-bold uppercase tracking-widest text-brand-green/60";
+  "text-[10px] font-bold uppercase tracking-widest text-brand-green/75";
 
 function buildInitialState(
   initialType?: string,

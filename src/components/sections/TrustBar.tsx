@@ -26,7 +26,7 @@ export async function TrustBar() {
               <p className="mt-4 text-[13px] font-medium tracking-[0.12em] text-white uppercase">
                 {t(`items.${key}.label`)}
               </p>
-              <p className="mt-2 text-[12px] text-white/50">{t(`items.${key}.subtext`)}</p>
+              <p className="mt-2 text-[12px] text-white/70">{t(`items.${key}.subtext`)}</p>
             </FadeIn>
           ))}
         </div>

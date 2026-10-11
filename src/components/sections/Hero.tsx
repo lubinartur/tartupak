@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
-import { FadeIn } from "@/components/ui/FadeIn";
 import { parseHeroHeadline } from "@/lib/utils";
 
 export async function Hero() {
@@ -11,7 +10,7 @@ export async function Hero() {
     <section className="relative min-h-[600px] overflow-hidden border-b border-brand-border bg-brand-bg pt-20 lg:min-h-[700px]">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <div className="grid h-full min-h-[600px] grid-cols-1 lg:min-h-[700px] lg:grid-cols-[3fr_2fr]">
-          <FadeIn className="relative z-10 flex flex-col justify-center border-brand-border py-12 lg:border-r lg:pr-8">
+          <div className="hero-rise relative z-10 flex flex-col justify-center border-brand-border py-12 lg:border-r lg:pr-8">
             <div className="w-full space-y-10">
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
@@ -52,12 +51,13 @@ export async function Hero() {
                 </Link>
               </div>
             </div>
-          </FadeIn>
+          </div>
 
           <div className="relative min-h-[320px] overflow-hidden lg:-mr-8 lg:h-full lg:min-h-0 xl:-mr-[calc((100vw_-_1280px)/2_+_2rem)]">
             <video
               className="absolute inset-0 h-full w-full object-cover"
               src="/videos/hero-video.mp4"
+              poster="/videos/hero-poster.webp"
               autoPlay
               muted
               loop

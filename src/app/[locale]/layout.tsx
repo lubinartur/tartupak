@@ -21,22 +21,34 @@ const dmSerif = DM_Serif_Display({
   weight: "400",
   style: ["normal", "italic"],
   display: "swap",
+  // Each font ships several unicode-range subsets; preloading all of them (~400 KB) competes with
+  // the first paint, so let the browser fetch only the subsets a page actually uses.
+  preload: false,
   variable: "--font-dm-serif",
 });
 const playfair = Playfair_Display({
   subsets: ["latin", "latin-ext", "cyrillic"],
   style: ["normal", "italic"],
   display: "swap",
+  // Each font ships several unicode-range subsets; preloading all of them (~400 KB) competes with
+  // the first paint, so let the browser fetch only the subsets a page actually uses.
+  preload: false,
   variable: "--font-playfair",
 });
 const inter = Inter({
   subsets: ["latin", "latin-ext", "cyrillic"],
   display: "swap",
+  // Each font ships several unicode-range subsets; preloading all of them (~400 KB) competes with
+  // the first paint, so let the browser fetch only the subsets a page actually uses.
+  preload: false,
   variable: "--font-inter",
 });
 const dmSans = DM_Sans({
   subsets: ["latin", "latin-ext"],
   display: "swap",
+  // Each font ships several unicode-range subsets; preloading all of them (~400 KB) competes with
+  // the first paint, so let the browser fetch only the subsets a page actually uses.
+  preload: false,
   variable: "--font-dm-sans",
 });
 

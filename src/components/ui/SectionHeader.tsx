@@ -17,7 +17,7 @@ type SectionHeaderProps = {
 const labelClass = (dark?: boolean) =>
   cn(
     "block font-display text-[10px] font-bold uppercase tracking-[0.2em] sm:text-xs",
-    dark ? "text-brand-bg/60" : "text-brand-green/60",
+    dark ? "text-brand-bg/60" : "text-brand-green/75",
   );
 
 export function SectionHeader({

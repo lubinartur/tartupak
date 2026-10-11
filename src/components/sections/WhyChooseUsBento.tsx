@@ -12,10 +12,10 @@ const cardLight = `${cardSurface} border border-[rgba(26,26,26,0.12)] bg-[#F8F6F
 const cardDark = `${cardSurface} border-[0.5px] border-[rgba(26,26,26,0.12)] bg-brand-green`;
 
 const labelLight =
-  "mt-3 font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/60 uppercase sm:text-xs";
+  "mt-3 font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/75 uppercase sm:text-xs";
 
 const labelDark =
-  "mt-3 font-display text-[10px] font-bold tracking-[0.2em] text-white/60 uppercase sm:text-xs";
+  "mt-3 font-display text-[10px] font-bold tracking-[0.2em] text-white/70 uppercase sm:text-xs";
 
 const textDarkMuted = "mt-3 max-w-xs text-sm leading-relaxed text-white/70";
 

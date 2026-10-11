@@ -80,7 +80,7 @@ export async function Footer() {
           </div>
 
           <div>
-            <h4 className={sectionLabel}>{t("contact")}</h4>
+            <h4 aria-level={3} className={sectionLabel}>{t("contact")}</h4>
             <ul className="flex flex-col gap-5">
               <li className="flex items-start gap-4">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-brand-kraft" />
@@ -90,7 +90,7 @@ export async function Footer() {
                 <li key={person.key} className="flex flex-col gap-1 pl-[34px]">
                   <span className="text-xs font-medium text-white">{person.name}</span>
                   {person.title ? (
-                    <span className="text-[10px] tracking-wide text-white/50">
+                    <span className="text-[10px] tracking-wide text-white/70">
                       {person.title}
                     </span>
                   ) : null}
@@ -112,7 +112,7 @@ export async function Footer() {
           </div>
 
           <div className="lg:pl-10">
-            <h4 className={sectionLabel}>{t("navigation")}</h4>
+            <h4 aria-level={3} className={sectionLabel}>{t("navigation")}</h4>
             <ul className="flex flex-col gap-3">
               {navLinks.map((item) => (
                 <li key={item.href}>
@@ -125,7 +125,7 @@ export async function Footer() {
           </div>
 
           <div className="space-y-6">
-            <h4 className={sectionLabel}>{t("credentials")}</h4>
+            <h4 aria-level={3} className={sectionLabel}>{t("credentials")}</h4>
             <div className="flex items-center gap-4">
               <div className="flex h-8 w-8 items-center justify-center border border-white/30 text-[9px] font-bold tracking-widest text-white">
                 AA

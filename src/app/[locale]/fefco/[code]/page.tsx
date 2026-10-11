@@ -66,7 +66,7 @@ export default async function FefcoDetailPage({ params }: Props) {
       <div className="mx-auto max-w-7xl">
         <Link
           href="/fefco"
-          className="group mb-12 inline-flex items-center gap-2 text-xs font-bold tracking-widest text-brand-green/60 uppercase hover:text-brand-green"
+          className="group mb-12 inline-flex items-center gap-2 text-xs font-bold tracking-widest text-brand-green/75 uppercase hover:text-brand-green"
         >
           <ArrowLeft
             size={16}
@@ -94,7 +94,7 @@ export default async function FefcoDetailPage({ params }: Props) {
             </p>
 
             <div className="space-y-6">
-              <h2 className="text-[10px] font-bold tracking-[0.2em] text-brand-green/60 uppercase">
+              <h2 className="text-[10px] font-bold tracking-[0.2em] text-brand-green/75 uppercase">
                 {t("typicalUseCases")}
               </h2>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
