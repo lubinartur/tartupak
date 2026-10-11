@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { fefcoCatalogCodes } from "@/data/fefco";
 import { productSlugs } from "@/data/products";
 import { routing } from "@/i18n/routing";
-import { SITE_URL } from "@/lib/seo";
+import { CONTENT_LAST_UPDATED, SITE_URL } from "@/lib/seo";
 
 type ChangeFrequency = NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
 
@@ -25,7 +25,7 @@ function localeUrl(locale: string, path: string): string {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
-  const lastModified = new Date();
+  const lastModified = CONTENT_LAST_UPDATED;
 
   for (const locale of routing.locales) {
     for (const route of staticRoutes) {

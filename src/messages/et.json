@@ -422,7 +422,93 @@
   },
   "terms": {
     "title": "Kasutustingimused",
-    "body": "Veebilehe kasutamise tingimused. Täielikud tingimused täpsustatakse enne avaldamist."
+    "body": "Tartupaki veebilehe kasutustingimused: veebilehe teave, pakkumispäringud, intellektuaalomand ja vastutus.",
+    "updatedLabel": "Viimati uuendatud",
+    "updated": "11. oktoober 2026",
+    "sections": [
+      {
+        "heading": "1. Üldist",
+        "paragraphs": [
+          "Need tingimused reguleerivad veebilehe www.tartupak.ee kasutamist. Veebilehte haldab Tartu Pak OÜ (Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Eesti). Veebilehte kasutades nõustute nende tingimustega. Kui te nendega ei nõustu, palume veebilehte mitte kasutada."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "2. Veebilehe teave",
+        "paragraphs": [
+          "Tootekirjeldused, tehnilised andmed, pildid ja FEFCO joonised on esitatud üldise teabena ning võivad ette teatamata muutuda. Need ei ole siduv pakkumine.",
+          "Toote tegelikud parameetrid, hinnad ja tarnetingimused lepitakse kokku eraldi kirjaliku pakkumise või lepinguga."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "3. Pakkumispäringud",
+        "paragraphs": [
+          "Kontaktivormi saatmine ei tekita lepingut. Vastame teie päringule ja võime küsida lisateavet. Leping loetakse sõlmituks alles pärast seda, kui pooled on tingimused kirjalikult kinnitanud.",
+          "Isikuandmeid töötleme vastavalt meie privaatsuspoliitikale."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "4. Intellektuaalomand",
+        "paragraphs": [
+          "Veebilehe tekstid, pildid, joonised, logo ja kujundus kuuluvad Tartu Pak OÜ-le või selle litsentsiandjatele ning on kaitstud autoriõigusega. Sisu võib vaadata ja printida isiklikuks või ettevõttesiseseks kasutamiseks. Kopeerimine, levitamine või muutmine ilma meie kirjaliku nõusolekuta on keelatud."
+        ],
+        "items": [],
+        "paragraphsAfter": [
+          "FEFCO nimi ja koodid kuuluvad nende õiguspärastele omanikele ning on siin esitatud üksnes teavitamise eesmärgil."
+        ]
+      },
+      {
+        "heading": "5. Lubatud kasutus",
+        "paragraphs": [
+          "Veebilehte ei tohi kasutada viisil, mis:"
+        ],
+        "items": [
+          "rikub õigusakte või kolmandate isikute õigusi;",
+          "häirib veebilehe või serverite tööd, sh liigsed automaatsed päringud;",
+          "levitab pahavara või eksitavat sisu;",
+          "esineb teise isiku või ettevõtte nime all."
+        ],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "6. Kättesaadavus ja vastutus",
+        "paragraphs": [
+          "Püüame hoida veebilehe kättesaadavana ja teabe täpsena, kuid ei garanteeri katkematut tööd ega vigadeta sisu. Seadusega lubatud ulatuses ei vastuta me kahju eest, mis tuleneb veebilehe kasutamisest või seal esitatud teabele tuginemisest, välja arvatud juhul, kui vastutust ei saa seadusega välistada."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "7. Välislingid",
+        "paragraphs": [
+          "Veebilehel võib olla linke kolmandate isikute lehtedele (nt sotsiaalmeedia). Me ei vastuta nende sisu ega privaatsustavade eest."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "8. Tingimuste muutmine",
+        "paragraphs": [
+          "Võime neid tingimusi aeg-ajalt uuendada. Kehtiv versioon on avaldatud sellel lehel koos viimase uuendamise kuupäevaga."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "9. Kohaldatav õigus ja kontakt",
+        "paragraphs": [
+          "Tingimustele kohaldatakse Eesti Vabariigi õigust. Vaidlusi püüame lahendada läbirääkimistega, vajaduse korral lahendab need pädev Eesti kohus.",
+          "Küsimuste korral kirjutage aadressil info@tartupak.ee."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      }
+    ]
   },
   "common": {
     "backToProducts": "Tagasi toodete juurde",

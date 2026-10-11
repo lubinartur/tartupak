@@ -1,6 +1,6 @@
 # Development Status
 
-Last updated: 2026-09-19
+Last updated: 2026-10-11
 
 ---
 
@@ -102,29 +102,27 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 
 ## Known Issues
 
-- Terms of Use: placeholder text, legal copy pending from client
-- Privacy Policy: written from actual data flows (contact form, Resend, Vercel, Turnstile, Google); have it reviewed and add the company registry code if desired
-- Tracking is off until `NEXT_PUBLIC_GTM_ID` is set in Vercel (see docs/24_seo_ads_plan.md)
-- public/images is ~38 MB of PNGs; consider WebP/AVIF re-export
+- Privacy Policy and Terms of Use are written from the site's actual behaviour; have a lawyer review them, and add the company registry code if desired
+- Google Ads campaign "TartuPak" (Performance Max, 0.30 EUR/day) is live; ad copy still needs rewriting per docs/24_seo_ads_plan.md
+- Old Ads conversions "Kontakt" (GA4) and "Local actions: directions" are still in the account goals; review or remove
+- Merchant Center: not set up (not needed: no prices/cart)
 - middleware.ts uses deprecated Next.js 16 convention (low priority)
 
 ---
 
+## Session 5 (2026-10-11)
+
+- SEO: canonical + hreflang, og:image on every page, one h1 per page, meta descriptions <= 155 chars, LocalBusiness/Product JSON-LD
+- Security headers in next.config.ts; contact API: Turnstile timeout, field length limits, UTM/gclid in the lead email
+- Tracking: GTM (GTM-T8XX8ZHR) with Consent Mode v2, cookie banner (ET/EN/RU), `generate_lead` event -> GA4 (G-7VBTW49QZN) -> Google Ads conversion
+- Search Console: https://www.tartupak.ee/ verified via HTML tag, sitemap submitted
+- Images: all photos and FEFCO diagrams are WebP (37 MB -> 2.6 MB); `node scripts/optimize-images.mjs <files>` converts new ones
+- Privacy Policy and Terms of Use pages with real text (`LegalDocument` component, copy in messages)
+- Sitemap lastmod uses `CONTENT_LAST_UPDATED` in src/lib/seo.ts (bump it when content changes)
+
 ## Next Steps
 
-### Immediate (can do now)
-1. Deploy 141 FEFCO illustrations to public/images/fefco/ and connect to catalog
-2. Connect domain tartupak.ee to Vercel (DNS)
-
-### Awaiting client
-3. RESEND_API_KEY + recipient email → Vercel env vars
-4. Privacy Policy legal text (ET/EN/RU)
-5. Terms of Service legal text (ET/EN/RU)
-6. LinkedIn / Instagram real URLs
-7. Production video with Tartupak-branded boxes for Hero
-8. Review images.unoptimized before go-live
-
-### Design tasks (separate from site)
-9. Round email avatar (logo in circle)
-10. Email signature image (Maksim Babiak)
-11. Door sticker design (entrance glass door)
+1. Ad copy and keyword groups per docs/24_seo_ads_plan.md; add negative keywords
+2. Legal review of Privacy Policy / Terms
+3. Review the two legacy Ads conversions
+4. Optional: dedicated landing pages per keyword cluster

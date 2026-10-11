@@ -19,6 +19,9 @@ export const DEFAULT_SOCIAL_IMAGE: SocialImage = {
   height: 537,
 };
 
+/** Bump when page content changes; used for sitemap <lastmod> instead of the build time. */
+export const CONTENT_LAST_UPDATED = new Date("2026-10-11");
+
 const MAX_DESCRIPTION_LENGTH = 155;
 
 /** Keeps meta descriptions within what search results show: cut at a sentence end, else at a word. */

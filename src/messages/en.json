@@ -422,7 +422,93 @@
   },
   "terms": {
     "title": "Terms of Use",
-    "body": "Terms for using this website. Full terms will be finalized before publication."
+    "body": "Terms of use of the Tartupak website: information on the site, quote requests, intellectual property and liability.",
+    "updatedLabel": "Last updated",
+    "updated": "11 October 2026",
+    "sections": [
+      {
+        "heading": "1. General",
+        "paragraphs": [
+          "These terms govern the use of the website www.tartupak.ee, operated by Tartu Pak OÜ (Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Estonia). By using the website you agree to these terms. If you do not agree, please do not use the website."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "2. Information on the website",
+        "paragraphs": [
+          "Product descriptions, specifications, images and FEFCO diagrams are provided for general information and may change without notice. They are not a binding offer.",
+          "The actual product parameters, prices and delivery terms are agreed separately in a written offer or contract."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "3. Quote requests",
+        "paragraphs": [
+          "Submitting the contact form does not create a contract. We will reply to your request and may ask for additional information. A contract is concluded only after both parties have confirmed the terms in writing.",
+          "We process personal data as described in our Privacy Policy."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "4. Intellectual property",
+        "paragraphs": [
+          "The texts, images, drawings, logo and design of the website belong to Tartu Pak OÜ or its licensors and are protected by copyright. You may view and print the content for personal or internal business use. Copying, distributing or modifying it without our written consent is prohibited."
+        ],
+        "items": [],
+        "paragraphsAfter": [
+          "The FEFCO name and codes belong to their respective owners and are shown here for reference only."
+        ]
+      },
+      {
+        "heading": "5. Acceptable use",
+        "paragraphs": [
+          "You must not use the website in a way that:"
+        ],
+        "items": [
+          "breaches the law or the rights of third parties;",
+          "disrupts the website or its servers, including excessive automated requests;",
+          "spreads malware or misleading content;",
+          "impersonates another person or company."
+        ],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "6. Availability and liability",
+        "paragraphs": [
+          "We aim to keep the website available and the information accurate, but we do not guarantee uninterrupted operation or error-free content. To the extent permitted by law, we are not liable for damage arising from the use of the website or from reliance on the information on it, except where liability cannot be excluded by law."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "7. External links",
+        "paragraphs": [
+          "The website may contain links to third-party sites (for example social networks). We are not responsible for their content or privacy practices."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "8. Changes to these terms",
+        "paragraphs": [
+          "We may update these terms from time to time. The current version is published on this page together with the date of the last update."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      },
+      {
+        "heading": "9. Governing law and contact",
+        "paragraphs": [
+          "These terms are governed by the laws of the Republic of Estonia. We try to resolve disputes through negotiation; failing that, they are resolved by the competent Estonian court.",
+          "For questions write to info@tartupak.ee."
+        ],
+        "items": [],
+        "paragraphsAfter": []
+      }
+    ]
   },
   "common": {
     "backToProducts": "Back to Products",
