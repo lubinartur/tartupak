@@ -3,6 +3,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import type { Metadata } from "next";
+import { DM_Sans, DM_Serif_Display, Inter, Playfair_Display } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -12,6 +13,32 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { absoluteUrl, DEFAULT_SOCIAL_IMAGE, openGraphLocale, organizationJsonLd } from "@/lib/seo";
 import { SITE_URL } from "@/lib/seo";
 import "../globals.css";
+
+// Self-hosted at build time: no requests to Google Fonts from the visitor's browser.
+// DM Serif Display and DM Sans have no Cyrillic glyphs (Russian pages fall back to the serif/sans stack).
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin", "latin-ext"],
+  weight: "400",
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-dm-serif",
+});
+const playfair = Playfair_Display({
+  subsets: ["latin", "latin-ext", "cyrillic"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-playfair",
+});
+const inter = Inter({
+  subsets: ["latin", "latin-ext", "cyrillic"],
+  display: "swap",
+  variable: "--font-inter",
+});
+const dmSans = DM_Sans({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-dm-sans",
+});
 
 type Props = {
   children: React.ReactNode;
@@ -75,7 +102,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      className={`${dmSerif.variable} ${playfair.variable} ${inter.variable} ${dmSans.variable}`}
+    >
       <body className="min-h-screen flex flex-col">
         <div className="kraft-texture" aria-hidden />
         <JsonLd data={organizationJsonLd} />

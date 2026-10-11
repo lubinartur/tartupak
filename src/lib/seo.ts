@@ -44,6 +44,12 @@ export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Tartupak",
+  legalName: "Tartu Pak OÜ",
+  identifier: {
+    "@type": "PropertyValue",
+    name: "Estonian commercial register code",
+    value: "10739054",
+  },
   url: SITE_URL,
   logo: `${SITE_URL}/logo-tartupak.svg`,
   image: `${SITE_URL}/images/og-image.png`,
