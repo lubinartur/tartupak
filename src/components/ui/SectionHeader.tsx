@@ -10,6 +10,8 @@ type SectionHeaderProps = {
   centered?: boolean;
   className?: string;
   dark?: boolean;
+  /** Heading level; use "h1" once per page when the page has no other h1. */
+  as?: "h1" | "h2";
 };
 
 const labelClass = (dark?: boolean) =>
@@ -25,6 +27,7 @@ export function SectionHeader({
   centered,
   className,
   dark,
+  as: Heading = "h2",
 }: SectionHeaderProps) {
   return (
     <div
@@ -36,7 +39,7 @@ export function SectionHeader({
     >
       {overline ? <span className={labelClass(dark)}>{overline}</span> : null}
       {subtitle ? <span className={labelClass(dark)}>{subtitle}</span> : null}
-      <h2 className={cn(dark ? "text-brand-bg" : "text-brand-green")}>{title}</h2>
+      <Heading className={cn(dark ? "text-brand-bg" : "text-brand-green")}>{title}</Heading>
     </div>
   );
 }

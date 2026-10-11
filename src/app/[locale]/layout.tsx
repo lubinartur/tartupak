@@ -9,7 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
 import { CookieBanner } from "@/components/analytics/CookieBanner";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { absoluteUrl, openGraphLocale, organizationJsonLd } from "@/lib/seo";
+import { absoluteUrl, DEFAULT_SOCIAL_IMAGE, openGraphLocale, organizationJsonLd } from "@/lib/seo";
 import { SITE_URL } from "@/lib/seo";
 import "../globals.css";
 
@@ -51,11 +51,11 @@ export async function generateMetadata({
       title: t("title"),
       description: t("description"),
       url: absoluteUrl(locale, "/"),
-      images: [{ url: "/images/og-image.png", width: 1200, height: 630 }],
+      images: [DEFAULT_SOCIAL_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
-      images: ["/images/og-image.png"],
+      images: [DEFAULT_SOCIAL_IMAGE.url],
     },
   };
 }

@@ -38,7 +38,7 @@ export default async function FefcoPage({ params }: Props) {
     <div className="px-6 pt-32 pb-24 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 space-y-6">
-          <SectionHeader overline={t("overline")} title={t("title")} className="mb-0" />
+          <SectionHeader as="h1" overline={t("overline")} title={t("title")} className="mb-0" />
           <a
             href={FEFCO_CATALOG_PDF_URL}
             target="_blank"

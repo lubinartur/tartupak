@@ -48,6 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     pathname: `/products/${slug}`,
     title: t("title"),
     description: t("description"),
+    image: { url: `/images/product-${slug}.png`, width: 1536, height: 1024 },
   });
 }
 

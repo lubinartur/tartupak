@@ -34,7 +34,7 @@ export default async function ProductsPage({ params }: Props) {
   return (
     <div className="px-6 pt-32 pb-24 lg:px-12">
       <div className="mx-auto max-w-7xl">
-        <SectionHeader overline={t("overline")} title={t("title")} className="mb-16 md:mb-24" />
+        <SectionHeader as="h1" overline={t("overline")} title={t("title")} className="mb-16 md:mb-24" />
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {productSlugs.map((slug) => (
             <ProductCard key={slug} slug={slug} variant="listing" />

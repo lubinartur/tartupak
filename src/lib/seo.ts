@@ -10,6 +10,33 @@ const OPEN_GRAPH_LOCALES: Record<string, string> = {
   ru: "ru_RU",
 };
 
+export type SocialImage = { url: string; width: number; height: number };
+
+/** Real pixel size of public/images/og-image.png. */
+export const DEFAULT_SOCIAL_IMAGE: SocialImage = {
+  url: "/images/og-image.png",
+  width: 1024,
+  height: 537,
+};
+
+const MAX_DESCRIPTION_LENGTH = 155;
+
+/** Keeps meta descriptions within what search results show: cut at a sentence end, else at a word. */
+export function trimDescription(text: string, max = MAX_DESCRIPTION_LENGTH): string {
+  const clean = text.replace(/\s+/g, " ").trim();
+  if (clean.length <= max) return clean;
+
+  for (let i = max - 1; i >= 80; i--) {
+    if (".!?".includes(clean[i]) && (clean[i + 1] === " " || i + 1 === clean.length)) {
+      return clean.slice(0, i + 1);
+    }
+  }
+
+  const cut = clean.slice(0, max - 1);
+  const space = cut.lastIndexOf(" ");
+  return `${(space > 0 ? cut.slice(0, space) : cut).replace(/[\s,;:\-—]+$/, "")}…`;
+}
+
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -73,19 +100,22 @@ export function createPageMetadata({
   title,
   description,
   titleAbsolute = false,
+  image = DEFAULT_SOCIAL_IMAGE,
 }: {
   locale: string;
   pathname: string;
   title: string;
   description: string;
   titleAbsolute?: boolean;
+  image?: SocialImage;
 }): Metadata {
   const url = absoluteUrl(locale, pathname);
   const ogLocale = openGraphLocale(locale);
+  const metaDescription = trimDescription(description);
 
   return {
     title: titleAbsolute ? { absolute: title } : title,
-    description,
+    description: metaDescription,
     alternates: {
       canonical: url,
       languages: {
@@ -95,11 +125,18 @@ export function createPageMetadata({
     },
     openGraph: {
       title,
-      description,
+      description: metaDescription,
       url,
       locale: ogLocale,
       type: "website",
       siteName: "Tartupak",
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: metaDescription,
+      images: [image.url],
     },
   };
 }

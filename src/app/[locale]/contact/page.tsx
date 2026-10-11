@@ -79,6 +79,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
     <div className="px-6 pt-32 pb-24 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
+          as="h1"
           overline={t("overline")}
           title={t("title")}
           className="mb-16"
