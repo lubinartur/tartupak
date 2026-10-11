@@ -118,6 +118,8 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 - Search Console: https://www.tartupak.ee/ verified via HTML tag, sitemap submitted
 - Images: all photos and FEFCO diagrams are WebP (37 MB -> 2.6 MB); `node scripts/optimize-images.mjs <files>` converts new ones
 - Privacy Policy and Terms of Use pages with real text (`LegalDocument` component, copy in messages)
+- Fonts are self-hosted via next/font (no Google Fonts requests before consent); registry code 10739054 in Privacy Policy / Terms
+- Legacy Ads conversion "Kontakt" (GA4 event `ads_conversion___1`, no data for 28+ days) is dead; set it to secondary or remove it from account goals
 - Sitemap lastmod uses `CONTENT_LAST_UPDATED` in src/lib/seo.ts (bump it when content changes)
 
 ## Next Steps
