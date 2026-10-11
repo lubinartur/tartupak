@@ -37,6 +37,10 @@ export async function generateMetadata({
       template: "%s | Tartupak",
     },
     description: t("description"),
+    verification: {
+      // Google Search Console ownership (HTML tag method).
+      google: "5FozUwfcYv3yYD--z_sPNf9SNf6-NyZuS49VT69wcLo",
+    },
     icons: {
       icon: [
         { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
