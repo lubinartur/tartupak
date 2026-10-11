@@ -122,6 +122,9 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 - Legacy Ads conversion "Kontakt" (GA4 event `ads_conversion___1`, no data for 28+ days) is dead; set it to secondary or remove it from account goals
 - Sitemap lastmod uses `CONTENT_LAST_UPDATED` in src/lib/seo.ts (bump it when content changes)
 
+- Performance (Lighthouse mobile, live, 2026-10-11): 69 -> 83; home page 8.9 MB -> 1.1 MB (videos re-encoded, boxes video lazy, hero headline no longer JS-gated). SEO 100, a11y 96. LCP is still ~4.5 s on simulated slow 4G.
+- Open design decision: many labels are 9-10 px uppercase (Lighthouse: ~52% legible text); raising them to 12 px would improve mobile usability but changes the look.
+
 ## Next Steps
 
 1. Ad copy and keyword groups per docs/24_seo_ads_plan.md; add negative keywords
