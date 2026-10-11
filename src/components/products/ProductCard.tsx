@@ -31,7 +31,7 @@ export async function ProductCard({ slug, className, variant = "default" }: Prod
         )}
       >
         <Image
-          src={`/images/product-${slug}.png`}
+          src={`/images/product-${slug}.webp`}
           alt={title}
           fill
           className="object-cover"

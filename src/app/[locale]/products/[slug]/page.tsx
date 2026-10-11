@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     pathname: `/products/${slug}`,
     title: t("title"),
     description: t("description"),
-    image: { url: `/images/product-${slug}.png`, width: 1536, height: 1024 },
+    image: { url: `/images/og/product-${slug}.jpg`, width: 1200, height: 630 },
   });
 }
 
@@ -92,7 +92,7 @@ export default async function ProductDetailPage({ params }: Props) {
         <div className="mb-16 grid items-start gap-12 lg:mb-32 lg:grid-cols-2 lg:gap-24">
           <div className="relative aspect-square overflow-hidden rounded-sm border border-brand-border">
             <Image
-              src={`/images/product-${slug}.png`}
+              src={`/images/product-${slug}.webp`}
               alt={t("title")}
               fill
               className="object-cover"

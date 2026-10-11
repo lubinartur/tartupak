@@ -7,10 +7,10 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const PHOTOS = [
-  "/images/facility-1.jpg",
-  "/images/facility-2.jpg",
-  "/images/facility-3.jpg",
-  "/images/facility-4.jpg",
+  "/images/facility-1.webp",
+  "/images/facility-2.webp",
+  "/images/facility-3.webp",
+  "/images/facility-4.webp",
 ] as const;
 
 const ALT_KEYS = ["1", "2", "3", "4"] as const;

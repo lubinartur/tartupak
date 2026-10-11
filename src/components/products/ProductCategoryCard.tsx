@@ -17,7 +17,7 @@ export function ProductCategoryCard({ slug, title, description }: ProductCategor
     >
       <div className="relative h-48 shrink-0 overflow-hidden bg-brand-bg sm:h-64 lg:h-80">
         <Image
-          src={`/images/product-${slug}.png`}
+          src={`/images/product-${slug}.webp`}
           alt={title}
           fill
           className="object-cover object-top"

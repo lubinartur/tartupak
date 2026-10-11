@@ -94,10 +94,10 @@ export function getFefcoMontage(code: string): FefcoMontageType | undefined {
   return FEFCO_MONTAGE[code];
 }
 
-/** Public URL path for a FEFCO diagram PNG (files live under `public/images/fefco/`). */
-export type FefcoImagePath = `/images/fefco/${string}.png`;
+/** Public URL path for a FEFCO diagram (WebP files live under `public/images/fefco/`). */
+export type FefcoImagePath = `/images/fefco/${string}.webp`;
 
 export function getFefcoImage(code: string): FefcoImagePath | undefined {
   if (!isFefcoCode(code)) return undefined;
-  return `/images/fefco/${code}.png`;
+  return `/images/fefco/${code}.webp`;
 }

@@ -73,7 +73,7 @@ export function productJsonLd({
     "@type": "Product",
     name,
     description,
-    image: `${SITE_URL}/images/product-${slug}.png`,
+    image: `${SITE_URL}/images/product-${slug}.webp`,
     url: absoluteUrl(locale, `/products/${slug}`),
     brand: { "@type": "Brand", name: "Tartupak" },
     manufacturer: { "@type": "Organization", name: "Tartupak", url: SITE_URL },

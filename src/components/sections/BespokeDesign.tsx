@@ -14,7 +14,7 @@ export async function BespokeDesign() {
           <div className="relative flex aspect-video items-center justify-center overflow-hidden border border-brand-green/5 bg-brand-bg p-1">
             <div className="relative h-full w-full overflow-hidden border border-brand-green/10">
               <Image
-                src="/images/bespoke-packaging.png"
+                src="/images/bespoke-packaging.webp"
                 alt={t("title")}
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
