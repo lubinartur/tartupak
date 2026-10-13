@@ -125,6 +125,8 @@ Routes use locale prefix (`/et`, `/en`, `/ru`); default locale is ET.
 - Performance (Lighthouse mobile, live, 2026-10-11): 69 -> 83; home page 8.9 MB -> 1.1 MB (videos re-encoded, boxes video lazy, hero headline no longer JS-gated). SEO 100, a11y 96. LCP is still ~4.5 s on simulated slow 4G.
 - Open design decision: many labels are 9-10 px uppercase (Lighthouse: ~52% legible text); raising them to 12 px would improve mobile usability but changes the look.
 
+- Google Ads: search campaigns "Search ET" / "Search RU" created PAUSED (see docs/27_ads_campaign_setup.md). Location targeting and negative keywords still to be added before enabling. Search Console linked to GA4 and Ads.
+
 ## Next Steps
 
 1. Ad copy and keyword groups per docs/24_seo_ads_plan.md; add negative keywords
