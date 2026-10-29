@@ -37,3 +37,8 @@ Search ET and Search RU are still PAUSED. Nothing below enables them.
 - All products are made to order, there is no shop; B2B and private customers; delivery across Europe and pickup.
 - Products: flexo printing yes; corrugated board in rolls: NO (removed from the site and ads); custom die-cut yes; large-format yes; board thickness 1-5 mm only (large-format page fixed from 5-7 mm). "AA credit rating" and Edukas Eesti Ettevote confirmed. Photos with customers' logos may be shown.
 - Still open: max cost per lead / monthly cap, call hours (16:30 vs 18:00), whether corrugated board is sold at all (sheets), "up to 200 kg" on the large-format page, review of the seven product-page texts, 0201 ad group and landing page, whether to add Latvia/Finland/other countries (delivery is Europe-wide).
+
+## 2026-10-29 later
+- 0201 ad groups created in Ads (ET and RU), negatives for shop intent added. Campaigns, PMax untouched.
+- Client: "no such weight" -> "up to 200 kg" removed from the large-format page; calls until 18:00 confirmed (ads stay Mon-Fri 08:00-18:00).
+- Open: does the client sell corrugated board separately (page "Lainepapp" and the paused ad group "ET Lainepapp ja pakend", whose live ad still mentions rolls). "ET Pappkastid" ad strength is Poor in Ads: improve headlines before launch.

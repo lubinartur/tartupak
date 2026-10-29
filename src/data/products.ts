@@ -89,17 +89,14 @@ export const PRODUCT_SPECS: Record<ProductSlug, ProductSpecs> = {
   },
   "suuregabariidilised-pakendid": {
     et: [
-      "Lainepapist konteinerid kandejõuga kuni 200 kg",
       "Lainepapi paksus 1–5 mm",
       "Küljed kokku klammerdatud",
     ],
     en: [
-      "Corrugated containers with load capacity up to 200 kg",
       "Corrugated board thickness 1–5 mm",
       "Sides joined with staples",
     ],
     ru: [
-      "Гофроконтейнеры с грузоподъёмностью до 200 кг",
       "Толщина гофрокартона 1–5 мм",
       "Боковые стенки скреплены скобами",
     ],

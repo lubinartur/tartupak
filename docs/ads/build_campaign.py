@@ -7,7 +7,7 @@ def camp(name, lang, budget, suffix, negatives, groups):
 
 # ---------- Estonian ----------
 camp("Search ET", "et", "2.00", "utm_source=google&utm_medium=cpc&utm_campaign=search-et",
-  ["kolimiseks","kolimine","kolimiskastid","tasuta","bauhof","kasutatud","ise tegema"],
+  ["kolimiseks","kolimine","kolimiskastid","tasuta","bauhof","kasutatud","ise tegema","lõunakarp","lunchbox","kauplus","pood","poest"],
   [
    dict(name="ET Pappkastid", url="/et/products/transpordipakend", p1="pappkastid", p2="tellimus",
         kw=["pappkast","pappkastid","papp kastid","pappkarbid","papp karbid","pappkastid müük","pappkarbid müük","suured pappkastid","väikesed pappkarbid"],
@@ -29,11 +29,17 @@ camp("Search ET", "et", "2.00", "utm_source=google&utm_medium=cpc&utm_campaign=s
         D=["Lainepapp ühe-, kahe- ja kolmeseinalisena, paksus 1–5 mm.",
            "Valmis karbid sinu toote järgi. Pruun või valge väliskiht.",
            "CAD-disain ja stantsimine sinu toote mõõtude järgi. Küsi pakkumist."]),
+   dict(name="ET FEFCO 0201", url="/et/fefco/0201", p1="fefco", p2="0201",
+        kw=["fefco 0201","fefco 0201 karp","0201 karp","0201 karbid","0201 pappkast","fefco karbid","fefco karp"],
+        H=["FEFCO 0201 karbid","FEFCO 0201 karbid tootjalt","Standardne transpordikarp","Karbid alates 1 tükist","Mõõdud sinu toote järgi","Mis tahes trükk karbil","Valmistame tellimuse järgi","Tarne üle Euroopa","Võimalik ise järele tulla","Tootmine alates 2001. aastast","Tartupak – tootja Tartumaal","Küsi pakkumist veebis"],
+        D=["FEFCO 0201 lainepappkarbid tellimuse järgi: sinu mõõdud, tellimus alates 1 tükist.",
+           "Tavaline transpordikarp (RSC), mis tahes trükk. Tarne üle Euroopa või järeletulek.",
+           "Lainepappkarpide tootja Tõrvandis, Tartumaal. Tootmine alates 2001. Küsi pakkumist!"]),
   ])
 
 # ---------- Russian ----------
 camp("Search RU", "ru", "1.00", "utm_source=google&utm_medium=cpc&utm_campaign=search-ru",
-  ["переезд","переезда","бесплатно","б/у","своими руками","макулатура"],
+  ["переезд","переезда","бесплатно","б/у","своими руками","макулатура","ланч бокс","магазин"],
   [
    dict(name="RU Коробки", url="/ru/products/transpordipakend", p1="korobki", p2="zakaz",
         kw=["картонные коробки","гофрокороб","гофрокороба","коробки купить","купить коробки","коробки для упаковки","упаковка из картона","гофрокартон"],
@@ -48,6 +54,12 @@ camp("Search RU", "ru", "1.00", "utm_source=google&utm_medium=cpc&utm_campaign=s
         D=["Коробки для пиццы из гофрокартона с любой печатью. Заказ от 1 шт., пробная партия.",
            "Для ресторанов и доставки. Стандартные размеры или под заказ, любая печать.",
            "Производство в Тырванди, Тартуский уезд. Запросите предложение на сайте."]),
+   dict(name="RU FEFCO 0201", url="/ru/fefco/0201", p1="fefco", p2="0201",
+        kw=["fefco 0201","коробка fefco 0201","коробка 0201","гофрокороб 0201","короб 0201","ящик fefco 0201","коробки fefco"],
+        H=["FEFCO 0201 от производителя","Коробки FEFCO 0201","Стандартный ящик 0201","Заказ от 1 штуки","Размеры под ваш товар","Любая печать на коробках","Изготовим под заказ","Доставка по всей Европе","Возможен самовывоз","Производим с 2001 года","Производство в Тырванди","Запросите предложение"],
+        D=["Гофрокороба FEFCO 0201 на заказ: ваши размеры, от 1 штуки, любая печать.",
+           "Стандартный ящик с клапанами (RSC). Доставка по Европе и самовывоз из Тырванди.",
+           "Производитель гофроупаковки в Тырванди, Тартуский уезд. Работаем с 2001 года."]),
   ])
 
 # ---------- validate ----------
