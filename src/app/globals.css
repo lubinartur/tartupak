@@ -44,6 +44,14 @@
     font-synthesis: weight;
   }
 
+  /* Long words (esp. Russian) must never push a heading past the screen edge. */
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
   /* SectionHeader renders an h1 on listing/contact pages but keeps the h2 look. */
   h2,
   h1.section-heading {
@@ -69,6 +77,15 @@
   [lang="ru"] h3 {
     font-family: var(--font-playfair), serif;
     font-weight: 900;
+  }
+
+  /* Playfair 900 is wide: let Russian section headings shrink on phones so words like
+     "характеристикам" fit without hyphenation. */
+  @media (max-width: 639px) {
+    [lang="ru"] h2,
+    [lang="ru"] h1.section-heading {
+      font-size: clamp(1.75rem, 8vw, 2.5rem);
+    }
   }
 
   h1.hero-headline {

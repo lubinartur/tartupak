@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import { Menu, X, Globe } from "lucide-react";
+import { Check, Menu, X, Globe } from "lucide-react";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
@@ -154,7 +154,6 @@ function LocaleDropdown() {
   const rootRef = useRef<HTMLDivElement>(null);
 
   const current = locales.find((l) => l.code === locale) ?? locales[0];
-  const otherLocales = locales.filter((l) => l.code !== locale);
 
   useEffect(() => {
     if (!open) return;
@@ -193,11 +192,11 @@ function LocaleDropdown() {
         aria-haspopup="listbox"
         aria-label={tAria("changeLanguage")}
         className={cn(
-          "flex cursor-pointer items-center gap-1.5 border border-transparent py-1 pr-2 pl-1 font-display text-[10px] font-bold tracking-widest uppercase transition-colors hover:text-brand-green md:border-r md:border-brand-border md:pr-4 lg:gap-2 lg:pr-4",
+          "flex min-h-11 cursor-pointer items-center gap-2 border border-transparent py-1 pr-2 pl-1 font-display text-xs font-bold tracking-widest uppercase transition-colors hover:text-brand-green md:border-r md:border-brand-border md:pr-4 lg:pr-4",
           open ? "text-brand-green" : "text-brand-text",
         )}
       >
-        <Globe size={14} className="shrink-0" aria-hidden />
+        <Globe size={16} className="shrink-0" aria-hidden />
         <span>{current.label}</span>
       </button>
 
@@ -205,20 +204,31 @@ function LocaleDropdown() {
         <ul
           role="listbox"
           aria-label={tAria("language")}
-          className="absolute top-full right-0 z-50 mt-1 min-w-[10.5rem] border border-brand-border bg-brand-bg py-1 shadow-lg"
+          className="absolute top-full right-0 z-50 mt-1 min-w-[12rem] border border-brand-border bg-white py-1 shadow-lg"
         >
-          {otherLocales.map((l) => (
-            <li key={l.code} role="option" aria-selected={false}>
-              <button
-                type="button"
-                onClick={() => switchLocale(l.code)}
-                className="flex w-full items-baseline gap-2 px-3 py-2 text-left font-display text-[10px] font-bold tracking-widest uppercase transition-colors hover:bg-brand-green/5 hover:text-brand-green"
-              >
-                <span className="w-6 shrink-0 text-brand-green">{l.label}</span>
-                <span className="font-normal text-brand-text">{l.name}</span>
-              </button>
-            </li>
-          ))}
+          {locales.map((l) => {
+            const active = l.code === locale;
+            return (
+              <li key={l.code} role="option" aria-selected={active}>
+                <button
+                  type="button"
+                  onClick={() => switchLocale(l.code)}
+                  className={cn(
+                    "flex w-full items-center gap-3 px-4 py-3 text-left font-display text-sm transition-colors hover:bg-brand-green/5",
+                    active ? "text-brand-green" : "text-brand-text",
+                  )}
+                >
+                  <span className="w-7 shrink-0 text-xs font-bold tracking-widest text-brand-green">
+                    {l.label}
+                  </span>
+                  <span className={active ? "font-semibold" : "font-normal"}>{l.name}</span>
+                  {active ? (
+                    <Check size={16} className="ml-auto shrink-0 text-brand-kraft" aria-hidden />
+                  ) : null}
+                </button>
+              </li>
+            );
+          })}
         </ul>
       ) : null}
     </div>

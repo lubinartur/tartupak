@@ -85,26 +85,26 @@ export async function Footer() {
             <ul className="flex flex-col gap-5">
               <li className="flex items-start gap-4">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-brand-kraft" />
-                <span className="text-xs leading-relaxed text-white/90">{contact("address")}</span>
+                <span className="text-sm leading-relaxed text-white/90 lg:text-xs">{contact("address")}</span>
               </li>
               {people.map((person) => (
                 <li key={person.key} className="flex flex-col gap-1 pl-[34px]">
-                  <span className="text-xs font-medium text-white">{person.name}</span>
+                  <span className="text-sm font-medium text-white lg:text-xs">{person.name}</span>
                   {person.title ? (
-                    <span className="text-[10px] tracking-wide text-white/70">
+                    <span className="text-xs tracking-wide text-white/70 lg:text-[10px]">
                       {person.title}
                     </span>
                   ) : null}
                   <PhoneLink
                     href={telHref(person.phone)}
                     placement="footer"
-                    className="text-xs text-white/90 transition-colors hover:text-brand-kraft"
+                    className="py-0.5 text-sm text-white/90 transition-colors hover:text-brand-kraft lg:text-xs"
                   >
                     {person.phone}
                   </PhoneLink>
                   <a
                     href={`mailto:${person.email}`}
-                    className="text-xs text-white/90 underline decoration-1 underline-offset-4 decoration-white/30 transition-colors hover:text-brand-kraft"
+                    className="py-0.5 text-sm text-white/90 underline decoration-1 underline-offset-4 decoration-white/30 transition-colors hover:text-brand-kraft lg:text-xs"
                   >
                     {person.email}
                   </a>
@@ -118,7 +118,7 @@ export async function Footer() {
             <ul className="flex flex-col gap-3">
               {navLinks.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-xs text-white transition-colors hover:text-brand-kraft">
+                  <Link href={item.href} className="inline-block py-1 text-sm text-white transition-colors hover:text-brand-kraft lg:text-xs">
                     {item.label}
                   </Link>
                 </li>
@@ -137,7 +137,9 @@ export async function Footer() {
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <Award size={20} className="shrink-0 text-brand-kraft" />
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center border border-white/30">
+                <Award size={16} className="text-brand-kraft" aria-hidden />
+              </div>
               <p className="text-[9px] leading-tight tracking-widest text-white/70 uppercase">
                 {t("edukasEttevote")}
               </p>
@@ -145,11 +147,11 @@ export async function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-6 md:flex-row">
+        <div className="flex flex-col items-start gap-6 border-t border-white/10 pt-6 md:flex-row md:items-center md:justify-between">
           <p className="text-[9px] font-bold tracking-[0.2em] text-white/70 uppercase">
             © {new Date().getFullYear()} Tartupak. {t("rights")}
           </p>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap gap-x-8 gap-y-3">
             <Link
               href="/privacy"
               className="text-[9px] font-bold tracking-[0.2em] text-white/70 uppercase transition-colors hover:text-brand-kraft"
