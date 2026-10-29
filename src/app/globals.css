@@ -44,7 +44,9 @@
     font-synthesis: weight;
   }
 
-  h2 {
+  /* SectionHeader renders an h1 on listing/contact pages but keeps the h2 look. */
+  h2,
+  h1.section-heading {
     font-family: var(--font-playfair), serif;
     font-weight: 700;
     font-size: clamp(2.5rem, 5vw, 4rem);

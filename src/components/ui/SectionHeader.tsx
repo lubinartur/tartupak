@@ -39,7 +39,9 @@ export function SectionHeader({
     >
       {overline ? <span className={labelClass(dark)}>{overline}</span> : null}
       {subtitle ? <span className={labelClass(dark)}>{subtitle}</span> : null}
-      <Heading className={cn(dark ? "text-brand-bg" : "text-brand-green")}>{title}</Heading>
+      <Heading className={cn("section-heading", dark ? "text-brand-bg" : "text-brand-green")}>
+        {title}
+      </Heading>
     </div>
   );
 }
