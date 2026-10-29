@@ -224,9 +224,9 @@ All copy in three languages: ET / EN / RU.
 - RU: Нужна единичная нестандартная коробка или высокообъёмное решение для цепочки поставок — наша команда готова помочь.
 
 **Response note:**
-- ET: Vastame tavaliselt 1 tööpäeva jooksul.
-- EN: We typically respond within 1 business day.
-- RU: Обычно отвечаем в течение 1 рабочего дня.
+- ET: Vastame tavaliselt 2–3 tööpäeva jooksul.
+- EN: We typically respond within 2–3 business days.
+- RU: Обычно отвечаем в течение 2–3 рабочих дней.
 
 ---
 

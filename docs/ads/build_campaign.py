@@ -6,7 +6,7 @@ def camp(name, lang, budget, suffix, negatives, groups):
     CAMPAIGNS.append(dict(name=name, lang=lang, budget=budget, suffix=suffix, neg=negatives, groups=groups))
 
 # ---------- Estonian ----------
-camp("Search ET", "et", "3.00", "utm_source=google&utm_medium=cpc&utm_campaign=search-et",
+camp("Search ET", "et", "2.00", "utm_source=google&utm_medium=cpc&utm_campaign=search-et",
   ["kolimiseks","kolimine","kolimiskastid","tasuta","bauhof","kasutatud","ise tegema"],
   [
    dict(name="ET Pappkastid", url="/et/products/transpordipakend", p1="pappkastid", p2="tellimus",
@@ -22,16 +22,17 @@ camp("Search ET", "et", "3.00", "utm_source=google&utm_medium=cpc&utm_campaign=s
         D=["Lainepapist pitsakarbid restoranidele ja kullerteenustele. Küsi pakkumist.",
            "Tellimus alates 1 tükist, proovitöö võimalik. Standardmõõdud või eritellimus, logoga.",
            "Mis tahes trükk - sinu bränd karbil. Tootja Tõrvandis, Tartumaal."]),
-   dict(name="ET Lainepapp ja pakend", url="/et/products/lainepapp", p1="lainepapp", p2="pakend",
+   dict(name="ET Lainepapp ja pakend", status="Paused",  # paused 2026-10-29: confirm with the client that board is sold separately
+        url="/et/products/lainepapp", p1="lainepapp", p2="pakend",
         kw=["kartongpakend","lainepapp","lainepapist karbid","pakendite tootja","lainepappkarbid"],
-        H=["Lainepapp ja lainepappkarbid","Ühe-, kahe- ja kolmeseinaline","Pruun või valge väliskiht","Rullpapp 1000 ja 1600 mm","Tartupak – tootja Tartumaal","Eritellimusel karbid","Stantsitud eritellimuspakend","Küsi pakkumist veebis","CAD-disain sinu tootele","Tootmine alates 2001. aastast"],
-        D=["Lainepapp ühe-, kahe- ja kolmeseinalisena. Rullpapp laiusega 1000 ja 1600 mm.",
-           "Valmis karbid või lainepapp toormaterjaliks. Pruun või valge väliskiht.",
+        H=["Lainepapp ja lainepappkarbid","Ühe-, kahe- ja kolmeseinaline","Pruun või valge väliskiht","Tartupak – tootja Tartumaal","Eritellimusel karbid","Stantsitud eritellimuspakend","Küsi pakkumist veebis","CAD-disain sinu tootele","Tootmine alates 2001. aastast"],
+        D=["Lainepapp ühe-, kahe- ja kolmeseinalisena, paksus 1–5 mm.",
+           "Valmis karbid sinu toote järgi. Pruun või valge väliskiht.",
            "CAD-disain ja stantsimine sinu toote mõõtude järgi. Küsi pakkumist."]),
   ])
 
 # ---------- Russian ----------
-camp("Search RU", "ru", "2.00", "utm_source=google&utm_medium=cpc&utm_campaign=search-ru",
+camp("Search RU", "ru", "1.00", "utm_source=google&utm_medium=cpc&utm_campaign=search-ru",
   ["переезд","переезда","бесплатно","б/у","своими руками","макулатура"],
   [
    dict(name="RU Коробки", url="/ru/products/transpordipakend", p1="korobki", p2="zakaz",
@@ -76,7 +77,7 @@ for c in CAMPAIGNS:
     for n in c["neg"]:
         row(**{"Campaign": c["name"], "Keyword": n, "Criterion Type": "Negative Phrase"})
     for g in c["groups"]:
-        row(**{"Campaign": c["name"], "Ad Group": g["name"], "Ad Group Status": "Enabled", "Max CPC": "0.70"})
+        row(**{"Campaign": c["name"], "Ad Group": g["name"], "Ad Group Status": g.get("status", "Enabled"), "Max CPC": "0.70"})
         for k in g["kw"]:
             row(**{"Campaign": c["name"], "Ad Group": g["name"], "Keyword": k, "Criterion Type": "Phrase", "Status": "Enabled"})
         ad = {"Campaign": c["name"], "Ad Group": g["name"], "Ad type": "Responsive search ad", "Final URL": BASE + g["url"],

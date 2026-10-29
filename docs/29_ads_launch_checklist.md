@@ -23,8 +23,17 @@ Search ET and Search RU are still PAUSED. Nothing below enables them.
 - Who answers leads, from which mailbox; phone for a call extension; show ads only Mon-Fri 08:00-16:30?
 - Geography: Latvia / Finland / English terms are the only way to more volume.
 
-## Site claims that contradict or are not backed by what the client confirmed (not changed, client decision)
-- Home page Trust Bar / WhyChooseUs show "AA credit rating" and "20+" (`aaCredit`, `whyChooseUs` keys). The audit marks credit rating as unconfirmed. Ads do not use it.
-- Large-format page still says "up to 200 kg" and "recommended 5-7 mm board"; the client confirmed board thickness 1-5 mm. One of the two is wrong.
-- Pizza page applications list "takeaway food packaging"; the client said lunch/takeaway boxes are NOT made.
+## Site claims (updated 2026-10-29)
+- "AA credit rating", "Edukas Eesti Ettevote": confirmed by the client. "20+ years" follows from "since 2001".
+- Large-format page: "5-7 mm board" replaced by 1-5 mm. "Up to 200 kg" is still unconfirmed.
+- Pizza page applications still list "takeaway food packaging" (the client said lunch/takeaway boxes are not made; he also said nothing is removed from the site).
 - Frozen page says "deep-freeze"; temperature range not confirmed.
+
+## Client answers, 2026-10-29
+- Budget: 3 EUR/day in total, weekends off. Done in Ads: Search ET 2 EUR, Search RU 1 EUR, schedule Mon-Fri 08:00-18:00. Card: "the one that is set now" (ending 3368); monthly cap not named.
+- Leads: calls and email only to Maksim (+372 555 20205; maksim@ and sales@ are both fine). Reply time is 2-3 business days (site copy changed from 1 day). He answers calls and prefers them in the stated hours.
+- Food: nothing food related except pizza boxes. Decision: nothing removed from the site.
+- Target: everyone who uses FEFCO 0201 (standard transport box). No ad group for 0201 exists yet.
+- All products are made to order, there is no shop; B2B and private customers; delivery across Europe and pickup.
+- Products: flexo printing yes; corrugated board in rolls: NO (removed from the site and ads); custom die-cut yes; large-format yes; board thickness 1-5 mm only (large-format page fixed from 5-7 mm). "AA credit rating" and Edukas Eesti Ettevote confirmed. Photos with customers' logos may be shown.
+- Still open: max cost per lead / monthly cap, call hours (16:30 vs 18:00), whether corrugated board is sold at all (sheets), "up to 200 kg" on the large-format page, review of the seven product-page texts, 0201 ad group and landing page, whether to add Latvia/Finland/other countries (delivery is Europe-wide).
