@@ -40,18 +40,18 @@ export default async function ContactPage({ params, searchParams }: Props) {
 
   const people = [
     {
-      key: "kulli",
-      name: t("people.kulli.name"),
-      title: null as string | null,
-      phone: t("people.kulli.phone"),
-      email: t("people.kulli.email"),
-    },
-    {
       key: "maksim",
       name: t("people.maksim.name"),
-      title: t("people.maksim.title"),
+      title: null as string | null,
       phone: t("people.maksim.phone"),
       email: t("people.maksim.email"),
+    },
+    {
+      key: "sales",
+      name: t("people.sales.name"),
+      title: t("people.sales.title"),
+      phone: t("people.sales.phone"),
+      email: t("people.sales.email"),
     },
   ] as const;
 

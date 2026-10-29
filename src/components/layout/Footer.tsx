@@ -24,18 +24,18 @@ export async function Footer() {
 
   const people = [
     {
-      key: "kulli",
-      name: contact("people.kulli.name"),
-      title: null as string | null,
-      phone: contact("people.kulli.phone"),
-      email: contact("people.kulli.email"),
-    },
-    {
       key: "maksim",
       name: contact("people.maksim.name"),
-      title: contact("people.maksim.title"),
+      title: null as string | null,
       phone: contact("people.maksim.phone"),
       email: contact("people.maksim.email"),
+    },
+    {
+      key: "sales",
+      name: contact("people.sales.name"),
+      title: contact("people.sales.title"),
+      phone: contact("people.sales.phone"),
+      email: contact("people.sales.email"),
     },
   ] as const;
 

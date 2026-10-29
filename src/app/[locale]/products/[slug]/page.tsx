@@ -81,7 +81,7 @@ export default async function ProductDetailPage({ params }: Props) {
   const detail = await getTranslations("products.detail");
   const common = await getTranslations("common");
   const contact = await getTranslations("contact");
-  const phone = contact("people.kulli.phone");
+  const phone = contact("people.maksim.phone");
   const applications = parseApplications(t("applications"));
   const specs = getProductSpecs(slug, locale);
   const relatedSlugs = getRelatedSlugs(slug);

@@ -54,7 +54,7 @@ export const organizationJsonLd = {
   logo: `${SITE_URL}/logo-tartupak.svg`,
   image: `${SITE_URL}/images/og-image.png`,
   email: "info@tartupak.ee",
-  telephone: "+372 534 99642",
+  telephone: "+372 555 20205",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Tamme 35, Tõrvandi alevik",

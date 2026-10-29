@@ -302,16 +302,16 @@
     "addressLine2": "Ülenurme vald, 61715 Tartumaa,",
     "addressLine3": "Эстония",
     "people": {
-      "kulli": {
-        "name": "Külli Aav",
-        "phone": "+372 534 99642",
-        "email": "info@tartupak.ee"
-      },
       "maksim": {
+        "name": "Maksim Babjak",
+        "phone": "+372 555 20205",
+        "email": "maksim@tartupak.ee"
+      },
+      "sales": {
         "name": "Maksim Babjak",
         "title": "Менеджер по продажам",
         "phone": "+372 555 20205",
-        "email": "maksim@tartupak.ee"
+        "email": "sales@tartupak.ee"
       }
     },
     "form": {
@@ -368,7 +368,7 @@
         "heading": "1. Оператор данных",
         "paragraphs": [
           "Tartu Pak OÜ (регистрационный код 10739054), Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Estonia.",
-          "E-mail: info@tartupak.ee. Телефон: +372 534 99642."
+          "E-mail: info@tartupak.ee. Телефон: +372 555 20205."
         ],
         "items": [],
         "paragraphsAfter": []
