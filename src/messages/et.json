@@ -304,15 +304,15 @@
     "people": {
       "maksim": {
         "name": "Maksim Babjak",
-        "phone": "+372 555 20205",
-        "email": "maksim@tartupak.ee"
-      },
-      "sales": {
-        "name": "Maksim Babjak",
         "title": "Müügijuht",
         "phone": "+372 555 20205",
-        "email": "sales@tartupak.ee"
+        "email": "maksim@tartupak.ee"
       }
+    },
+    "help": {
+      "title": "Abi ja küsimused",
+      "text": "Kui vajate abi või teil on küsimusi, kirjutage meile:",
+      "email": "sales@tartupak.ee"
     },
     "form": {
       "fullName": "Täisnimi",

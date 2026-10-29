@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
-import { Clock, MapPin, User } from "lucide-react";
+import { Clock, Mail, MapPin, User } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { QuoteForm } from "@/components/contact/QuoteForm";
 import { PhoneLink } from "@/components/analytics/PhoneLink";
@@ -42,16 +42,9 @@ export default async function ContactPage({ params, searchParams }: Props) {
     {
       key: "maksim",
       name: t("people.maksim.name"),
-      title: null as string | null,
+      title: t("people.maksim.title"),
       phone: t("people.maksim.phone"),
       email: t("people.maksim.email"),
-    },
-    {
-      key: "sales",
-      name: t("people.sales.name"),
-      title: t("people.sales.title"),
-      phone: t("people.sales.phone"),
-      email: t("people.sales.email"),
     },
   ] as const;
 
@@ -143,6 +136,26 @@ export default async function ContactPage({ params, searchParams }: Props) {
                   </div>
                 </div>
               ))}
+
+              <div className="flex gap-6 border border-brand-green/5 bg-white p-6">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-bg text-brand-kraft">
+                  <Mail size={24} aria-hidden />
+                </div>
+                <div>
+                  <h3 className="mb-1 text-xs font-bold tracking-widest text-brand-green/40 uppercase">
+                    {t("help.title")}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-brand-green">
+                    {t("help.text")}{" "}
+                    <a
+                      href={`mailto:${t("help.email")}`}
+                      className="font-medium underline decoration-brand-green/20 underline-offset-4 hover:text-brand-kraft"
+                    >
+                      {t("help.email")}
+                    </a>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 

@@ -26,16 +26,9 @@ export async function Footer() {
     {
       key: "maksim",
       name: contact("people.maksim.name"),
-      title: null as string | null,
+      title: contact("people.maksim.title"),
       phone: contact("people.maksim.phone"),
       email: contact("people.maksim.email"),
-    },
-    {
-      key: "sales",
-      name: contact("people.sales.name"),
-      title: contact("people.sales.title"),
-      phone: contact("people.sales.phone"),
-      email: contact("people.sales.email"),
     },
   ] as const;
 
@@ -110,6 +103,17 @@ export async function Footer() {
                   </a>
                 </li>
               ))}
+              <li className="flex flex-col gap-1 pl-[34px]">
+                <span className="text-sm leading-relaxed text-white/70 lg:text-xs">
+                  {contact("help.text")}
+                </span>
+                <a
+                  href={`mailto:${contact("help.email")}`}
+                  className="py-0.5 text-sm text-white/90 underline decoration-1 underline-offset-4 decoration-white/30 transition-colors hover:text-brand-kraft lg:text-xs"
+                >
+                  {contact("help.email")}
+                </a>
+              </li>
             </ul>
           </div>
 
