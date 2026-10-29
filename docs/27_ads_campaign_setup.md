@@ -1,4 +1,6 @@
-# Google Ads: search campaigns (state as of 2026-10-29)
+# Google Ads: search campaigns (state as of 2026-10-29, LIVE since ~16:45)
+
+LAUNCHED: Search ET and Search RU are enabled, PMax is paused (see the end of `docs/29_ads_launch_checklist.md`). The "paused" notes below are history.
 
 Updated 2026-10-29 after the client's answers: budget 3 EUR/day in total (ET 2 + RU 1), ad schedule Mon-Fri 08:00-18:00 (account time zone GMT+02:00) on both campaigns, ad group "ET Lainepapp ja pakend" PAUSED (its ads promised roll board 1000/1600 mm, which the client does not make). Campaigns are still paused; PMax "TartuPak" (0.30 EUR/day) still runs. Also added: ad groups "ET FEFCO 0201" and "RU FEFCO 0201" (`docs/30_ads_fefco0201_proposal.md`) and negatives kauplus, pood, poest, магазин (20 negatives in total). 7 ad groups now, 6 of them ready. See `docs/29_ads_launch_checklist.md`.
 

@@ -42,3 +42,9 @@ Search ET and Search RU are still PAUSED. Nothing below enables them.
 - 0201 ad groups created in Ads (ET and RU), negatives for shop intent added. Campaigns, PMax untouched.
 - Client: "no such weight" -> "up to 200 kg" removed from the large-format page; calls until 18:00 confirmed (ads stay Mon-Fri 08:00-18:00).
 - Open: does the client sell corrugated board separately (page "Lainepapp" and the paused ad group "ET Lainepapp ja pakend", whose live ad still mentions rolls). "ET Pappkastid" ad strength is Poor in Ads: improve headlines before launch.
+
+## LAUNCHED 2026-10-29 (about 16:45, Estonia time)
+- Search ET (2 EUR/day) and Search RU (1 EUR/day) ENABLED; PMax "TartuPak" PAUSED. Account total 3 EUR/day. Schedule Mon-Fri 08:00-18:00. Manual CPC, max 0.70 per group.
+- Live ad groups: ET Pappkastid, ET Pitsakarbid, ET FEFCO 0201, RU Коробки, RU Коробки для пиццы, RU FEFCO 0201. Paused: ET Lainepapp ja pakend.
+- Ad strength fixed the same day: three keyword headlines added to ET Pappkastid (Poor -> Average), ET FEFCO 0201 and RU FEFCO 0201 (Poor -> Good). Same headlines are in `docs/ads/build_campaign.py`.
+- To do: day 1-3 check the search terms report and add negatives; day 7 review clicks, cost per lead, leads in the mailbox; sitelinks (Products, FEFCO catalogue, Contact) are still missing and would lift ad strength; decide on the Lainepapp group after the client answers whether board is sold separately.
