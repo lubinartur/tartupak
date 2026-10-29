@@ -174,8 +174,8 @@
         "description": "The foundation of all our packaging. We produce and supply corrugated cardboard in various flute profiles and wall configurations — single wall, double wall, and triple wall. Suitable for manufacturing, retail, and logistics.",
         "applications": "Packaging manufacturing, raw material supply, custom box production, retail and logistics",
         "metaTitle": "Corrugated Board – Single, Double & Triple Wall",
-        "metaDescription": "Corrugated cardboard in single, double and triple wall, 1–5 mm thick. Brown or white liner, double-wall rolls in 1000 and 1600 mm widths.",
-        "body": "Corrugated board is the foundation of all our packaging. We produce and supply it in several flute profiles and wall configurations (single, double and triple wall) for manufacturing, retail and logistics. The board is 1–5 mm thick, with a brown or white outer liner. Double-wall roll board is offered in 1000 mm and 1600 mm widths, and other dimensions and technical parameters can be agreed. Buy the board as raw material, or have us turn it into finished boxes."
+        "metaDescription": "Corrugated cardboard in single, double and triple wall, 1–5 mm thick. Brown or white liner, dimensions and parameters by agreement.",
+        "body": "Corrugated board is the foundation of all our packaging. We produce and supply it in several flute profiles and wall configurations (single, double and triple wall) for manufacturing, retail and logistics. The board is 1–5 mm thick, with a brown or white outer liner. Dimensions and technical parameters can be agreed. Buy the board as raw material, or have us turn it into finished boxes."
       },
       "transpordipakend": {
         "title": "Transport Packaging",
@@ -295,7 +295,7 @@
     "info": {
       "officeTitle": "Office & Production",
       "hoursTitle": "Working Hours",
-      "hours": "Monday–Friday 08:00–16:30"
+      "hours": "Monday–Friday 08:00\u2060–\u206016:30"
     },
     "address": "Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Estonia",
     "addressLine1": "Tamme 35, Tõrvandi alevik,",
@@ -345,8 +345,8 @@
         "other": "Other"
       },
       "submit": "Send Quote Request",
-      "responseNote": "We typically respond within 1 business day.",
-      "success": "Thank you! We'll get back to you within 1 business day.",
+      "responseNote": "We typically respond within 2–3 business days.",
+      "success": "Thank you! We'll get back to you within 2–3 business days.",
       "error": "Something went wrong. Please try again.",
       "fefcoPrefill": "FEFCO #{code}",
       "errors": {

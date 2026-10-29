@@ -95,7 +95,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
                     <Icon size={24} aria-hidden />
                   </div>
                   <div>
-                    <h3 className="mb-1 text-xs font-bold tracking-widest text-brand-green/40 uppercase">
+                    <h3 className="mb-1 font-sans text-xs font-semibold tracking-wider text-brand-green/75 uppercase">
                       {title}
                     </h3>
                     {content}
@@ -114,11 +114,11 @@ export default async function ContactPage({ params, searchParams }: Props) {
                   <div>
                     <p className="font-medium text-brand-green">{person.name}</p>
                     {person.title ? (
-                      <p className="mt-0.5 text-xs font-bold tracking-widest text-brand-green/40 uppercase">
+                      <p className="mt-1 font-sans text-xs font-semibold tracking-wider text-brand-green/75 uppercase">
                         {person.title}
                       </p>
                     ) : null}
-                    <div className="mt-2 flex flex-col gap-1 text-sm text-brand-green">
+                    <div className="mt-3 flex flex-col gap-1 text-base text-brand-green">
                       <PhoneLink
                         href={telHref(person.phone)}
                         placement="contact"
@@ -142,10 +142,10 @@ export default async function ContactPage({ params, searchParams }: Props) {
                   <Mail size={24} aria-hidden />
                 </div>
                 <div>
-                  <h3 className="mb-1 text-xs font-bold tracking-widest text-brand-green/40 uppercase">
+                  <h3 className="mb-1 font-sans text-xs font-semibold tracking-wider text-brand-green/75 uppercase">
                     {t("help.title")}
                   </h3>
-                  <p className="text-sm leading-relaxed text-brand-green">
+                  <p className="text-base leading-relaxed text-brand-green">
                     {t("help.text")}{" "}
                     <a
                       href={`mailto:${t("help.email")}`}

@@ -19,17 +19,14 @@ export const PRODUCT_SPECS: Record<ProductSlug, ProductSpecs> = {
     et: [
       "Kõikvõimalikud erinevad mõõdud erinevate tehniliste parameetritega",
       "Valikus pruun või valge väliskiht",
-      "Pakume kahekihilist rullpappi laiusega 1000 ja 1600 mm",
     ],
     en: [
       "Available in a wide range of dimensions and technical parameters",
       "Brown or white outer liner options",
-      "Double-wall roll corrugated board offered in 1000 mm and 1600 mm widths",
     ],
     ru: [
       "Все возможные размеры с различными техническими параметрами",
       "На выбор коричневый или белый наружный слой",
-      "Поставляем двухслойный рулонный картон шириной 1000 и 1600 мм",
     ],
   },
   transpordipakend: {
@@ -93,17 +90,17 @@ export const PRODUCT_SPECS: Record<ProductSlug, ProductSpecs> = {
   "suuregabariidilised-pakendid": {
     et: [
       "Lainepapist konteinerid kandejõuga kuni 200 kg",
-      "Soovitatav 5–7 mm paksusega lainepapp",
+      "Lainepapi paksus 1–5 mm",
       "Küljed kokku klammerdatud",
     ],
     en: [
       "Corrugated containers with load capacity up to 200 kg",
-      "Recommended corrugated board thickness of 5–7 mm",
+      "Corrugated board thickness 1–5 mm",
       "Sides joined with staples",
     ],
     ru: [
       "Гофроконтейнеры с грузоподъёмностью до 200 кг",
-      "Рекомендуемая толщина гофрокартона 5–7 мм",
+      "Толщина гофрокартона 1–5 мм",
       "Боковые стенки скреплены скобами",
     ],
   },

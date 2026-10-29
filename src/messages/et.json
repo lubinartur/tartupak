@@ -174,8 +174,8 @@
         "description": "Meie pakendite alus. Toodame ja müüme lainepappi erinevates profiilides ja seintega konfiguratsioonides — ühe-, kahe- ja kolmeseineline. Sobib tootmisele, jaekaubandusele ja logistikale.",
         "applications": "Pakenditootmine, toormaterjali tarnimine tootmisele, kohandatud karpide tootmine, jaemüük ja logistika",
         "metaTitle": "Lainepapp – ühe-, kahe- ja kolmeseinaline",
-        "metaDescription": "Lainepapp erinevates profiilides: ühe-, kahe- ja kolmeseinaline, paksus 1–5 mm. Pruun või valge väliskiht, rullpapi laius 1000 ja 1600 mm.",
-        "body": "Lainepapp on kõigi meie pakendite alus. Toodame ja müüme seda erinevates profiilides ja seintega konfiguratsioonides – ühe-, kahe- ja kolmeseinalisena – tootmiseks, jaekaubanduseks ja logistikaks. Lainepapi paksus on 1–5 mm ning väliskihi saab valida pruunina või valgena. Kahekihilist rullpappi pakume laiusega 1000 ja 1600 mm, teisi mõõtmeid ja tehnilisi parameetreid saab kokku leppida. Osta papp toormaterjaliks või lase meil see valmis karpideks teha."
+        "metaDescription": "Lainepapp erinevates profiilides: ühe-, kahe- ja kolmeseinaline, paksus 1–5 mm. Pruun või valge väliskiht, mõõdud ja parameetrid kokkuleppel.",
+        "body": "Lainepapp on kõigi meie pakendite alus. Toodame ja müüme seda erinevates profiilides ja seintega konfiguratsioonides – ühe-, kahe- ja kolmeseinalisena – tootmiseks, jaekaubanduseks ja logistikaks. Lainepapi paksus on 1–5 mm ning väliskihi saab valida pruunina või valgena. Mõõtmeid ja tehnilisi parameetreid saab kokku leppida. Osta papp toormaterjaliks või lase meil see valmis karpideks teha."
       },
       "transpordipakend": {
         "title": "Transpordipakend",
@@ -295,7 +295,7 @@
     "info": {
       "officeTitle": "Kontor ja tootmine",
       "hoursTitle": "Tööaeg",
-      "hours": "Esmaspäev–reede 08:00–16:30"
+      "hours": "Esmaspäev–reede 08:00\u2060–\u206016:30"
     },
     "address": "Tamme 35, Tõrvandi alevik, Ülenurme vald, 61715 Tartumaa, Eesti",
     "addressLine1": "Tamme 35, Tõrvandi alevik,",
@@ -345,8 +345,8 @@
         "other": "Muu"
       },
       "submit": "Saada hinnapäring",
-      "responseNote": "Vastame tavaliselt 1 tööpäeva jooksul.",
-      "success": "Aitäh! Võtame teiega ühendust 1 tööpäeva jooksul.",
+      "responseNote": "Vastame tavaliselt 2–3 tööpäeva jooksul.",
+      "success": "Aitäh! Võtame teiega ühendust 2–3 tööpäeva jooksul.",
       "error": "Midagi läks valesti. Palun proovige uuesti.",
       "fefcoPrefill": "FEFCO #{code}",
       "errors": {
