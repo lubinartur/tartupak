@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { Clock, MapPin, User } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { QuoteForm } from "@/components/contact/QuoteForm";
+import { PhoneLink } from "@/components/analytics/PhoneLink";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -125,12 +126,13 @@ export default async function ContactPage({ params, searchParams }: Props) {
                       </p>
                     ) : null}
                     <div className="mt-2 flex flex-col gap-1 text-sm text-brand-green">
-                      <a
+                      <PhoneLink
                         href={telHref(person.phone)}
+                        placement="contact"
                         className="hover:text-brand-kraft"
                       >
                         {person.phone}
-                      </a>
+                      </PhoneLink>
                       <a
                         href={`mailto:${person.email}`}
                         className="underline decoration-brand-green/20 underline-offset-4 hover:text-brand-kraft"

@@ -41,17 +41,17 @@ export const PRODUCT_SPECS: Record<ProductSlug, ProductSpecs> = {
     et: [
       "Erinevad pakendite mudelid disaini ja konstruktsiooni valikuga",
       "Perforatsioon võimaldab eemaldada osa tervikpakendist",
-      "Võimalik teostada 4-värvi trükki",
+      "Võimalik mis tahes trükk",
     ],
     en: [
       "Various packaging designs with flexible layout and construction options",
       "Perforation allows removing part of the complete package",
-      "Up to 4-color flexographic printing available",
+      "Any print design available",
     ],
     ru: [
       "Различные модели упаковки с выбором дизайна и конструкции",
       "Перфорация позволяет отделить часть цельной упаковки",
-      "Возможна 4-цветная флексопечать",
+      "Возможна любая печать",
     ],
   },
   "kulmutatud-toodete-pakend": {
@@ -66,28 +66,28 @@ export const PRODUCT_SPECS: Record<ProductSlug, ProductSpecs> = {
     ],
   },
   pizzakarbid: {
-    et: ["Erinevate mõõtudega pizzakarbid 4-värvi fleksotrükiga"],
-    en: ["Pizza boxes in various sizes with 4-color flexographic printing"],
-    ru: ["Пицца-боксы разных размеров с 4-цветной флексопечатью"],
+    et: ["Erinevate mõõtudega pizzakarbid, soovi korral fleksotrükiga"],
+    en: ["Pizza boxes in various sizes, optionally flexo printed"],
+    ru: ["Пицца-боксы разных размеров, по желанию с флексопечатью"],
   },
   "erilise-kujuga-pakendid": {
     et: [
       "Toodame lainepapist pakendeid erinevate matriitsidega",
       "Suuremõõdulised erivormid toodame lamestantsiga",
       "Suured partiid ja väiksemad mõõdud rotatsioonstantsiga",
-      "Toodet saame atraktiivsemaks muuta 4-värvi fleksotrükiga",
+      "Toodet saame atraktiivsemaks muuta fleksotrükiga",
     ],
     en: [
       "We produce corrugated packaging using various die-cutting tools",
       "Large custom shapes manufactured with flat-bed die cutting",
       "Large runs and smaller formats with rotary die cutting",
-      "Products can be enhanced with 4-color flexographic printing",
+      "Products can be enhanced with flexographic printing",
     ],
     ru: [
       "Производим гофроупаковку с использованием различных штампов",
       "Крупные нестандартные формы изготавливаем плоским штампом",
       "Крупные и мелкие партии — ротационным штампом",
-      "Продукцию можно улучшить 4-цветной флексопечатью",
+      "Продукцию можно улучшить флексопечатью",
     ],
   },
   "suuregabariidilised-pakendid": {

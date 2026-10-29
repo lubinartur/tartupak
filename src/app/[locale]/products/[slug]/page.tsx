@@ -15,7 +15,7 @@ import {
 } from "@/data/products";
 import { routing } from "@/i18n/routing";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { createPageMetadata, productJsonLd } from "@/lib/seo";
+import { absoluteUrl, breadcrumbJsonLd, createPageMetadata, productJsonLd } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -46,8 +46,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return createPageMetadata({
     locale,
     pathname: `/products/${slug}`,
-    title: t("title"),
-    description: t("description"),
+    title: t("metaTitle"),
+    description: t("metaDescription"),
     image: { url: `/images/og/product-${slug}.jpg`, width: 1200, height: 630 },
   });
 }
@@ -82,7 +82,14 @@ export default async function ProductDetailPage({ params }: Props) {
   return (
     <div className="px-6 pt-32 pb-24 lg:px-12">
       <JsonLd
-        data={productJsonLd({ locale, slug, name: t("title"), description: t("description") })}
+        data={productJsonLd({ locale, slug, name: t("title"), description: t("metaDescription") })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Tartupak", url: absoluteUrl(locale, "/") },
+          { name: products("title"), url: absoluteUrl(locale, "/products") },
+          { name: t("title"), url: absoluteUrl(locale, `/products/${slug}`) },
+        ])}
       />
       <div className="mx-auto max-w-7xl">
         <Link href="/products" className="mb-12 inline-block text-sm text-brand-kraft transition-colors hover:text-brand-green">
@@ -147,6 +154,13 @@ export default async function ProductDetailPage({ params }: Props) {
             </div>
           </div>
         </div>
+
+        <section className="mb-16 max-w-3xl space-y-4 lg:mb-32">
+          <h2 className="font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/75 uppercase">
+            {detail("aboutLabel")}
+          </h2>
+          <p className="text-base leading-relaxed text-brand-text">{t("body")}</p>
+        </section>
 
         <section className="mb-16 grid grid-cols-1 gap-12 bg-brand-green p-12 text-white [&_p]:text-white md:grid-cols-3 lg:mb-32 lg:p-20">
           {featureKeys.map((key) => {

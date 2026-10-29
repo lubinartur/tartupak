@@ -1,4 +1,6 @@
-# Product page copy — DRAFT for client approval (not deployed)
+# Product page copy — DRAFT for client approval
+
+> 2026-10-29: implemented in `src/messages/{et,en,ru}.json` (`metaTitle`, `metaDescription`, `body`) with the unconfirmed claims below removed (food-safe, ventilated, grease-resistant, up to 4 colours, 200 kg, 5-7 mm). The text in this file is the original draft and is no longer the source of truth; see `docs/29_ads_launch_checklist.md`.
 
 Rules used: only facts already on the site or in the product specs (`src/data/products.ts`); no prices, lead times or certificates.
 Each block: SEO title (<= ~60 chars incl. " | Tartupak"), meta description (<= 155), body text (shown under the intro).

@@ -147,6 +147,7 @@
     "detail": {
       "overline": "INDUSTRIAL MODEL",
       "specsLabel": "TECHNICAL SPECS",
+      "aboutLabel": "ABOUT THIS PRODUCT",
       "features": {
         "recyclable": {
           "title": "100% Recyclable",
@@ -170,37 +171,58 @@
       "lainepapp": {
         "title": "Corrugated Cardboard",
         "description": "The foundation of all our packaging. We produce and supply corrugated cardboard in various flute profiles and wall configurations — single wall, double wall, and triple wall. Suitable for manufacturing, retail, and logistics.",
-        "applications": "Packaging manufacturing, raw material supply, custom box production, retail and logistics"
+        "applications": "Packaging manufacturing, raw material supply, custom box production, retail and logistics",
+        "metaTitle": "Corrugated Board – Single, Double & Triple Wall",
+        "metaDescription": "Corrugated cardboard in single, double and triple wall, 1–5 mm thick. Brown or white liner, double-wall rolls in 1000 and 1600 mm widths.",
+        "body": "Corrugated board is the foundation of all our packaging. We produce and supply it in several flute profiles and wall configurations (single, double and triple wall) for manufacturing, retail and logistics. The board is 1–5 mm thick, with a brown or white outer liner. Double-wall roll board is offered in 1000 mm and 1600 mm widths, and other dimensions and technical parameters can be agreed. Buy the board as raw material, or have us turn it into finished boxes."
       },
       "transpordipakend": {
         "title": "Transport Packaging",
         "description": "Robust corrugated cardboard transport boxes designed for heavy-duty shipping and storage. Built to withstand the rigors of logistics while keeping contents pristine. Available in standard and custom dimensions from 1 piece.",
-        "applications": "Logistics and freight, warehousing, e-commerce shipping, industrial goods transport"
+        "applications": "Logistics and freight, warehousing, e-commerce shipping, industrial goods transport",
+        "metaTitle": "Corrugated Shipping Boxes from 1 Piece",
+        "metaDescription": "Durable corrugated boxes for shipping and storage. Standard sizes and custom dimensions from 1 piece. Made in Tõrvandi, Tartu County, Estonia.",
+        "body": "Transport packaging is the most common type of box: easy to fold, easy to seal. We make corrugated boxes that protect goods in logistics, warehousing, e-commerce shipping and industrial transport. Choose a standard size or a box made to your product's dimensions, available from a single piece. Not sure which construction you need? Our FEFCO catalogue helps you find the right box style, such as the classic 0201."
       },
       "fleksotrukk": {
         "title": "Flexo Print Packaging",
-        "description": "High-quality flexographic printing on corrugated cardboard. Up to 4 colors for vivid retail presence and brand recognition. Ideal for companies that want packaging to communicate their brand as well as protect their product.",
-        "applications": "Retail packaging, brand packaging, product presentation boxes, promotional packaging"
+        "description": "High-quality flexographic printing on corrugated cardboard. Any print design for vivid retail presence and brand recognition. Ideal for companies that want packaging to communicate their brand as well as protect their product.",
+        "applications": "Retail packaging, brand packaging, product presentation boxes, promotional packaging",
+        "metaTitle": "Flexo Printing on Corrugated Boxes",
+        "metaDescription": "Flexographic printing on corrugated board for branded retail, presentation and promotional packaging. Any print design, choice of construction.",
+        "body": "Flexographic printing lets your packaging carry your brand as well as protect the product. We print on corrugated board, with any print design, for retail packaging, brand boxes, product presentation and promotional packaging. Layout and construction are flexible, and perforation can be added so that part of the pack can be removed. Tell us about your product and we will suggest a design."
       },
       "kulmutatud-toodete-pakend": {
         "title": "Frozen Product Packaging",
         "description": "Moisture-resistant corrugated cardboard packaging specifically engineered for frozen and refrigerated products. Maintains structural integrity at low temperatures. Suitable for cold storage logistics and frozen food production.",
-        "applications": "Frozen food production, cold storage logistics, refrigerated goods transport, food industry"
+        "applications": "Frozen food production, cold storage logistics, refrigerated goods transport, food industry",
+        "metaTitle": "Frozen Food Packaging – Moisture-Resistant",
+        "metaDescription": "Moisture-resistant corrugated packaging for frozen and chilled products, including frozen fish. For cold storage logistics and food production.",
+        "body": "Frozen and chilled goods need packaging that does not soften in the cold. This corrugated packaging is made from moisture-resistant material, so frozen products can be transported in refrigerated conditions and kept in deep-freeze storage while the box keeps its structural integrity. We have also made packaging for frozen fish; the material is chosen to suit your product. It suits food producers, cold storage logistics and the transport of chilled goods."
       },
       "pizzakarbid": {
         "title": "Pizza Boxes",
-        "description": "Food-safe corrugated cardboard pizza boxes for restaurants and delivery services. Ventilated and grease-resistant to keep food fresh and hot. Available in standard sizes and custom dimensions with optional flexo print branding.",
-        "applications": "Pizzerias and restaurants, food delivery services, takeaway food packaging, catering"
+        "description": "Corrugated cardboard pizza boxes for restaurants and delivery services. Available in standard sizes and custom dimensions with optional flexo print branding.",
+        "applications": "Pizzerias and restaurants, food delivery services, takeaway food packaging, catering",
+        "metaTitle": "Pizza Boxes – Corrugated, Printed to Order",
+        "metaDescription": "Corrugated pizza boxes for restaurants and delivery services. Standard and custom sizes, orders from 1 piece, any print.",
+        "body": "Pizza boxes for restaurants and delivery services. We make them from corrugated board in standard sizes or custom dimensions. You can order from a single piece, and a trial order is possible. The box can carry your logo and brand design, with any print you need."
       },
       "erilise-kujuga-pakendid": {
         "title": "Custom Shape Packaging",
         "description": "Bespoke packaging developed specifically for your product's dimensions, shape and transportation conditions. Our CAD designers engineer die-cut solutions that balance protection with presentation. From fragile electronics to industrial components.",
-        "applications": "Electronics and tech products, fragile or irregularly shaped items, industrial components, premium retail presentation"
+        "applications": "Electronics and tech products, fragile or irregularly shaped items, industrial components, premium retail presentation",
+        "metaTitle": "Custom Die-Cut Corrugated Packaging",
+        "metaDescription": "Custom corrugated packaging made to your product's dimensions and shipping conditions. CAD design, flat-bed and rotary die cutting, optional flexo print.",
+        "body": "When a standard box does not fit, we develop packaging around your product: its dimensions, shape and transport conditions. Our CAD designers create die-cut solutions that combine protection with presentation, for fragile electronics, industrial components or premium retail packaging. We use flat-bed die cutting for large custom shapes and rotary die cutting for larger runs and smaller formats, and can add flexographic printing."
       },
       "suuregabariidilised-pakendid": {
         "title": "Large Format Packaging",
         "description": "Heavy-duty corrugated cardboard packaging for large or heavy goods. Engineered for oversized industrial products, furniture, appliances, and pallet transport. Built to handle substantial weight and volume without compromising structural integrity.",
-        "applications": "Industrial equipment, furniture and appliances, pallet transport, construction materials"
+        "applications": "Industrial equipment, furniture and appliances, pallet transport, construction materials",
+        "metaTitle": "Large Corrugated Boxes for Heavy Goods",
+        "metaDescription": "Heavy-duty corrugated containers for large and heavy goods: industrial equipment, furniture, appliances and pallet transport.",
+        "body": "Large or heavy goods need packaging that holds its shape under load. Our corrugated containers are designed for oversized industrial products, furniture, appliances and pallet transport, with the sides joined with staples for strength. Tell us the size and weight of the product and we will propose the construction."
       }
     }
   },

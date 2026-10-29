@@ -89,6 +89,19 @@ export function productJsonLd({
   };
 }
 
+export function breadcrumbJsonLd(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
 export function localizedPath(locale: string, pathname: string): string {
   const path = pathname.startsWith("/") ? pathname : `/${pathname}`;
   const suffix = path === "/" ? "" : path;

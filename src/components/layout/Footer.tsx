@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { CookieSettingsButton } from "@/components/analytics/CookieSettingsButton";
+import { PhoneLink } from "@/components/analytics/PhoneLink";
 import { MapPin, Facebook, Instagram, Award } from "lucide-react";
 
 function telHref(phone: string) {
@@ -94,12 +95,13 @@ export async function Footer() {
                       {person.title}
                     </span>
                   ) : null}
-                  <a
+                  <PhoneLink
                     href={telHref(person.phone)}
+                    placement="footer"
                     className="text-xs text-white/90 transition-colors hover:text-brand-kraft"
                   >
                     {person.phone}
-                  </a>
+                  </PhoneLink>
                   <a
                     href={`mailto:${person.email}`}
                     className="text-xs text-white/90 underline decoration-1 underline-offset-4 decoration-white/30 transition-colors hover:text-brand-kraft"
