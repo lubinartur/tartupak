@@ -144,6 +144,7 @@
     "applicationsLabel": "Applications",
     "requestQuote": "Request a Quote",
     "requestQuoteForProduct": "Request a Quote for This Product",
+    "callUs": "Call {phone}",
     "detail": {
       "overline": "INDUSTRIAL MODEL",
       "specsLabel": "TECHNICAL SPECS",

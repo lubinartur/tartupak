@@ -15,6 +15,10 @@ const variants: Record<ButtonVariant, string> = {
 const baseClass =
   "inline-flex items-center justify-center rounded-sm px-6 py-3 text-sm font-medium font-display transition-colors";
 
+export function buttonClassName(variant: ButtonVariant = "primary", className?: string) {
+  return cn(baseClass, variants[variant], className);
+}
+
 type ButtonProps = {
   variant?: ButtonVariant;
   className?: string;
@@ -32,7 +36,7 @@ export function Button({
   onClick,
   type = "button",
 }: ButtonProps) {
-  const classes = cn(baseClass, variants[variant], className);
+  const classes = buttonClassName(variant, className);
 
   if (href) {
     return (

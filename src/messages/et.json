@@ -144,6 +144,7 @@
     "applicationsLabel": "Rakendused",
     "requestQuote": "Küsi pakkumist",
     "requestQuoteForProduct": "Küsi pakkumist selle toote jaoks",
+    "callUs": "Helista {phone}",
     "detail": {
       "overline": "TÖÖSTUSLIK LAHENDUS",
       "specsLabel": "TEHNILISED ANDMED",

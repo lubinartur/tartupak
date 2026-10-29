@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { CheckCircle, Package, Recycle, ShieldCheck } from "lucide-react";
+import { CheckCircle, Package, Phone, Recycle, ShieldCheck } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import { Button } from "@/components/ui/Button";
+import { Button, buttonClassName } from "@/components/ui/Button";
+import { PhoneLink } from "@/components/analytics/PhoneLink";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ProductCard } from "@/components/products/ProductCard";
 import {
@@ -52,6 +53,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
+function telHref(phone: string) {
+  return `tel:${phone.replace(/[\s/]/g, "")}`;
+}
+
 function parseApplications(value: string): string[] {
   return value
     .split(",")
@@ -75,6 +80,8 @@ export default async function ProductDetailPage({ params }: Props) {
   const products = await getTranslations("products");
   const detail = await getTranslations("products.detail");
   const common = await getTranslations("common");
+  const contact = await getTranslations("contact");
+  const phone = contact("people.kulli.phone");
   const applications = parseApplications(t("applications"));
   const specs = getProductSpecs(slug, locale);
   const relatedSlugs = getRelatedSlugs(slug);
@@ -108,7 +115,7 @@ export default async function ProductDetailPage({ params }: Props) {
             />
           </div>
 
-          <div className="flex flex-col space-y-10">
+          <div className="flex flex-col gap-10">
             <div className="space-y-4">
               <span className="text-xs font-bold tracking-widest text-brand-kraft uppercase">
                 {detail("overline")}
@@ -117,7 +124,7 @@ export default async function ProductDetailPage({ params }: Props) {
               <p className="text-xl leading-relaxed font-normal text-brand-text">{t("description")}</p>
             </div>
 
-            <div>
+            <div className="order-2 lg:order-none">
               <h2 className="font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/75 uppercase">
                 {detail("specsLabel")}
               </h2>
@@ -128,7 +135,7 @@ export default async function ProductDetailPage({ params }: Props) {
               </ul>
             </div>
 
-            <div>
+            <div className="order-2 lg:order-none">
               <h2 className="font-display text-[10px] font-bold tracking-[0.2em] text-brand-green/75 uppercase">
                 {products("applicationsLabel")}
               </h2>
@@ -147,10 +154,23 @@ export default async function ProductDetailPage({ params }: Props) {
               </ul>
             </div>
 
-            <div>
-              <Button href={`/contact?type=${slug}`} variant="primary">
+            {/* Directly under the intro on small screens (ad traffic), after the specs on desktop. */}
+            <div className="order-1 flex flex-col gap-3 sm:flex-row lg:order-none">
+              <Button
+                href={`/contact?type=${slug}`}
+                variant="primary"
+                className="w-full sm:w-auto"
+              >
                 {products("requestQuoteForProduct")}
               </Button>
+              <PhoneLink
+                href={telHref(phone)}
+                placement="product-page"
+                className={buttonClassName("outline", "w-full gap-2 sm:w-auto lg:hidden")}
+              >
+                <Phone size={16} strokeWidth={1.5} aria-hidden />
+                {products("callUs", { phone })}
+              </PhoneLink>
             </div>
           </div>
         </div>

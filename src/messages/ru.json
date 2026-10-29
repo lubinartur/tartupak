@@ -144,6 +144,7 @@
     "applicationsLabel": "Применение",
     "requestQuote": "Запросить предложение",
     "requestQuoteForProduct": "Запросить предложение на этот продукт",
+    "callUs": "Позвонить {phone}",
     "detail": {
       "overline": "ПРОМЫШЛЕННОЕ РЕШЕНИЕ",
       "specsLabel": "ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ",
