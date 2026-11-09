@@ -48,3 +48,10 @@ Search ET and Search RU are still PAUSED. Nothing below enables them.
 - Live ad groups: ET Pappkastid, ET Pitsakarbid, ET FEFCO 0201, RU Коробки, RU Коробки для пиццы, RU FEFCO 0201. Paused: ET Lainepapp ja pakend.
 - Ad strength fixed the same day: three keyword headlines added to ET Pappkastid (Poor -> Average), ET FEFCO 0201 and RU FEFCO 0201 (Poor -> Good). Same headlines are in `docs/ads/build_campaign.py`.
 - To do: day 1-3 check the search terms report and add negatives; day 7 review clicks, cost per lead, leads in the mailbox; sitelinks (Products, FEFCO catalogue, Contact) are still missing and would lift ad strength; decide on the Lainepapp group after the client answers whether board is sold separately.
+
+## 2026-11-09 review and changes
+- State on 9 Nov (30 days): Search ET spent 6.10 EUR, 9 clicks, 1 conversion (1.40 EUR on "pappkarbid", not verified as a real lead vs test). Search RU: about 5 impressions, 0 spend. Only ~40% of the 15 EUR weekly cap is spent: the limit is ad rank (low Quality Score on "pappkast"/"pappkarbid", first-page bids 0.84-0.98 EUR vs max CPC 0.70), not budget.
+- Irrelevant search terms seen: kinkekarbid (gift boxes), koogikarbid (cake boxes), pitsa ahi / pizza ahi / mustang pitsaahi (pizza ovens).
+- DONE in Ads (user approved): campaign-level phrase negatives on Search ET: ahi, ahjud, pitsaahi, kinkekarbid, kinke, kingitus (negatives 20 -> 26). Max CPC raised 0.70 -> 1.00 EUR on the six active ad groups (Lainepapp stays paused at 0.70). Budgets unchanged (2 + 1 EUR/day, 3 EUR total).
+- Not done, ideas: sitelinks/callouts/call asset and ad images (free CTR lift); check Quality Score components per keyword; Latvia/Finland geo (needs client OK); Google Business Profile and Facebook page; phone button on `/fefco/[code]`; tidy conversion goals "Contact" (invalid config) and "Directions" (needs action); ask client about cake boxes (koogikarbid).
+- Check in ~1 week: impressions, average CPC and spend per ad group, new search terms; confirm the 1 conversion in the Maksim mailbox. Organic (Search Console, 28 days): 74 clicks, 3.46k impressions, avg position 13.3.
