@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Leaf, Ruler, Zap } from "lucide-react";
+import { Layers, Ruler, Zap } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FacilityGallery } from "@/components/about/FacilityGallery";
@@ -16,7 +16,7 @@ const philosophyKeys = ["precision", "production", "eco"] as const;
 const philosophyIcons = {
   precision: Ruler,
   production: Zap,
-  eco: Leaf,
+  eco: Layers,
 } as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -29,7 +29,6 @@ export function WhyChooseUsBento() {
   const isInView = useInView(ref, { once: true, amount: 0.8 });
 
   const yearsCount = useCountUp(20, isInView, 1.5);
-  const sustainableCount = useCountUp(100, isInView, 1.5);
 
   return (
     <div ref={ref} className="grid w-full grid-cols-1 gap-3 md:grid-cols-3 md:grid-rows-2 md:auto-rows-auto">
@@ -57,15 +56,19 @@ export function WhyChooseUsBento() {
         <h3 className={labelLight}>{t("stats.scale.label")}</h3>
       </div>
 
-      {/* 100% — center bottom */}
+      {/* 1–5 mm board — center bottom */}
       <div className={`${cardLight} md:col-start-2 md:row-start-2`}>
-        <p className={`${numberKraft} text-6xl md:text-7xl`}>
-          {sustainableCount}
-          <span>%</span>
-        </p>
-        <h3 className={labelLight}>{t("stats.sustainable.label")}</h3>
+        <motion.p
+          className={`${numberKraft} text-6xl whitespace-nowrap md:text-7xl`}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={fadeTransition}
+        >
+          {t("stats.board.value")}
+        </motion.p>
+        <h3 className={labelLight}>{t("stats.board.label")}</h3>
         <p className="mt-3 max-w-xs text-sm leading-relaxed text-brand-text">
-          {t("stats.sustainable.description")}
+          {t("stats.board.description")}
         </p>
       </div>
 

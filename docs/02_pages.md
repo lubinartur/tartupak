@@ -53,7 +53,7 @@ Main marketing page. Primary goal: lead generation.
 - 6 stats in 2-row grid:
   - AA — Credit Rating
   - 20+ — Years Experience
-  - 100% — Sustainable Materials
+  - 1–5 mm — Board Thickness
   - 1pc — Scale Flexible (from 1 unit)
   - EE — Edukas Eesti Ettevõte
   - EST — Rapid Delivery (Baltics & Scandinavia)
@@ -123,7 +123,7 @@ Main marketing page. Primary goal: lead generation.
 - 3 cards:
   - Precision Engineering — CAD-driven design process
   - Modern Production — Ongoing investment in high-speed cutting
-  - Eco Commitment — 100% recycled production waste, sustainable raw materials
+  - Made of Paper — corrugated board is layers of paper; clean board goes into paper recycling
 
 ---
 

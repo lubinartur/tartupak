@@ -13,7 +13,7 @@
     "quote": "Küsi pakkumist"
   },
   "footer": {
-    "tagline": "Eesti gofreeritud kartongpakendi tootja alates 2001. Kaasaegsed tootmisliinid ja jätkusuutlikud tööstuslikud lahendused.",
+    "tagline": "Eesti gofreeritud kartongpakendi tootja alates 2001. Kaasaegsed tootmisliinid ja pakend tellimuse järgi.",
     "navigation": "Navigatsioon",
     "contact": "Kontakt",
     "credentials": "Tunnustused",
@@ -30,31 +30,7 @@
       "title": "Me loome *pakendit*, mis kaitseb.",
       "subtitle": "Kvaliteetne gofreeritud kartongpakend tööstuslikuks usaldusväärsuseks. Ühendame Skandinaavia minimalismi 20+ aastase tootmiskogemusega.",
       "ctaPrimary": "Küsi pakkumist",
-      "ctaSecondary": "Sirvi kataloogi",
-      "carousel": {
-        "constructionCode": "Konstruktsioonikood",
-        "material": "Materjal",
-        "strength": "Tugevus",
-        "impact": "Mõju",
-        "slide0": {
-          "code": "FEFCO 0201",
-          "material": "Kartong",
-          "strength": "Kaheseineline",
-          "impact": "100% öko"
-        },
-        "slide1": {
-          "code": "FEFCO 0201",
-          "material": "Kartong",
-          "strength": "Kaheseineline",
-          "impact": "100% öko"
-        },
-        "slide2": {
-          "code": "FEFCO 0300",
-          "material": "Kartong",
-          "strength": "Üheseineline",
-          "impact": "100% öko"
-        }
-      }
+      "ctaSecondary": "Sirvi kataloogi"
     },
     "trustBar": {
       "items": {
@@ -123,10 +99,10 @@
           "description": "Kaks aastakümmet lainepaki kogemust Baltikumis ja Skandinaavias.",
           "subtitle": "Alates 2001"
         },
-        "sustainable": {
-          "value": "100%",
-          "label": "Jätkusuutlikud materjalid",
-          "description": "Kõik toorained pärit jätkusuutlikult majandatavatest metsadest ja täielikult taaskasutatavad."
+        "board": {
+          "value": "1–5 mm",
+          "label": "Papi paksus",
+          "description": "Ühe-, kahe- ja kolmeseinaline lainepapp, pruun või valge väliskiht."
         },
         "scale": { "value": "1 tk", "label": "Paindlik mastaap" }
       }
@@ -151,8 +127,8 @@
       "aboutLabel": "LÄHEMALT TOOTEST",
       "features": {
         "recyclable": {
-          "title": "100% taaskasutatav",
-          "description": "Pärit jätkusuutlikult majandatud Euroopa metsadest"
+          "title": "Paberpõhine pakend",
+          "description": "Puhta papi saab pärast kasutamist panna paberi- ja papikonteinerisse"
         },
         "protection": {
           "title": "Premium kaitse",
@@ -281,8 +257,8 @@
           "description": "Pidev investeerimine kiiretesse lõike- ja automatiseeritud koostusliinidesse."
         },
         "eco": {
-          "title": "Ökoloogiline vastutus",
-          "description": "100% meie tootmisjäätmetest taaskasutatakse ja kõik toorained pärinevad jätkusuutlikest allikatest."
+          "title": "Paberist pakend",
+          "description": "Meie karbid on valmistatud lainepapist, mis koosneb paberikihtidest. Puhta papi saab pärast kasutamist anda ringlusse koos paberi- ja papijäätmetega."
         }
       }
     },

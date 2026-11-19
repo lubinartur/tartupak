@@ -13,7 +13,7 @@
     "quote": "Request a Quote"
   },
   "footer": {
-    "tagline": "Estonian corrugated cardboard packaging manufacturer since 2001. Modern production lines and sustainable industrial solutions.",
+    "tagline": "Estonian corrugated cardboard packaging manufacturer since 2001. Modern production lines and packaging made to order.",
     "navigation": "Navigation",
     "contact": "Contact",
     "credentials": "Credentials",
@@ -30,31 +30,7 @@
       "title": "We create *packaging* that protects.",
       "subtitle": "Premium corrugated cardboard solutions engineered for industrial reliability. We combine Scandinavian minimalism with 20+ years of manufacturing expertise.",
       "ctaPrimary": "Request a Quote",
-      "ctaSecondary": "Browse Catalog",
-      "carousel": {
-        "constructionCode": "Construction Code",
-        "material": "Material",
-        "strength": "Strength",
-        "impact": "Impact",
-        "slide0": {
-          "code": "FEFCO 0201",
-          "material": "Cardboard",
-          "strength": "Double Wall",
-          "impact": "100% Eco"
-        },
-        "slide1": {
-          "code": "FEFCO 0201",
-          "material": "Cardboard",
-          "strength": "Double Wall",
-          "impact": "100% Eco"
-        },
-        "slide2": {
-          "code": "FEFCO 0300",
-          "material": "Cardboard",
-          "strength": "Single Wall",
-          "impact": "100% Eco"
-        }
-      }
+      "ctaSecondary": "Browse Catalog"
     },
     "trustBar": {
       "items": {
@@ -123,10 +99,10 @@
           "description": "Two decades of corrugated packaging expertise serving the Baltics and Scandinavia.",
           "subtitle": "Since 2001"
         },
-        "sustainable": {
-          "value": "100%",
-          "label": "Sustainable Materials",
-          "description": "All raw materials from sustainably managed forests and fully recyclable production."
+        "board": {
+          "value": "1–5 mm",
+          "label": "Board Thickness",
+          "description": "Single, double and triple wall corrugated board with a brown or white outer liner."
         },
         "scale": { "value": "1pc", "label": "Scale Flexible" }
       }
@@ -151,8 +127,8 @@
       "aboutLabel": "ABOUT THIS PRODUCT",
       "features": {
         "recyclable": {
-          "title": "100% Recyclable",
-          "description": "Sourced from sustainably managed European forests"
+          "title": "Paper-Based Packaging",
+          "description": "Clean cardboard goes into paper and cardboard recycling after use"
         },
         "protection": {
           "title": "Premium Protection",
@@ -281,8 +257,8 @@
           "description": "Ongoing investment in high-speed cutting and automated assembly lines."
         },
         "eco": {
-          "title": "Eco Commitment",
-          "description": "100% of our production waste is recycled and all raw materials are from sustainable sources."
+          "title": "Made of Paper",
+          "description": "Our boxes are made of corrugated board, which consists of layers of paper. Clean cardboard can be recycled with paper and cardboard waste after use."
         }
       }
     },

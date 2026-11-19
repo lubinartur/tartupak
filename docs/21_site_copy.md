@@ -153,7 +153,7 @@ All copy in three languages: ET / EN / RU.
 |---|---|---|---|
 | AA | Krediidireiting | Credit Rating | Кредитный рейтинг |
 | 20+ | Aastat kogemust | Years Experience | Лет опыта |
-| 100% | Jätkusuutlikud materjalid | Sustainable Materials | Экологичные материалы |
+| 1–5 mm | Papi paksus | Board Thickness | Толщина картона |
 | 1tk | Paindlik mastaap | Scale Flexible | Гибкий масштаб |
 | EE | Edukas Eesti Ettevõte | Leading Estonian Enterprise | Ведущее эстонское предприятие |
 | EST | Kiire tarnimine | Rapid Delivery | Быстрая доставка |
@@ -202,7 +202,7 @@ All copy in three languages: ET / EN / RU.
 |---|---|---|
 | Täppistehnoloogia | Precision Engineering | Точное производство |
 | Kaasaegne tootmine | Modern Production | Современное производство |
-| Ökoloogiline vastutus | Eco Commitment | Экологическая ответственность |
+| Paberist pakend | Made of Paper | Упаковка из бумаги |
 
 ---
 
@@ -233,9 +233,9 @@ All copy in three languages: ET / EN / RU.
 ## Footer
 
 **Brand description:**
-- ET: Eesti gofreeritud kartongpakendi tootja alates 2001. Kaasaegsed tootmisliinid ja jätkusuutlikud tööstuslikud lahendused.
-- EN: Estonian corrugated cardboard packaging manufacturer since 2001. Modern production lines and sustainable industrial solutions.
-- RU: Эстонский производитель гофрокартонной упаковки с 2001 года. Современные производственные линии и устойчивые промышленные решения.
+- ET: Eesti gofreeritud kartongpakendi tootja alates 2001. Kaasaegsed tootmisliinid ja pakend tellimuse järgi.
+- EN: Estonian corrugated cardboard packaging manufacturer since 2001. Modern production lines and packaging made to order.
+- RU: Эстонский производитель гофрокартонной упаковки с 2001 года. Современные производственные линии и упаковка на заказ.
 
 **Section labels:**
 | ET | EN | RU |
@@ -243,3 +243,11 @@ All copy in three languages: ET / EN / RU.
 | Logistikakeskus | Logistics Hub | Логистический центр |
 | Navigeerimine | Navigation | Навигация |
 | Tunnustused | Credentials | Сертификаты |
+
+---
+
+## Environmental claims (2026-11-19)
+
+Since 27 Sept 2026 Estonian law (EU Directive 2024/825) bans generic environmental claims ("eco", "sustainable", "environmentally friendly") that can't be backed by documents. On 2026-11-19 we removed "100% eco", "100% sustainable materials", "sustainably managed forests" and "100% of production waste is recycled". The site now says only what is true of any corrugated board: it is paper-based and clean board goes into paper and cardboard recycling.
+
+Bring back a forest or waste claim only with evidence in hand, and name it exactly (e.g. "FSC-certified board" with the certificate number, or the recycling contractor for production waste).
